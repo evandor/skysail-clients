@@ -1,6 +1,10 @@
 package skysail.client.eclipse.plugin.osgimonitor.views;
 
 
+import java.io.IOException;
+import java.util.List;
+
+import org.codehaus.jackson.map.ObjectMapper;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.*;
 import org.eclipse.jface.viewers.*;
@@ -10,6 +14,10 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.*;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.SWT;
+import org.restlet.representation.Representation;
+
+import de.skysail.client.ClientUtils;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 
 
 /**
@@ -42,6 +50,9 @@ public class SampleView extends ViewPart {
 	private Action action2;
 	private Action doubleClickAction;
 
+    /** deals with json objects */
+    private ObjectMapper mapper = new ObjectMapper();
+
 	/*
 	 * The content provider class is responsible for
 	 * providing objects to the view. It can wrap
@@ -58,6 +69,30 @@ public class SampleView extends ViewPart {
 		public void dispose() {
 		}
 		public Object[] getElements(Object parent) {
+			try {
+				Representation representation = ClientUtils.restletCall("");
+				
+				SkysailResponse response = mapper.readValue(representation.toString(), SkysailResponse.class);
+				
+				List data = response.getData();
+				
+//				// Map<String, TreeNodeData> data = (Map<String,
+//				// TreeNodeData>)jsonData.getData();
+//				List<String> result = new ArrayList<String>();
+//				List<TreeNodeData> listData = jsonData.getData();
+//				for (TreeNodeData entry : listData) {
+//					result.add(entry.getName());
+//				}
+//				return result;
+//				
+//				
+//				
+//				
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			return new String[] { "One", "Two", "Three" };
 		}
 	}
