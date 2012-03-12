@@ -2,11 +2,9 @@ package de.skysail.client;
 
 import java.io.IOException;
 
-import org.restlet.data.Cookie;
 import org.restlet.data.MediaType;
 import org.restlet.representation.Representation;
 import org.restlet.resource.ClientResource;
-import org.restlet.util.Series;
 
 public class ClientUtils {
 

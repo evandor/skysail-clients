@@ -49,13 +49,13 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>de.evandor</groupId>
+			<groupId>de.twenty11.skysail</groupId>
 			<artifactId>skysail.common</artifactId>
 			<version>[0.2.7-SNAPSHOT, 0.3)</version>
 		</dependency>
 
 		<!-- restlet -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet</artifactId>
 			<version>${org.restlet.version}</version>
@@ -119,10 +119,22 @@
 			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet.ext.json</artifactId>
 			<version>${org.restlet.version}</version>
-		</dependency> -->
+		</dependency>
 
 
 	</dependencies>
+
+	<repositories>
+		<!-- need to find parent pom -->
+		<repository>
+			<id>central</id>
+			<name>All evandor-hosted artifacts</name>
+			<url>http://nexus.twentyeleven.de/content/groups/public</url>
+			<releases>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+		</repository>
+	</repositories>
 
 
 </project>
