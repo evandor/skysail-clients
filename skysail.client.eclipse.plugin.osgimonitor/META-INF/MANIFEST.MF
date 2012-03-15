@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Osgimonitor
+Bundle-SymbolicName: skysail.client.eclipse.plugin.osgimonitor; singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: skysail.client.eclipse.plugin.osgimonitor.Activator
+Bundle-Vendor: twenty11
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
