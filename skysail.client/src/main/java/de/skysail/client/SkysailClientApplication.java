@@ -16,11 +16,12 @@ import java.util.Properties;
  */
 public class SkysailClientApplication {
 
+	//http://localhost:8099/rest/osgi/services/
 	private static String restletUrlScheme = "http";
 	private static String restletUrlUserInfo = null;
 	private static String restletUrlHost = "localhost";
-	private static int    restletUrlPort = 8989;
-	private static String restletUrlPath = "/skysail.server.restlet/rest/";
+	private static int    restletUrlPort = 8099;
+	private static String restletUrlPath = "/rest/";
     
     //private static Logger logger = LoggerFactory.getLogger(SkysailClientApplication.class);
 

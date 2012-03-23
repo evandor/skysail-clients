@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+
+<target name="Running Platform" sequenceNumber="48">
+<locations>
+<location path="/home/carsten/.m2/repository/org/restlet/jse/org.restlet.ext.xml/2.0.11" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/restlet/jse/org.restlet.ext.freemarker/2.0.11" type="Directory"/>
+<location path="/home/carsten/.m2/repository/de/twenty11/skysail/skysail.client/0.0.1-SNAPSHOT" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/xmlpull/com.springsource.org.xmlpull/1.1.4.c" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/restlet/jse/org.restlet.ext.jackson/2.0.9" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/restlet/jse/org.restlet.ext.xstream/2.0.11" type="Directory"/>
+<location path="/home/carsten/.m2/repository/com/thoughtworks/xstream/com.springsource.com.thoughtworks.xstream/1.3.1" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/codehaus/jettison/com.springsource.org.codehaus.jettison/1.0.1" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/restlet/jse/org.restlet.ext.wadl/2.0.11" type="Directory"/>
+<location path="${eclipse_home}" type="Profile"/>
+<location path="/home/carsten/.m2/repository/org/freemarker/com.springsource.freemarker/2.3.18" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/restlet/jse/org.restlet/2.0.11" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/codehaus/jackson/jackson-mapper-lgpl/1.6.3" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/codehaus/jackson/jackson-core-lgpl/1.6.3" type="Directory"/>
+</locations>
+<environment>
+<os>linux</os>
+<ws>gtk</ws>
+<arch>x86_64</arch>
+<nl>en_US</nl>
+</environment>
+<launcherArgs>
+<vmArgs>-Dosgi.requiredJavaVersion=1.5 -XX:MaxPermSize=256m -Xms40m -Xmx512m</vmArgs>
+</launcherArgs>
+</target>

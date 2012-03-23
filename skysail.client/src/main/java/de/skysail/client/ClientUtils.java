@@ -2,6 +2,8 @@ package de.skysail.client;
 
 import java.io.IOException;
 
+import org.restlet.data.ChallengeResponse;
+import org.restlet.data.ChallengeScheme;
 import org.restlet.data.MediaType;
 import org.restlet.representation.Representation;
 import org.restlet.resource.ClientResource;
@@ -23,6 +25,10 @@ public class ClientUtils {
 		
 		String url = SkysailClientApplication.getRestletUrl(urlPart, query, fragment);
 		ClientResource cr = new ClientResource(url);
+		ChallengeResponse authentication = new ChallengeResponse(
+				ChallengeScheme.HTTP_BASIC, "scott", "tiger");
+		cr.setChallengeResponse(authentication);
+
 		return cr.get(mediatype);
 	}
 	

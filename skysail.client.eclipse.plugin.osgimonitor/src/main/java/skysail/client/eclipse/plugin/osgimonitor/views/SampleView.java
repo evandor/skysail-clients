@@ -2,21 +2,42 @@ package skysail.client.eclipse.plugin.osgimonitor.views;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.codehaus.jackson.map.ObjectMapper;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.ui.part.*;
-import org.eclipse.jface.viewers.*;
-import org.eclipse.swt.graphics.Image;
-import org.eclipse.jface.action.*;
+import org.codehaus.jackson.type.TypeReference;
+import org.eclipse.jface.action.Action;
+import org.eclipse.jface.action.IMenuListener;
+import org.eclipse.jface.action.IMenuManager;
+import org.eclipse.jface.action.IToolBarManager;
+import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.ui.*;
-import org.eclipse.swt.widgets.Menu;
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredContentProvider;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.ITableLabelProvider;
+import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerSorter;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Menu;
+import org.eclipse.ui.IActionBars;
+import org.eclipse.ui.ISharedImages;
+import org.eclipse.ui.IWorkbenchActionConstants;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.part.ViewPart;
 import org.restlet.representation.Representation;
 
 import de.skysail.client.ClientUtils;
+import de.twenty11.skysail.common.grids.GridData;
+import de.twenty11.skysail.common.grids.RowData;
 import de.twenty11.skysail.common.responses.SkysailResponse;
 
 
@@ -70,30 +91,21 @@ public class SampleView extends ViewPart {
 		}
 		public Object[] getElements(Object parent) {
 			try {
-				Representation representation = ClientUtils.restletCall("");
-				
-				SkysailResponse response = mapper.readValue(representation.toString(), SkysailResponse.class);
-				
-				List data = response.getData();
-				
-//				// Map<String, TreeNodeData> data = (Map<String,
-//				// TreeNodeData>)jsonData.getData();
-//				List<String> result = new ArrayList<String>();
-//				List<TreeNodeData> listData = jsonData.getData();
-//				for (TreeNodeData entry : listData) {
-//					result.add(entry.getName());
-//				}
-//				return result;
-//				
-//				
-//				
-//				
-				
+				Representation representation = ClientUtils.restletCall("osgi/services/");
+				SkysailResponse<GridData> response = mapper.readValue(representation.getText(), 
+						new TypeReference<SkysailResponse<GridData>>() { });
+				GridData payload = response.getData();
+				List<RowData> gridData = payload.getGridData();
+				List<String> result = new ArrayList<String>();
+				for (RowData rowData : gridData) {
+					List<Object> columnData = rowData.getColumnData();
+					result.add((String)columnData.get(1));
+				}
+				return result.toArray();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
+				return new String[] { "Error" };
 			}
-			return new String[] { "One", "Two", "Three" };
 		}
 	}
 	class ViewLabelProvider extends LabelProvider implements ITableLabelProvider {
