@@ -11,10 +11,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Import-Package: de.skysail.client,
  de.twenty11.skysail.common.grids;version="0.2.0",
- de.twenty11.skysail.common.responses;version="0.1.0",
- de.twenty11.skysail.server;version="0.1.0",
- org.codehaus.jackson.map;version="1.6.3",
- org.codehaus.jackson.type;version="1.6.3",
- org.restlet.ext.jackson,
- org.restlet.ext.xstream,
- org.restlet.representation
+ de.twenty11.skysail.common.responses;version="0.1.0"
