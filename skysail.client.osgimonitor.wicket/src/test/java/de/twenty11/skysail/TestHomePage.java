@@ -4,6 +4,9 @@ import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;
 
+import de.twenty11.skysail.client.osgimonitor.wicket.HomePage;
+import de.twenty11.skysail.client.osgimonitor.wicket.WicketApplication;
+
 /**
  * Simple test using the WicketTester
  */
