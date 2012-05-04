@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org" lang="en">
+<head>
+<meta charset="utf-8" />
+
+<title></title>
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<!-- mobile viewport optimisation -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="yaml/core/base.min.css" type="text/css" />
+<link rel="stylesheet" href="yaml/flexible-columns.css" type="text/css" />
+<!--<link rel="stylesheet" href="css/styles.css" type="text/css"/>-->
+
+<!--[if lte IE 7]>
+  <link rel="stylesheet" href="yaml/core/iehacks.min.css" type="text/css"/>
+  <![endif]-->
+</head>
+<body>
+
+	<div class="ym-wrapper">
+		<div class="ym-wbox">
+			<header>
+				<h1 wicket:id="projectName">Project Name</h1>
+			</header>
+
+			<span wicket:id="navigation">navigation</span>
+
+			<div id="main">
+				<div class="ym-column linearize-level-1">
+
+					<div class="ym-col1" style="min-width:920px;">
+						<div class="ym-cbox">
+
+							<wicket:child />
+
+
+							<section class="ym-grid linearize-level-2">
+								<article class="ym-g50 ym-gl">
+									<div class="ym-gbox">
+										<!-- content -->
+										<h3>Heading</h3>
+										<p>Lorem ipsum dolor sit amet, consetetur</p>
+									</div>
+								</article>
+								<article class="ym-g50 ym-gr">
+									<div class="ym-gbox">
+										<!-- content -->
+										<h3>Heading</h3>
+										<p>Lorem ipsum dolor sit amet, consetetur</p>
+									</div>
+								</article>
+							</section>
+						</div>
+					</div>
+					<aside class="ym-col3">
+						<div class="ym-cbox">
+							<h2>Sidebar</h2>
+							<h4>Advertisement</h4>
+							<h4>Widget</h4>
+							<ul>
+								<li>Item 1</li>
+								<li>Item 2</li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+			<footer>
+				<p>
+					© Skysail 2012 &ndash; Layout based on <a href="http://www.yaml.de">YAML</a>
+				</p>
+			</footer>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

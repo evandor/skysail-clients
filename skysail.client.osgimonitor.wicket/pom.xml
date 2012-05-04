@@ -23,6 +23,14 @@
 		<spring.version>3.0.7.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+
+		<!-- SKYSAIL DEPENDENCIES -->
+		<dependency>
+			<groupId>de.twenty11.skysail</groupId>
+			<artifactId>skysail.client</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- WICKET DEPENDENCIES -->
 		<dependency>
 			<groupId>org.apache.wicket</groupId>

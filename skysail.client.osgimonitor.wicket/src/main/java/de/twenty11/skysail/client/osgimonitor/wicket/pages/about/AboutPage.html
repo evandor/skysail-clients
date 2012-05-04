@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org">
+<body>
+
+	<wicket:extend>
+		<section class="box info">
+			<h2>About</h2>
+			<p>
+				What is it ---------- skysail <i>osgimonitor minimal</i> is a simple
+				viewer for the installed bundles in an OSGi enviroment. In this
+				state of development, it is not much more than a collection of
+				bundles with a rather straight-forward setup, mostly suited for an
+				non-trivial, introduction-style tutorial about OSGi. skysail
+				osgimonitor further serves as a proof-of-concept for the skysail
+				project (see links below). How to start it --------------- * Extract
+				the zip file somewhere on your disk * Navigate on the command line
+				to the bin folder * Depending on your OS, start either run.bat or
+				run.sh (on linx chmod 775 first) * You should see an (equinox) OSGi
+				prompt, and the framework should start downloading the necessary
+				bundles. * You can monitor the progress by typing "ss" for short
+				status and should see a growing list of bundles * When the framework
+				is started, point your browser to http://localhost:port. The port to
+				use is the one configured in conf/skysail.properties; there you will
+				find the password as well. Configuration ------------- In the conf
+				folder, there is a properties file which you can edit (setting the
+				port and the [still very simple] user management properties. File
+				Layout ----------- * bin: This is where the scripts (for starting)
+				reside * conf: Adjust the port and the like * doc: Some more
+				information * osgiRuntime: This is where the bundles get installed
+
+				Further links: -------------- * Issue Bugs and requests to
+				http://jira.twentyeleven.de * Check the sonar installation if you
+				want: http://sonar.twentyeleven.de * Check out our wiki
+				http://wiki.twentyeleven.de
+
+
+
+			</p>
+			<a class="ym-button ym-next" href="#">Read More</a>
+		</section>
+	</wicket:extend>
+
+</body>
+</html>
