@@ -52,7 +52,7 @@
 		<dependency>
 			<groupId>de.twenty11.skysail</groupId>
 			<artifactId>skysail.common</artifactId>
-			<version>[0.2.13-SNAPSHOT, 0.3)</version>
+			<version>[0.3.0, 1.0)</version>
 		</dependency>
 
 		<!-- restlet -->

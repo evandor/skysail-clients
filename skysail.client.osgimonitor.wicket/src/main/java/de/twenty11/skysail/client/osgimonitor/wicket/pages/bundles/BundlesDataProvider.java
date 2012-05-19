@@ -20,6 +20,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+
+import de.skysail.client.ClientUtils;
+import de.twenty11.skysail.common.grids.GridData;
+import de.twenty11.skysail.common.grids.RowData;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 
 import org.apache.wicket.extensions.markup.html.repeater.util.SortParam;
 import org.apache.wicket.markup.repeater.data.IDataProvider;
@@ -27,11 +33,6 @@ import org.apache.wicket.model.IModel;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 import org.restlet.representation.Representation;
-
-import de.skysail.client.ClientUtils;
-import de.twenty11.skysail.common.grids.GridData;
-import de.twenty11.skysail.common.grids.RowData;
-import de.twenty11.skysail.common.responses.SkysailResponse;
 
 /**
  * Implementation of IDataProvider that retrieves contacts from the contact
@@ -55,13 +56,11 @@ public class BundlesDataProvider implements IDataProvider<Bundle> {
 					new TypeReference<SkysailResponse<GridData>>() {
 					});
 			GridData payload = response.getData();
-			List<RowData> gridData = payload.getGridData();
-			//List<String> result = new ArrayList<String>();
-			for (RowData rowData : gridData) {
+            List<RowData> rows = payload.getRows();
+            for (RowData rowData : rows) {
+                Map<String, String> properties = rowData.getCells();
 				Bundle bundle = new Bundle();
-				List<Object> columnData = rowData.getColumnData();
-				//result.add((String) columnData.get(1));
-				bundle.setSymbolicName((String)columnData.get(1));
+                bundle.setSymbolicName(properties.get("symbolicName"));
 				bundles.add(bundle);
 			}
 			return bundles;
