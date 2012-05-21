@@ -72,8 +72,9 @@ public class Skysail_client_osgimonitor_vaadinApplication extends Application {
             e.printStackTrace();
         }
 
-        // Define two columns for the built-in container
+        // Define columns for the built-in container
         table.addContainerProperty("Name", String.class, null);
+        table.addContainerProperty("Mag", Float.class, null);
         table.addContainerProperty("Mag", Float.class, null);
 
         // Add a row the hard way
@@ -83,9 +84,9 @@ public class Skysail_client_osgimonitor_vaadinApplication extends Application {
         row1.getItemProperty("Mag").setValue(-1.46);
 
         // Add a few other rows using shorthand addItem()
-        table.addItem(new Object[] { "Canopus", -0.72 }, 2);
-        table.addItem(new Object[] { "Arcturus", -0.04 }, 3);
-        table.addItem(new Object[] { "Alpha Centauri", -0.01 }, 4);
+        table.addItem(new Object[] { "Canopus", -0.72, -0.72 }, 2);
+        table.addItem(new Object[] { "Arcturus", -0.04, -0.72 }, 3);
+        table.addItem(new Object[] { "Alpha Centauri", -0.01, -0.72 }, 4);
 
         // Show 5 rows
         table.setPageLength(5);

@@ -16,6 +16,12 @@
 			<param-name>application</param-name>
 			<param-value>de.twenty11.skysail.client.osgimonitor.vaadin.Skysail_client_osgimonitor_vaadinApplication</param-value>
 		</init-param>
+		<init-param>
+			<description>
+			Application widgetset</description>
+			<param-name>widgetset</param-name>
+			<param-value>de.twenty11.skysail.client.osgimonitor.vaadin.widgetset.Skysail_client_osgimonitor_vaadinWidgetset</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Skysail_client_osgimonitor_vaadin Application</servlet-name>
