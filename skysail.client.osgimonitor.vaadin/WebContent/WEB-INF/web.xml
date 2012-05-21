@@ -14,7 +14,7 @@
 			<description>
 			Vaadin application class to start</description>
 			<param-name>application</param-name>
-			<param-value>com.example.skysail_client_osgimonitor_vaadin.Skysail_client_osgimonitor_vaadinApplication</param-value>
+			<param-value>de.twenty11.skysail.client.osgimonitor.vaadin.Skysail_client_osgimonitor_vaadinApplication</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
