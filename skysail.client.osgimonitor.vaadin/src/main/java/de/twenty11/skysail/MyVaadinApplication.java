@@ -33,7 +33,14 @@ public class MyVaadinApplication extends Application {
     public void init() {
         window = new Window("Skysail OSGi Monitor Vaadin Client");
         setMainWindow(window);
-        Button button = new Button("Click Me!!");
+
+        // Needed because composites are full size
+        window.getContent().setSizeFull();
+
+        MyComponent myComposite = new MyComponent();
+        window.addComponent(myComposite);
+
+        Button button = new Button("Click Me");
         button.addListener(new Button.ClickListener() {
             public void buttonClick(ClickEvent event) {
                 window.addComponent(new Label("Thank you for clicking"));
@@ -60,6 +67,7 @@ public class MyVaadinApplication extends Application {
         table.addItem(new Object[] { "Isaac", "Newton", new Integer(1643) }, new Integer(6));
 
         window.addComponent(table);
+        setTheme("skysail.client.osgimonitor.vaadintheme");
     }
 
 }
