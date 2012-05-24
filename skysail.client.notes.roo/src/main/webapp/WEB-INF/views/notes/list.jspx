@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_de_skysail_client_notes_roo_Note" items="${notes}" z="sUDZl8iTP9SeJPt6KTz22zPPgRw=">
+        <table:table data="${notes}" id="l_de_skysail_client_notes_roo_Note" path="/notes" z="NqA+e/ZTV6HkLaQKv3OhdRtIDOQ=">
+            <table:column id="c_de_skysail_client_notes_roo_Note_title" property="title" z="0RbGZuJFSihqwdvF3rlOug3cp/E="/>
+            <table:column id="c_de_skysail_client_notes_roo_Note_content" property="content" z="+Hph/zWcdHOBn3wgPq8FvHIoD6A="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,16 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-24 07:42:38
+project --topLevelPackage de.twenty11.skysail.client.goals.roo 
+jpa setup --provider HIBERNATE --database MYSQL 
+hint
+entity jpa --class ~.Goal
+web mvc setup
+web mvc all --package ~.web
+perform package
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-24 07:46:08
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-24 07:57:17
+backup
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-24 07:57:25
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-24 07:57:54
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-24 07:58:55
