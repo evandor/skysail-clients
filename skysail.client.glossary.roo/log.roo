@@ -4,3 +4,7 @@ quit
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-24 08:10:06
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-24 08:14:07
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-24 08:15:10
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-24 18:47:38
+web mvc setup
+web mvc all --package ~.web
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-24 22:13:17
