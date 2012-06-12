@@ -1,0 +1,6 @@
+#Updated at Thu May 24 07:43:45 CEST 2012
+#Thu May 24 07:43:45 CEST 2012
+database.driverClassName=com.mysql.jdbc.Driver
+database.url=jdbc\:mysql\://localhost\:3306
+database.username=root
+database.password=websphere
