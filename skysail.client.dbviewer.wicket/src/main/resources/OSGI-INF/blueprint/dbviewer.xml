@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:wicket="http://www.ops4j.org/schema/wicket">
+
+	<wicket:application id="dbviewerApplication"
+		class="de.twenty11.skysail.client.dbviewer.wicket.DbviewerWicketApplication"
+		applicationName="blueprint.dbviewer" mountPoint="dbviewer" />
+
+</blueprint>

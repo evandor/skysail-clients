@@ -9,6 +9,16 @@
 		<version>0.7.11</version>
 	</parent>
 
+	<description>
+    This project a frontend for skysail.server.ext.dbviewer developed with wicket
+    </description>
+
+	<properties>
+		<wicket.dependency.version>1.5.7</wicket.dependency.version>
+		<cglib.version>2.2_2</cglib.version>
+	    <cglib.range>[2,3)</cglib.range>
+	</properties>
+
 	<artifactId>skysail.client.dbviewer.wicket</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>skysail wicket client for dbviewer</name>
@@ -22,16 +32,6 @@
 		<!-- A publicly browsable repository. For example, via ViewCVS. -->
 		<url>scm:git:git@github.com:evandor/skysail-clients.git</url>
 	</scm>
-
-	<description>
-    This project a frontend for skysail.server.ext.dbviewer developed with wicket
-    </description>
-
-	<properties>
-		<wicket.dependency.version>1.5.7</wicket.dependency.version>
-		<cglib.version>2.2_2</cglib.version>
-	    <cglib.range>[2,3)</cglib.range>
-	</properties>
 
 	<build>
 		<plugins>
@@ -72,6 +72,30 @@
 						</Import-Package>
 					</instructions>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+ 					<execution>
+						<id>copy</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>de.twentyeleven.skysail</groupId>
+									<artifactId>skysail.client.dbviewer.wicket</artifactId>
+									<version>${project.version}</version>
+									<outputDirectory>/home/carsten/install/skysail.karaf.distribution-0.0.3-SNAPSHOT/deploy/</outputDirectory>
+									<!-- <destFileName>skysail.karaf.distribution.branding-0.1.0.jar</destFileName> -->
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
