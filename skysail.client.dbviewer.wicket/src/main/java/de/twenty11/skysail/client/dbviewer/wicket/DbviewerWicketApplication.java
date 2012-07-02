@@ -5,8 +5,8 @@ import org.apache.wicket.protocol.http.WebApplication;
 public class DbviewerWicketApplication extends WebApplication {
 
     @Override
-    public Class<DbViewerHome> getHomePage() {
-        return DbViewerHome.class;
+    public Class<DbViewerTemplate> getHomePage() {
+        return DbViewerTemplate.class;
     }
 
 }
