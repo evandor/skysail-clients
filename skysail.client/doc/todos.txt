@@ -1,0 +1,1 @@
+rename to skysail.client.common

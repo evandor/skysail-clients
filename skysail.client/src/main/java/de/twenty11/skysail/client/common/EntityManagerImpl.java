@@ -1,4 +1,5 @@
-//package de.twenty11.skysail.client;
+package de.twenty11.skysail.client.common;
+//package de.twenty11.skysail.client.common;
 //
 //import javax.persistence.EntityManager;
 //import javax.persistence.EntityTransaction;

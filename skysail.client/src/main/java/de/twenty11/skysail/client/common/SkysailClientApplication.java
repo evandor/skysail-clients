@@ -1,4 +1,4 @@
-package de.twenty11.skysail.client;
+package de.twenty11.skysail.client.common;
 
 import java.io.BufferedInputStream;
 import java.io.File;

@@ -11,7 +11,7 @@
 
 	<artifactId>skysail.client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>skysail :: client - common for all clients </name>
+	<name>skysail :: client :: common - for all clients </name>
 	<packaging>bundle</packaging>
 
 	<scm>

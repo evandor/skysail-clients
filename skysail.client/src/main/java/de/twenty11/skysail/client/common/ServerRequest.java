@@ -1,4 +1,4 @@
-package de.twenty11.skysail.client;
+package de.twenty11.skysail.client.common;
 
 import org.restlet.data.Cookie;
 import org.restlet.data.MediaType;
