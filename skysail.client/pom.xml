@@ -11,7 +11,7 @@
 
 	<artifactId>skysail.client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>skysail common for clients</name>
+	<name>skysail :: client - common for all clients </name>
 	<packaging>bundle</packaging>
 
 	<scm>
@@ -114,11 +114,7 @@
 			<version>1.6.0</version>
 		</dependency> -->
 
-		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>persistence-api</artifactId>
-			<version>1.0.2</version>
-		</dependency>
+		
 	</dependencies>
 
 </project>
