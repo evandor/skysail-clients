@@ -16,7 +16,7 @@
 	<properties>
 		<wicket.dependency.version>1.5.7</wicket.dependency.version>
 		<cglib.version>2.2_2</cglib.version>
-	    <cglib.range>[2,3)</cglib.range>
+		<cglib.range>[2,3)</cglib.range>
 	</properties>
 
 	<artifactId>skysail.client.dbviewer.wicket</artifactId>
@@ -38,38 +38,10 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
+				<!-- <extensions>true</extensions> -->
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<!-- The bundle activator is only required if we do the things by hand. -->
-						<Import-Package>
-							org.apache.wicket,
-							org.apache.wicket.util,
-							org.apache.wicket.event,
-							org.apache.wicket.page,
-							org.apache.wicket.request.resource,
-							org.apache.wicket.request.mapper,
-							org.apache.wicket.request.cycle,
-							org.apache.wicket.markup.html,
-							org.apache.wicket.markup.html.basic,
-							org.apache.wicket.protocol.http,
-							org.apache.wicket.request.http,
-							org.ops4j.pax.wicket.api,
-							org.ops4j.pax.wicket.util,
-							org.osgi.framework,
-							net.sf.cglib.proxy;version="${cglib.range}",
-							net.sf.cglib.core;version="${cglib.range}",
-							net.sf.cglib.reflect;version="${cglib.range}",
-							javax.servlet,
-							org.apache.wicket.settings,
-							org.apache.wicket.session,
-							org.apache.wicket.util.file,
-							org.apache.wicket.request,
-							javax.servlet.http,
-							org.apache.wicket.ajax,
-							org.osgi.service.blueprint
-						</Import-Package>
+						<_include>-osgi.bnd</_include>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -77,7 +49,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
- 					<execution>
+					<execution>
 						<id>copy</id>
 						<phase>install</phase>
 						<goals>
@@ -101,6 +73,12 @@
 	</build>
 
 	<dependencies>
+	    <!-- skysail client common utils -->
+		<dependency>
+			<groupId>de.twentyeleven.skysail</groupId>
+			<artifactId>skysail.client</artifactId>
+			<version>[0.0.1-SNAPSHOT, 1.0)</version>
+		</dependency>
 		<!-- Since we're using OSGi direclty we need a reference to those classes -->
 		<dependency>
 			<groupId>org.osgi</groupId>
@@ -132,6 +110,16 @@
 					<artifactId>slf4j-api</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-extensions</artifactId>
+			<version>${wicket.dependency.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-datetime</artifactId>
+			<version>${wicket.dependency.version}</version>
 		</dependency>
 
 	</dependencies>
