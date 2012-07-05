@@ -11,7 +11,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 import org.restlet.representation.Representation;
 
-import de.skysail.client.ClientUtils;
+import de.twenty11.skysail.client.common.ClientUtils;
 import de.twenty11.skysail.common.grids.GridData;
 import de.twenty11.skysail.common.grids.RowData;
 import de.twenty11.skysail.common.responses.SkysailResponse;
