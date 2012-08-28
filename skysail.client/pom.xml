@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.twentyeleven.skysail</groupId>
 		<artifactId>skysail.build.maven.parentPom</artifactId>
-		<version>0.7.11</version>
+		<version>0.8.2</version>
 	</parent>
 
 	<artifactId>skysail.client</artifactId>
@@ -45,76 +45,48 @@
 		<org.restlet.version>2.0.11</org.restlet.version>
 	</properties>
 
-
 	<dependencies>
 
 		<dependency>
-			<groupId>de.twenty11.skysail</groupId>
+			<groupId>de.twentyeleven.skysail</groupId>
 			<artifactId>skysail.common</artifactId>
-			<version>[0.3.0, 1.0)</version>
+			<version>[0.3.6, 1.0)</version>
 		</dependency>
 
 		<!-- restlet -->
-		<dependency>
-			<groupId>org.restlet.jse</groupId>
+ 		<dependency>
+			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet</artifactId>
-			<version>${org.restlet.version}</version>
 		</dependency>
-		<!-- <dependency> <groupId>org.restlet.jse</groupId> <artifactId>org.restlet.ext.servlet</artifactId> 
-			<version>${org.restlet.version}</version> </dependency> -->
 		<dependency>
-			<groupId>org.restlet.jse</groupId>
+			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet.ext.xml</artifactId>
-			<version>${org.restlet.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.restlet.jse</groupId>
+			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet.ext.xstream</artifactId>
-			<version>${org.restlet.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.restlet.jse</groupId>
+			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet.ext.slf4j</artifactId>
-			<version>${org.restlet.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.restlet.jse</groupId>
+			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet.ext.json</artifactId>
-			<version>${org.restlet.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.restlet.jse</groupId>
+			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet.ext.freemarker</artifactId>
-			<version>${org.restlet.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.restlet.jse</groupId>
+			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet.ext.wadl</artifactId>
-			<version>${org.restlet.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.restlet.jse</groupId>
+			<groupId>org.restlet.jee</groupId>
 			<artifactId>org.restlet.ext.jackson</artifactId>
-			<version>2.0.9</version>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>com.springsource.org.codehaus.jackson.mapper</artifactId>
-			<version>1.4.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>com.springsource.org.codehaus.jackson</artifactId>
-			<version>1.4.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.joda</groupId>
-			<artifactId>com.springsource.org.joda.time</artifactId>
-			<version>1.6.0</version>
-		</dependency> -->
-
-		
 	</dependencies>
 
 </project>
