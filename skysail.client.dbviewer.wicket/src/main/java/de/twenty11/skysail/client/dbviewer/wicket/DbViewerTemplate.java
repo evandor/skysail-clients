@@ -1,9 +1,6 @@
 package de.twenty11.skysail.client.dbviewer.wicket;
 
-import org.apache.wicket.devutils.debugbar.DebugBar;
 import org.apache.wicket.markup.html.WebPage;
-import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.panel.EmptyPanel;
 
 public abstract class DbViewerTemplate extends WebPage {
 
@@ -14,10 +11,10 @@ public abstract class DbViewerTemplate extends WebPage {
 
     public DbViewerTemplate() {
         // http://stackoverflow.com/questions/10683018/wicket-debugbar-devutils-during-production
-        if (getApplication().getDebugSettings().isDevelopmentUtilitiesEnabled()) {
-            add(new DebugBar("debug"));
-        } else {
-            add(new EmptyPanel("debug").setVisible(false));
-        }
+        // if (getApplication().getDebugSettings().isDevelopmentUtilitiesEnabled()) {
+        // add(new DebugBar("debug"));
+        // } else {
+        // add(new EmptyPanel("debug").setVisible(false));
+        // }
     }
 }
