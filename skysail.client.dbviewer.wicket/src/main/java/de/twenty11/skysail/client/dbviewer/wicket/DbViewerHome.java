@@ -1,9 +1,8 @@
 package de.twenty11.skysail.client.dbviewer.wicket;
 
-import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 
-public class DbViewerHome extends WebPage { // extends DbViewerTemplate {
+public class DbViewerHome extends DbViewerTemplate {
 
     /**
      * 
