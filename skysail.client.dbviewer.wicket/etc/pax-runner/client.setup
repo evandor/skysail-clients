@@ -1,0 +1,69 @@
+### ------------------------------------------------
+### equivalent to AbstractFrameworkIntegrationSetup:
+### ------------------------------------------------
+
+mvn:org.slf4j/slf4j-api/1.6.4
+mvn:ch.qos.logback/logback-core/0.9.29
+mvn:ch.qos.logback/logback-classic/0.9.29
+mvn:org.apache.felix/org.apache.felix.log/1.0.1 
+mvn:org.slf4j/jul-to-slf4j/1.6.4
+
+### -------------------------------
+### skysail common and dependencies 
+### -------------------------------
+
+mvn:de.twentyeleven.skysail/skysail.common/0.3.8-SNAPSHOT@update
+mvn:commons-lang/commons-lang/2.6
+mvn:org.codehaus.jackson/jackson-core-lgpl/1.9.5
+mvn:org.codehaus.jackson/jackson-mapper-lgpl/1.9.5
+mvn:javax.xml.stream/com.springsource.javax.xml.stream/1.0.1
+mvn:org.xmlpull/com.springsource.org.xmlpull/1.1.4.c
+mvn:com.thoughtworks.xstream/com.springsource.com.thoughtworks.xstream/1.3.1
+
+### --------------------
+### Other
+### --------------------
+
+mvn:org.osgi/org.osgi.compendium/4.2.0
+
+mvn:org.restlet.osgi/org.restlet/2.1.0
+mvn:org.restlet.osgi/org.restlet.ext.xml/2.1.0
+mvn:org.restlet.osgi/org.restlet.ext.jackson/2.1.0
+mvn:org.restlet.osgi/org.restlet.ext.xstream/2.1.0
+mvn:org.restlet.osgi/org.restlet.ext.wadl/2.1.0
+mvn:org.restlet.osgi/org.restlet.ext.json/2.1.0
+ 
+### mvn:commons-dbcp/commons-dbcp/1.4 
+### mvn:de.twentyeleven.skysail/skysail.fragment.commons.dbcp/0.0.1-SNAPSHOT
+### mvn:commons-pool/commons-pool/1.6 
+### mvn:mysql/mysql-connector-java/5.1.21 
+mvn:org.apache.felix/org.apache.felix.fileinstall/3.2.4 
+mvn:de.twentyeleven.skysail/org.json-osgi/20080701
+
+
+### -------------------------------
+### Client Side 
+### -------------------------------
+
+mvn:de.twentyeleven.skysail/skysail.client/0.0.1-SNAPSHOT@update
+###mvn:de.twentyeleven.skysail/skysail.client.dbviewer.wicket/0.0.1-SNAPSHOT@update
+file:/home/carsten/git/skysail-clients/skysail.client.dbviewer.wicket/target/skysail.client.dbviewer.wicket-0.0.1-SNAPSHOT.jar
+
+###mvn:javax.servlet/javax.servlet/3.0.0.v201103241009
+mvn:javax.servlet/com.springsource.javax.servlet/2.5.0
+mvn:net.sourceforge.cglib/com.springsource.net.sf.cglib/2.2.0
+
+mvn:org.ops4j.pax.wicket/org.ops4j.pax.wicket.service/1.1.0
+
+mvn:org.apache.felix/org.apache.felix.http.jetty/2.2.0
+
+#mvn:org.apache.wicket/wicket-core/1.5.8
+#mvn:org.apache.wicket/wicket-request/1.5.8
+#mvn:org.apache.wicket/wicket-util/1.5.8
+#mvn:org.apache.wicket/wicket-devutils/1.5.8
+#mvn:org.apache.wicket/wicket-extensions/1.5.8
+
+mvn:org.apache.aries.blueprint/org.apache.aries.blueprint/1.0.0
+mvn:org.apache.aries.proxy/org.apache.aries.proxy/1.0.0
+mvn:org.apache.aries/org.apache.aries.util/1.0.0
+

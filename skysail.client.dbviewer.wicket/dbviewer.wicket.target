@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+
+<target name="Running Platform" sequenceNumber="13">
+<locations>
+<location path="${eclipse_home}" type="Profile"/>
+<location path="/home/carsten/.m2/repository/org/ops4j/pax/wicket/org.ops4j.pax.wicket.service/1.1.0" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/apache/aries/blueprint/org.apache.aries.blueprint/1.0.0" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/apache/aries/proxy/org.apache.aries.proxy/1.0.0" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/apache/aries/org.apache.aries.util/1.0.0" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/apache/felix/org.apache.felix.framework/3.2.2" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/slf4j/slf4j-api/1.6.4" type="Directory"/>
+<location path="/home/carsten/.m2/repository/ch/qos/logback/logback-core/0.9.29" type="Directory"/>
+<location path="/home/carsten/.m2/repository/ch/qos/logback/logback-classic/0.9.29" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/osgi/org.osgi.enterprise/4.2.0" type="Directory"/>
+</locations>
+<environment>
+<os>linux</os>
+<ws>gtk</ws>
+<arch>x86_64</arch>
+<nl>en_US</nl>
+</environment>
+<launcherArgs>
+<vmArgs>-Dosgi.requiredJavaVersion=1.5 -Dhelp.lucene.tokenizer=standard -XX:MaxPermSize=256m -Xms40m -Xmx512m</vmArgs>
+</launcherArgs>
+</target>
