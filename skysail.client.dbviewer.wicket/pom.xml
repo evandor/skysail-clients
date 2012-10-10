@@ -79,6 +79,11 @@
 			<artifactId>skysail.client</artifactId>
 			<version>[0.0.1-SNAPSHOT, 1.0)</version>
 		</dependency>
+        <dependency>
+            <groupId>de.twentyeleven.skysail</groupId>
+            <artifactId>skysail.common.ext.dbviewer</artifactId>
+            <version>[0.0.1-SNAPSHOT, 1.0)</version>
+        </dependency>
 		<!-- Since we're using OSGi direclty we need a reference to those classes -->
 		<dependency>
 			<groupId>org.osgi</groupId>

@@ -33,21 +33,22 @@ mvn:org.restlet.osgi/org.restlet.ext.xstream/2.1.0
 mvn:org.restlet.osgi/org.restlet.ext.wadl/2.1.0
 mvn:org.restlet.osgi/org.restlet.ext.json/2.1.0
  
-### mvn:commons-dbcp/commons-dbcp/1.4 
-### mvn:de.twentyeleven.skysail/skysail.fragment.commons.dbcp/0.0.1-SNAPSHOT
-### mvn:commons-pool/commons-pool/1.6 
-### mvn:mysql/mysql-connector-java/5.1.21 
 mvn:org.apache.felix/org.apache.felix.fileinstall/3.2.4 
 mvn:de.twentyeleven.skysail/org.json-osgi/20080701
 
+
+### -------------------------------
+### Common Side 
+### -------------------------------
+
+mvn:de.twentyeleven.skysail/skysail.server/0.2.6-SNAPSHOT@update
+mvn:de.twentyeleven.skysail/skysail.common.ext.dbviewer/0.0.1-SNAPSHOT@update
 
 ### -------------------------------
 ### Client Side 
 ### -------------------------------
 
 mvn:de.twentyeleven.skysail/skysail.client/0.0.1-SNAPSHOT@update
-###mvn:de.twentyeleven.skysail/skysail.client.dbviewer.wicket/0.0.1-SNAPSHOT@update
-file:/home/carsten/git/skysail-clients/skysail.client.dbviewer.wicket/target/skysail.client.dbviewer.wicket-0.0.1-SNAPSHOT.jar
 
 ###mvn:javax.servlet/javax.servlet/3.0.0.v201103241009
 mvn:javax.servlet/com.springsource.javax.servlet/2.5.0
@@ -67,3 +68,5 @@ mvn:org.apache.aries.blueprint/org.apache.aries.blueprint/1.0.0
 mvn:org.apache.aries.proxy/org.apache.aries.proxy/1.0.0
 mvn:org.apache.aries/org.apache.aries.util/1.0.0
 
+### at the very end for pax wicket to pick it up correctly
+file:/home/carsten/git/skysail-clients/skysail.client.dbviewer.wicket/target/skysail.client.dbviewer.wicket-0.0.1-SNAPSHOT.jar

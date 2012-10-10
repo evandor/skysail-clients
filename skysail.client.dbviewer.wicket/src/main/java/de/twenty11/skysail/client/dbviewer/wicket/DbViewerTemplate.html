@@ -1,45 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
 <head>
+    <meta charset='utf-8' />
     <title wicket:id="title">title comes here</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link rel="stylesheet" type="text/css" href="template/style.css"/>
-</head>
-<body>
-    <span wicket:id="mainNavigation"/>
-
-    <div id="header" class="borderedBlock">
-     <table width="100%">
-      <tr>
-       <td id="ad">
-         <span wicket:id="ad">ad comes here</span>
-       </td>
-       <td id="changeAddButton">
-         <input type="button" wicket:id="changeAdLink" value="change ad" />
-       </td>
-      </tr>
-     </table>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <style type='text/css'>
+      /*<![CDATA[*/
+        body {
+          padding-top: 60px;
+        }
+      /*]]>*/
+    </style>
+    <link href='http://localhost:4242/stylesheets/styles.css' rel='stylesheet' type='text/css' />
+    <!--[if lt IE 9]>
+      <script src='//html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class='navbar navbar-fixed-top'>
+      <div class='navbar-inner'>
+        <div class='container'>
+          <a class='brand' href='http://localhost:4242'>Skysail</a>
+          <ul class='nav'>
+            <li>
+              <a href='http://localhost:4242'>Home</a>
+            </li>
+            <li>
+              <a href='http://localhost:4242/news/'>News</a>
+            </li>
+            <li class='dropdown' id='getting-started-menu'>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#getting-started-menu'>
+                Bundles
+                <b class='caret'></b>
+              </a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='http://localhost:4242/bundles/'>General</a>
+                </li>
+                <li>
+                  <a href='http://localhost:4242/layout/'>Skysail Common</a>
+                </li>
+                <li>
+                  <a href='http://localhost:4242/bundles/dbviewer/'>Skysail Server Extension DbViewer</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <div class='container'>
 
-    <table width="100%">
+      <wicket:child />
 
-      <tr>
-        <td id="left" class="borderedBlock">
-         <ul>
-          <li><a href="#" wicket:id="page1Link">Page 1</a></li>
-          <li><a href="#" wicket:id="page2Link">Page 2</a></li>
-         </ul>
-        </td>
-        <td id="content" class="borderedBlock">
-            <wicket:child />
-        </td>
-      </tr>
-
-    </table>
-
-    <div id="footer" class="borderedBlock">
-     footer
+      <hr />
+      <footer>
+        <p>&copy; skysail 2012</p>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>
+        <script src='http://localhost:4242/javascripts/bootstrap-dropdown.js' type='text/javascript'></script>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>
