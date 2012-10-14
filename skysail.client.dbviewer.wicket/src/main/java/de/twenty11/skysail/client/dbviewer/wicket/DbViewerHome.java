@@ -7,7 +7,7 @@ import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 
-import de.twenty11.skysail.client.dbviewer.wicket.pages.ConnectionsPage;
+import de.twenty11.skysail.client.dbviewer.wicket.pages.ConnectionPage;
 import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 
@@ -27,7 +27,7 @@ public class DbViewerHome extends DbViewerTemplate {
                 item.add(new Label("connectionName", connection.getId()));
             }
         });
-        add(new BookmarkablePageLink("addConnection", ConnectionsPage.class));
+        add(new BookmarkablePageLink("addConnection", ConnectionPage.class));
     }
 
     private List<ConnectionDetails> getConnections() {
