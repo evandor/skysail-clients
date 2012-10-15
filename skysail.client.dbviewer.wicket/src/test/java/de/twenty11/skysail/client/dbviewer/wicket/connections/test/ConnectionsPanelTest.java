@@ -15,9 +15,12 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.internal.matchers.Any;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.restlet.resource.ClientResource;
 
+import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsModel;
+import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -43,9 +46,11 @@ public class ConnectionsPanelTest {
 
     @Test
     public void getsProperErrorMessageWhenServerIsDown() {
-        ClientResource clientResource = mock(ClientResource.class);
-        when(clientResource.wrap(RestfulConnections.class)).thenReturn(null);
-        tester.startPage(ConnectionsPanelTestPage.class);
+        ConnectionsProxy proxyMock = mock(ConnectionsProxy.class);
+        when(proxyMock.getRestfulConnections()).thenReturn(null);
+        tester.startPage(new ConnectionsPanelTestPage(proxyMock));
+        tester.debugComponentTrees();
+        tester.dumpPage();
         tester.assertRenderedPage(ConnectionsPanelTestPage.class);
         TagTester msgTag = tester.getTagByWicketId("connectionsMessage");
         assertThat(msgTag.getValue(), is(equalTo("Communication Error")));
