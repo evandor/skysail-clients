@@ -9,9 +9,7 @@ import org.apache.wicket.model.LoadableDetachableModel;
 
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
-import de.twenty11.skysail.common.grids.GridData;
 import de.twenty11.skysail.common.responses.Response;
-import de.twenty11.skysail.common.responses.SkysailResponse;
 
 public class ConnectionsModel extends LoadableDetachableModel<List<ConnectionDetails>> {
 
@@ -24,8 +22,8 @@ public class ConnectionsModel extends LoadableDetachableModel<List<ConnectionDet
 
         try {
             RestfulConnections proxy = connectionsProxy.getRestfulConnections();
-            Response<List<ConnectionDetails>> connections = proxy.getConnections();
-            return null;
+            Response<List<ConnectionDetails>> response = proxy.getConnections();
+            return response.getData();
         } catch (Exception e) {
             messageLabel.setVisible(true);
             messageLabel.getPage().get("connectionPanel:" + ConnectionsPanel.CONNECTIONS).setVisible(false);
