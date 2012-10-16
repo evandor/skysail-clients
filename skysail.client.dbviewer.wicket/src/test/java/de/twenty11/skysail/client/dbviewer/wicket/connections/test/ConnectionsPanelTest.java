@@ -38,7 +38,6 @@ public class ConnectionsPanelTest {
     }
 
     @Test
-    @Ignore
     public void canRenderListOfConnections() {
         tester.startPage(ConnectionsPanelTestPage.class);
         tester.assertRenderedPage(ConnectionsPanelTestPage.class);
