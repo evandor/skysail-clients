@@ -24,6 +24,7 @@ public class ConnectionsPanel extends Panel {
         
         ConnectionsModel model = new ConnectionsModel();
         model.setConnectionsProxy(proxy);
+        model.setErrorMessageLabel(connectionsMessage);
         ListView<ConnectionDetails> connections = new ListView<ConnectionDetails>(CONNECTIONS, model) {
             @Override
             protected void populateItem(ListItem<ConnectionDetails> item) {
