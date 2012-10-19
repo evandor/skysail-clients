@@ -11,7 +11,7 @@
 --clean \
 --log=WARNING \
 --vmOptions="\
- -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 \
+ -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5006 \
  -Dfelix.fileinstall.dir=../config \
  -Dfelix.fileinstall.filter=skysail.*.jar|.*\\.cfg \
  -Dfelix.fileinstall.noInitialDelay=true \
