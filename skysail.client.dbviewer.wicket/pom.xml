@@ -23,7 +23,7 @@
 	<artifactId>skysail.client.dbviewer.wicket</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>skysail wicket client for dbviewer</name>
-	<packaging>bundle</packaging>
+	<packaging>war</packaging>
 
 	<scm>
 		<!-- read access -->
@@ -35,6 +35,39 @@
 	</scm>
 
 	<build>
+		<resources>
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<filtering>false</filtering>
+				<directory>src/test/resources</directory>
+			</testResource>
+			<testResource>
+				<filtering>false</filtering>
+				<directory>src/test/java</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
@@ -70,7 +103,8 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin> <!-- to create an (additional) war file to be run in server instead of default OSGi approach -->
+			<plugin> <!-- to create an (additional) war file to be run in server instead of default 
+					OSGi approach -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.3</version>
@@ -143,7 +177,7 @@
 			<version>1.9.0</version>
 		</dependency>
 
-		<!--  JETTY DEPENDENCIES FOR TESTING  -->
+		<!-- JETTY DEPENDENCIES FOR TESTING -->
 		<dependency>
 			<groupId>org.eclipse.jetty.aggregate</groupId>
 			<artifactId>jetty-all-server</artifactId>
