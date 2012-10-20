@@ -16,6 +16,7 @@ import org.apache.wicket.WicketRuntimeException;
 import org.apache.wicket.util.tester.TagTester;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -55,12 +56,13 @@ public class ConnectionsPanelTest {
 
     @Test
     public void rendersListOfConnectionsSuccessfully() {
+        final String identifier = "id";
         RestfulConnections answer = new RestfulConnections() {
             @Override
             @Get
             public Response<List<ConnectionDetails>> getConnections() {
                 List<ConnectionDetails> data = new ArrayList<ConnectionDetails>();
-                data.add(new ConnectionDetails("id", "username", "password", "url", "driverClassName"));
+                data.add(new ConnectionDetails(identifier, "username", "password", "url", "driverClassName"));
                 Response<List<ConnectionDetails>> result = new SuccessResponse<List<ConnectionDetails>>(data);
                 return result;
             }
@@ -73,11 +75,10 @@ public class ConnectionsPanelTest {
         };
         when(proxyMock.getRestfulConnections()).thenReturn(answer);
         tester.startPage(page);
-        tester.dumpPage();
         tester.assertRenderedPage(ConnectionsPanelTestPage.class);
         List<TagTester> connectionNames = tester.getTagsByWicketId("connectionName");
         assertThat(connectionNames.size(), is(equalTo(1)));
-        assertThat(connectionNames.get(0).getValue(), is(equalTo("id")));
+        assertThat(connectionNames.get(0).getValue(), is(equalTo(identifier)));
     }
 
     @Test
