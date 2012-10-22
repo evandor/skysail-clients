@@ -12,6 +12,7 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 import org.apache.wicket.model.Model;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,7 +35,7 @@ public class ConnectionsPanel extends Panel {
         final Label panelMessage = new Label("connectionsMessage", new Model<String>(""));
         panelMessage.setVisible(false);
         final BookmarkablePageLink<String> newConnectionButton = new BookmarkablePageLink<String>("addConnection", ConnectionPage.class);
-        
+
         LoadableDetachableModel<List<ConnectionDetails>> panelModel = new LoadableDetachableModel<List<ConnectionDetails>>() {
 
             @Override
@@ -62,6 +63,9 @@ public class ConnectionsPanel extends Panel {
                 Map modelObject = (Map)item.getModelObject();
                 //ConnectionDetails connection = (ConnectionDetails) item.getModelObject();
                 item.add(new Label("connectionName", (String)modelObject.get("id")));
+                PageParameters pars = new PageParameters();
+                pars.add("id", (String)modelObject.get("id"));
+                item.add(new BookmarkablePageLink("edit", ConnectionPage.class, pars));
             }
         };
 
