@@ -24,7 +24,7 @@ public class DbviewerWicketApplication extends WebApplication {
 
     @Override
     public Session newSession(Request request, Response response) {
-        return new DbviewerSession(request);
+        return new DbViewerSession(request);
     }
 
 }

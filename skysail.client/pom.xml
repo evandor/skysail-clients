@@ -46,6 +46,12 @@
 			<groupId>de.twentyeleven.skysail</groupId>
 			<artifactId>skysail.common</artifactId>
 			<version>[0.3.6, 1.0)</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.restlet.osgi</groupId>
+					<artifactId>org.restlet.ext.jetty</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 	</dependencies>

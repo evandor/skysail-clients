@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.twenty11.skysail.client.dbviewer.wicket.connection.ConnectionPage;
+import de.twenty11.skysail.client.dbviewer.wicket.proxies.ConnectionsProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
 import de.twenty11.skysail.common.responses.Response;
@@ -44,7 +45,7 @@ public class ConnectionsPanel extends Panel {
                     logger.info("found {} connections", response.getData().size());
                     return response.getData();
                 } catch (Exception e) {
-                    //logger.error("Exception thrown trying to access skysail server: {}", e.getMessage(), e);
+                    logger.error("Exception thrown trying to access skysail server: {}", e.getMessage(), e);
                     panelMessage.setVisible(true);
                     IModel<String> defaultModel = (IModel<String>) panelMessage.getDefaultModel();
                     defaultModel.setObject(e.getMessage());

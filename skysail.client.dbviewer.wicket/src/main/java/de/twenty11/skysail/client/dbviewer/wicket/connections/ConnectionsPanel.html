@@ -1,8 +1,12 @@
 
 <wicket:panel xmlns:wicket="http://wicket.apache.org">
     <div >
-		<ul wicket:id="connections">
-			<li wicket:id="connectionName" />
+		<ul>
+			<li wicket:id="connections">
+				<b wicket:id="connectionName">name</b>
+				[edit]
+				[<a href='#'>delete</a>]
+			</li>
 		</ul>
 	</div>
     <div wicket:id="connectionsMessage">potential error or info message comes here</div>

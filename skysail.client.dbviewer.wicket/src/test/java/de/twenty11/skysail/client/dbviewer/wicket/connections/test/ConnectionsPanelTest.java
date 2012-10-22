@@ -23,7 +23,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.restlet.resource.Get;
 import org.restlet.resource.Post;
 
-import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
+import de.twenty11.skysail.client.dbviewer.wicket.proxies.ConnectionsProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
 import de.twenty11.skysail.common.responses.Response;

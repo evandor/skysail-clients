@@ -1,4 +1,4 @@
-package de.twenty11.skysail.client.dbviewer.wicket.connections;
+package de.twenty11.skysail.client.dbviewer.wicket.proxies;
 
 import org.apache.wicket.WicketRuntimeException;
 import org.restlet.data.ChallengeResponse;
@@ -10,6 +10,10 @@ import org.restlet.resource.ClientResource;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
 
+/**
+ * Access point for remote server for connections
+ *
+ */
 public class ConnectionsProxy {
 
     public RestfulConnections getRestfulConnections() {
