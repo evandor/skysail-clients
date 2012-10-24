@@ -1,5 +1,7 @@
 package de.twenty11.skysail.client.dbviewer.wicket.connection;
 
+import java.util.Map;
+
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
@@ -15,6 +17,7 @@ import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
 import de.twenty11.skysail.common.MapData;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnection;
+import de.twenty11.skysail.common.responses.Response;
 
 @SuppressWarnings("serial")
 public class ConnectionPage extends DbViewerTemplate {
@@ -23,8 +26,11 @@ public class ConnectionPage extends DbViewerTemplate {
         StringValue id = parameters.get("id");
         ConnectionProxy proxy = new ConnectionProxy();
         RestfulConnection restfulConnection = proxy.getRestfulConnection(id.toString());
-        MapData connection = restfulConnection.getConnection().getData();
-        final ConnectionDetails connectionDetails = new ConnectionDetails(connection.getValue("id"), "", "", "", "");
+        Response<MapData> connection2 = restfulConnection.getConnection();
+        MapData data2 = connection2.getData();
+        Map<String, String> dictionary = data2.getDictionary();
+        Map connection = (Map)restfulConnection.getConnection().getData().getDictionary();
+        final ConnectionDetails connectionDetails = new ConnectionDetails((String)connection.get("id"), "", "", "", "");
         createForm(connectionDetails);
     }
     
