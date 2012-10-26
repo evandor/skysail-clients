@@ -26,10 +26,10 @@ public class TablesPanel extends Panel {
 
     public TablesPanel(String id, final TablesProxy proxy) {
         super(id);
-        
+
         final Label panelMessage = new Label("tablesMessage", new Model<String>(""));
         panelMessage.setVisible(false);
-        
+
         LoadableDetachableModel<List<String>> panelModel = new LoadableDetachableModel<List<String>>() {
 
             @Override
@@ -40,16 +40,16 @@ public class TablesPanel extends Panel {
                     logger.info("found {} tables", response.getData().size());
                     return response.getData();
                 } catch (Exception e) {
-                    logger.error("Exception thrown trying to access skysail server: {}", e.getMessage(), e);
+                    // logger.error("Exception thrown trying to access skysail server: {}", e.getMessage(), e);
                     panelMessage.setVisible(true);
                     IModel<String> defaultModel = (IModel<String>) panelMessage.getDefaultModel();
                     defaultModel.setObject(e.getMessage());
                     return Collections.emptyList();
                 }
             }
-            
+
         };
-        
+
         ListView<String> connections = new ListView<String>(TABLES, panelModel) {
             @Override
             protected void populateItem(ListItem<String> item) {
