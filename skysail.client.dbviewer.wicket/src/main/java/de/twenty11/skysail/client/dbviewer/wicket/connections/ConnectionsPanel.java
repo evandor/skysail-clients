@@ -20,6 +20,7 @@ import org.restlet.ext.jackson.JacksonConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import de.twenty11.skysail.client.dbviewer.wicket.DbViewerHome;
 import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
 import de.twenty11.skysail.client.dbviewer.wicket.connection.ConnectionPage;
 import de.twenty11.skysail.client.dbviewer.wicket.connection.MyLocalJacksonCustomConverter;
@@ -83,8 +84,7 @@ public class ConnectionsPanel extends Panel {
 
                     @Override
                     public void onClick() {
-                        // TODO Auto-generated method stub
-
+                        setResponsePage(DbViewerHome.class);
                     }
                 });
             }
