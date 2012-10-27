@@ -16,7 +16,6 @@ import org.apache.wicket.WicketRuntimeException;
 import org.apache.wicket.util.tester.TagTester;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -27,7 +26,6 @@ import de.twenty11.skysail.client.dbviewer.wicket.proxies.ConnectionsProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
 import de.twenty11.skysail.common.responses.Response;
-import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.responses.SuccessResponse;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -55,7 +53,6 @@ public class ConnectionsPanelTest {
     }
 
     @Test
-    @Ignore
     public void rendersListOfConnectionsSuccessfully() {
         final String identifier = "id";
         RestfulConnections answer = new RestfulConnections() {
@@ -67,10 +64,10 @@ public class ConnectionsPanelTest {
                 Response<List<ConnectionDetails>> result = new SuccessResponse<List<ConnectionDetails>>(data);
                 return result;
             }
-            
+
             @Override
             @Post
-            public SkysailResponse<?> addConnection(ConnectionDetails entity) {
+            public Response<?> addConnection(ConnectionDetails entity) {
                 return null;
             }
         };
@@ -84,17 +81,17 @@ public class ConnectionsPanelTest {
 
     @Test
     public void getsProperErrorMessageWhenServerIsDown() {
-        
+
         RestfulConnections answer = new RestfulConnections() {
             @Override
             @Get
             public Response<List<ConnectionDetails>> getConnections() {
                 throw new WicketRuntimeException("Communication Error");
             }
-            
+
             @Override
             @Post
-            public SkysailResponse<?> addConnection(ConnectionDetails entity) {
+            public Response<?> addConnection(ConnectionDetails entity) {
                 return null;
             }
         };
@@ -113,10 +110,10 @@ public class ConnectionsPanelTest {
             public Response<List<ConnectionDetails>> getConnections() {
                 throw new WicketRuntimeException("Communication Error");
             }
-            
+
             @Override
             @Post
-            public SkysailResponse<?> addConnection(ConnectionDetails entity) {
+            public Response<?> addConnection(ConnectionDetails entity) {
                 return null;
             }
         };

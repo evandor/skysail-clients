@@ -2,7 +2,6 @@ package de.twenty11.skysail.client.dbviewer.wicket.connections;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
@@ -17,6 +16,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.codehaus.jackson.type.TypeReference;
 import org.restlet.engine.converter.ConverterHelper;
 import org.restlet.ext.jackson.JacksonConverter;
+import org.restlet.representation.Representation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +24,7 @@ import de.twenty11.skysail.client.dbviewer.wicket.DbViewerHome;
 import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
 import de.twenty11.skysail.client.dbviewer.wicket.connection.ConnectionPage;
 import de.twenty11.skysail.client.dbviewer.wicket.connection.MyLocalJacksonCustomConverter;
+import de.twenty11.skysail.client.dbviewer.wicket.proxies.ConnectionProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.proxies.ConnectionsProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
@@ -40,9 +41,9 @@ public class ConnectionsPanel extends Panel {
         super(id);
 
         ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                new TypeReference<Response<ConnectionDetails>>() {
+                new TypeReference<Response<List<ConnectionDetails>>>() {
                 });
-        RestletUtils.replaceConverter(JacksonConverter.class, new JacksonConverter());
+        RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
 
         final Label panelMessage = new Label("connectionsMessage", new Model<String>(""));
         panelMessage.setVisible(false);
@@ -73,17 +74,19 @@ public class ConnectionsPanel extends Panel {
         ListView<ConnectionDetails> connections = new ListView<ConnectionDetails>(CONNECTIONS, panelModel) {
             @Override
             protected void populateItem(ListItem<ConnectionDetails> item) {
-                Map modelObject = (Map) item.getModelObject();
-                // ConnectionDetails connection = (ConnectionDetails) item.getModelObject();
-                item.add(new Label("connectionName", (String) modelObject.get("id")));
+                // final Map modelObject = (Map) item.getModelObject();
+                final ConnectionDetails connection = (ConnectionDetails) item.getModelObject();
+                item.add(new Label("connectionName", connection.getId()));
                 PageParameters pars = new PageParameters();
-                pars.add("id", (String) modelObject.get("id"));
+                pars.add("id", connection.getId());
                 item.add(new BookmarkablePageLink("edit", ConnectionPage.class, pars));
-                // item.add(new BookmarkablePageLink("delete", ConnectionPage.class, pars));
                 item.add(new Link("delete") {
 
                     @Override
                     public void onClick() {
+                        // String idToDelete = (String) modelObject.get("id");
+                        ConnectionProxy proxy = new ConnectionProxy();
+                        Representation answer = proxy.deleteConnection(connection.getId());
                         setResponsePage(DbViewerHome.class);
                     }
                 });

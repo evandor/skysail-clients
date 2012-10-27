@@ -1,13 +1,17 @@
 package de.twenty11.skysail.client.dbviewer.wicket.connection;
 
+import java.io.IOException;
 import java.util.Map;
 
+import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.util.string.StringValue;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 import org.restlet.engine.converter.ConverterHelper;
 import org.restlet.ext.jackson.JacksonConverter;
@@ -25,6 +29,8 @@ import de.twenty11.skysail.common.responses.Response;
 
 @SuppressWarnings("serial")
 public class ConnectionPage extends DbViewerTemplate {
+
+    private Label messageLabel = new Label("message", new Model(""));
 
     public ConnectionPage(PageParameters parameters) {
         StringValue id = parameters.get("id");
@@ -52,11 +58,26 @@ public class ConnectionPage extends DbViewerTemplate {
         form.add(new TextField("id", new PropertyModel(connection, "id")));
         form.add(new TextField("username", new PropertyModel(connection, "username")));
         form.add(new TextField("password", new PropertyModel(connection, "password")));
+        form.add(messageLabel);
 
         form.add(new Button("order") {
             @Override
             public void onSubmit() {
                 Representation answer = new ConnectionsProxy().addConnection(connection);
+                try {
+                    String jsonString = answer.getText();
+                    Response<?> response = new ObjectMapper().readValue(jsonString, new TypeReference<Response<?>>() {
+                    });
+                    if (!response.getSuccess()) {
+                        messageLabel.setDefaultModel(new Model(response.getMessage()));
+                        setResponsePage(getPage());
+                        return;
+                    }
+
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
                 setResponsePage(DbViewerHome.class);
             }
         });
