@@ -1,14 +1,17 @@
 
 <wicket:panel xmlns:wicket="http://wicket.apache.org">
+
+    <div wicket:id="errorMessage" style="border:1px solid red;">potential error or info message comes here</div>
     <div >
 		<ul>
 			<li wicket:id="connections">
 				<b wicket:id="connectionName">name</b>
+                [<a href='#' wicket:id="select">select</a>]
 				[<a href='#' wicket:id="edit">edit</a>]
 				[<a href='#' wicket:id="delete">delete</a>]
 			</li>
 		</ul>
 	</div>
-    <div wicket:id="connectionsMessage">potential error or info message comes here</div>
     <input type="button" wicket:id="addConnection" value="New Connection"></input>
+
 </wicket:panel>

@@ -98,7 +98,7 @@ public class ConnectionsPanelTest {
         when(proxyMock.getRestfulConnections()).thenReturn(answer);
         tester.startPage(page);
         tester.assertRenderedPage(ConnectionsPanelTestPage.class);
-        TagTester msgTag = tester.getTagByWicketId("connectionsMessage");
+        TagTester msgTag = tester.getTagByWicketId("errorMessage");
         assertThat(msgTag.getValue(), is(equalTo("Communication Error")));
     }
 
@@ -120,7 +120,7 @@ public class ConnectionsPanelTest {
         when(proxyMock.getRestfulConnections()).thenReturn(answer);
         tester.startPage(page);
         tester.assertRenderedPage(ConnectionsPanelTestPage.class);
-        TagTester msgTag = tester.getTagByWicketId("connectionsMessage");
+        TagTester msgTag = tester.getTagByWicketId("errorMessage");
         assertThat(msgTag.getValue(), is(equalTo("Communication Error")));
     }
 

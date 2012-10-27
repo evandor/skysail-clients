@@ -9,11 +9,11 @@ import org.restlet.resource.Resource;
 
 import de.twenty11.skysail.common.responses.Response;
 
-public class MyLocalJacksonCustomConverter<T> extends JacksonConverter {
+public class MyLocalJacksonCustomConverter<E> extends JacksonConverter {
 
-    private TypeReference<Response<T>> type;
+    private TypeReference<Response<E>> type;
 
-    public MyLocalJacksonCustomConverter(TypeReference<Response<T>> typeReference) {
+    public MyLocalJacksonCustomConverter(TypeReference<Response<E>> typeReference) {
         this.type = typeReference;
     }
 
