@@ -3,7 +3,7 @@ package de.twenty11.skysail.client.dbviewer.wicket.connections.test;
 import org.apache.wicket.markup.html.WebPage;
 
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel;
-import de.twenty11.skysail.client.dbviewer.wicket.proxies.ConnectionsProxy;
+import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 
 public class ConnectionsPanelTestPage extends WebPage {
 

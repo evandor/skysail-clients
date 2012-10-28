@@ -19,8 +19,7 @@ import org.restlet.representation.Representation;
 
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerHome;
 import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
-import de.twenty11.skysail.client.dbviewer.wicket.proxies.ConnectionProxy;
-import de.twenty11.skysail.client.dbviewer.wicket.proxies.ConnectionsProxy;
+import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
 import de.twenty11.skysail.common.MapData;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
