@@ -15,18 +15,16 @@ public class ConnectionsModel extends LoadableDetachableModel<List<ConnectionDet
 
     private static final long serialVersionUID = -5645764949454058272L;
     private static final Logger logger = LoggerFactory.getLogger(ConnectionsModel.class);
-    private ConnectionsProxy proxy;
     private ConnectionsPanel panel;
 
-    public ConnectionsModel(ConnectionsProxy proxy, ConnectionsPanel connectionsPanel) {
-        this.proxy = proxy;
+    public ConnectionsModel(ConnectionsPanel connectionsPanel) {
         panel = connectionsPanel;
     }
 
     @Override
     protected List<ConnectionDetails> load() {
         try {
-            RestfulConnections restfulConnections = proxy.getRestfulConnections();
+            RestfulConnections restfulConnections = panel.getProxy().getRestfulConnections();
             Response<List<ConnectionDetails>> response = restfulConnections.getConnections();
             logger.info("found {} connections", response.getData().size());
             return response.getData();
@@ -35,5 +33,4 @@ public class ConnectionsModel extends LoadableDetachableModel<List<ConnectionDet
             return Collections.emptyList();
         }
     }
-
 }

@@ -11,6 +11,10 @@ import de.twenty11.skysail.common.responses.Response;
 
 public class MyLocalJacksonCustomConverter<E> extends JacksonConverter {
 
+    /**
+     * @uml.property  name="type"
+     * @uml.associationEnd  multiplicity="(1 1)"
+     */
     private TypeReference<Response<E>> type;
 
     public MyLocalJacksonCustomConverter(TypeReference<Response<E>> typeReference) {

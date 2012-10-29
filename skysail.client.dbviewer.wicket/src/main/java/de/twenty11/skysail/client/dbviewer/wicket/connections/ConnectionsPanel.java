@@ -26,7 +26,7 @@ public class ConnectionsPanel extends Panel {
 
     private static final long serialVersionUID = 5884156412839557835L;
     private static final Logger logger = LoggerFactory.getLogger(ConnectionsPanel.class);
-    private ConnectionsProxy proxy;
+    private transient ConnectionsProxy proxy;
     private Label errorMessage;
     private BookmarkablePageLink<String> newConnection;
 
@@ -56,7 +56,7 @@ public class ConnectionsPanel extends Panel {
         };
 
         ListView<ConnectionDetails> connections = new ConnectionsListView(CONNECTIONS,
-                new ConnectionsModel(proxy, this));
+                new ConnectionsModel(this));
 
         add(connections);
         add(errorMessage);
@@ -65,6 +65,10 @@ public class ConnectionsPanel extends Panel {
 
     public void setErrorMessage(String message) {
         errorMessage.setDefaultModelObject(message);
+    }
+
+    public ConnectionsProxy getProxy() {
+        return proxy;
     }
 
     private void adjustJacksonConverterForRestlet() {

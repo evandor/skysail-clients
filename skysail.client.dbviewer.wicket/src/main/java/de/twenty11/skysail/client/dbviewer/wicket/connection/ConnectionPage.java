@@ -29,6 +29,10 @@ import de.twenty11.skysail.common.responses.Response;
 @SuppressWarnings("serial")
 public class ConnectionPage extends DbViewerTemplate {
 
+    /**
+     * @uml.property  name="messageLabel"
+     * @uml.associationEnd  multiplicity="(1 1)"
+     */
     private Label messageLabel = new Label("message", new Model(""));
 
     public ConnectionPage(PageParameters parameters) {
@@ -47,16 +51,18 @@ public class ConnectionPage extends DbViewerTemplate {
     }
 
     public ConnectionPage() {
-        final ConnectionDetails connection = new ConnectionDetails("", "", "", "", "");
+        final ConnectionDetails connection = new ConnectionDetails("", "root", "", "jdbc:mysql://[host][:port]/[database]", "com.mysql.jdbc.Driver");
         createForm(connection);
     }
 
     private void createForm(final ConnectionDetails connection) {
         Form form = new Form("form");
         add(form);
-        form.add(new TextField("id", new PropertyModel(connection, "id")));
-        form.add(new TextField("username", new PropertyModel(connection, "username")));
-        form.add(new TextField("password", new PropertyModel(connection, "password")));
+        form.add(new TextField<String>("id", new PropertyModel(connection, "id")));
+        form.add(new TextField<String>("username", new PropertyModel(connection, "username")));
+        form.add(new TextField<String>("password", new PropertyModel(connection, "password")));
+        form.add(new TextField<String>("url", new PropertyModel(connection, "url")));
+        form.add(new TextField<String>("driverName", new PropertyModel(connection, "driverName")));
         form.add(messageLabel);
 
         form.add(new Button("order") {

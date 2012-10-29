@@ -1,0 +1,89 @@
+<sequence-diagram version="1.0.10" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsModel" 
+    project="skysail.client.dbviewer.wicket" 
+    file="/skysail.client.dbviewer.wicket/src/main/java/de/twenty11/skysail/client/dbviewer/wicket/connections/ConnectionsModel.java" 
+    binary="false" label="connectionsModel" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="512" y="0"/>    
+    <execution id="2">      
+      <position height="351" width="0" x="0" y="493"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="294" width="0" x="0" y="531"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy" 
+    project="skysail.client.dbviewer.wicket" 
+    file="/skysail.client.dbviewer.wicket/src/main/java/de/twenty11/skysail/client/dbviewer/wicket/connections/ConnectionsProxy.java" 
+    binary="false" label="proxy" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="19" width="0" x="0" y="559"/>    
+    </execution>  
+  </object>  
+  <object id="18" language="java" name="de.twenty11.skysail.common.ext.dbviewer.RestfulConnections" 
+    project="skysail.common.ext.dbviewer" 
+    file="/skysail.common.ext.dbviewer/src/main/java/de/twenty11/skysail/common/ext/dbviewer/RestfulConnections.java" 
+    binary="false" label="restfulConnections" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="8">      
+      <position height="19" width="0" x="0" y="597"/>    
+    </execution>  
+  </object>  
+  <object id="19" language="java" name="de.twenty11.skysail.common.responses.Response" project="skysail.common" 
+    file="/skysail.common/src/main/java/de/twenty11/skysail/common/responses/Response.java" binary="false" 
+    label="response" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="10">      
+      <position height="19" width="0" x="0" y="635"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="19" width="0" x="0" y="711"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel" 
+    project="skysail.client.dbviewer.wicket" 
+    file="/skysail.client.dbviewer.wicket/src/main/java/de/twenty11/skysail/client/dbviewer/wicket/connections/ConnectionsPanel.java" 
+    binary="false" label="panel" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="14">      
+      <position height="19" width="0" x="0" y="749"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" name="java.util.Collections" project="skysail.client.dbviewer.wicket" 
+    file="/home/carsten/Misc/install/jdk1.6.0_18/jre/lib/rt.jar" binary="true" label="&lt;static&gt;" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="16">      
+      <position height="19" width="0" x="0" y="787"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="load():java.util.List&lt;ConnectionDetails&gt;">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="getRestfulConnections():de.twenty11.skysail.common.ext.dbviewer.RestfulConnections">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="getConnections():de.twenty11.skysail.common.responses.Response&lt;List&lt;ConnectionDetails&gt;&gt;">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="getData()">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="getData()">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="setErrorMessage(java.lang.String):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="emptyList():java.util.List&lt;T&gt;">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>
+</sequence-diagram>

@@ -11,8 +11,7 @@ public class DbViewerSession extends WebSession {
     private static final long serialVersionUID = -4830435111341816343L;
 
     private User user;
-
-    private String selectedConnection;
+    private String activeConnection;
 
     public static DbViewerSession get() {
         return (DbViewerSession) Session.get();
@@ -36,11 +35,13 @@ public class DbViewerSession extends WebSession {
         dirty();
     }
 
-    public String getSelectedConnection() {
-        return this.selectedConnection;
+    // TODO make sure only autorized users connections can end up here
+    public void setActiveConnection(String id) {
+        this.activeConnection = id;
     }
-
-    public void setSelectedConnection(String selectedConnection) {
-        this.selectedConnection = selectedConnection;
+    
+    public String getActiveConnection() {
+        return activeConnection;
     }
+    
 }

@@ -1,0 +1,40 @@
+package de.twenty11.skysail.client.dbviewer.wicket.tables;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.restlet.resource.ClientResource;
+import org.restlet.resource.Get;
+
+import de.twenty11.skysail.client.dbviewer.wicket.DbViewerClientResource;
+import de.twenty11.skysail.client.dbviewer.wicket.DbViewerSession;
+import de.twenty11.skysail.common.ext.dbviewer.RestfulTables;
+import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SuccessResponse;
+
+/**
+ * Access point for remote server for connections
+ * 
+ */
+public class TablesProxy {
+
+    public RestfulTables getRestfulTables() {
+        
+        String connection = DbViewerSession.get().getActiveConnection();
+        if (connection == null) {
+            return new RestfulTables() {
+
+                @Override
+                @Get
+                public Response<List<String>> getTables() {
+                     List<String> emptyList = Collections.<String>emptyList();
+                     return new SuccessResponse<List<String>>(emptyList);
+                }
+                
+            };
+        }
+
+        ClientResource clientResource = new DbViewerClientResource(connection + "/tables");
+        return clientResource.wrap(RestfulTables.class);
+    }
+}

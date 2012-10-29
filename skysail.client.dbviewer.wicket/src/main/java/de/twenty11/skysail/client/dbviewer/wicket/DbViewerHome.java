@@ -2,8 +2,8 @@ package de.twenty11.skysail.client.dbviewer.wicket;
 
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
-import de.twenty11.skysail.client.dbviewer.wicket.proxies.TablesProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.tables.TablesPanel;
+import de.twenty11.skysail.client.dbviewer.wicket.tables.TablesProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
 
 public class DbViewerHome extends DbViewerTemplate {
