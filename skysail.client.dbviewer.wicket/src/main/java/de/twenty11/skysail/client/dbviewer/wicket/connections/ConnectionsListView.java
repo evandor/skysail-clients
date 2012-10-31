@@ -38,7 +38,7 @@ public class ConnectionsListView extends ListView<ConnectionDetails> {
         item.add(new Link<String>("select", new Model("hi") {}) {
             @Override
             public void onClick() {
-                logger.debug("setting active connection to '{}'", connection.getId());
+                logger.info("setting active connection to '{}'", connection.getId());
                 DbViewerSession.get().setActiveConnection(connection.getId());
                 setResponsePage(DbViewerHome.class);
             }

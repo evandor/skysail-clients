@@ -23,7 +23,7 @@
     </display>  
   </class>  
   <class id="3" corner="BOTTOM_RIGHT" language="java" 
-    name="de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel" 
+    name="de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanelanel" 
     project="skysail.client.dbviewer.wicket" 
     file="/skysail.client.dbviewer.wicket/src/main/java/de/twenty11/skysail/client/dbviewer/wicket/connections/ConnectionsPanel.java" 
     binary="false">    

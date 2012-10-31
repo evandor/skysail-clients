@@ -40,7 +40,7 @@
       <position height="19" width="0" x="0" y="711"/>    
     </execution>  
   </object>  
-  <object id="20" language="java" name="de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel" 
+  <object id="20" language="java" name="de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanelanel" 
     project="skysail.client.dbviewer.wicket" 
     file="/skysail.client.dbviewer.wicket/src/main/java/de/twenty11/skysail/client/dbviewer/wicket/connections/ConnectionsPanel.java" 
     binary="false" label="panel" type="class" autoSize="true">    

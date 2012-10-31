@@ -1,4 +1,4 @@
-package de.twenty11.skysail.client.dbviewer.wicket.connections;
+package de.twenty11.skysail.client.dbviewer.wicket.schemas;
 
 import java.util.Collections;
 import java.util.List;
@@ -12,31 +12,30 @@ import org.slf4j.LoggerFactory;
 
 import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
 import de.twenty11.skysail.client.dbviewer.wicket.connection.MyLocalJacksonCustomConverter;
-import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
-import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
+import de.twenty11.skysail.common.ext.dbviewer.RestfulSchemas;
+import de.twenty11.skysail.common.ext.dbviewer.SchemaDetails;
 import de.twenty11.skysail.common.responses.Response;
 
-public class ConnectionsModel extends LoadableDetachableModel<List<ConnectionDetails>> {
+public class SchemasModel extends LoadableDetachableModel<List<SchemaDetails>> {
 
     private static final long serialVersionUID = -5645764949454058272L;
-    private static final Logger logger = LoggerFactory.getLogger(ConnectionsModel.class);
-    private ConnectionsPanel panel;
+    private static final Logger logger = LoggerFactory.getLogger(SchemasModel.class);
+    private SchemasPanel panel;
 
-    public ConnectionsModel(ConnectionsPanel connectionsPanel) {
-        panel = connectionsPanel;
+    public SchemasModel(SchemasPanel panel) {
+        this.panel = panel;
     }
 
     @Override
-    protected List<ConnectionDetails> load() {
+    protected List<SchemaDetails> load() {
         try {
             ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                    new TypeReference<Response<List<ConnectionDetails>>>() {
+                    new TypeReference<Response<List<SchemaDetails>>>() {
                     });
             RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
-            
-            RestfulConnections restfulConnections = panel.getProxy().getRestfulConnections();
-            Response<List<ConnectionDetails>> response = restfulConnections.getConnections();
-            logger.info("found {} connections", response.getData().size());
+            RestfulSchemas restfulSchemas = panel.getProxy().getRestfulSchemas();
+            Response<List<SchemaDetails>> response = restfulSchemas.getSchemas();
+            logger.info("found {} schemas", response.getData().size());
             return response.getData();
         } catch (Exception e) {
             panel.setErrorMessage(e.getMessage());
