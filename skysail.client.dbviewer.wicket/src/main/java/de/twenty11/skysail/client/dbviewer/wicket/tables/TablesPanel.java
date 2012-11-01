@@ -5,15 +5,12 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-
-@SuppressWarnings("serial")
 public class TablesPanel extends Panel {
 
     public static final String TABLES = "tables";
-    private static final Logger logger = LoggerFactory.getLogger(TablesPanel.class);
+
+    private static final long serialVersionUID = 5884156412839557835L;
     private transient TablesProxy proxy;
     private Label errorMessage;
 
@@ -22,20 +19,21 @@ public class TablesPanel extends Panel {
         this.proxy = proxy;
     }
 
+    @SuppressWarnings("serial")
     @Override
     protected void onInitialize() {
         super.onInitialize();
-        
+
         errorMessage = new Label("errorMessage", new Model<String>("")) {
-            @Override
             public boolean isVisible() {
                 return StringUtils.isNotEmpty((String) getDefaultModelObject());
             }
         };
 
-        ListView<String> connections = new TablesListView(TABLES, new TablesModel(this));
+        ListView<String> Tables = new TablesListView(TABLES,
+                new TablesModel(this));
 
-        add(connections);
+        add(Tables);
         add(errorMessage);
     }
 
@@ -47,4 +45,5 @@ public class TablesPanel extends Panel {
         return proxy;
     }
 
+   
 }

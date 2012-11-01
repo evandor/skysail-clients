@@ -4,10 +4,16 @@ import java.util.Collections;
 import java.util.List;
 
 import org.apache.wicket.model.LoadableDetachableModel;
+import org.codehaus.jackson.type.TypeReference;
+import org.restlet.engine.converter.ConverterHelper;
+import org.restlet.ext.jackson.JacksonConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
+import de.twenty11.skysail.client.dbviewer.wicket.connection.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulTables;
+import de.twenty11.skysail.common.ext.dbviewer.SchemaDetails;
 import de.twenty11.skysail.common.responses.Response;
 
 public class TablesModel extends LoadableDetachableModel<List<String>> {
@@ -23,6 +29,10 @@ public class TablesModel extends LoadableDetachableModel<List<String>> {
     @Override
     protected List<String> load() {
         try {
+            ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
+                    new TypeReference<Response<List<String>>>() {
+                    });
+            RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
             RestfulTables restfulConnections = panel.getProxy().getRestfulTables();
             Response<List<String>> response = restfulConnections.getTables();
             logger.info("found {} tables", response.getData().size());

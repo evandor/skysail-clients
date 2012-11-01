@@ -18,7 +18,7 @@ public class DbViewerHome extends DbViewerTemplate {
     public DbViewerHome() {
         add(new ConnectionsPanel("connectionsPanel", new ConnectionsProxy()));
         add(new SchemasPanel("schemesPanel", new SchemasProxy()));
-//        add(new TablesPanel("tablesPanel", new TablesProxy()));
+        add(new TablesPanel("tablesPanel", new TablesProxy()));
     }
 
 }

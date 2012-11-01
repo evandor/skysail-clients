@@ -29,8 +29,18 @@ public class SchemasListView extends ListView<SchemaDetails> {
 
     @Override
     protected void populateItem(ListItem<SchemaDetails> item) {
-        final SchemaDetails connection = (SchemaDetails) item.getModelObject();
-        item.add(new Label("schemaName", connection.getId()));
+        final SchemaDetails schema = (SchemaDetails) item.getModelObject();
+        item.add(new Label("schemaName", schema.getId()));
+        
+        item.add(new Link<String>("select", new Model("") {}) {
+            @Override
+            public void onClick() {
+                logger.info("setting active schema to '{}'", schema.getId());
+                DbViewerSession.get().setActiveSchema(schema.getId());
+                setResponsePage(DbViewerHome.class);
+            }
+        });
+
     }
 
 }

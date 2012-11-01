@@ -29,9 +29,7 @@ public class TablesListView extends ListView<String> {
     @Override
     protected void populateItem(ListItem<String> item) {
         final String table = (String) item.getModelObject();
-        item.add(new Label("connectionName", table));
-//        PageParameters params = new PageParameters();
-//        params.add("id", connection.getId());
+        item.add(new Label("tableName", table));
     }
 
 }

@@ -21,7 +21,8 @@ public class TablesProxy {
     public RestfulTables getRestfulTables() {
         
         String connection = DbViewerSession.get().getActiveConnection();
-        if (connection == null) {
+        String schema = DbViewerSession.get().getActiveSchema();
+        if (connection == null || schema == null) {
             return new RestfulTables() {
 
                 @Override
@@ -34,7 +35,7 @@ public class TablesProxy {
             };
         }
 
-        ClientResource clientResource = new DbViewerClientResource(connection + "/tables");
+        ClientResource clientResource = new DbViewerClientResource(connection + "/schemas/" + schema + "/tables");
         return clientResource.wrap(RestfulTables.class);
     }
 }
