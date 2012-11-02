@@ -1,5 +1,7 @@
 package de.twenty11.skysail.client.dbviewer.wicket;
 
+import de.twenty11.skysail.client.dbviewer.wicket.columns.ColumnsPanel;
+import de.twenty11.skysail.client.dbviewer.wicket.columns.ColumnsProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.schemas.SchemasPanel;
@@ -19,6 +21,7 @@ public class DbViewerHome extends DbViewerTemplate {
         add(new ConnectionsPanel("connectionsPanel", new ConnectionsProxy()));
         add(new SchemasPanel("schemesPanel", new SchemasProxy()));
         add(new TablesPanel("tablesPanel", new TablesProxy()));
+        add(new ColumnsPanel("columnsPanel", new ColumnsProxy()));
     }
 
 }

@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org">
 <body>
 
-    <wicket:extend>
-        <p>Available Connections:</p>
-        <div wicket:id="connectionsPanel" style="border:solid 1px grey"/>
+	<wicket:extend>
 
-        <p>Schemas:</p>
-        <div wicket:id="schemesPanel" style="border:solid 1px blue"/>
+		<div id="container" style="width: 100%">
 
-        <p>Tables:</p>
-        <div wicket:id="tablesPanel" style="border:solid 1px blue"/>
-    </wicket:extend>
+			<div id="header" style="background-color: #FFA500;">
+				<h1 style="margin-bottom: 0;">Main Title of Web Page</h1>
+			</div>
+
+			<div id="menu"
+				style="background-color: #FFD700; height: 100%; width: 220px; float: left;">
+				<b>Connections</b> 
+				<div wicket:id="connectionsPanel" style="border: solid 1px grey" />
+				<br />
+				<b>Schemas:</b>
+				<div wicket:id="schemesPanel" style="border: solid 1px blue" />
+			</div>
+
+			<div id="content"
+				style="background-color: #EEEEEE; height: 200px; width: 600px; float: left;">
+				<b>Tables:</b>
+				<div wicket:id="tablesPanel" style="border: solid 1px blue" />
+				<br />
+				<b>Columns:</b>
+				<div wicket:id="columnsPanel" style="border: solid 1px blue" />
+
+			</div>
+
+			<div id="footer"
+				style="background-color: #FFA500; clear: both; text-align: center;">
+				Copyright © W3Schools.com</div>
+
+		</div>
+
+
+	</wicket:extend>
 
 </body>
 </html>

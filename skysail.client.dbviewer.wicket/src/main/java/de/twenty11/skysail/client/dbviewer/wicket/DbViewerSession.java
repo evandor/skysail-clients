@@ -15,6 +15,8 @@ public class DbViewerSession extends WebSession {
 
     private String activeSchema;
 
+    private String activeTable;
+
     public static DbViewerSession get() {
         return (DbViewerSession) Session.get();
     }
@@ -41,7 +43,7 @@ public class DbViewerSession extends WebSession {
     public void setActiveConnection(String id) {
         this.activeConnection = id;
     }
-    
+
     public String getActiveConnection() {
         return activeConnection;
     }
@@ -49,10 +51,17 @@ public class DbViewerSession extends WebSession {
     public void setActiveSchema(String id) {
         this.activeSchema = id;
     }
-    
+
     public String getActiveSchema() {
         return activeSchema;
     }
-    
-    
+
+    public void setActiveTable(String activeTable) {
+        this.activeTable = activeTable;
+    }
+
+    public String getActiveTable() {
+        return activeTable;
+    }
+
 }
