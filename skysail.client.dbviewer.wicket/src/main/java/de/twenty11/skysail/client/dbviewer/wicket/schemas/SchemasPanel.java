@@ -4,16 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.wicket.Component;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.form.OnChangeAjaxBehavior;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
-import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.codehaus.jackson.type.TypeReference;
 import org.restlet.engine.converter.ConverterHelper;
 import org.restlet.ext.jackson.JacksonConverter;
 
+import de.twenty11.skysail.client.dbviewer.wicket.DbViewerSession;
 import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
 import de.twenty11.skysail.client.dbviewer.wicket.connection.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulSchemas;
@@ -58,12 +62,37 @@ public class SchemasPanel extends Panel {
                 schemasList.add(schemaDetails.getId());
             }
         }
-        // List<String> schemasList = Arrays.asList(new String[] {"The Server Side", "Java Lobby", "Java.Net" });
-        DropDownChoice<String> dropDownChoice = new DropDownChoice<String>("schemasDropDown", schemasList);
 
-        ListView<SchemaDetails> connections = new SchemasListView(SCHEMAS, new SchemasModel(this));
+        DropDownChoice<String> dropDownChoice = new DropDownChoice<String>("schemasDropDown", new IModel<String>() {
 
-        add(connections);
+            private String schema;
+
+            @Override
+            public void detach() {
+            }
+
+            @Override
+            public String getObject() {
+                return schema;
+            }
+
+            @Override
+            public void setObject(String object) {
+                this.schema = object;
+            }
+        }, schemasList);
+        dropDownChoice.setOutputMarkupId(true);
+        dropDownChoice.add(new OnChangeAjaxBehavior() {
+
+            @Override
+            protected void onUpdate(AjaxRequestTarget target) {
+                Component component2 = getComponent();
+                String schema = component2.getDefaultModelObjectAsString();
+                DbViewerSession.get().setActiveSchema(schema);
+                target.add(getPage());
+            }
+        });
+
         add(errorMessage);
         add(dropDownChoice);
     }
