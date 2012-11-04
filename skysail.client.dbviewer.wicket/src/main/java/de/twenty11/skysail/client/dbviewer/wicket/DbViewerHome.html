@@ -7,30 +7,26 @@
 
 		<div id="container" style="width: 100%">
 
-			<div id="header" style="background-color: #FFA500;">
-				<h1 style="margin-bottom: 0;">Main Title of Web Page</h1>
+			<div id="header" style="background-color: #000066;">
+				<h4 style="margin-bottom: 0; color:white">Home</h4>
 			</div>
 
 			<div id="menu"
 				style="background-color: #FFD700; height: 100%; width: 240px; float: left;">
-				<b>Connections</b> 
-				<div wicket:id="connectionsPanel" style="border: solid 1px grey" />
+				<b>Connections</b> <a wicket:id="addConnection"><img src='img/database_add.png' /></a>
+				<div wicket:id="connectionsPanel" />
 				<br />
 				<b>Schemas:</b>
 				<div wicket:id="schemesPanel" />
+                <br />
+                <b>Tables:</b>
+                <div wicket:id="tablesPanel" />
+                <br />
 			</div>
 
 			<div id="content"
-				style="background-color: #EEEEEE; height: 200px; width: 600px; float: left;">
-				<b>Tables:</b>
-				<div wicket:id="tablesPanel" style="border: solid 1px blue" />
-				<br />
-				<b>Columns:</b>
-				<div wicket:id="columnsPanel" style="border: solid 1px blue" />
-                <br />
-                <b>Data:</b>
-                <div wicket:id="dataPanel" style="border: solid 1px blue" />
-
+				style="background-color: white; width: 100%; ">
+				<span wicket:id="tabs" class="tabpanel">[tabbed panel will be here]</span>
 			</div>
 
 			<div id="footer"

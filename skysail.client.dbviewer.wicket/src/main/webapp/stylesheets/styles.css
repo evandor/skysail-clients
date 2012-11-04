@@ -170,7 +170,7 @@ a:hover {
 
 /* line 553, /home/carsten/.rvm/gems/ruby-1.9.3-p286/gems/bootstrap-sass-2.0.4.2/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 100%;
 }
 
 /* line 560, /home/carsten/.rvm/gems/ruby-1.9.3-p286/gems/bootstrap-sass-2.0.4.2/vendor/assets/stylesheets/bootstrap/_mixins.scss */

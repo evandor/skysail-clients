@@ -30,11 +30,16 @@ public class TablesPanel extends Panel {
             }
         };
 
-        ListView<String> Tables = new TablesListView(TABLES,
-                new TablesModel(this));
+        ListView<String> Tables = new TablesListView(TABLES, new TablesModel(this));
 
         add(Tables);
         add(errorMessage);
+    }
+
+    @Override
+    protected void onConfigure() {
+        // TODO Auto-generated method stub
+        super.onConfigure();
     }
 
     public void setErrorMessage(String message) {
@@ -45,5 +50,4 @@ public class TablesPanel extends Panel {
         return proxy;
     }
 
-   
 }

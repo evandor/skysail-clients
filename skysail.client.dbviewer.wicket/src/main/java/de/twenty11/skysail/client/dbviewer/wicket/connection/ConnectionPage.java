@@ -19,6 +19,7 @@ import org.restlet.representation.Representation;
 
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerHome;
 import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
+import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
 import de.twenty11.skysail.common.MapData;
@@ -30,8 +31,8 @@ import de.twenty11.skysail.common.responses.Response;
 public class ConnectionPage extends DbViewerTemplate {
 
     /**
-     * @uml.property  name="messageLabel"
-     * @uml.associationEnd  multiplicity="(1 1)"
+     * @uml.property name="messageLabel"
+     * @uml.associationEnd multiplicity="(1 1)"
      */
     private Label messageLabel = new Label("message", new Model(""));
 
@@ -48,10 +49,14 @@ public class ConnectionPage extends DbViewerTemplate {
                 .getDictionary();
         final ConnectionDetails connectionDetails = new ConnectionDetails((String) connection.get("id"), "", "", "", "");
         createForm(connectionDetails);
+
+        add(new ConnectionsPanel("connectionsPanel", new ConnectionsProxy()));
+
     }
 
     public ConnectionPage() {
-        final ConnectionDetails connection = new ConnectionDetails("", "root", "", "jdbc:mysql://[host][:port]/[database]", "com.mysql.jdbc.Driver");
+        final ConnectionDetails connection = new ConnectionDetails("", "root", "",
+                "jdbc:mysql://[host][:port]/[database]", "com.mysql.jdbc.Driver");
         createForm(connection);
     }
 
