@@ -9,7 +9,6 @@ import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.OnChangeAjaxBehavior;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.DropDownChoice;
-import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
@@ -31,7 +30,6 @@ public class SchemasPanel extends Panel {
     private static final long serialVersionUID = 5884156412839557835L;
     private transient SchemasProxy proxy;
     private Label errorMessage;
-    private BookmarkablePageLink<String> newConnection;
 
     public SchemasPanel(String id, final SchemasProxy proxy) {
         super(id);
@@ -80,7 +78,12 @@ public class SchemasPanel extends Panel {
             public void setObject(String object) {
                 this.schema = object;
             }
-        }, schemasList);
+        }, schemasList) {
+            @Override
+            public boolean isEnabled() {
+                return getChoices().size() > 0;
+            }
+        };
         dropDownChoice.setOutputMarkupId(true);
         dropDownChoice.add(new OnChangeAjaxBehavior() {
 
