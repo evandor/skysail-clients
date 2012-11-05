@@ -38,7 +38,7 @@ public class TablesPanelTest {
         @Get
         public Response<List<ConnectionDetails>> getConnections() {
             List<ConnectionDetails> data = new ArrayList<ConnectionDetails>();
-            data.add(new ConnectionDetails("id", "username", "password", "url", "driverClassName"));
+            data.add(new ConnectionDetails("name", "username", "password", "url", "driverClassName"));
             Response<List<ConnectionDetails>> result = new SuccessResponse<List<ConnectionDetails>>(data);
             return result;
         }
@@ -62,6 +62,5 @@ public class TablesPanelTest {
         tester.startPage(page);
         tester.assertRenderedPage(TablesPanelTestPage.class);
     }
-
 
 }

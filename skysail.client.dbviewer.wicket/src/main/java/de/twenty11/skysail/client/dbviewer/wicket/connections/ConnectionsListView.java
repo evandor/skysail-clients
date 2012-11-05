@@ -30,16 +30,17 @@ public class ConnectionsListView extends ListView<ConnectionDetails> {
     @Override
     protected void populateItem(ListItem<ConnectionDetails> item) {
         final ConnectionDetails connection = (ConnectionDetails) item.getModelObject();
-        item.add(new Label("connectionName", connection.getId()));
+        item.add(new Label("connectionName", connection.getName()));
         PageParameters params = new PageParameters();
-        params.add("id", connection.getId());
+        params.add("name", connection.getName());
         item.add(new BookmarkablePageLink<String>("edit", ConnectionPage.class, params));
 
-        item.add(new Link<String>("select", new Model("hi") {}) {
+        item.add(new Link<String>("select", new Model("hi") {
+        }) {
             @Override
             public void onClick() {
-                logger.info("setting active connection to '{}'", connection.getId());
-                DbViewerSession.get().setActiveConnection(connection.getId());
+                logger.info("setting active connection to '{}'", connection.getName());
+                DbViewerSession.get().setActiveConnection(connection.getName());
                 setResponsePage(DbViewerHome.class);
             }
         });
@@ -47,9 +48,9 @@ public class ConnectionsListView extends ListView<ConnectionDetails> {
         item.add(new Link<String>("delete") {
             @Override
             public void onClick() {
-                logger.info("about to delete connection '{}'", connection.getId());
+                logger.info("about to delete connection '{}'", connection.getName());
                 ConnectionProxy proxy = new ConnectionProxy();
-                Representation answer = proxy.deleteConnection(connection.getId());
+                Representation answer = proxy.deleteConnection(connection.getName());
                 setResponsePage(DbViewerHome.class);
             }
         });

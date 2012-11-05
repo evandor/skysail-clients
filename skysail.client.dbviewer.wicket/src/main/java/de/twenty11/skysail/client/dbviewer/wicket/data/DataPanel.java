@@ -56,7 +56,7 @@ public class DataPanel extends Panel {
         RestfulColumns restfulColumns = columnsProxy.getRestfulColumns();
         Response<List<ColumnsDetails>> columns2 = restfulColumns.getColumns();
         List<IColumn> columns = new ArrayList<IColumn>();
-        if (columns2.getData().size() > 0) {
+        if (columns2 != null && columns2.getData() != null && columns2.getData().size() > 0) {
             for (ColumnsDetails column : columns2.getData()) {
                 columns.add(new PropertyColumn(new Model(column.getId()), column.getId(), column.getId()));
             }

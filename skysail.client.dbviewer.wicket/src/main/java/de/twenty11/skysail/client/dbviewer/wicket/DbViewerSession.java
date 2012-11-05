@@ -10,7 +10,7 @@ public class DbViewerSession extends WebSession {
 
     private static final long serialVersionUID = -4830435111341816343L;
 
-    private User user;
+    private transient User user;
     private String activeConnection;
 
     private String activeSchema;

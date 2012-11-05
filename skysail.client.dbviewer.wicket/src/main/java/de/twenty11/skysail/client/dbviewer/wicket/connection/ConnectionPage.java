@@ -37,17 +37,18 @@ public class ConnectionPage extends DbViewerTemplate {
     private Label messageLabel = new Label("message", new Model(""));
 
     public ConnectionPage(PageParameters parameters) {
-        StringValue id = parameters.get("id");
+        StringValue name = parameters.get("name");
 
         ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
                 new TypeReference<Response<MapData>>() {
                 });
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
         ConnectionProxy proxy = new ConnectionProxy();
-        RestfulConnection<MapData> restfulConnection = proxy.getRestfulConnection(id.toString());
+        RestfulConnection<MapData> restfulConnection = proxy.getRestfulConnection(name.toString());
         Map<String, String> connection = (Map<String, String>) restfulConnection.getConnection().getData()
                 .getDictionary();
-        final ConnectionDetails connectionDetails = new ConnectionDetails((String) connection.get("id"), "", "", "", "");
+        final ConnectionDetails connectionDetails = new ConnectionDetails((String) connection.get("name"), "", "", "",
+                "");
         createForm(connectionDetails);
 
         add(new ConnectionsPanel("connectionsPanel", new ConnectionsProxy()));
@@ -63,7 +64,7 @@ public class ConnectionPage extends DbViewerTemplate {
     private void createForm(final ConnectionDetails connection) {
         Form form = new Form("form");
         add(form);
-        form.add(new TextField<String>("id", new PropertyModel(connection, "id")));
+        form.add(new TextField<String>("name", new PropertyModel(connection, "name")));
         form.add(new TextField<String>("username", new PropertyModel(connection, "username")));
         form.add(new TextField<String>("password", new PropertyModel(connection, "password")));
         form.add(new TextField<String>("url", new PropertyModel(connection, "url")));

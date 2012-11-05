@@ -47,7 +47,7 @@ public class ConnectionsPanelTest {
         @Get
         public Response<List<ConnectionDetails>> getConnections() {
             List<ConnectionDetails> data = new ArrayList<ConnectionDetails>();
-            data.add(new ConnectionDetails("id", "username", "password", "url", "driverClassName"));
+            data.add(new ConnectionDetails("name", "username", "password", "url", "driverClassName"));
             Response<List<ConnectionDetails>> result = new SuccessResponse<List<ConnectionDetails>>(data);
             return result;
         }
@@ -74,7 +74,7 @@ public class ConnectionsPanelTest {
 
     @Test
     public void rendersListOfConnectionsSuccessfully() {
-        final String identifier = "id";
+        final String identifier = "name";
         when(proxyMock.getRestfulConnections()).thenReturn(successAnswer);
         tester.startPage(page);
         tester.assertRenderedPage(ConnectionsPanelTestPage.class);
@@ -84,10 +84,11 @@ public class ConnectionsPanelTest {
     }
 
     @Test
-    @Ignore // Candidate for integration test
+    @Ignore
+    // Candidate for integration test
     public void can_add_new_connection() {
-        final String identifier = "id";
-        ConnectionDetails connection =  new ConnectionDetails("id2", "username", "password", "url", "driverClassName");
+        final String identifier = "name";
+        ConnectionDetails connection = new ConnectionDetails("id2", "username", "password", "url", "driverClassName");
         when(proxyMock.addConnection(connection)).thenReturn(new StringRepresentation("done"));
         tester.startPage(ConnectionPage.class);
         tester.assertRenderedPage(ConnectionPage.class);

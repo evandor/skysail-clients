@@ -54,17 +54,21 @@ public class DataProvider extends SortableDataProvider {
 
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
 
-        RestfulData restfulData = new DataProxy().getRestfulData();
-        Response<GridData> data = restfulData.getData();
+        try {
+            RestfulData restfulData = new DataProxy().getRestfulData();
+            Response<GridData> data = restfulData.getData();
 
-        if (data != null) {
-            GridData gridData = data.getData();
-            if (gridData != null) {
-                for (RowData row : gridData.getRows()) {
-                    Data2 data2 = new Data2(row.getCells());
-                    list.add(data2);
+            if (data != null) {
+                GridData gridData = data.getData();
+                if (gridData != null) {
+                    for (RowData row : gridData.getRows()) {
+                        Data2 data2 = new Data2(row.getCells());
+                        list.add(data2);
+                    }
                 }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

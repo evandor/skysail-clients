@@ -51,14 +51,19 @@ public class SchemasPanel extends Panel {
                 new TypeReference<Response<List<SchemaDetails>>>() {
                 });
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
-        RestfulSchemas restfulSchemas = proxy.getRestfulSchemas();
-        Response<List<SchemaDetails>> response = restfulSchemas.getSchemas();
-        List<SchemaDetails> data2 = response.getData();
+
         List<String> schemasList = new ArrayList<String>();
-        if (data2 != null) {
-            for (SchemaDetails schemaDetails : data2) {
-                schemasList.add(schemaDetails.getId());
+        try {
+            RestfulSchemas restfulSchemas = proxy.getRestfulSchemas();
+            Response<List<SchemaDetails>> response = restfulSchemas.getSchemas();
+            List<SchemaDetails> data2 = response.getData();
+            if (data2 != null) {
+                for (SchemaDetails schemaDetails : data2) {
+                    schemasList.add(schemaDetails.getId());
+                }
             }
+        } catch (Exception e) {
+            errorMessage.setDefaultModelObject(e.getMessage());
         }
 
         DropDownChoice<String> dropDownChoice = new DropDownChoice<String>("schemasDropDown", new IModel<String>() {

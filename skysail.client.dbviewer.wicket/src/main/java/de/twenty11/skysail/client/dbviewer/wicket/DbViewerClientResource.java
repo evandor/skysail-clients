@@ -20,8 +20,12 @@ public class DbViewerClientResource extends ClientResource {
     }
 
     private void addAuthentication() {
-        ChallengeResponse authentication = new ChallengeResponse(ChallengeScheme.HTTP_BASIC, "scott", "tiger");
-        setChallengeResponse(authentication);
+        User user = DbViewerSession.get().getUser();
+        if (user != null) {
+            ChallengeResponse authentication = new ChallengeResponse(ChallengeScheme.HTTP_BASIC, user.getUsername(),
+                    user.getPassword());
+            setChallengeResponse(authentication);
+        }
     }
 
 }
