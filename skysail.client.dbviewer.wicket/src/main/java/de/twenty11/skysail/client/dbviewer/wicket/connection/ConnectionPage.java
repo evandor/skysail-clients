@@ -45,10 +45,7 @@ public class ConnectionPage extends DbViewerTemplate {
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
         ConnectionProxy proxy = new ConnectionProxy();
         RestfulConnection<MapData> restfulConnection = proxy.getRestfulConnection(name.toString());
-        Map<String, String> connection = (Map<String, String>) restfulConnection.getConnection().getData()
-                .getDictionary();
-        final ConnectionDetails connectionDetails = new ConnectionDetails((String) connection.get("name"), "", "", "",
-                "");
+        ConnectionDetails connectionDetails  = restfulConnection.getConnection().getData();
         createForm(connectionDetails);
 
         add(new ConnectionsPanel("connectionsPanel", new ConnectionsProxy()));
