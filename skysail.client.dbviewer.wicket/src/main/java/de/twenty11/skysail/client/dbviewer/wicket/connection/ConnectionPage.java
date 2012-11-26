@@ -1,7 +1,6 @@
 package de.twenty11.skysail.client.dbviewer.wicket.connection;
 
 import java.io.IOException;
-import java.util.Map;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Button;
@@ -18,7 +17,6 @@ import org.restlet.ext.jackson.JacksonConverter;
 import org.restlet.representation.Representation;
 
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerHome;
-import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
@@ -26,6 +24,8 @@ import de.twenty11.skysail.common.MapData;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnection;
 import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
+import de.twenty11.skysail.common.utils.RestletUtils;
 
 @SuppressWarnings("serial")
 public class ConnectionPage extends DbViewerTemplate {
@@ -53,8 +53,8 @@ public class ConnectionPage extends DbViewerTemplate {
     }
 
     public ConnectionPage() {
-        final ConnectionDetails connection = new ConnectionDetails("", "root", "",
-                "jdbc:mysql://[host][:port]/[database]", "com.mysql.jdbc.Driver");
+        final ConnectionDetails connection = new ConnectionDetails("skysail", "skysail", "skysail",
+                "jdbc:derby:skysailDerbyDb", "org.apache.derby.jdbc.EmbeddedDriver");
         createForm(connection);
     }
 

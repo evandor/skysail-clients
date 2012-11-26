@@ -10,11 +10,10 @@ import org.restlet.ext.jackson.JacksonConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
-import de.twenty11.skysail.client.dbviewer.wicket.connection.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulTables;
-import de.twenty11.skysail.common.ext.dbviewer.SchemaDetails;
 import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
+import de.twenty11.skysail.common.utils.RestletUtils;
 
 public class TablesModel extends LoadableDetachableModel<List<String>> {
 

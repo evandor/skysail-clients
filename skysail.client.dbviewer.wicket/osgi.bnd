@@ -22,6 +22,7 @@ Import-Package: org.apache.wicket,\
  javax.servlet.http,\
  org.apache.wicket.ajax,\
  org.osgi.service.blueprint,\
+ de.twenty11.skysail.common.utils;version="[0.1.0, 1)",\
  de.twenty11.skysail.common.ext.dbviewer;version="[0.1.0, 1)",\
  *
 Export-Package: skysail.client.dbviewer.wicket

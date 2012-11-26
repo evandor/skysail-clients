@@ -17,11 +17,11 @@ import org.restlet.engine.converter.ConverterHelper;
 import org.restlet.ext.jackson.JacksonConverter;
 
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerSession;
-import de.twenty11.skysail.client.dbviewer.wicket.RestletUtils;
-import de.twenty11.skysail.client.dbviewer.wicket.connection.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulSchemas;
 import de.twenty11.skysail.common.ext.dbviewer.SchemaDetails;
 import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
+import de.twenty11.skysail.common.utils.RestletUtils;
 
 public class SchemasPanel extends Panel {
 
