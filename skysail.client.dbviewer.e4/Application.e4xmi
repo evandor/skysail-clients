@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_OqGCUDZGEeKjs6BVRKf9DA" elementId="org.eclipse.e4.ide.application" bindingContexts="_OqGCUTZGEeKjs6BVRKf9DA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_OqGpZjZGEeKjs6BVRKf9DA" label="skysail.client.dbviewer.e4" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_OqGpbjZGEeKjs6BVRKf9DA">
+      <children xsi:type="advanced:Perspective" xmi:id="_OqGpbzZGEeKjs6BVRKf9DA">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_OqGpcDZGEeKjs6BVRKf9DA">
+          <children xsi:type="basic:PartStack" xmi:id="_OqGpcTZGEeKjs6BVRKf9DA"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="basic:Part" xmi:id="_963_oDbMEeKt9IVJITwY6w" elementId="skysail.client.dbviewer.e4.part.0" contributionURI="bundleclass://skysail.client.dbviewer.e4/skysail.client.dbviewer.e4.ConnectionsTree"/>
+    <mainMenu xmi:id="_OqGpZzZGEeKjs6BVRKf9DA" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_OqGpaDZGEeKjs6BVRKf9DA" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_OqGpaTZGEeKjs6BVRKf9DA" label="Open" iconURI="platform:/plugin/skysail.client.dbviewer.e4/icons/sample.gif" command="_OqGCXjZGEeKjs6BVRKf9DA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_OqGpajZGEeKjs6BVRKf9DA" label="Save" iconURI="platform:/plugin/skysail.client.dbviewer.e4/icons/save_edit.gif" command="_OqGpYDZGEeKjs6BVRKf9DA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_OqGpazZGEeKjs6BVRKf9DA" label="Quit" command="_OqGCWjZGEeKjs6BVRKf9DA"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_OqGpbDZGEeKjs6BVRKf9DA" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_OqGpbTZGEeKjs6BVRKf9DA" label="About" command="_OqGpYzZGEeKjs6BVRKf9DA"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_OqGpcjZGEeKjs6BVRKf9DA">
+      <children xsi:type="menu:ToolBar" xmi:id="_OqGpczZGEeKjs6BVRKf9DA" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_OqGpdDZGEeKjs6BVRKf9DA" iconURI="platform:/plugin/skysail.client.dbviewer.e4/icons/sample.gif" command="_OqGCXjZGEeKjs6BVRKf9DA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_OqGpdTZGEeKjs6BVRKf9DA" iconURI="platform:/plugin/skysail.client.dbviewer.e4/icons/save_edit.gif" command="_OqGpYDZGEeKjs6BVRKf9DA"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_OqGCWzZGEeKjs6BVRKf9DA" contributionURI="bundleclass://skysail.client.dbviewer.e4/skysail.client.dbviewer.e4.handlers.QuitHandler" command="_OqGCWjZGEeKjs6BVRKf9DA"/>
+  <handlers xmi:id="_OqGCXzZGEeKjs6BVRKf9DA" contributionURI="bundleclass://skysail.client.dbviewer.e4/skysail.client.dbviewer.e4.handlers.OpenHandler" command="_OqGCXjZGEeKjs6BVRKf9DA"/>
+  <handlers xmi:id="_OqGpYTZGEeKjs6BVRKf9DA" contributionURI="bundleclass://skysail.client.dbviewer.e4/skysail.client.dbviewer.e4.handlers.SaveHandler" command="_OqGpYDZGEeKjs6BVRKf9DA"/>
+  <handlers xmi:id="_OqGpZDZGEeKjs6BVRKf9DA" contributionURI="bundleclass://skysail.client.dbviewer.e4/skysail.client.dbviewer.e4.handlers.AboutHandler" command="_OqGpYzZGEeKjs6BVRKf9DA"/>
+  <bindingTables xmi:id="_OqGCXDZGEeKjs6BVRKf9DA" bindingContext="_OqGCUTZGEeKjs6BVRKf9DA">
+    <bindings xmi:id="_OqGCXTZGEeKjs6BVRKf9DA" keySequence="M1+Q" command="_OqGCWjZGEeKjs6BVRKf9DA"/>
+    <bindings xmi:id="_OqGCYDZGEeKjs6BVRKf9DA" keySequence="M1+O" command="_OqGCXjZGEeKjs6BVRKf9DA"/>
+    <bindings xmi:id="_OqGpYjZGEeKjs6BVRKf9DA" keySequence="M1+S" command="_OqGpYDZGEeKjs6BVRKf9DA"/>
+    <bindings xmi:id="_OqGpZTZGEeKjs6BVRKf9DA" keySequence="M1+A" command="_OqGpYzZGEeKjs6BVRKf9DA"/>
+  </bindingTables>
+  <rootContext xmi:id="_OqGCUTZGEeKjs6BVRKf9DA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_OqGCUjZGEeKjs6BVRKf9DA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_OqGCUzZGEeKjs6BVRKf9DA" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_OqGCWjZGEeKjs6BVRKf9DA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_OqGCXjZGEeKjs6BVRKf9DA" elementId="skysail.client.dbviewer.e4.open" commandName="openCommand"/>
+  <commands xmi:id="_OqGpYDZGEeKjs6BVRKf9DA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_OqGpYzZGEeKjs6BVRKf9DA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_OqGCVDZGEeKjs6BVRKf9DA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_OqGCVTZGEeKjs6BVRKf9DA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_OqGCVjZGEeKjs6BVRKf9DA" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_OqGCVzZGEeKjs6BVRKf9DA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_OqGCWDZGEeKjs6BVRKf9DA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_OqGCWTZGEeKjs6BVRKf9DA" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
