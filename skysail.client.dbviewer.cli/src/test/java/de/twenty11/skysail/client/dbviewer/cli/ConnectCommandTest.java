@@ -1,7 +1,6 @@
 package de.twenty11.skysail.client.dbviewer.cli;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import org.clamshellcli.api.Context;
 import org.clamshellcli.test.MockContext;
