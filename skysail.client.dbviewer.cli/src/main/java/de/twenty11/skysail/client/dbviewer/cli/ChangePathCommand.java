@@ -65,8 +65,9 @@ public class ChangePathCommand implements Command {
         IOConsole console = ctx.getIoConsole();
         //console.writeOutput(String.format("%n%s%n%n",new Date().toString()));
         
-        Map<String,Object> argsMap = (Map<String,Object>) ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
-        Object pathParam = (argsMap != null) ? argsMap.get(KEY_ARGS_PATH) : null;
+        String[] argsMap = (String[]) ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
+        System.out.println(argsMap);
+        Object pathParam = (argsMap != null && argsMap.length > 0 ) ? argsMap[0] : null;
         String pathIdentifier ;
         if (pathParam instanceof String) {
             pathIdentifier = (String) pathParam;

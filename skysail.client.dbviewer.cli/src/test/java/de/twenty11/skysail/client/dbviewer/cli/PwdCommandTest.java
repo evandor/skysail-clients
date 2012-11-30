@@ -26,7 +26,7 @@ public class PwdCommandTest extends CommandTest {
     @Test
     // call of "pwd"
     public void pwd_gives_null_path_the_first_time_called() {
-        setArgument("");
+        //setArgument("");
         String currentPath = (String) cmd.execute(ctx);
         assertThat(currentPath, is(equalTo(null)));
     }
@@ -35,14 +35,14 @@ public class PwdCommandTest extends CommandTest {
     // call of "pwd"
     public void pwd_returns_current_path_after_setting_with_cd() {
         cd("path");
-        setArgument("");
+        //setArgument("");
         String currentPath = (String) cmd.execute(ctx);
         assertThat(currentPath, is(equalTo("path")));
     }
 
     private void cd(String path) {
         ChangePathCommand cpc = new ChangePathCommand();
-        setArgument(path);
+        setArgument(ChangePathCommand.KEY_ARGS_PATH, path);
         cpc.execute(ctx);
     }
 

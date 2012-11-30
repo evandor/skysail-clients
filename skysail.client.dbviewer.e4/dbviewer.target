@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="Running Platform" sequenceNumber="25">
+<?pde version="3.8"?><target name="Running Platform" sequenceNumber="26">
 <locations>
 <location path="${eclipse_home}" type="Profile"/>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.restlet.ext.servlet.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.net.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.jetty.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.httpclient.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.sdc.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.javamail.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.simple.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.html.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.crypto.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.ssl.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.sip.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.atom.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.wadl.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.openid.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.json.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.jaxrs.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.rdf.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.oauth.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.odata.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.xml.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.xdb.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.rome.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.jackson.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.freemarker.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.fileupload.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.slf4j.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.xstream.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.jaxb.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.lucene.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.emf.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.jibx.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.spring.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.velocity.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<unit id="org.restlet.ext.gwt.feature.group" version="2.1.0.snapshot-v20121125-0617"/>
-<repository location="http://p2.restlet.org/2.1/"/>
-</location>
 <location path="/home/carsten/.m2/repository/javax/validation/com.springsource.javax.validation/1.0.0.GA" type="Directory"/>
 <location path="/home/carsten/.m2/repository/org/eclipse/persistence/javax.persistence/2.0.3" type="Directory"/>
 <location path="/home/carsten/.m2/repository/org/osgi/org.osgi.enterprise/4.2.0" type="Directory"/>
 <location path="/home/carsten/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.8" type="Directory"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.restlet.ext.net.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.httpclient.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.simple.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.jetty.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.javamail.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.sdc.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.servlet.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.rdf.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.xml.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.odata.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.sip.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.atom.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.jaxrs.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.ssl.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.crypto.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.oauth.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.html.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.wadl.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.json.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.openid.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.spring.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.fileupload.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.gwt.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.slf4j.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.jibx.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.jackson.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.emf.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.jaxb.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.lucene.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.freemarker.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.xstream.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.xdb.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.rome.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<unit id="org.restlet.ext.velocity.feature.group" version="2.1.0.snapshot-v20121129-1518"/>
+<repository location="http://p2.restlet.org/2.1/"/>
+</location>
 </locations>
 <environment>
 <os>linux</os>

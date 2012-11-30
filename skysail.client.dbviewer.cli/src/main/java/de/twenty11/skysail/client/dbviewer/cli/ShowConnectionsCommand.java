@@ -26,21 +26,21 @@ public class ShowConnectionsCommand implements Command {
 
 	@Override
 	public Object execute(Context ctx) {
-		Map<String,Object> argsMap = (Map<String,Object>) ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
-		try {
-			HttpURLConnection con = (HttpURLConnection) new URL("http://www.heise.de").openConnection();
-			//con.setRequestMethod("POST");
-			//con.getOutputStream().write("LOGIN".getBytes("UTF-8"));
-			InputStream inputStream = con.getInputStream();
-			BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
-			String inputLine;
-			while ((inputLine = in.readLine()) != null) {
-	            System.out.println(inputLine);
-	        }
-	        in.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		Map<String,Object> argsMap = (Map<String,Object>) ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
+//		try {
+//			HttpURLConnection con = (HttpURLConnection) new URL("http://www.heise.de").openConnection();
+//			//con.setRequestMethod("POST");
+//			//con.getOutputStream().write("LOGIN".getBytes("UTF-8"));
+//			InputStream inputStream = con.getInputStream();
+//			BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
+//			String inputLine;
+//			while ((inputLine = in.readLine()) != null) {
+//	            System.out.println(inputLine);
+//	        }
+//	        in.close();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		return null;
 	}
 
