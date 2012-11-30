@@ -1,5 +1,2 @@
-org.clamshellcli.jmx.JmxSplashScreen
-org.clamshellcli.jmx.JmxPrompt
-org.clamshellcli.jmx.JmxController
-org.clamshellcli.jmx.ConnectCommand
-org.clamshellcli.jmx.DescribeCommand
+de.twenty11.skysail.client.dbviewer.cli.ChangePathCommand
+de.twenty11.skysail.client.dbviewer.cli.PwdCommand
