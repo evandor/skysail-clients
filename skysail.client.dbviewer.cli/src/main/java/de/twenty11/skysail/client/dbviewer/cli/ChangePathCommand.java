@@ -8,62 +8,31 @@ import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
+import org.clamshellcli.api.IOConsole;
 
 public class ChangePathCommand implements Command {
 
-    private static final String NAMESPACE = "syscmd";
     private static final String ACTION_NAME = "cd";
-    public static final String KEY_ARGS_PATH = "path";
-    public static final String CURRENT_PATH = "currentPath";
 
-    @Override
-    public Descriptor getDescriptor() {
-        return new Command.Descriptor() {
-
-            Map<String, String> args;
-
-            @Override
-            public String getNamespace() {
-                return NAMESPACE;
-            }
-
-            @Override
-            public String getName() {
-                return ACTION_NAME;
-            }
-
-            @Override
-            public String getDescription() {
-                return "change path";
-            }
-
-            @Override
-            public String getUsage() {
-                return "cd path:<Path>";
-            }
-
-            @Override
-            public Map<String, String> getArguments() {
-                if (args != null) {
-                    return args;
-                }
-                args = new LinkedHashMap<String, String>();
-                args.put(KEY_ARGS_PATH + ":<Path>", "A remote path to change to");
-                return args;
-            }
-        };
-
-    }
-
-    @Override
-    public void plug(Context arg0) {
-        // TODO Auto-generated method stub
-    }
+    private Descriptor descriptor = new HttpCommandDescriptor(ACTION_NAME, "cd <path>", "change path") {
+        @Override
+        public Map<String, String> getArguments() {
+            Map<String, String> args = new LinkedHashMap<String, String>();
+            args.put(Const.KEY_ARGS_PATH + ":<Path>", "A remote path to change to");
+            return args;
+        }
+    };
 
     @Override
     public Object execute(Context ctx) {
-        String currentPath = getCurrentPath(ctx);
-        String pathArgument = getPathArgument(ctx);
+        IOConsole console = ctx.getIoConsole();
+        if (!Utils.isConnected(ctx)) {
+            console.writeOutput("please connect first before using this command\n");
+            return "not connected";
+        }
+        String msg = "";
+        String currentPath = Utils.getCurrentPath(ctx);
+        String pathArgument = Utils.getPathArgument(ctx);
         
         if (pathArgument == null || pathArgument.trim().length() == 0) {
             currentPath = "/";
@@ -84,35 +53,17 @@ public class ChangePathCommand implements Command {
         } else {
             currentPath = "/" + pathArgument;
         }
-        ctx.putValue(CURRENT_PATH, currentPath);
+        ctx.putValue(Const.CURRENT_PATH, currentPath);
 
-        return currentPath;
+        return msg;
     }
 
-    private String getPathArgument(Context ctx) {
-        String pathArgument = null;
-        Object tmp = ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
-        if (tmp instanceof String) {
-            pathArgument = (String)tmp;
-        } else if (tmp instanceof String[]) {
-            String[] argsMap = (String[]) tmp;
-            pathArgument = (argsMap != null && argsMap.length > 0) ? argsMap[0] : null;
-        }
-        return pathArgument;
+    @Override
+    public Descriptor getDescriptor() {
+        return this.descriptor;
     }
 
-    private String getCurrentPath(Context ctx) {
-        Object pathAsObject = ctx.getValue(CURRENT_PATH);
-        if (pathAsObject == null) {
-            return "/";
-        } else {
-            String pathAsString = (String) pathAsObject;
-            if ("".equals(pathAsString.trim())) {
-                return "/";
-            } else {
-                return pathAsString.trim();
-            }
-        }
-    }
+    @Override
+    public void plug(Context arg0) {}
 
 }

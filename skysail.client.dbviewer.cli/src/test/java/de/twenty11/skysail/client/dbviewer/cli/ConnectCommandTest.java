@@ -1,78 +1,39 @@
 package de.twenty11.skysail.client.dbviewer.cli;
 
-import java.util.HashMap;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
-import org.clamshellcli.api.Context;
-import org.clamshellcli.test.MockContext;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ConnectCommandTest {
+public class ConnectCommandTest extends CommandTest {
 	
-	private MockContext ctx;
-	private ConnectCommand cmd;
-	private HashMap<String, String> argsMap;
+    private ConnectCommand cmd;
 
-	@Before
-	public void setUp() {
-		ctx = MockContext.createInstance();
-		cmd = new ConnectCommand();
-		argsMap = new HashMap<String, String>();
-	}
+    public ConnectCommandTest() {
+        cmd = new ConnectCommand();
+    }
 
-	@Test
-	public void testExecuteWithDefaultHostArgs() throws Exception {
-		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, argsMap);
-		cmd.execute(ctx);
-		Object value = ctx.getValue(Management.KEY_JMX_URL);
-	}
+    @Before
+    public void setUp() {
+        // needs to be done as we get same ctx Object everytime
+        reset(ctx);
+    }
 
-	@Test
-	public void testExecuteWithHostArgs() throws Exception {
-//		JmxAgent agent = TestUtils.startNewJmxAgent(1999);
-//
-//		argsMap.put(Management.KEY_ARGS_HOST, "localhost:1999");
-//
-//		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, argsMap);
-//		cmd.execute(ctx);
-//
-//		JMXServiceURL url = (JMXServiceURL) ctx
-//				.getValue(Management.KEY_JMX_URL);
-//		JMXConnector c = (JMXConnector) ctx
-//				.getValue(Management.KEY_JMX_CONNECTOR);
-//		MBeanServerConnection cn = (MBeanServerConnection) ctx
-//				.getValue(Management.KEY_JMX_MBEANSERVER);
-//
-//		assert url != null;
-//		assert c != null;
-//		assert cn != null;
-//
-//		agent.stop();
-	}
+    @Test
+    public void should_give_errormessage_if_server_is_unknown() throws Exception {
+        //setArgument("http://unknownserver");
+        String msg = (String) cmd.execute(ctx);
+        assertThat(msg, is(equalTo("not connected")));
+    }
 
-	@Test
-	public void testExecuteWithPidArgs() throws Exception {
-//		JmxAgent agent = TestUtils.startNewJmxAgent(1999);
-//
-//		Map<Integer, VmInfo> vms = Management.mapVmInfo("localhost");
-//		Integer vmId = vms.keySet().iterator().next();
-//		argsMap.put(Management.KEY_ARGS_PID, vmId.toString());
-//
-//		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, argsMap);
-//		cmd.execute(ctx);
-//
-//		JMXServiceURL url = (JMXServiceURL) ctx
-//				.getValue(Management.KEY_JMX_URL);
-//		JMXConnector c = (JMXConnector) ctx
-//				.getValue(Management.KEY_JMX_CONNECTOR);
-//		MBeanServerConnection cn = (MBeanServerConnection) ctx
-//				.getValue(Management.KEY_JMX_MBEANSERVER);
-//
-//		assert url != null;
-//		assert c != null;
-//		assert cn != null;
-//
-//		agent.stop();
+//    @Test
+//    public void should_set_connect_to_true_if_server_is_responsive() throws Exception {
+//        setArgument("http://www.heise.de");
+//        cmd.execute(ctx);
+//        assertThat(Utils.isConnected(ctx), is(equalTo(true)));
+//    }
 
-	}
+
 }

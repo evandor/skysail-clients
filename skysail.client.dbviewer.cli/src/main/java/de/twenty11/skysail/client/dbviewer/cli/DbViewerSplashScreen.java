@@ -6,21 +6,13 @@ import java.io.PrintStream;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.api.SplashScreen;
 
-public class JmxSplashScreen implements SplashScreen{
+public class DbViewerSplashScreen implements SplashScreen{
     private static StringBuilder screen;
     static{
         screen = new StringBuilder();
         screen
             .append(String.format("%n%n"))
-            .append(" /##### /###### /## /##").append(String.format("%n"))
-            .append(" |__ ## /##__ ## | ## |__/").append(String.format("%n"))
-            .append(" | ## /######/#### /## /## | ## \\__/ | ## /##").append(String.format("%n"))
-            .append(" | ## | ##_ ##_ ## | ## /##/ | ## | ## | ##").append(String.format("%n"))
-            .append(" /## | ## | ## \\ ## \\ ## \\ ####/ | ## | ## | ##").append(String.format("%n"))
-            .append("| ## | ## | ## | ## | ## >## ## | ## ## | ## | ##").append(String.format("%n"))
-            .append("| ######/ | ## | ## | ## /##/\\ ## | ######/ | ## | ##").append(String.format("%n"))
-            .append(" \\______/ |__/ |__/ |__/ |__/ \\__/ \\______/ |__/ |__/").append(String.format("%n%n"))
-            .append("A command-line tool for JMX").append(String.format("%n"))
+            .append("A command-line tool for Skysail").append(String.format("%n"))
             .append("Powered by Clamshell-Cli framework ").append(String.format("%n"))
             .append("http://code.google.com/p/clamshell-cli/").append(String.format("%n%n"))
     
