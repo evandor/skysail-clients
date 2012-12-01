@@ -5,10 +5,8 @@ import org.clamshellcli.api.Prompt;
 
 public class DbViewerPrompt implements Prompt {
 
-	private static final String PROMPT = "jmx-cli > ";
-
 	public String getValue(Context ctx) {
-		return PROMPT;
+		return "skysail DbViewer> ";
 	}
 
 	public void plug(Context plug) {

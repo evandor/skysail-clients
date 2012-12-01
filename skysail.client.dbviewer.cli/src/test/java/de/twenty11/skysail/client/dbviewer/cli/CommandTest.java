@@ -8,16 +8,16 @@ import org.clamshellcli.test.MockContext;
 
 public class CommandTest {
 
-    protected MockContext ctx;
+    protected MockContext ctx = MockContext.createInstance();
     protected Map<String, String> argsMap = new HashMap<String, String>();
 
     protected void resetContext() {
         ctx.removeValue(ChangePathCommand.CURRENT_PATH);
     }
 
-    protected void setArgument(String key, String str) {
-    	argsMap.put(key, str);
-        ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, argsMap);
+    protected void setArgument(String str) {
+    	//argsMap.put(key, str);
+        ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, str);
     	
         //argsMap.put(ChangePathCommand.KEY_ARGS_PATH, path);
         //ctx.putValue(Context.KEY_COMMAND_LINE_INPUT, str);

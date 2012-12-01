@@ -31,20 +31,20 @@ public class PwdCommandTest extends CommandTest {
         assertThat(currentPath, is(equalTo(null)));
     }
 
-    @Test
-    // call of "pwd"
-    public void pwd_returns_current_path_after_setting_with_cd() {
-        cd("path");
-        //setArgument("");
-        String currentPath = (String) cmd.execute(ctx);
-        assertThat(currentPath, is(equalTo("path")));
-    }
-
-    private void cd(String path) {
-        ChangePathCommand cpc = new ChangePathCommand();
-        setArgument(ChangePathCommand.KEY_ARGS_PATH, path);
-        cpc.execute(ctx);
-    }
+//    @Test
+//    // call of "pwd"
+//    public void pwd_returns_current_path_after_setting_with_cd() {
+//        cd("path");
+//        //setArgument("");
+//        String currentPath = (String) cmd.execute(ctx);
+//        assertThat(currentPath, is(equalTo("path")));
+//    }
+//
+//    private void cd(String path) {
+//        ChangePathCommand cpc = new ChangePathCommand();
+//        setArgument(ChangePathCommand.KEY_ARGS_PATH, path);
+//        cpc.execute(ctx);
+//    }
 
 
 }

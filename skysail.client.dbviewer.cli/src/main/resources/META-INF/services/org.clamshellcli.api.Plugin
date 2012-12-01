@@ -1,2 +1,3 @@
 de.twenty11.skysail.client.dbviewer.cli.ChangePathCommand
 de.twenty11.skysail.client.dbviewer.cli.PwdCommand
+de.twenty11.skysail.client.dbviewer.cli.DbViewerPrompt
