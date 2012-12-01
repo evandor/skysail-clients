@@ -10,6 +10,9 @@ import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.api.IOConsole;
 
+import de.twenty11.skysail.client.dbviewer.cli.internal.Const;
+import de.twenty11.skysail.client.dbviewer.cli.internal.Utils;
+
 public class ChangePathCommand implements Command {
 
     private static final String ACTION_NAME = "cd";
@@ -30,6 +33,7 @@ public class ChangePathCommand implements Command {
             console.writeOutput("please connect first before using this command\n");
             return "not connected";
         }
+
         String msg = "";
         String currentPath = Utils.getCurrentPath(ctx);
         String pathArgument = Utils.getPathArgument(ctx);

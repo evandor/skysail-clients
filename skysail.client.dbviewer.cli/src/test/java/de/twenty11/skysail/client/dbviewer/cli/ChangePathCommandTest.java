@@ -8,6 +8,8 @@ import org.clamshellcli.api.Command.Descriptor;
 import org.junit.Before;
 import org.junit.Test;
 
+import de.twenty11.skysail.client.dbviewer.cli.internal.Const;
+
 public class ChangePathCommandTest extends CommandTest {
 
     private ChangePathCommand cmd;

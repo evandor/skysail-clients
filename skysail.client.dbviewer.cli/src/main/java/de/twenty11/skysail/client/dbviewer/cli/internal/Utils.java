@@ -1,12 +1,13 @@
-package de.twenty11.skysail.client.dbviewer.cli;
+package de.twenty11.skysail.client.dbviewer.cli.internal;
 
 import org.clamshellcli.api.Context;
+
 
 public class Utils {
 
     private Utils() {}
     
-    static String getCurrentPath(Context ctx) {
+    public static String getCurrentPath(Context ctx) {
         Object pathAsObject = ctx.getValue(Const.CURRENT_PATH);
         if (pathAsObject == null) {
             return "/";
@@ -20,7 +21,7 @@ public class Utils {
         }
     }
     
-    static String getPathArgument(Context ctx) {
+    public static String getPathArgument(Context ctx) {
         String pathArgument = null;
         Object tmp = ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
         if (tmp instanceof String) {
@@ -32,7 +33,7 @@ public class Utils {
         return pathArgument;
     }
     
-    static boolean isConnected(Context ctx) {
+    public static boolean isConnected(Context ctx) {
         Object value = ctx.getValue(Const.HOST);
         if (value == null) {
             return false;
@@ -44,7 +45,7 @@ public class Utils {
         return strValue.trim().length() > 0;
     }
     
-    static String getHost (Context ctx) {
+    public static String getHost (Context ctx) {
         Object value = ctx.getValue(Const.HOST);
         if (value instanceof String) {
             return (String) value;
@@ -52,7 +53,7 @@ public class Utils {
         return null;
     }
     
-    static String getUrl (Context ctx) {
+    public static String getUrl (Context ctx) {
         String path = Utils.getCurrentPath(ctx);
         if (path != null && path.length() > 0 && (path.charAt(0) == '/')) {
             return Utils.getHost(ctx) + path.substring(1,path.length());

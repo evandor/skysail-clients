@@ -1,4 +1,4 @@
-package de.twenty11.skysail.client.dbviewer.cli;
+package de.twenty11.skysail.client.dbviewer.cli.internal;
 
 public class Const {
 

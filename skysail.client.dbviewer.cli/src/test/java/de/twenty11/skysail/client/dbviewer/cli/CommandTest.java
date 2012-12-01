@@ -6,6 +6,8 @@ import java.util.Map;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.test.MockContext;
 
+import de.twenty11.skysail.client.dbviewer.cli.internal.Const;
+
 public class CommandTest {
 
     protected MockContext ctx = MockContext.createInstance();

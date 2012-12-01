@@ -4,6 +4,8 @@ import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.api.IOConsole;
 
+import de.twenty11.skysail.client.dbviewer.cli.internal.Utils;
+
 public class PwdCommand implements Command {
 
     private static final String ACTION_NAME = "pwd";

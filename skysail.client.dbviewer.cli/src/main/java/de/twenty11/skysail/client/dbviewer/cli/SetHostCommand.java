@@ -6,6 +6,9 @@ import java.util.Map;
 import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
 
+import de.twenty11.skysail.client.dbviewer.cli.internal.Const;
+import de.twenty11.skysail.client.dbviewer.cli.internal.Utils;
+
 public class SetHostCommand implements Command {
 
     protected static final String ACTION_NAME = "setHost";

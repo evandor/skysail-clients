@@ -4,6 +4,8 @@ import java.util.Map;
 
 import org.clamshellcli.api.Command.Descriptor;
 
+import de.twenty11.skysail.client.dbviewer.cli.internal.Const;
+
 
 public class HttpCommandDescriptor implements Descriptor {
 

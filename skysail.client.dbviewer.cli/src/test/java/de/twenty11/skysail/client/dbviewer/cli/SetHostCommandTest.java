@@ -7,6 +7,8 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
+import de.twenty11.skysail.client.dbviewer.cli.internal.Utils;
+
 public class SetHostCommandTest extends CommandTest {
 	
     private SetHostCommand cmd;

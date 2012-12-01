@@ -7,6 +7,8 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
+import de.twenty11.skysail.client.dbviewer.cli.internal.Utils;
+
 public class GetCommandTest extends CommandTest {
 	
     private GetCommand cmd;
@@ -30,9 +32,11 @@ public class GetCommandTest extends CommandTest {
 
     @Test
     public void should_set_connect_to_true_if_server_is_responsive() throws Exception {
-        connect("http://localhost");
+        setHost("http://localhost");
+        connect(null);
         cmd.execute(ctx);
-        //assertThat(Utils.isConnected(ctx), is(equalTo(true)));
+        assertThat(Utils.isConnected(ctx), is(equalTo(true)));
     }
+
 
 }
