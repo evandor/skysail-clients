@@ -1,6 +1,7 @@
 de.twenty11.skysail.client.dbviewer.cli.ChangePathCommand
 de.twenty11.skysail.client.dbviewer.cli.PwdCommand
 de.twenty11.skysail.client.dbviewer.cli.GetCommand
+de.twenty11.skysail.client.dbviewer.cli.OptionsCommand
 de.twenty11.skysail.client.dbviewer.cli.DbViewerPrompt
 de.twenty11.skysail.client.dbviewer.cli.DbViewerSplashScreen
 de.twenty11.skysail.client.dbviewer.cli.ConnectCommand
