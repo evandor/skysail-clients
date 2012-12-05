@@ -17,6 +17,7 @@ import org.restlet.ext.jackson.JacksonConverter;
 import org.restlet.representation.Representation;
 
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerHome;
+import de.twenty11.skysail.client.dbviewer.wicket.ValidationBehavior;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
@@ -61,11 +62,11 @@ public class ConnectionPage extends DbViewerTemplate {
     private void createForm(final ConnectionDetails connection) {
         Form form = new Form("form");
         add(form);
-        form.add(new TextField<String>("name", new PropertyModel(connection, "name")));
-        form.add(new TextField<String>("username", new PropertyModel(connection, "username")));
-        form.add(new TextField<String>("password", new PropertyModel(connection, "password")));
-        form.add(new TextField<String>("url", new PropertyModel(connection, "url")));
-        form.add(new TextField<String>("driverName", new PropertyModel(connection, "driverName")));
+        form.add(new TextField<String>("name", new PropertyModel(connection, "name")).add(new ValidationBehavior()));
+        form.add(new TextField<String>("username", new PropertyModel(connection, "username")).add(new ValidationBehavior()));
+        form.add(new TextField<String>("password", new PropertyModel(connection, "password")).add(new ValidationBehavior()));
+        form.add(new TextField<String>("url", new PropertyModel(connection, "url")).add(new ValidationBehavior()));
+        form.add(new TextField<String>("driverName", new PropertyModel(connection, "driverName")).add(new ValidationBehavior()));
         form.add(messageLabel);
 
         form.add(new Button("order") {
