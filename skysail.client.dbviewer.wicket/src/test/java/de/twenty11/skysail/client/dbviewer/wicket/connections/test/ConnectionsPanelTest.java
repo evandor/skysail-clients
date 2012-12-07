@@ -28,6 +28,7 @@ import de.twenty11.skysail.client.dbviewer.wicket.connection.ConnectionPage;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
+import de.twenty11.skysail.common.forms.ConstraintViolations;
 import de.twenty11.skysail.common.responses.Response;
 import de.twenty11.skysail.common.responses.SuccessResponse;
 
@@ -54,7 +55,7 @@ public class ConnectionsPanelTest {
 
         @Override
         @Post
-        public Response<?> addConnection(ConnectionDetails entity) {
+        public Response<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
             return null;
         }
     };
@@ -109,7 +110,7 @@ public class ConnectionsPanelTest {
 
             @Override
             @Post
-            public Response<?> addConnection(ConnectionDetails entity) {
+            public Response<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
                 return null;
             }
         };
@@ -131,7 +132,7 @@ public class ConnectionsPanelTest {
 
             @Override
             @Post
-            public Response<?> addConnection(ConnectionDetails entity) {
+            public Response<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
                 return null;
             }
         };

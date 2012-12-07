@@ -24,6 +24,7 @@ import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
 import de.twenty11.skysail.common.MapData;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnection;
+import de.twenty11.skysail.common.forms.ConstraintViolations;
 import de.twenty11.skysail.common.responses.Response;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
@@ -45,7 +46,7 @@ public class ConnectionPage extends DbViewerTemplate {
                 });
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
         ConnectionProxy proxy = new ConnectionProxy();
-        RestfulConnection<MapData> restfulConnection = proxy.getRestfulConnection(name.toString());
+        RestfulConnection restfulConnection = proxy.getRestfulConnection(name.toString());
         ConnectionDetails connectionDetails  = restfulConnection.getConnection().getData();
         createForm(connectionDetails);
 

@@ -19,6 +19,7 @@ import org.restlet.resource.Post;
 import de.twenty11.skysail.client.dbviewer.wicket.tables.TablesProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
+import de.twenty11.skysail.common.forms.ConstraintViolations;
 import de.twenty11.skysail.common.responses.Response;
 import de.twenty11.skysail.common.responses.SuccessResponse;
 
@@ -45,7 +46,7 @@ public class TablesPanelTest {
 
         @Override
         @Post
-        public Response<?> addConnection(ConnectionDetails entity) {
+        public Response<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
             return null;
         }
     };
