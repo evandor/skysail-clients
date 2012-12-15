@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="Running Platform" sequenceNumber="50">
+<?pde version="3.8"?><target name="Running Platform" sequenceNumber="60">
 <locations>
 <location path="${eclipse_home}" type="Profile"/>
 <location path="/home/carsten/.m2/repository/javax/validation/com.springsource.javax.validation/1.0.0.GA" type="Directory"/>
@@ -48,6 +48,8 @@
 <location path="/home/carsten/.m2/repository/org/hibernate/hibernate-validator/4.3.0.Final" type="Directory"/>
 <location path="/home/carsten/.m2/repository/commons-dbcp/commons-dbcp/1.4" type="Directory"/>
 <location path="/home/carsten/.m2/repository/org/jboss/logging/jboss-logging/3.1.2.GA" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/apache/felix/org.apache.felix.configadmin/1.4.0" type="Directory"/>
+<location path="/home/carsten/.m2/repository/org/apache/felix/org.apache.felix.log/1.0.1" type="Directory"/>
 </locations>
 <environment>
 <os>linux</os>
