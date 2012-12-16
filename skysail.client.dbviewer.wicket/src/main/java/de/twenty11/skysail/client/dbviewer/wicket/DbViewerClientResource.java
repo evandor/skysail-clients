@@ -7,7 +7,7 @@ import org.restlet.resource.ClientResource;
 public class DbViewerClientResource extends ClientResource {
 
     // TODO set from outside
-    private static final String SERVER_URL = "http://localhost:8554/dbviewer/connections/";
+    private static final String SERVER_URL = "http://localhost:2011/dbviewer/connections/";
 
     public DbViewerClientResource() {
         super(SERVER_URL + "?media=json");
