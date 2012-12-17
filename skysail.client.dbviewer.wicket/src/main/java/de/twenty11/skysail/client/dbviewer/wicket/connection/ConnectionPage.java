@@ -24,7 +24,6 @@ import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
 import de.twenty11.skysail.common.MapData;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnection;
-import de.twenty11.skysail.common.forms.ConstraintViolations;
 import de.twenty11.skysail.common.responses.Response;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
@@ -32,25 +31,25 @@ import de.twenty11.skysail.common.utils.RestletUtils;
 @SuppressWarnings("serial")
 public class ConnectionPage extends DbViewerTemplate {
 
-    /**
-     * @uml.property name="messageLabel"
-     * @uml.associationEnd multiplicity="(1 1)"
-     */
     private Label messageLabel = new Label("message", new Model(""));
 
     public ConnectionPage(PageParameters parameters) {
         StringValue name = parameters.get("name");
 
         ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                new TypeReference<Response<MapData>>() {
+                new TypeReference<Response<ConnectionDetails>>() {
                 });
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
         ConnectionProxy proxy = new ConnectionProxy();
         RestfulConnection restfulConnection = proxy.getRestfulConnection(name.toString());
         ConnectionDetails connectionDetails  = restfulConnection.getConnection().getData();
-        createForm(connectionDetails);
-
-        add(new ConnectionsPanel("connectionsPanel", new ConnectionsProxy()));
+        if (connectionDetails != null) {
+            createForm(connectionDetails);
+        } else {
+            messageLabel.setDefaultModel(new Model("Could not retrieve connection from db. If you want to create a new one, please proceed."));
+            createForm(new ConnectionDetails());
+        }
+        //add(new ConnectionsPanel("connectionsPanel", new ConnectionsProxy()));
 
     }
 
