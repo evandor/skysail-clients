@@ -9,7 +9,7 @@ import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.PlatformUI;
 import org.osgi.framework.FrameworkUtil;
 
-public class TodoLabelProvider extends LabelProvider {
+public class ConnectionsLabelProvider extends LabelProvider {
     
     private static final Image FOLDER = getImage("folder.gif");
     private static final Image FILE = getImage("file.gif");
@@ -35,7 +35,7 @@ public class TodoLabelProvider extends LabelProvider {
     // Helper Method to load the images
     private static Image getImage(String file) {
         return null;
-//      Bundle bundle = FrameworkUtil.getBundle(TodoLabelProvider.class);
+//      Bundle bundle = FrameworkUtil.getBundle(ConnectionsLabelProvider.class);
 //      URL url = FileLocator.find(bundle, new Path("icons/" + file), null);
 //      ImageDescriptor image = ImageDescriptor.createFromURL(url);
 //      return image.createImage();

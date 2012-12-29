@@ -17,16 +17,10 @@ import de.twenty11.skysail.common.utils.RestletUtils;
 
 public class ConnectionsModel {
 
-    public List<Connection> getCategories() {
+    public List<Connection> getConnections() {
         List<Connection> result = new ArrayList<Connection>();
         ClientResource cr = new DbViewerClientResource();
-        Class<RestfulConnections> clazs;
         RestfulConnections connections;
-        // 1 .) RestfulConnections connections = cr.wrap(RestfulConnections.class);
-
-        // 2. ) clazs = (Class<RestfulConnections>)
-        // cr.getClass().getClassLoader().loadClass("de.twenty11.skysail.common.ext.dbviewer.RestfulConnections");
-        // connections = cr.wrap(clazs);
 
         List<ConnectionDetails> data;
         
@@ -52,20 +46,6 @@ public class ConnectionsModel {
             conn.setName(connectionDetails.getName());
             result.add(conn);
         }
-        // Connection category = new Connection();
-        // category.setName("Programming");
-        // connections.add(category);
-        // Schema todo = new Schema("Write more about e4");
-        // category.getSchemes().add(todo);
-        // todo = new Schema("Android", "Write a widget.");
-        // category.getSchemes().add(todo);
-        //
-        // category = new Connection();
-        // category.setName("Leasure");
-        // connections.add(category);
-        // todo = new Schema("Skiing");
-        // category.getSchemes().add(todo);
-
         return result;
     }
 
