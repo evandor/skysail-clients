@@ -5,29 +5,29 @@ public class Schema {
     private String description = "";
 
     public Schema(String summary) {
-      this.summary = summary;
+        this.summary = summary;
     }
 
     public Schema(String summary, String description) {
-      this.summary = summary;
-      this.description = description;
+        this.summary = summary;
+        this.description = description;
 
     }
 
     public String getSummary() {
-      return summary;
+        return summary;
     }
 
     public void setSummary(String summary) {
-      this.summary = summary;
+        this.summary = summary;
     }
 
     public String getDescription() {
-      return description;
+        return description;
     }
 
     public void setDescription(String description) {
-      this.description = description;
+        this.description = description;
     }
 
-  } 
+}

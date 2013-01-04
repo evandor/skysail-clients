@@ -6,6 +6,8 @@ import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
+import de.twenty11.skysail.common.ext.dbviewer.TableDetails;
+
 public class TablesPanel extends Panel {
 
     public static final String TABLES = "tables";
@@ -30,7 +32,7 @@ public class TablesPanel extends Panel {
             }
         };
 
-        ListView<String> Tables = new TablesListView(TABLES, new TablesModel(this));
+        ListView<TableDetails> Tables = new TablesListView(TABLES, new TablesModel(this));
 
         add(Tables);
         add(errorMessage);

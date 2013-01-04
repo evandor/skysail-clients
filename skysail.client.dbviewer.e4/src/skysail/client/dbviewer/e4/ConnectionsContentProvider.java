@@ -3,7 +3,7 @@ package skysail.client.dbviewer.e4;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-public class TodoContentProvider implements ITreeContentProvider {
+public class ConnectionsContentProvider implements ITreeContentProvider {
 
     private ConnectionsModel model;
 
@@ -18,7 +18,7 @@ public class TodoContentProvider implements ITreeContentProvider {
 
     @Override
     public Object[] getElements(Object inputElement) {
-      return model.getCategories().toArray();
+      return model.getConnections().toArray();
     }
 
     @Override

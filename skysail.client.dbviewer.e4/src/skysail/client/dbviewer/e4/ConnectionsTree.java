@@ -12,7 +12,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.KeyAdapter;
 import org.eclipse.swt.events.KeyEvent;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.ui.part.ViewPart;
 
 
 public class ConnectionsTree {
@@ -23,8 +22,8 @@ public class ConnectionsTree {
     @PostConstruct
     public void createPartControl(Composite parent) {
       viewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
-      viewer.setContentProvider(new TodoContentProvider());
-      viewer.setLabelProvider(new TodoLabelProvider());
+      viewer.setContentProvider(new ConnectionsContentProvider());
+      viewer.setLabelProvider(new ConnectionsLabelProvider());
       //viewer.setAutoExpandLevel(2);
       // Provide the input to the ContentProvider
       viewer.setInput(new ConnectionsModel());

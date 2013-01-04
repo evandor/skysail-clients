@@ -11,11 +11,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.twenty11.skysail.common.ext.dbviewer.RestfulTables;
+import de.twenty11.skysail.common.ext.dbviewer.TableDetails;
 import de.twenty11.skysail.common.responses.Response;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
 
-public class TablesModel extends LoadableDetachableModel<List<String>> {
+public class TablesModel extends LoadableDetachableModel<List<TableDetails>> {
 
     private static final long serialVersionUID = -5645764949454058272L;
     private static final Logger logger = LoggerFactory.getLogger(TablesModel.class);
@@ -26,14 +27,14 @@ public class TablesModel extends LoadableDetachableModel<List<String>> {
     }
 
     @Override
-    protected List<String> load() {
+    protected List<TableDetails> load() {
         try {
             ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
                     new TypeReference<Response<List<String>>>() {
                     });
             RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
             RestfulTables restfulConnections = panel.getProxy().getRestfulTables();
-            Response<List<String>> response = restfulConnections.getTables();
+            Response<List<TableDetails>> response = restfulConnections.getTables();
             logger.info("found {} tables", response.getData().size());
             return response.getData();
         } catch (Exception e) {
