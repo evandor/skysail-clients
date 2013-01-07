@@ -25,6 +25,7 @@ public class Connection {
     }
 
     public List<Schema> getSchemes() {
-      return schemes;
+        SchemesModel schemesModel = new SchemesModel();
+        return schemesModel.getSchemes(this);
     }
   } 

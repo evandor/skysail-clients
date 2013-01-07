@@ -1,3 +1,4 @@
+package skysail.client.dbviewer.e4.internal;
 //package skysail.client.dbviewer.e4;
 //
 //import skysail.client.dbviewer.e4.internal.VCardContactsRepository;

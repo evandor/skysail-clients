@@ -38,5 +38,13 @@ public class GetCommandTest extends CommandTest {
         assertThat(Utils.isConnected(ctx), is(equalTo(true)));
     }
 
+    @Test
+    public void integrationTest() throws Exception {
+        setHost("http://80.86.88.102:8554/osgimonitor/?media=json");
+        connect(null);
+        cmd.execute(ctx);
+        assertThat(Utils.isConnected(ctx), is(equalTo(true)));
+    }
+
 
 }

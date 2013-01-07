@@ -15,7 +15,7 @@ public class DbViewerClientResource extends ClientResource {
     }
 
     public DbViewerClientResource(String connectionId) {
-        super(SERVER_URL + connectionId + "?media=json");
+        super(SERVER_URL + connectionId + "/schemas?media=json");
         addAuthentication();
     }
 

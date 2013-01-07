@@ -24,8 +24,8 @@ public class ConnectionsContentProvider implements ITreeContentProvider {
     @Override
     public Object[] getChildren(Object parentElement) {
       if (parentElement instanceof Connection) {
-        Connection category = (Connection) parentElement;
-        return category.getSchemes().toArray();
+        Connection connection = (Connection) parentElement;
+        return connection.getSchemes().toArray();
       }
       return null;
     }
