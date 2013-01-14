@@ -18,10 +18,8 @@ import org.restlet.representation.Representation;
 
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerHome;
 import de.twenty11.skysail.client.dbviewer.wicket.ValidationBehavior;
-import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsPanel;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
-import de.twenty11.skysail.common.MapData;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnection;
 import de.twenty11.skysail.common.responses.Response;
