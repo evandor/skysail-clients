@@ -30,7 +30,7 @@ public class TablesModel extends LoadableDetachableModel<List<TableDetails>> {
     protected List<TableDetails> load() {
         try {
             ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                    new TypeReference<Response<List<String>>>() {
+                    new TypeReference<Response<List<TableDetails>>>() {
                     });
             RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
             RestfulTables restfulConnections = panel.getProxy().getRestfulTables();
