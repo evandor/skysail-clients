@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
 
@@ -30,12 +30,12 @@ public class ConnectionsModel extends LoadableDetachableModel<List<ConnectionDet
     protected List<ConnectionDetails> load() {
         try {
             ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                    new TypeReference<Response<List<ConnectionDetails>>>() {
+                    new TypeReference<SkysailResponse<List<ConnectionDetails>>>() {
                     });
             RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
             
             RestfulConnections restfulConnections = panel.getProxy().getRestfulConnections();
-            Response<List<ConnectionDetails>> response = restfulConnections.getConnections();
+            SkysailResponse<List<ConnectionDetails>> response = restfulConnections.getConnections();
             logger.info("found {} connections", response.getData().size());
             return response.getData();
         } catch (Exception e) {

@@ -19,7 +19,7 @@ import org.restlet.ext.jackson.JacksonConverter;
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerSession;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulSchemas;
 import de.twenty11.skysail.common.ext.dbviewer.SchemaDetails;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
 
@@ -48,14 +48,14 @@ public class SchemasPanel extends Panel {
         };
 
         ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                new TypeReference<Response<List<SchemaDetails>>>() {
+                new TypeReference<SkysailResponse<List<SchemaDetails>>>() {
                 });
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
 
         List<String> schemasList = new ArrayList<String>();
         try {
             RestfulSchemas restfulSchemas = proxy.getRestfulSchemas();
-            Response<List<SchemaDetails>> response = restfulSchemas.getSchemas();
+            SkysailResponse<List<SchemaDetails>> response = restfulSchemas.getSchemas();
             List<SchemaDetails> data2 = response.getData();
             if (data2 != null) {
                 for (SchemaDetails schemaDetails : data2) {

@@ -17,7 +17,7 @@ import org.restlet.ext.jackson.JacksonConverter;
 import de.twenty11.skysail.client.dbviewer.wicket.columns.ColumnsProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ColumnsDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulColumns;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
 
@@ -48,13 +48,13 @@ public class DataPanel extends Panel {
         final DataProvider dataProvider = new DataProvider();
 
         ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                new TypeReference<Response<List<ColumnsDetails>>>() {
+                new TypeReference<SkysailResponse<List<ColumnsDetails>>>() {
                 });
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
 
         ColumnsProxy columnsProxy = new ColumnsProxy();
         RestfulColumns restfulColumns = columnsProxy.getRestfulColumns();
-        Response<List<ColumnsDetails>> columns2 = restfulColumns.getColumns();
+        SkysailResponse<List<ColumnsDetails>> columns2 = restfulColumns.getColumns();
         List<IColumn> columns = new ArrayList<IColumn>();
         if (columns2 != null && columns2.getData() != null && columns2.getData().size() > 0) {
             for (ColumnsDetails column : columns2.getData()) {

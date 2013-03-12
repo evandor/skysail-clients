@@ -6,7 +6,7 @@ import org.restlet.resource.Get;
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerClientResource;
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerSession;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulData;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 
 /**
  * Access point for remote server for connections
@@ -24,7 +24,7 @@ public class DataProxy {
 
                 @Override
                 @Get
-                public Response getData() {
+                public SkysailResponse getData() {
                     // TODO Auto-generated method stub
                     return null;
                 }
