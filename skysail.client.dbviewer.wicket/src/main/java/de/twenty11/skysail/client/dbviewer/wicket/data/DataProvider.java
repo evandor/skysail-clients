@@ -19,7 +19,7 @@ import org.restlet.ext.jackson.JacksonConverter;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulData;
 import de.twenty11.skysail.common.grids.GridData;
 import de.twenty11.skysail.common.grids.RowData;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
 
@@ -49,14 +49,14 @@ public class DataProvider extends SortableDataProvider {
         setSort("first", SortOrder.ASCENDING);
 
         ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                new TypeReference<Response<GridData>>() {
+                new TypeReference<SkysailResponse<GridData>>() {
                 });
 
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
 
         try {
             RestfulData restfulData = new DataProxy().getRestfulData();
-            Response<GridData> data = restfulData.getData();
+            SkysailResponse<GridData> data = restfulData.getData();
 
             if (data != null) {
                 GridData gridData = data.getData();

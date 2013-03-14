@@ -12,7 +12,7 @@ import org.restlet.resource.ClientResource;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulSchemas;
 import de.twenty11.skysail.common.ext.dbviewer.SchemaDetails;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
 
@@ -32,11 +32,11 @@ public class SchemesModel {
             engine.setUserClassLoader(loaderNew);
             schemas = cr.wrap(RestfulSchemas.class);
             ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                    new TypeReference<Response<List<SchemaDetails>>>() {
+                    new TypeReference<SkysailResponse<List<SchemaDetails>>>() {
                     });
             RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
 
-            Response<List<SchemaDetails>> connections2 = schemas.getSchemas();
+            SkysailResponse<List<SchemaDetails>> connections2 = schemas.getSchemas();
             data = connections2.getData();
         } finally {
             engine.setUserClassLoader(loaderOld);

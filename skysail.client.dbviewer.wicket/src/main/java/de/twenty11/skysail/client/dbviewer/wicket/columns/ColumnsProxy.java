@@ -10,7 +10,7 @@ import de.twenty11.skysail.client.dbviewer.wicket.DbViewerClientResource;
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerSession;
 import de.twenty11.skysail.common.ext.dbviewer.ColumnsDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulColumns;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.responses.SuccessResponse;
 
 /**
@@ -29,7 +29,7 @@ public class ColumnsProxy {
 
                 @Override
                 @Get
-                public Response<List<ColumnsDetails>> getColumns() {
+                public SkysailResponse<List<ColumnsDetails>> getColumns() {
                     List<ColumnsDetails> emptyList = Collections.<ColumnsDetails> emptyList();
                     return new SuccessResponse<List<ColumnsDetails>>(emptyList);
                 }

@@ -22,7 +22,7 @@ import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.client.dbviewer.wicket.templates.DbViewerTemplate;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnection;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
 
@@ -35,7 +35,7 @@ public class ConnectionPage extends DbViewerTemplate {
         StringValue name = parameters.get("name");
 
         ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                new TypeReference<Response<ConnectionDetails>>() {
+                new TypeReference<SkysailResponse<ConnectionDetails>>() {
                 });
         RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
         ConnectionProxy proxy = new ConnectionProxy();
@@ -73,7 +73,7 @@ public class ConnectionPage extends DbViewerTemplate {
                 Representation answer = new ConnectionsProxy().addConnection(connection);
                 try {
                     String jsonString = answer.getText();
-                    Response<?> response = new ObjectMapper().readValue(jsonString, new TypeReference<Response<?>>() {
+                    SkysailResponse<?> response = new ObjectMapper().readValue(jsonString, new TypeReference<SkysailResponse<?>>() {
                     });
                     if (!response.getSuccess()) {
                         messageLabel.setDefaultModel(new Model(response.getMessage()));

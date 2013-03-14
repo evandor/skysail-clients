@@ -23,11 +23,11 @@ public class SkysailClientApplication {
 	private static int    restletUrlPort = 8099;
 	private static String restletUrlPath = "/rest/";
     
-    //private static Logger logger = LoggerFactory.getLogger(SkysailClientApplication.class);
+    //private static Logger log4jLogger = LoggerFactory.getLogger(SkysailClientApplication.class);
 
     static {
         String confDir = System.getProperty("skysail.confDir", "./conf");
-        //logger.info("skysail.confDir system property resolved to " + confDir + " (default './conf')");
+        //log4jLogger.info("skysail.confDir system property resolved to " + confDir + " (default './conf')");
         String path = "";
         
         try {
@@ -36,7 +36,7 @@ public class SkysailClientApplication {
             path = confDir + File.separator
                 + "server" + File.separator + "restlet.properties";
             
-            //logger.info ("trying to open file '"+path+"'");
+            //log4jLogger.info ("trying to open file '"+path+"'");
             reader = new InputStreamReader(new BufferedInputStream(new FileInputStream(path)), "UTF-8");
             props.load(reader);
             reader.close();
@@ -46,8 +46,8 @@ public class SkysailClientApplication {
             restletUrlPath = props.getProperty("skysail.server.restlet.path");
             
         } catch (Exception e) {
-//            logger.error ("Could not open file '"+path+"', expection is " + e.getMessage());
-//            logger.error("current path is " + new File(".").getAbsolutePath());
+//            log4jLogger.error ("Could not open file '"+path+"', expection is " + e.getMessage());
+//            log4jLogger.error("current path is " + new File(".").getAbsolutePath());
         }
     }
 

@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>de.twentyeleven.skysail</groupId>
 		<artifactId>skysail.build.maven.parentPom</artifactId>
-		<version>0.8.17-SNAPSHOT</version>
+		<version>0.8.32</version>
 	</parent>
 
 	<artifactId>skysail.client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>skysail :: client :: common - for all clients </name>
+	<name>SKYSAIL :: client :: common - for all clients </name>
 	<packaging>bundle</packaging>
 
 	<scm>
@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>de.twentyeleven.skysail</groupId>
 			<artifactId>skysail.common</artifactId>
-			<version>[0.3.13-SNAPSHOT, 1.0)</version>
+			<version>[0.3.19, 1.0)</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.restlet.osgi</groupId>
