@@ -35,7 +35,7 @@ public class SchemasProxy {
             };
         }
         
-        ClientResource clientResource = new DbViewerClientResource(connection + "/schemas");
+        ClientResource clientResource = new DbViewerClientResource("/" + connection + "/schemas");
         return clientResource.wrap(RestfulSchemas.class);
     }
 

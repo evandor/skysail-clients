@@ -37,7 +37,7 @@ public class ColumnsProxy {
             };
         }
 
-        ClientResource clientResource = new DbViewerClientResource(connection + "/schemas/" + schema + "/tables/"
+        ClientResource clientResource = new DbViewerClientResource("/" + connection + "/schemas/" + schema + "/tables/"
                 + table + "/columns");
         return clientResource.wrap(RestfulColumns.class);
     }

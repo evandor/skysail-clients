@@ -33,7 +33,7 @@ public class DataProxy {
             };
         }
 
-        ClientResource clientResource = new DbViewerClientResource(connection + "/schemas/" + schema + "/tables/"
+        ClientResource clientResource = new DbViewerClientResource("/" + connection + "/schemas/" + schema + "/tables/"
                 + table + "/data");
         return clientResource.wrap(RestfulData.class);
     }

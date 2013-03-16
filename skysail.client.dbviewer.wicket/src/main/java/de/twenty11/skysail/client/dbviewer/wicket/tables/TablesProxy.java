@@ -36,7 +36,7 @@ public class TablesProxy {
             };
         }
 
-        ClientResource clientResource = new DbViewerClientResource(connection + "/schemas/" + schema + "/tables");
+        ClientResource clientResource = new DbViewerClientResource("/" + connection + "/schemas/" + schema + "/tables");
         return clientResource.wrap(RestfulTables.class);
     }
 }
