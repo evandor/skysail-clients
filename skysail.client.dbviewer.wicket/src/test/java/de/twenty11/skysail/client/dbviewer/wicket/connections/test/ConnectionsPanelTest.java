@@ -22,13 +22,11 @@ import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.Get;
-import org.restlet.resource.Post;
 
 import de.twenty11.skysail.client.dbviewer.wicket.connection.ConnectionPage;
 import de.twenty11.skysail.client.dbviewer.wicket.connections.ConnectionsProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
-import de.twenty11.skysail.common.forms.ConstraintViolations;
 import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.responses.SuccessResponse;
 
@@ -53,11 +51,7 @@ public class ConnectionsPanelTest {
             return result;
         }
 
-        @Override
-        @Post
-        public SkysailResponse<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
-            return null;
-        }
+
     };
 
     @Before
@@ -108,11 +102,7 @@ public class ConnectionsPanelTest {
                 throw new WicketRuntimeException("Communication Error");
             }
 
-            @Override
-            @Post
-            public SkysailResponse<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
-                return null;
-            }
+
         };
         when(proxyMock.getRestfulConnections()).thenReturn(answer);
         tester.startPage(page);
@@ -130,11 +120,6 @@ public class ConnectionsPanelTest {
                 throw new WicketRuntimeException("Communication Error");
             }
 
-            @Override
-            @Post
-            public SkysailResponse<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
-                return null;
-            }
         };
         when(proxyMock.getRestfulConnections()).thenReturn(answer);
         tester.startPage(page);

@@ -14,12 +14,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.restlet.resource.Get;
-import org.restlet.resource.Post;
 
 import de.twenty11.skysail.client.dbviewer.wicket.tables.TablesProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
-import de.twenty11.skysail.common.forms.ConstraintViolations;
 import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.responses.SuccessResponse;
 
@@ -44,11 +42,6 @@ public class TablesPanelTest {
             return result;
         }
 
-        @Override
-        @Post
-        public SkysailResponse<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
-            return null;
-        }
     };
 
     @Before
