@@ -33,7 +33,7 @@ public class GetCommand implements Command {
             // con.setRequestMethod("POST");
             // con.getOutputStream().write("LOGIN".getBytes("UTF-8"));
             
-            String userpass = "scott:tiger";
+            String userpass = "admin:skysail";
             String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes());
             con.setRequestProperty("Authorization", basicAuth);
             
@@ -41,7 +41,7 @@ public class GetCommand implements Command {
             BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
-                System.out.println(inputLine);
+                console.writeOutput(inputLine);
             }
             in.close();
         } catch (Exception e) {

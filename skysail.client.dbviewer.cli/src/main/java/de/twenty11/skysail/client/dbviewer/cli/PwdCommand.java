@@ -21,7 +21,7 @@ public class PwdCommand implements Command {
             return "not connected";
         }
 
-        String host = Utils.getHost(ctx);
+        String host = Utils.getServer(ctx);
         String path = Utils.getCurrentPath(ctx);
         console.writeOutput(host + path);
         console.writeOutput("\n");

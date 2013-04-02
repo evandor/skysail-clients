@@ -24,11 +24,11 @@ public class CommandTest {
     protected void reset(MockContext ctx) {
         ctx.removeValue(Context.KEY_COMMAND_LINE_ARGS);
         ctx.removeValue(Const.CURRENT_PATH);
-        ctx.removeValue(Const.HOST);
+        ctx.removeValue(Const.SERVER);
     }
 
     protected String setHost(String host) {
-        SetHostCommand shc = new SetHostCommand();
+        SetServerCommand shc = new SetServerCommand();
         setArgument(host);
         return (String) shc.execute(ctx);
     }

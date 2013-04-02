@@ -30,7 +30,7 @@ public class ConnectCommand implements Command {
 
     public Object execute(Context ctx) {
         IOConsole console = ctx.getIoConsole();
-        if (Utils.getHost(ctx) == null) {
+        if (Utils.getServer(ctx) == null) {
             console.writeOutput("please set the host using 'setHost' before connecting \n");
             return "not connected";
         }
@@ -43,7 +43,7 @@ public class ConnectCommand implements Command {
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
 
-            String userpass = "scott:tiger";
+            String userpass = "admin:skysail";
             String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes());
             con.setRequestProperty("Authorization", basicAuth);
             // con.getOutputStream().write("LOGIN".getBytes("UTF-8"));
@@ -72,7 +72,7 @@ public class ConnectCommand implements Command {
     }
 
     private void setHost(Context ctx, String host) {
-        ctx.putValue(Const.HOST, host);
+        ctx.putValue(Const.SERVER, host);
     }
 
 }
