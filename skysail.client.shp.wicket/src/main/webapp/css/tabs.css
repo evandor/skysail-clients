@@ -1,0 +1,36 @@
+div.tab-row ul {
+    background: url("../img/tab_bottom.gif") repeat-x scroll center bottom transparent;
+    height: 20px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+div.tab-row li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.tab-row li.selected a:link, div.tab-row a.active:visited {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    color: #000000;
+}
+div.tab-row a:link, div.tab-row a:visited {
+    background: none repeat scroll 0 0 #F3F3F3;
+    border: 1px solid #CCCCCC;
+    color: #666666;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+    margin-right: 4px;
+    padding: 2px 10px;
+    text-decoration: none;
+}
+a {
+    color: #E9601A;
+    font-weight: bold;
+    text-decoration: none;
+}
