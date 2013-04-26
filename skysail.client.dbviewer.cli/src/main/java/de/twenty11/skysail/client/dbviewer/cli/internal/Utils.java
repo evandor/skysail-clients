@@ -34,7 +34,7 @@ public class Utils {
     }
     
     public static boolean isConnected(Context ctx) {
-        Object value = ctx.getValue(Const.HOST);
+        Object value = ctx.getValue(Const.SERVER);
         if (value == null) {
             return false;
         } 
@@ -45,8 +45,8 @@ public class Utils {
         return strValue.trim().length() > 0;
     }
     
-    public static String getHost (Context ctx) {
-        Object value = ctx.getValue(Const.HOST);
+    public static String getServer (Context ctx) {
+        Object value = ctx.getValue(Const.SERVER);
         if (value instanceof String) {
             return (String) value;
         }
@@ -56,9 +56,9 @@ public class Utils {
     public static String getUrl (Context ctx) {
         String path = Utils.getCurrentPath(ctx);
         if (path != null && path.length() > 0 && (path.charAt(0) == '/')) {
-            return Utils.getHost(ctx) + path.substring(1,path.length());
+            return Utils.getServer(ctx) + path.substring(1,path.length());
         }
-        return Utils.getHost(ctx) + path;
+        return Utils.getServer(ctx) + path;
     }
 
 }

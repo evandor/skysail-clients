@@ -10,7 +10,7 @@ import de.twenty11.skysail.client.dbviewer.wicket.DbViewerClientResource;
 import de.twenty11.skysail.client.dbviewer.wicket.DbViewerSession;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulSchemas;
 import de.twenty11.skysail.common.ext.dbviewer.SchemaDetails;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.responses.SuccessResponse;
 
 /**
@@ -27,7 +27,7 @@ public class SchemasProxy {
 
                 @Override
                 @Get
-                public Response<List<SchemaDetails>> getSchemas() {
+                public SkysailResponse<List<SchemaDetails>> getSchemas() {
                      List<SchemaDetails> emptyList = Collections.<SchemaDetails>emptyList();
                      return new SuccessResponse<List<SchemaDetails>>(emptyList);
                 }
@@ -35,7 +35,7 @@ public class SchemasProxy {
             };
         }
         
-        ClientResource clientResource = new DbViewerClientResource(connection + "/schemas");
+        ClientResource clientResource = new DbViewerClientResource("/" + connection + "/schemas");
         return clientResource.wrap(RestfulSchemas.class);
     }
 

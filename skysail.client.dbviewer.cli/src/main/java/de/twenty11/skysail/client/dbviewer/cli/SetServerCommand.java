@@ -1,17 +1,20 @@
 package de.twenty11.skysail.client.dbviewer.cli;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Collections;
 import java.util.Map;
 
 import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
+import org.clamshellcli.api.IOConsole;
 
 import de.twenty11.skysail.client.dbviewer.cli.internal.Const;
 import de.twenty11.skysail.client.dbviewer.cli.internal.Utils;
 
-public class SetHostCommand implements Command {
+public class SetServerCommand implements Command {
 
-    protected static final String ACTION_NAME = "setHost";
+    protected static final String ACTION_NAME = "setServer";
     private Descriptor descriptor;
 
     public Descriptor getDescriptor() {
@@ -30,7 +33,7 @@ public class SetHostCommand implements Command {
             }
 
             public String getUsage() {
-                return "setHost <hostname>, e.g. setHost http://localhost:8888/";
+                return "setServer <serverUrl>, e.g. setServer http://localhost:8888";
             }
 
             public Map<String, String> getArguments() {
@@ -41,15 +44,24 @@ public class SetHostCommand implements Command {
 
     @Override
     public Object execute(Context ctx) {
+        IOConsole console = ctx.getIoConsole();
         String pathArgument = Utils.getPathArgument(ctx);
-        ctx.putValue(Const.HOST, pathArgument);
-        return null;
+        try {
+            URL url = new URL(pathArgument);
+            String serverUrl = url.getProtocol() + "://" + url.getHost();
+            serverUrl += ":" + url.getPort();
+            ctx.putValue(Const.SERVER, serverUrl);
+            console.writeOutput("'" + Const.SERVER + "' was set to '" + serverUrl + "'\n\n");
+            return serverUrl;
+        } catch (MalformedURLException e) {
+            console.writeOutput("setServer argument '" + pathArgument + "' could not be parsed as URL: "
+                    + e.getMessage());
+            return null;
+        }
     }
 
     @Override
     public void plug(Context arg0) {
-        // TODO Auto-generated method stub
-
     }
 
 }

@@ -14,13 +14,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.restlet.resource.Get;
-import org.restlet.resource.Post;
 
 import de.twenty11.skysail.client.dbviewer.wicket.tables.TablesProxy;
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
-import de.twenty11.skysail.common.forms.ConstraintViolations;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.responses.SuccessResponse;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -37,18 +35,13 @@ public class TablesPanelTest {
     private RestfulConnections successAnswer = new RestfulConnections() {
         @Override
         @Get
-        public Response<List<ConnectionDetails>> getConnections() {
+        public SkysailResponse<List<ConnectionDetails>> getConnections() {
             List<ConnectionDetails> data = new ArrayList<ConnectionDetails>();
             data.add(new ConnectionDetails("name", "username", "password", "url", "driverClassName"));
-            Response<List<ConnectionDetails>> result = new SuccessResponse<List<ConnectionDetails>>(data);
+            SkysailResponse<List<ConnectionDetails>> result = new SuccessResponse<List<ConnectionDetails>>(data);
             return result;
         }
 
-        @Override
-        @Post
-        public Response<ConstraintViolations<ConnectionDetails>> addConnection(ConnectionDetails entity) {
-            return null;
-        }
     };
 
     @Before

@@ -11,7 +11,7 @@ import org.restlet.resource.ClientResource;
 
 import de.twenty11.skysail.common.ext.dbviewer.ConnectionDetails;
 import de.twenty11.skysail.common.ext.dbviewer.RestfulConnections;
-import de.twenty11.skysail.common.responses.Response;
+import de.twenty11.skysail.common.responses.SkysailResponse;
 import de.twenty11.skysail.common.utils.MyLocalJacksonCustomConverter;
 import de.twenty11.skysail.common.utils.RestletUtils;
 
@@ -31,11 +31,11 @@ public class ConnectionsModel {
             engine.setUserClassLoader(loaderNew);
             connections = cr.wrap(RestfulConnections.class);
             ConverterHelper myLocalJacksonConverter = new MyLocalJacksonCustomConverter(
-                    new TypeReference<Response<List<ConnectionDetails>>>() {
+                    new TypeReference<SkysailResponse<List<ConnectionDetails>>>() {
                     });
             RestletUtils.replaceConverter(JacksonConverter.class, myLocalJacksonConverter);
 
-            Response<List<ConnectionDetails>> connections2 = connections.getConnections();
+            SkysailResponse<List<ConnectionDetails>> connections2 = connections.getConnections();
             data = connections2.getData();
         } finally {
             engine.setUserClassLoader(loaderOld);
