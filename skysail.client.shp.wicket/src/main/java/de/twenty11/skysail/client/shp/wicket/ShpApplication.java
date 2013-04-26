@@ -13,6 +13,8 @@ public class ShpApplication extends WebApplication {
     @Override
     protected void init() {
         super.init();
+        mountPage("/impressum", ImpressumPage.class);
+        mountPage("/contact", ContactPage.class);
     }
 
     public static ShpApplication get() {

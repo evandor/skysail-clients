@@ -5,12 +5,89 @@
 
 	<wicket:extend>
 
-		<div id="container" style="width: 100%">
+		<div class="container">
+			<div class="row">
+				<div class="span1">&nbsp;</div>
+				<div class="span10">
+					<div class="masthead">
+						<ul class="nav nav-pills pull-right">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Profil</a></li>
+							<li><a href="/competence">Kompetenz</a></li>
+							<li><a href="/impressum">Impressum</a></li>
+							<li><a href="/contact">Kontakt</a></li>
+						</ul>
+						<h3 class="muted">
+							<img src='img/Logo_weisser Hintergrund.png' style="width: 250px;" />
+						</h3>
+					</div>
 
-
+					<hr />
+					<center>
+						<img src="img/Carsten_Mira_gebleicht.jpg" />
+					</center>
+				</div>
+				<div class="span1">&nbsp;</div>
+			</div>
 		</div>
 
+		<div id="svg" style="position:absolute; left:855px; top:247px;">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+				xmlns:xlink="http://www.w3.org/1999/xlink">
+		   <defs>
+		    <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
+		  </defs>
+		  <text x="10" y="100" style="fill:red;">
+		    <textPath xlink:href="#path1">&nbsp;&nbsp;&nbsp;&nbsp;Bus > Proc > Tech</textPath>
+		  </text>
+</svg>
+		</div>
+		<p>
+			<br />
+		</p>
 
+		<div class="container">
+			<div class="row">
+				<div class="span2">&nbsp;</div>
+				<div class="span3">
+					<img src="img/business.png" style="width: 100px;" />
+					<h3>
+						Business <span style="color: orange; vertical-align: text-bottom;">&gt;</span>
+					</h3>
+					<p>Durchdacht, fokussiert, profitabel – wie Sie mit uns die
+						Konzeption fachlicher Anforderungen erfolgreich meistern...</p>
+					<p>
+						<a class="btn" href="#">mehr &raquo;</a>
+					</p>
+				</div>
+				<!-- /.span4 -->
+				<div class="span3">
+					<img src="img/process.png" style="width: 100px;" />
+					<h3>
+						Process <span style="color: orange; vertical-align: text-bottom;">&gt;</span>
+					</h3>
+					<p>Vom strategischen BPM bis zur Prozessautomatisierung – wie
+						Sie mit uns Ihre Prozesse in den Griff bekommen...</p>
+					<p>
+						<a class="btn" href="#">mehr... &raquo;</a>
+					</p>
+				</div>
+				<div class="span3">
+					<img src="img/technology2.png" style="width: 100px;" />
+					<h3>
+						Technology <span
+							style="color: orange; vertical-align: text-bottom;">&gt;</span>
+					</h3>
+					<p>Elegant, agil und nachhaltig – wie Sie mit uns erstklassige
+						Softwarelösungen entwickeln...</p>
+					<p>
+						<a class="btn" href="#">mehr... &raquo;</a>
+					</p>
+				</div>
+				<div class="span1">&nbsp;</div>
+			</div>
+			<!-- /.row -->
+		</div>
 	</wicket:extend>
 
 </body>
