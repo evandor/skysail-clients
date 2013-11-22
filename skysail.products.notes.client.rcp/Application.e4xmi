@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6GAScFNWEeOfjZp37xQdhw" elementId="org.eclipse.e4.ide.application" bindingContexts="_6GAScVNWEeOfjZp37xQdhw">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_6GASh1NWEeOfjZp37xQdhw" selectedElement="_6GASj1NWEeOfjZp37xQdhw" label="de.twenty11.skysail.products.notes.client.rcp" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_6GASj1NWEeOfjZp37xQdhw">
+      <children xsi:type="advanced:Perspective" xmi:id="_6GASkFNWEeOfjZp37xQdhw" elementId="skysail.products.notes.client.rcp.perspective.0" selectedElement="_6GASkVNWEeOfjZp37xQdhw">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_6GASkVNWEeOfjZp37xQdhw">
+          <children xsi:type="basic:PartStack" xmi:id="_6GASklNWEeOfjZp37xQdhw">
+            <children xsi:type="basic:Part" xmi:id="_tlmQcFNXEeOfjZp37xQdhw" elementId="skysail.products.notes.client.rcp.part.0" contributionURI="bundleclass://de.twenty11.skysail.products.notes.client.rcp/de.twenty11.skysail.products.notes.client.rcp.handlers.BrowserPart" label="Browser" closeable="true">
+              <toolbar xmi:id="_hYNboFNZEeOfjZp37xQdhw" elementId="skysail.products.notes.client.rcp.toolbar.0"/>
+            </children>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_fBgYEFNbEeOfjZp37xQdhw" elementId="skysail.products.notes.client.rcp.perspective.1"/>
+    </children>
+    <mainMenu xmi:id="_6GASiFNWEeOfjZp37xQdhw" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_6GASiVNWEeOfjZp37xQdhw" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6GASilNWEeOfjZp37xQdhw" label="Open" iconURI="platform:/plugin/de.twenty11.skysail.products.notes.client.rcp/icons/sample.gif" command="_6GASflNWEeOfjZp37xQdhw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6GASi1NWEeOfjZp37xQdhw" label="Save" iconURI="platform:/plugin/de.twenty11.skysail.products.notes.client.rcp/icons/save_edit.gif" command="_6GASgVNWEeOfjZp37xQdhw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6GASjFNWEeOfjZp37xQdhw" label="Quit" command="_6GASelNWEeOfjZp37xQdhw"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_6GASjVNWEeOfjZp37xQdhw" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6GASjlNWEeOfjZp37xQdhw" label="About" command="_6GAShFNWEeOfjZp37xQdhw"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_6GASk1NWEeOfjZp37xQdhw">
+      <children xsi:type="menu:ToolBar" xmi:id="_6GASlFNWEeOfjZp37xQdhw" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6GASlVNWEeOfjZp37xQdhw" iconURI="platform:/plugin/de.twenty11.skysail.products.notes.client.rcp/icons/sample.gif" command="_6GASflNWEeOfjZp37xQdhw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6GASllNWEeOfjZp37xQdhw" iconURI="platform:/plugin/de.twenty11.skysail.products.notes.client.rcp/icons/save_edit.gif" command="_6GASgVNWEeOfjZp37xQdhw"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_6GASe1NWEeOfjZp37xQdhw" contributionURI="bundleclass://de.twenty11.skysail.products.notes.client.rcp/de.twenty11.skysail.products.notes.client.rcp.handlers.QuitHandler" command="_6GASelNWEeOfjZp37xQdhw"/>
+  <handlers xmi:id="_6GASf1NWEeOfjZp37xQdhw" contributionURI="bundleclass://de.twenty11.skysail.products.notes.client.rcp/de.twenty11.skysail.products.notes.client.rcp.handlers.OpenHandler" command="_6GASflNWEeOfjZp37xQdhw"/>
+  <handlers xmi:id="_6GASglNWEeOfjZp37xQdhw" contributionURI="bundleclass://de.twenty11.skysail.products.notes.client.rcp/de.twenty11.skysail.products.notes.client.rcp.handlers.SaveHandler" command="_6GASgVNWEeOfjZp37xQdhw"/>
+  <handlers xmi:id="_6GAShVNWEeOfjZp37xQdhw" contributionURI="bundleclass://de.twenty11.skysail.products.notes.client.rcp/de.twenty11.skysail.products.notes.client.rcp.handlers.AboutHandler" command="_6GAShFNWEeOfjZp37xQdhw"/>
+  <bindingTables xmi:id="_6GASfFNWEeOfjZp37xQdhw" bindingContext="_6GAScVNWEeOfjZp37xQdhw">
+    <bindings xmi:id="_6GASfVNWEeOfjZp37xQdhw" keySequence="M1+Q" command="_6GASelNWEeOfjZp37xQdhw"/>
+    <bindings xmi:id="_6GASgFNWEeOfjZp37xQdhw" keySequence="M1+O" command="_6GASflNWEeOfjZp37xQdhw"/>
+    <bindings xmi:id="_6GASg1NWEeOfjZp37xQdhw" keySequence="M1+S" command="_6GASgVNWEeOfjZp37xQdhw"/>
+    <bindings xmi:id="_6GAShlNWEeOfjZp37xQdhw" keySequence="M1+A" command="_6GAShFNWEeOfjZp37xQdhw"/>
+  </bindingTables>
+  <rootContext xmi:id="_6GAScVNWEeOfjZp37xQdhw" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_6GASclNWEeOfjZp37xQdhw" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_6GASc1NWEeOfjZp37xQdhw" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_6GASelNWEeOfjZp37xQdhw" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_6GASflNWEeOfjZp37xQdhw" elementId="de.twenty11.skysail.products.notes.client.rcp.open" commandName="openCommand"/>
+  <commands xmi:id="_6GASgVNWEeOfjZp37xQdhw" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_6GAShFNWEeOfjZp37xQdhw" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_6GASdFNWEeOfjZp37xQdhw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_6GASdVNWEeOfjZp37xQdhw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_6GASdlNWEeOfjZp37xQdhw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_6GASd1NWEeOfjZp37xQdhw" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_6GASeFNWEeOfjZp37xQdhw" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_6GASeVNWEeOfjZp37xQdhw" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>

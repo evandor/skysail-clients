@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="de.twenty11.skysail.products.notes.client.rcp"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="appName"
+               value="de.twenty11.skysail.products.notes.client.rcp">
+         </property>
+         <property
+               name="applicationXMI"
+               value="de.twenty11.skysail.products.notes.client.rcp/Application.e4xmi">
+         </property>
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/de.twenty11.skysail.products.notes.client.rcp/css/default.css">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
