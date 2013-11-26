@@ -10,3 +10,4 @@ Import-Package: de.twenty11.skysail.server.utils,\
 Service-Component: *
 	
 Private-Package: de.twenty11.skysail.product.notes
+Bundle-Version: 0.5.0
