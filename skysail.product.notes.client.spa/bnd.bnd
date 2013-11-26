@@ -1,0 +1,12 @@
+-buildpath: org.restlet;version=2.1,\
+	skysail.api;version=0.6,\
+	skysail.server;version=0.5,\
+	skysail.server.um;version=0.5,\
+	biz.aQute.bnd.annotation;version=1.52
+	
+Include-Resource: resources
+Import-Package: de.twenty11.skysail.server.utils,\
+ *
+Service-Component: *
+	
+Private-Package: de.twenty11.skysail.product.notes
