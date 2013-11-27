@@ -67,11 +67,10 @@
 	skysail.config.configadmin;version=latest,\
 	skysail.server;version=latest,\
 	skysail.server.um;version=latest,\
-	skysail.server.um.db;version=latest,\
 	skysail.server.static;version=latest,\
 	skysail.server.security.shiro;version=latest,\
 	skysail.server.ext.notes.core;version=latest,\
-	skysail.server.ext.notes.db;version=0.6.0,\
+	skysail.server.ext.notes.db;version=latest,\
 	skysail.utils.commons.dbcp;version=latest,\
 	com.googlecode.flyway.core;version=2.2.1,\
 	osgi.enterprise;version=4.2.0,\
