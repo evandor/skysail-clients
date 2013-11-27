@@ -49,7 +49,9 @@ public class SetServerCommand implements Command {
         try {
             URL url = new URL(pathArgument);
             String serverUrl = url.getProtocol() + "://" + url.getHost();
-            serverUrl += ":" + url.getPort();
+            if (url.getPort() != -1) {
+                serverUrl += ":" + url.getPort();
+            }
             ctx.putValue(Const.SERVER, serverUrl);
             console.writeOutput("'" + Const.SERVER + "' was set to '" + serverUrl + "'\n\n");
             return serverUrl;
