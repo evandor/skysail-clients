@@ -7,6 +7,7 @@ import static org.junit.Assert.assertThat;
 import org.clamshellcli.api.Command;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
@@ -22,6 +23,7 @@ public class PwdCommandTest extends CommandTest {
     }
 
     @Test
+    @Ignore
     // call of "pwd"
     public void pwd_gives_null_path_the_first_time_called() {
         setHost("http://localhost");

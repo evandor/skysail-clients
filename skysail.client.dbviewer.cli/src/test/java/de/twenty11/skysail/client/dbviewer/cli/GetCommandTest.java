@@ -5,12 +5,13 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import de.twenty11.skysail.client.dbviewer.cli.internal.Utils;
 
 public class GetCommandTest extends CommandTest {
-	
+
     private GetCommand cmd;
 
     public GetCommandTest() {
@@ -31,6 +32,8 @@ public class GetCommandTest extends CommandTest {
     }
 
     @Test
+    @Ignore
+
     public void should_set_connect_to_true_if_server_is_responsive() throws Exception {
         setHost("http://localhost");
         connect(null);
@@ -39,6 +42,8 @@ public class GetCommandTest extends CommandTest {
     }
 
     @Test
+    @Ignore
+
     public void integrationTest() throws Exception {
         setHost("http://localhost:2011/osgimonitor/?media=json");
         connect(null);

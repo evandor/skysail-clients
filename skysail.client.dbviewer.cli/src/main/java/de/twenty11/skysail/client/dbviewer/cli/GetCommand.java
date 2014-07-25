@@ -25,7 +25,7 @@ public class GetCommand implements Command {
             return "not connected";
         }
 
-        String url = Utils.getUrl(ctx);
+        String url = Utils.getUrl(ctx) + "?media=json";
         console.writeOutput("issuing GET request on '" + url + "'\n");
 
         try {
