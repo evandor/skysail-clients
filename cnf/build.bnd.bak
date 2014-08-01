@@ -48,38 +48,3 @@ javac.debug:           on
 ## If you use git, you might want to uncomment the following lines:
 # Git-Descriptor:       ${system-allow-fail;git describe --dirty --always}
 # Git-SHA:              ${system-allow-fail;git rev-list -1 HEAD}
-#
-# Custom Settings - ideas from bnd
-#
-
-#repo:                   ${workspace}/cnf/repo
-#releaserepo:            ${workspace}/dist/bundles
-
-copyright:              Copyright (c) twentyeleven.de (2011, ${tstamp;yyyy}). All Rights Reserved.
-copyright.html:         Copyright &copy; twentyeleven.de (2011, ${tstamp;yyyy}). All Rights Reserved.
-
-restlet.version         2.1.6
-skysail.api.version     latest
-skysail.server.version  latest
-Bundle-Vendor:          graefundpartner http://www.graefundpartner.de
-Bundle-Copyright:       ${copyright}
-Bundle-License:         http://www.opensource.org/licenses/apache2.0.php;\
-                          description="Apache 2.0 Licensed";\
-                          link=LICENSE
-#Bundle-SCM:             git://github.com/bndtools/bnd.git
-
-
-# default version policies
-#   -provider-policy =  ${range;[==,=+)}
-#   -consumer-policy =  ${range;[==,+)}
-
-#-make:                  (*).(jar);type=bnd; recipe="bnd/$1.bnd"
-
-#-releaserepo:  Release
-#-baselinerepo: Main
-
-#-removeheader:          Include-Resource
-
-#-runpath:\
-#	org.eclipse.osgi;version=3.5,\
-#	com.springsource.junit;export="junit.framework;version=3.8"

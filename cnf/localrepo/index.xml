@@ -1,2 +1,91 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1342528672992' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'/>
+<repository increment='1406722841849' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.apache.commons.cli'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='e7cd8951956d349b568b7ccfd4f5b2529a8c113e67c32b028f52ffda371259d9'/>
+      <attribute name='url' value='org.apache.commons.cli/org.apache.commons.cli-1.2.0.jar'/>
+      <attribute name='size' type='Long' value='41123'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.apache.commons.cli'/>
+      <attribute name='bundle-version' type='Version' value='1.2.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.apache.commons.cli'/>
+      <attribute name='bundle-version' type='Version' value='1.2.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.commons.cli'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.commons.cli'/>
+      <attribute name='bundle-version' type='Version' value='1.2.0'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.commons.cli)(version&gt;=1.2.0))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='jline'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='2.9.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='1943d84aea1e826da724ea1f306363e02691db1cf04165d339d97bfc8fdd10db'/>
+      <attribute name='url' value='jline/jline-2.9.0.jar'/>
+      <attribute name='size' type='Long' value='204750'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.9.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.9.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='jline'/>
+      <attribute name='version' type='Version' value='2.9.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.9.0'/>
+      <directive name='uses' value='org.fusesource.jansi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='jline.console'/>
+      <attribute name='version' type='Version' value='2.9.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.9.0'/>
+      <directive name='uses' value='org.fusesource.jansi,jline.console.history,jline,jline.console.completer'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='jline.console.completer'/>
+      <attribute name='version' type='Version' value='2.9.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.9.0'/>
+      <directive name='uses' value='jline.console'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='jline.console.history'/>
+      <attribute name='version' type='Version' value='2.9.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.9.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.fusesource.jansi'/>
+      <attribute name='version' type='Version' value='1.9.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.9.0'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.swing)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+  </resource>
+</repository>
