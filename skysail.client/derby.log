@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Fri Aug 01 17:22:21 CEST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0147-922a-250b-0000032532c8 
+on database directory C:\git\skysail-clients\skysail.client\skysailSwarmDb  with class loader org.apache.derby [27] 
+Loaded from file:/C:/git/skysail/cnf/localrepo/org.apache.derby/org.apache.derby-10.8.2.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0-b132
+user.dir=C:\git\skysail-clients\skysail.client
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

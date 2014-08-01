@@ -1,10 +1,12 @@
 Bundle-Version: 0.0.1.${tstamp}
 Bundle-Name: SKYSAIL :: client
-Include-Resource: lib=lib
-Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.jar
--buildpath: \
-	lib/clamshell-api-0.5.2.jar;version=file,\
+Include-Resource: lib=lib,resources
+Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.jar,lib/clamshell-test-0.5.2.jar
+-buildpath: lib/clamshell-api-0.5.2.jar;version=file,\
 	lib/clamshell-impl-core-0.5.2.jar;version=file,\
+	lib/clamshell-test-0.5.2.jar;version=file,\
 	com.springsource.org.junit;version=4.11,\
-	biz.aQute.launcher
+	biz.aQute.launcher,\
+	osgi.core;version=5.0,\
+	org.apache.felix.framework;version=4.4
 Private-Package: de.twenty11.skysail.client.cli.commands

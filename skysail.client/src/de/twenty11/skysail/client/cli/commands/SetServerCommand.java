@@ -11,7 +11,6 @@ public class SetServerCommand implements Command {
 
 	@Override
 	public void plug(Context arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -37,7 +36,6 @@ public class SetServerCommand implements Command {
 
 	@Override
 	public Descriptor getDescriptor() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
