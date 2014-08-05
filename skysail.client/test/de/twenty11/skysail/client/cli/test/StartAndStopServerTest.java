@@ -91,7 +91,7 @@ public class StartAndStopServerTest {
 	}
 
 	private String andReturnLink(String title) {
-		List<String> links = result.getHeaders().get("Link");
+		List<String> links = result.getHeaders().
 		return parseLinkheaderByTitle(links, title).orElse(null);
 	}
 

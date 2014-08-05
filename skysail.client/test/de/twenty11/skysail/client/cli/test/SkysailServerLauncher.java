@@ -8,6 +8,10 @@ public class SkysailServerLauncher {
 
 	private static Thread serverThread;
 	private static ServerRunnable runnable;
+	
+	public static void main(String[] args) throws Exception {
+		start(new String[0]);
+	}
 
 	public static class ServerRunnable implements Runnable {
 
