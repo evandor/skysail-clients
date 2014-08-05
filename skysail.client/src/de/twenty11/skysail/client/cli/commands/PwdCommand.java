@@ -12,18 +12,14 @@ public class PwdCommand implements Command {
     
 
     @Override
-    public Object execute(Context ctx) {
+    public String execute(Context ctx) {
         IOConsole console = ctx.getIoConsole();
-        if (!Utils.isConnected(ctx)) {
-            console.writeOutput("please connect first before using this command\n");
-            return "not connected";
-        }
-
         String host = Utils.getServer(ctx);
         String path = Utils.getCurrentPath(ctx);
-        console.writeOutput(host + path);
+        String output = host + path;
+		console.writeOutput(output);
         console.writeOutput("\n");
-        return path;
+        return output;
     }
 
     @Override

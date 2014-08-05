@@ -25,7 +25,7 @@ public class SetServerCommand implements Command {
                 serverUrl += ":" + url.getPort();
             }
             ctx.putValue(Const.SERVER, serverUrl);
-            console.writeOutput("'" + Const.SERVER + "' was set to '" + serverUrl + "'\n\n");
+            console.writeOutput("'" + Const.SERVER + "' was set to '" + serverUrl + "'\n");
             return serverUrl;
         } catch (MalformedURLException e) {
             console.writeOutput("setServer argument '" + pathArgument + "' could not be parsed as URL: "

@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
 
 import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
@@ -16,39 +18,40 @@ public class GetCommand implements Command {
     private Descriptor descriptor = new HttpCommandDescriptor(ACTION_NAME, "get", "executes http GET request on current path (see command 'pwd')");
 
     @Override
-    public Object execute(Context ctx) {
+    public Response execute(Context ctx) {
         IOConsole console = ctx.getIoConsole();
-        if (!Utils.isConnected(ctx)) {
-            console.writeOutput("please connect first before using this command\n");
-            return "not connected";
-        }
-
         String url = Utils.getUrl(ctx) + "?media=json";
-        console.writeOutput("issuing GET request on '" + url + "'\n");
+        //console.writeOutput("issuing GET request on '" + url + "'\n");
 
         StringBuilder result = new StringBuilder();
         try {
             HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
             // con.setRequestMethod("POST");
             // con.getOutputStream().write("LOGIN".getBytes("UTF-8"));
-            
+
             String userpass = "admin:skysail";
             String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes());
             con.setRequestProperty("Authorization", basicAuth);
+            
+            Map<String, List<String>> headerFields = con.getHeaderFields();
+            Response response = new Response(headerFields);
             
             InputStream inputStream = con.getInputStream();
             BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
             String inputLine;
             
             while ((inputLine = in.readLine()) != null) {
-                console.writeOutput(inputLine);
+//                console.writeOutput(inputLine);
                 result.append(inputLine);
             }
             in.close();
+            response.withBody(result.toString());
+            console.writeOutput(response.toString());
+            return response;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return result.toString();
     }
 
     @Override
