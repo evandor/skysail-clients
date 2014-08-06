@@ -31,5 +31,16 @@ public class HttpUtils {
 		return null;
 	}
 
+	public static HttpResponse post(String url, Form form) {
+		try {
+			return Request.Post(url)
+					.bodyForm(form.build())
+					.execute().returnResponse();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 
 }

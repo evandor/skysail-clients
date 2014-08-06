@@ -53,7 +53,7 @@ public class ChangePathCommand extends AbstractCommand {
         } else {
             currentPath = "/" + pathArgument;
         }
-        CtxUtils.setCurrentPath(ctx, currentPath);
+        CtxUtils.setCurrentPath(ctx, currentPath.replace("//","/"));
 
         return msg;
     }
