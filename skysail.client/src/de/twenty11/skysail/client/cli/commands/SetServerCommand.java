@@ -3,16 +3,13 @@ package de.twenty11.skysail.client.cli.commands;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.api.IOConsole;
 
-public class SetServerCommand implements Command {
+import de.twenty11.skysail.client.cli.commands.utils.CtxUtils;
+import de.twenty11.skysail.client.cli.commands.utils.Utils;
 
-	@Override
-	public void plug(Context arg0) {
-		
-	}
+public class SetServerCommand extends AbstractCommand {
 
 	@Override
 	public Object execute(Context ctx) {
@@ -24,7 +21,7 @@ public class SetServerCommand implements Command {
             if (url.getPort() != -1) {
                 serverUrl += ":" + url.getPort();
             }
-            ctx.putValue(Const.SERVER, serverUrl);
+            CtxUtils.setServer(ctx, serverUrl);
             console.writeOutput("'" + Const.SERVER + "' was set to '" + serverUrl + "'\n");
             return serverUrl;
         } catch (MalformedURLException e) {
@@ -32,11 +29,6 @@ public class SetServerCommand implements Command {
                     + e.getMessage());
             return null;
         }
-	}
-
-	@Override
-	public Descriptor getDescriptor() {
-		return null;
 	}
 
 }

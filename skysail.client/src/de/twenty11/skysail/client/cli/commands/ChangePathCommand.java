@@ -10,7 +10,10 @@ import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.api.IOConsole;
 
-public class ChangePathCommand implements Command {
+import de.twenty11.skysail.client.cli.commands.utils.CtxUtils;
+import de.twenty11.skysail.client.cli.commands.utils.Utils;
+
+public class ChangePathCommand extends AbstractCommand {
 
     private static final String ACTION_NAME = "cd";
 
@@ -26,13 +29,9 @@ public class ChangePathCommand implements Command {
     @Override
     public Object execute(Context ctx) {
         IOConsole console = ctx.getIoConsole();
-//        if (!Utils.isConnected(ctx)) {
-//            console.writeOutput("please connect first before using this command\n");
-//            return "not connected";
-//        }
 
         String msg = "";
-        String currentPath = Utils.getCurrentPath(ctx);
+        String currentPath = CtxUtils.getCurrentPath(ctx);
         String pathArgument = Utils.getPathArgument(ctx);
         
         if (pathArgument == null || pathArgument.trim().length() == 0) {
@@ -54,7 +53,7 @@ public class ChangePathCommand implements Command {
         } else {
             currentPath = "/" + pathArgument;
         }
-        ctx.putValue(Const.CURRENT_PATH, currentPath);
+        CtxUtils.setCurrentPath(ctx, currentPath);
 
         return msg;
     }
@@ -64,7 +63,5 @@ public class ChangePathCommand implements Command {
         return this.descriptor;
     }
 
-    @Override
-    public void plug(Context arg0) {}
 
 }

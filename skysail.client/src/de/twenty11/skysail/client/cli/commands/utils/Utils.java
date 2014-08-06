@@ -1,25 +1,13 @@
-package de.twenty11.skysail.client.cli.commands;
+package de.twenty11.skysail.client.cli.commands.utils;
 
 import org.clamshellcli.api.Context;
+
+import de.twenty11.skysail.client.cli.commands.Const;
 
 
 public class Utils {
 
     private Utils() {}
-    
-    public static String getCurrentPath(Context ctx) {
-        Object pathAsObject = ctx.getValue(Const.CURRENT_PATH);
-        if (pathAsObject == null) {
-            return "/";
-        } else {
-            String pathAsString = (String) pathAsObject;
-            if ("".equals(pathAsString.trim())) {
-                return "/";
-            } else {
-                return pathAsString.trim();
-            }
-        }
-    }
     
     public static String getPathArgument(Context ctx) {
         String pathArgument = null;
@@ -53,12 +41,6 @@ public class Utils {
         return null;
     }
     
-    public static String getUrl (Context ctx) {
-        String path = Utils.getCurrentPath(ctx);
-        if (path != null && path.length() > 0 && (path.charAt(0) == '/')) {
-            return Utils.getServer(ctx) + path.substring(1,path.length());
-        }
-        return Utils.getServer(ctx) + path;
-    }
+   
 
 }

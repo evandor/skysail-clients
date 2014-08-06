@@ -11,6 +11,9 @@ import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.api.IOConsole;
 
+import de.twenty11.skysail.client.cli.commands.utils.CtxUtils;
+import de.twenty11.skysail.client.cli.commands.utils.Utils;
+
 public class ConnectCommand implements Command {
 
     public static final String ACTION_NAME = "connect";
@@ -27,7 +30,7 @@ public class ConnectCommand implements Command {
 
     public String execute(Context ctx) {
         IOConsole console = ctx.getIoConsole();
-        String urlAsString = Utils.getUrl(ctx);
+        String urlAsString = CtxUtils.getUrl(ctx);
         InputStream inputStream = null;
         try {
             URL url = new URL(urlAsString);

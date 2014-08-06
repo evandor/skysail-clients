@@ -4,6 +4,9 @@ import org.clamshellcli.api.Command;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.api.IOConsole;
 
+import de.twenty11.skysail.client.cli.commands.utils.CtxUtils;
+import de.twenty11.skysail.client.cli.commands.utils.Utils;
+
 public class PwdCommand implements Command {
 
     private static final String ACTION_NAME = "pwd";
@@ -15,7 +18,7 @@ public class PwdCommand implements Command {
     public String execute(Context ctx) {
         IOConsole console = ctx.getIoConsole();
         String host = Utils.getServer(ctx);
-        String path = Utils.getCurrentPath(ctx);
+        String path = CtxUtils.getCurrentPath(ctx);
         String output = host + path;
 		console.writeOutput(output);
         console.writeOutput("\n");
