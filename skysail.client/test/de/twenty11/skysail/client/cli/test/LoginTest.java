@@ -15,13 +15,8 @@ public class LoginTest extends TestBase {
 	@Test
 	public void unauthorized_user_cannot_access_usermanagement()
 			throws Exception {
-		pwd();
-		// String um = get().andReturnLink("usermanagement");
-		// String um =
-		// get().andExpectHeader("Content-Type","application/json; charset=UTF-8").andReturnLink("usermanagement");
 		get();
 		cd("usermanagement");
-		pwd();
 		get().andExpectStatusCode(403);
 	}
 
@@ -30,6 +25,16 @@ public class LoginTest extends TestBase {
 		login("admin", "skysail");
 		cd("usermanagement");
 		get().andExpectStatusCode(200);
+	}
+
+	@Test
+	public void previously_authenticated_user_cannot_access_usermanagement_after_logout() throws Exception {
+		login("admin", "skysail");
+		cd("usermanagement");
+		get().andExpectStatusCode(200);
+		logout();
+		pwd();
+		get().andExpectStatusCode(403);
 	}
 
 }
