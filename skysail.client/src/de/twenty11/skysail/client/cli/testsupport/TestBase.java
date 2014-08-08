@@ -1,4 +1,4 @@
-package de.twenty11.skysail.client.cli.test;
+package de.twenty11.skysail.client.cli.testsupport;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -35,6 +35,7 @@ import de.twenty11.skysail.client.cli.commands.PostCommand;
 import de.twenty11.skysail.client.cli.commands.PwdCommand;
 import de.twenty11.skysail.client.cli.commands.SetCommand;
 import de.twenty11.skysail.client.cli.commands.SetServerCommand;
+import de.twenty11.skysail.client.cli.test.LogoutCommand;
 
 public class TestBase {
 
@@ -141,7 +142,7 @@ public class TestBase {
 		return this;
 	}
 
-	protected void andExpectStatusCode(int code) {
+	public void andExpectStatusCode(int code) {
 		int statusCode = response.getStatusLine().getStatusCode();
 		assertThat(statusCode, is(code));
 	}

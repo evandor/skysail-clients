@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import de.twenty11.skysail.client.cli.testsupport.TestBase;
+
 @Ignore
 public class RegisterTest extends TestBase {
 
