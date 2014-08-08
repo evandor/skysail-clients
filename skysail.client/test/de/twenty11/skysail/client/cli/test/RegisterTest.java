@@ -1,11 +1,11 @@
 package de.twenty11.skysail.client.cli.test;
 
-import javax.annotation.PostConstruct;
-
 import org.apache.http.client.fluent.Form;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class RegisterTest extends TestBase {
 
 	private Form form;

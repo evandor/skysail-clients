@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1407504467697' name='skysail snapshots (local)' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1407505427817' name='skysail-clients' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='skysail.client'/>

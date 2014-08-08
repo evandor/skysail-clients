@@ -19,6 +19,9 @@ public class ConsoleUtils {
 	}
 
 	public static void writeBody(Context ctx, HttpResponse returnResponse) {
+		if (!CtxUtils.showBody(ctx)) {
+			return;
+		}
 		try {
 			IOConsole console = ctx.getIoConsole();
 			String msg = EntityUtils.toString(returnResponse.getEntity());
@@ -29,6 +32,9 @@ public class ConsoleUtils {
 	}
 
 	public static void writeHeader(Context ctx, HttpResponse returnResponse) {
+		if (!CtxUtils.showHeader(ctx)) {
+			return;
+		}
 		IOConsole console = ctx.getIoConsole();
 		String msg = Arrays.stream(returnResponse.getAllHeaders())
 				.map(h -> getSingleHeaderRepresentation(h))

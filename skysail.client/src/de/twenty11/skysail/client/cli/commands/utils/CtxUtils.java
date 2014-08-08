@@ -10,6 +10,14 @@ public class CtxUtils {
 		ctx.putValue(Const.SERVER, serverUrl);
 	}
 
+	public static void set(Context ctx, String key, String value) {
+		if (value.equalsIgnoreCase("true") || value.equalsIgnoreCase("false")) {
+			ctx.putValue(key, Boolean.valueOf(value));
+		} else {
+			ctx.putValue(key, value);
+		}
+	}
+
 	public static String getServer(Context ctx) {
 		return (String) ctx.getValue(Const.SERVER);
 	}
@@ -31,4 +39,21 @@ public class CtxUtils {
 		String path = CtxUtils.getCurrentPath(ctx);
 		return getServer(ctx) + path;
 	}
+
+	public static boolean showHeader(Context ctx) {
+		return showElement(ctx, Const.SHOW_HEADER);
+	}
+
+	private static boolean showElement(Context ctx, String key) {
+		Object value = ctx.getValue(key);
+		if (value == null || !(value instanceof Boolean)) {
+			return true;
+		}
+		return (Boolean)value;
+	}
+
+	public static boolean showBody(Context ctx) {
+		return showElement(ctx, Const.SHOW_BODY);
+	}
+
 }

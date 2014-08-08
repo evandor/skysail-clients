@@ -33,6 +33,7 @@ import de.twenty11.skysail.client.cli.commands.GetCommand;
 import de.twenty11.skysail.client.cli.commands.LoginCommand;
 import de.twenty11.skysail.client.cli.commands.PostCommand;
 import de.twenty11.skysail.client.cli.commands.PwdCommand;
+import de.twenty11.skysail.client.cli.commands.SetCommand;
 import de.twenty11.skysail.client.cli.commands.SetServerCommand;
 
 public class TestBase {
@@ -41,12 +42,12 @@ public class TestBase {
 
 	@BeforeClass
 	public static void init() throws Exception {
-		// SkysailServerLauncher.start(new String[0]);
+		//SkysailServerLauncher.start(new String[0]);
 	}
 
 	@AfterClass
 	public static void shutdown() throws InterruptedException {
-		// SkysailServerLauncher.getRunnable().terminate();
+		//SkysailServerLauncher.getRunnable().terminate();
 	}
 
 	protected Command setServerCommand = new SetServerCommand();
@@ -58,6 +59,7 @@ public class TestBase {
 	protected Command loginCommand = new LoginCommand();
 	protected Command logoutCommand = new LogoutCommand();
 	protected Command postCommand = new PostCommand();
+	protected Command setCommand = new SetCommand();
 
 	protected TestBase get() {
 		echoCommand("get");
@@ -112,6 +114,17 @@ public class TestBase {
 	protected void logout() {
 		echoCommand("logout");
 		logoutCommand.execute(ctx);
+	}
+	
+	protected void set() {
+		set("", "");
+	}
+	
+	protected void set(String param, String value) {
+		echoCommand("set", param, value);
+		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, param + " " + value);
+		setCommand.execute(ctx);
+		
 	}
 
 	private void writeSeparator(IOConsole console, String string, int length) {

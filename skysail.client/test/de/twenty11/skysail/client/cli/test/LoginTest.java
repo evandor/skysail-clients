@@ -1,12 +1,16 @@
 package de.twenty11.skysail.client.cli.test;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class LoginTest extends TestBase {
 
 	@Before
 	public void setUp() {
+		set("showHeader", "false");
+		set();
 		setServer("http://localhost:2016");
 		cd(null);
 		logout();

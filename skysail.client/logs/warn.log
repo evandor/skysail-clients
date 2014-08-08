@@ -1,6 +1,0 @@
-ERROR d.t.skysail.server.app.incubator.compiler.Compiler - if you want to use the Incubator application, skysail server must be run with a JDK, not a JRE.
-ERROR d.t.s.s.e.osgi.listener.SkysailServerFrameworkListener - FrameworkEvent 'ERROR': Source: [skysail.server.app.incubator.core [76], 76], Bundle #org.osgi.framework.ServiceException: Service factory returned null.
-ERROR d.t.skysail.server.app.incubator.compiler.Compiler - if you want to use the Incubator application, skysail server must be run with a JDK, not a JRE.
-ERROR d.t.skysail.server.app.incubator.compiler.Compiler - if you want to use the Incubator application, skysail server must be run with a JDK, not a JRE.
-ERROR d.t.s.s.e.osgi.listener.SkysailServerFrameworkListener - FrameworkEvent 'ERROR': Source: [skysail.server.app.incubator.core [76], 76], Bundle #org.osgi.framework.ServiceException: Service factory returned null.
-ERROR d.t.s.s.e.osgi.listener.SkysailServerFrameworkListener - FrameworkEvent 'ERROR': Source: [skysail.server.app.incubator.core [76], 76], Bundle #org.osgi.framework.ServiceException: Service factory returned null.
