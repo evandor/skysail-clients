@@ -1,12 +1,12 @@
-package de.twenty11.skysail.client.cli.test;
+package de.twenty11.skysail.client.cli.commands;
 
 import org.apache.http.HttpResponse;
 import org.clamshellcli.api.Context;
 
-import de.twenty11.skysail.client.cli.commands.AbstractCommand;
 import de.twenty11.skysail.client.cli.commands.utils.ConsoleUtils;
 import de.twenty11.skysail.client.cli.commands.utils.CtxUtils;
 import de.twenty11.skysail.client.cli.commands.utils.HttpUtils;
+
 
 public class LogoutCommand extends AbstractCommand {
 

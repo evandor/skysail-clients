@@ -31,11 +31,11 @@ import de.twenty11.skysail.client.cli.commands.ChangePathCommand;
 import de.twenty11.skysail.client.cli.commands.ConnectCommand;
 import de.twenty11.skysail.client.cli.commands.GetCommand;
 import de.twenty11.skysail.client.cli.commands.LoginCommand;
+import de.twenty11.skysail.client.cli.commands.LogoutCommand;
 import de.twenty11.skysail.client.cli.commands.PostCommand;
 import de.twenty11.skysail.client.cli.commands.PwdCommand;
 import de.twenty11.skysail.client.cli.commands.SetCommand;
 import de.twenty11.skysail.client.cli.commands.SetServerCommand;
-import de.twenty11.skysail.client.cli.test.LogoutCommand;
 
 public class TestBase {
 
