@@ -37,38 +37,43 @@ import de.twenty11.skysail.client.cli.commands.PwdCommand;
 import de.twenty11.skysail.client.cli.commands.SetCommand;
 import de.twenty11.skysail.client.cli.commands.SetServerCommand;
 
-public class TestBase {
+public class LargeTestsBase {
 
 	private HttpResponse response;
 
 	@BeforeClass
 	public static void init() throws Exception {
-		//SkysailServerLauncher.start(new String[0]);
+		if (runLauncher()) {
+			SkysailServerLauncher.start(new String[0]);
+		}
 	}
 
 	@AfterClass
 	public static void shutdown() throws InterruptedException {
-		//SkysailServerLauncher.getRunnable().terminate();
+		if (runLauncher()) {
+			SkysailServerLauncher.getRunnable().terminate();
+		}
 	}
+
+	private Context ctx = MockContext.createInstance();
 
 	protected Command setServerCommand = new SetServerCommand();
 	protected Command getCommand = new GetCommand();
 	protected Command pwdCommand = new PwdCommand();
 	protected Command cdCommand = new ChangePathCommand();
 	protected Command connectCommand = new ConnectCommand();
-	private Context ctx = MockContext.createInstance();
 	protected Command loginCommand = new LoginCommand();
 	protected Command logoutCommand = new LogoutCommand();
 	protected Command postCommand = new PostCommand();
 	protected Command setCommand = new SetCommand();
 
-	protected TestBase get() {
+	protected LargeTestsBase get() {
 		echoCommand("get");
 		response = (HttpResponse) getCommand.execute(ctx);
 		return this;
 	}
 
-	protected TestBase post(Form form) {
+	protected HttpResponse post(Form form) {
 		echoCommand("post", "form to be done");
 		Map<String, Object> arguments = new HashMap<>();
 		List<NameValuePair> pairs = form.build();
@@ -77,7 +82,7 @@ public class TestBase {
 		});
 		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, arguments);
 		response = (HttpResponse) postCommand.execute(ctx);
-		return this;
+		return response;
 	}
 
 	protected String pwd() {
@@ -116,16 +121,16 @@ public class TestBase {
 		echoCommand("logout");
 		logoutCommand.execute(ctx);
 	}
-	
+
 	protected void set() {
 		set("", "");
 	}
-	
+
 	protected void set(String param, String value) {
 		echoCommand("set", param, value);
 		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, param + " " + value);
 		setCommand.execute(ctx);
-		
+
 	}
 
 	private void writeSeparator(IOConsole console, String string, int length) {
@@ -137,7 +142,7 @@ public class TestBase {
 		console.writeOutput(sb.toString());
 	}
 
-	private TestBase andExpectHeader(String key, String value) {
+	private LargeTestsBase andExpectHeader(String key, String value) {
 		// assertThat(result.getHeaders().get(key).get(0), is(equalTo(value)));
 		return this;
 	}
@@ -168,15 +173,29 @@ public class TestBase {
 		writeSeparator(console, "-", 6 + command.length());
 	}
 
-	public String andExtractFromBody(String jsonPath) {
-		try {
-			String json = EntityUtils.toString(response.getEntity());
-			return JsonPath.read(json, jsonPath);
-		} catch (ParseException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+    public String extractFromBody(HttpResponse response, String jsonPath) {
+        try {
+            String json = EntityUtils.toString(response.getEntity());
+            return JsonPath.read(json, jsonPath);
+        } catch (ParseException | IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
+	protected int getStatusCode(HttpResponse response) {
+        return response.getStatusLine().getStatusCode();
+    }
+
+    private static boolean runLauncher() {
+		String runLauncher = System.getProperty("runLauncher");
+		if (runLauncher == null || runLauncher.trim().length() == 0) {
+			return false;
 		}
-		return null;
+		return Boolean.valueOf(runLauncher);
 	}
+
 
 }
