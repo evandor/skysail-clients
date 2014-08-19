@@ -31,7 +31,7 @@ public class RegisterTest extends LargeTestsBase {
         Form form = createForm("testA@test.de", "pass123", "pass123");
         HttpResponse response = post(form);
         assertThat(getStatusCode(response), is(equalTo(201)));
-        assertThat(extractFromBody(response, "$.data.confirmationUrl"), containsString("registration/{id}/confirmation"));
+        assertThat(extractFromBody(response, "$.data.confirmationUrl"), containsString("registrations/{id}/confirmation"));
         assertThat(extractFromBody(response, "$.data.confirmationDate"), is(nullValue()));
         assertThat(extractFromBody(response, "$.data.password"), is(equalTo("******")));
         assertThat(extractFromBody(response, "$.data.pwdRepeated"), is(equalTo("******")));
