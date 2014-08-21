@@ -27,7 +27,7 @@ public class ChangePathCommand extends AbstractCommand {
     };
 
     @Override
-    public Object execute(Context ctx) {
+    public Object doExecute(Context ctx) {
         IOConsole console = ctx.getIoConsole();
 
         String msg = "";

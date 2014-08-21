@@ -2,8 +2,8 @@ Bundle-Version: 0.0.4.${tstamp}
 Bundle-Name: SKYSAIL :: client
 Include-Resource: lib=lib,resources
 Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.jar,lib/clamshell-test-0.5.2.jar,lib/htmlunit-2.11.jar
--buildpath:  \
-	lib/clamshell-api-0.5.2.jar;version=file,\
+Include-Resource: resources, conf=conf
+-buildpath: lib/clamshell-api-0.5.2.jar;version=file,\
 	lib/clamshell-impl-core-0.5.2.jar;version=file,\
 	lib/clamshell-test-0.5.2.jar;version=file,\
 	lib/htmlunit-2.11.jar;version=file,\
@@ -19,7 +19,9 @@ Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.ja
 	org.apache.commons.logging;version=1.1,\
 	com.jayway.jsonpath.json-path;version=0.9,\
 	slf4j.api;version=1.7,\
-	net.minidev.json-smart;version=1.2
+	net.minidev.json-smart;version=1.2,\
+	com.google.gson;version=1.7
 Private-Package: de.twenty11.skysail.client.cli.commands,\
 	de.twenty11.skysail.client.cli.commands.utils,\
-	de.twenty11.skysail.client.cli.testsupport
+	de.twenty11.skysail.client.cli.testsupport,\
+	de.twenty11.skysail.client.cli.controllers

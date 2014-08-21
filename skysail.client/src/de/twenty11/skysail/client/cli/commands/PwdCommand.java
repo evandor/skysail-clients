@@ -12,7 +12,6 @@ public class PwdCommand implements Command {
     private static final String ACTION_NAME = "pwd";
     
     private Descriptor descriptor = new HttpCommandDescriptor(ACTION_NAME, "pwd", "prompt current working directory");
-    
 
     @Override
     public String execute(Context ctx) {

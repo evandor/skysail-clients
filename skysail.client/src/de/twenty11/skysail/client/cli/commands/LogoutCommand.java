@@ -10,8 +10,14 @@ import de.twenty11.skysail.client.cli.commands.utils.HttpUtils;
 
 public class LogoutCommand extends AbstractCommand {
 
+	private static final String LOGOUT_CMD = "logout";
+
+	public LogoutCommand() {
+		commandDescriptor = new HttpCommandDescriptor(LOGOUT_CMD, "logout", "logs out the currently logged in user");
+	}
+
 	@Override
-	public Object execute(Context ctx) {
+	public Object doExecute(Context ctx) {
 		String originalPath = CtxUtils.getCurrentPath(ctx);
 		
 		CtxUtils.setCurrentPath(ctx, "/_logout?targetUri=/");

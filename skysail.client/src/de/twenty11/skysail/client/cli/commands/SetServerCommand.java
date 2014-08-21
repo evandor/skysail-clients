@@ -11,8 +11,14 @@ import de.twenty11.skysail.client.cli.commands.utils.Utils;
 
 public class SetServerCommand extends AbstractCommand {
 
+	private static final String ACTION_NAME = "setServer";
+
+	public SetServerCommand() {
+		commandDescriptor = new HttpCommandDescriptor(ACTION_NAME, "setServer", "sets server");
+	}
+
 	@Override
-	public Object execute(Context ctx) {
+	public Object doExecute(Context ctx) {
 		IOConsole console = ctx.getIoConsole();
         String pathArgument = Utils.getPathArgument(ctx);
         try {

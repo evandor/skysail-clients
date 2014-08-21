@@ -17,7 +17,7 @@ public class SetCommand extends AbstractCommand {
 	public Command.Descriptor descriptor = null;
 	
 	@Override
-	public Object execute(Context ctx) {
+	public Object doExecute(Context ctx) {
 		String pathArgument = (String)ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
 		if (noArgumentGiven(pathArgument)) {
 			printAllCtxValues(ctx);

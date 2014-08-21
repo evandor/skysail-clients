@@ -11,24 +11,31 @@ import de.twenty11.skysail.client.cli.commands.utils.HttpUtils;
 
 public class LoginCommand extends AbstractCommand {
 
+	private static final String LOGIN_CMD = "login";
+
+	public LoginCommand() {
+		commandDescriptor = new HttpCommandDescriptor(LOGIN_CMD,
+				"login <username> <password>", "authenticate the provided user");
+	}
+
 	@Override
-	public HttpResponse execute(Context ctx) {
+	public HttpResponse doExecute(Context ctx) {
 		@SuppressWarnings("unchecked")
-		Map<String, Object> argsMap = (Map<String, Object>) ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
+		Map<String, Object> argsMap = (Map<String, Object>) ctx
+				.getValue(Context.KEY_COMMAND_LINE_ARGS);
 		String username = (String) argsMap.get("username");
 		String password = (String) argsMap.get("password");
-		
+
 		String originalPath = CtxUtils.getCurrentPath(ctx);
-		
+
 		CtxUtils.setCurrentPath(ctx, "/_login");
-		
-		String url = CtxUtils.getUrl(ctx) ;
+
+		String url = CtxUtils.getUrl(ctx);
 		HttpResponse response = HttpUtils.post(url, username, password);
 		ConsoleUtils.writeStatus(ctx, response);
 		ConsoleUtils.writeHeader(ctx, response);
 		ConsoleUtils.writeBody(ctx, response);
 
-		
 		CtxUtils.setCurrentPath(ctx, originalPath);
 		return response;
 	}
