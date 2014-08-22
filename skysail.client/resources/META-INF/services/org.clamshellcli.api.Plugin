@@ -4,3 +4,4 @@ de.twenty11.skysail.client.cli.commands.PwdCommand
 de.twenty11.skysail.client.cli.commands.SetServerCommand
 de.twenty11.skysail.client.cli.commands.LoginCommand
 de.twenty11.skysail.client.cli.commands.LogoutCommand
+de.twenty11.skysail.client.cli.commands.GetCommand

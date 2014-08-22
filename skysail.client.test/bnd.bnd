@@ -1,10 +1,7 @@
-Bundle-Version: 0.1.0.${tstamp}
-Bundle-Name: SKYSAIL :: client
-Include-Resource: lib=lib,resources
-Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.jar,lib/htmlunit-2.11.jar
-Include-Resource: resources, conf=conf
+Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.jar,lib/clamshell-test-0.5.2.jar,lib/htmlunit-2.11.jar
 -buildpath: lib/clamshell-api-0.5.2.jar;version=file,\
 	lib/clamshell-impl-core-0.5.2.jar;version=file,\
+	lib/clamshell-test-0.5.2.jar;version=file,\
 	lib/htmlunit-2.11.jar;version=file,\
 	com.springsource.org.junit;version=4.11,\
 	biz.aQute.launcher,\
@@ -19,9 +16,13 @@ Include-Resource: resources, conf=conf
 	com.jayway.jsonpath.json-path;version=0.9,\
 	slf4j.api;version=1.7,\
 	net.minidev.json-smart;version=1.2,\
-	com.google.gson;version=1.7
-Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
-	de.twenty11.skysail.client.cli.testsupport,\
-	de.twenty11.skysail.client.cli.controllers,\
-	de.twenty11.skysail.client.cli.launcher
-Export-Package: de.twenty11.skysail.client.cli.commands
+	com.google.gson;version=1.7,\
+	skysail.client;version=latest
+Test-Cases: ${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
+-runvm: -ea
+-runbundles: org.mockito.mockito-all
+-runfw: org.apache.felix.framework
+-runee: JavaSE-1.6
+Private-Package: de.twenty11.skysail.client.cli.testsupport,\
+	de.twenty11.skysail.client.cli.test
+-runsystempackages: sun.reflect

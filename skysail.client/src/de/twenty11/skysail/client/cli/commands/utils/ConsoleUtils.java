@@ -1,7 +1,9 @@
 package de.twenty11.skysail.client.cli.commands.utils;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.apache.http.Header;
@@ -50,6 +52,9 @@ public class ConsoleUtils {
 
 
 	private static String getSingleHeaderRepresentation(Header h) {
+		if (h.getName().equals("Link")) {
+			return "<   " + h.getName() + ": " + h.getValue().replace(",",",\n          ");
+		}
 		return "<   " + h.getName() + ": " + h.getValue();
 	}
 
