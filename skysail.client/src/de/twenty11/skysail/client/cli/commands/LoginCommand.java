@@ -1,7 +1,5 @@
 package de.twenty11.skysail.client.cli.commands;
 
-import java.util.Map;
-
 import org.apache.http.HttpResponse;
 import org.clamshellcli.api.Context;
 
@@ -20,11 +18,9 @@ public class LoginCommand extends AbstractCommand {
 
 	@Override
 	public HttpResponse doExecute(Context ctx) {
-		@SuppressWarnings("unchecked")
-		Map<String, Object> argsMap = (Map<String, Object>) ctx
-				.getValue(Context.KEY_COMMAND_LINE_ARGS);
-		String username = (String) argsMap.get("username");
-		String password = (String) argsMap.get("password");
+		String arguments[] = ((String) ctx.getValue(Context.KEY_COMMAND_LINE_INPUT)).split(" ");
+		String username = arguments[1].trim();
+		String password = arguments[2].trim();
 
 		String originalPath = CtxUtils.getCurrentPath(ctx);
 

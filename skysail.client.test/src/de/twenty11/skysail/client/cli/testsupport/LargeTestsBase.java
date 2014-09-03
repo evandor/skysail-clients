@@ -34,6 +34,7 @@ import de.twenty11.skysail.client.cli.commands.LoginCommand;
 import de.twenty11.skysail.client.cli.commands.LogoutCommand;
 import de.twenty11.skysail.client.cli.commands.PostCommand;
 import de.twenty11.skysail.client.cli.commands.PwdCommand;
+import de.twenty11.skysail.client.cli.commands.ScriptCommand;
 import de.twenty11.skysail.client.cli.commands.SetCommand;
 import de.twenty11.skysail.client.cli.commands.SetServerCommand;
 
@@ -66,6 +67,7 @@ public class LargeTestsBase {
 	protected Command logoutCommand = new LogoutCommand();
 	protected Command postCommand = new PostCommand();
 	protected Command setCommand = new SetCommand();
+	protected Command scriptCommand = new ScriptCommand();
 
 	protected LargeTestsBase get() {
 		echoCommand("get");
@@ -131,6 +133,12 @@ public class LargeTestsBase {
 		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, param + " " + value);
 		setCommand.execute(ctx);
 
+	}
+	
+	protected void script(String filename) {
+		echoCommand("script", filename);
+		ctx.putValue(Context.KEY_COMMAND_LINE_INPUT, filename);
+		scriptCommand.execute(ctx);
 	}
 
 	private void writeSeparator(IOConsole console, String string, int length) {

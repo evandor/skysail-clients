@@ -12,6 +12,7 @@ import org.apache.http.StatusLine;
 import org.apache.http.util.EntityUtils;
 import org.clamshellcli.api.Context;
 import org.clamshellcli.api.IOConsole;
+import org.codehaus.jackson.map.ObjectMapper;
 
 public class ConsoleUtils {
 
@@ -27,10 +28,22 @@ public class ConsoleUtils {
 		try {
 			IOConsole console = ctx.getIoConsole();
 			String msg = EntityUtils.toString(returnResponse.getEntity());
-			console.writeOutput(msg + "\n");
+			console.writeOutput(format(msg) + "\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	private static String format(String msg) {
+		ObjectMapper mapper = new ObjectMapper();
+		Object json;
+		try {
+			json = mapper.readValue(msg, Object.class);
+			return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
+		} catch (IOException e) {
+			e.printStackTrace();
+			return "";
+		}	
 	}
 
 	public static void writeHeader(Context ctx, HttpResponse returnResponse) {
