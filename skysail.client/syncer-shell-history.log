@@ -1,0 +1,67 @@
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-04 14:04:13
+help
+quit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-04 14:47:37
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-04 15:36:14
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-04 15:37:26
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-04 15:37:27
+help
+allPraxen
+allAerzte
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-04 15:44:26
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-04 15:44:29
+help
+setHost
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-05 12:19:28
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-05 12:19:32
+help
+pwd
+pwd
+setHost --host localhost
+pwd
+help
+version
+system properties
+help
+// [failed] scrip test.run
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-05 12:24:29
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-05 12:24:30
+help
+setHost localhost
+setPort 8080
+pwd
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-05 12:33:05
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-05 12:33:07
+help
+setHost localhost
+setPort 2016
+pwd
+// [failed] get
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-05 12:35:45
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-05 12:35:50
+help
+setHost localhost
+pwd
+get
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-05 12:54:58
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-05 12:55:05
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-05 12:55:07
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-05 13:02:39
+help
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-05 13:03:54
+// Syncer Banner 1.1.0.RELEASE log opened at 2014-09-05 13:03:59
+help
+login --u admin --p pass
+// null 1.1.0.RELEASE log opened at 2014-09-05 14:26:17
+login --u admin --p skysail
+exit
+// Syncer Banner 1.1.0.RELEASE log closed at 2014-09-05 14:30:22

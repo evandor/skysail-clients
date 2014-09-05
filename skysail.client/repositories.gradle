@@ -1,0 +1,31 @@
+allprojects {
+    ext.repoConfig = {
+        maven {
+            credentials {
+                username mavenProxyUsername
+                password mavenProxyPassword
+            }
+            url "http://mavenproxy.kvb.de/content/groups/kvb-releases"
+            name "kvb-releases"
+        }
+		
+		maven {
+            credentials {
+                username mavenProxyUsername
+                password mavenProxyPassword
+            }
+            url "http://mavenproxy.kvb.de/content/groups/public"
+            name "public"
+        }
+
+        maven {
+            credentials {
+                username mavenProxyUsername
+                password mavenProxyPassword
+            }
+            url "http://mavenproxy.kvb.de/content/repositories/manual-upload"
+            name "manualUploadRepos"
+        }
+    }
+    repositories ext.repoConfig
+}

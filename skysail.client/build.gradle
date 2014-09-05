@@ -1,0 +1,23 @@
+description = 'Spring Shell Example'
+apply from: 'repositories.gradle'
+apply plugin: 'base'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+dependencies {
+	compile "org.springframework.shell:spring-shell:$springShellVersion"
+    compile "log4j:log4j:$log4jVersion"
+    compile "log4j:apache-log4j-extras:1.1"
+    compile "org.slf4j:slf4j-log4j12:$slf4jVersion"
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
+    compile "org.slf4j:jcl-over-slf4j:$slf4jVersion"
+    compile "org.projectlombok:lombok:1.12.2"
+    compile "org.apache.commons:commons-lang3:3.1"
+    compile "de.kvb.common:common-configuration:2.1.6"
+	testCompile "junit:junit:$junitVersion"
+}
+
+mainClassName = "org.springframework.shell.Bootstrap"
+
+defaultTasks 'installApp'
