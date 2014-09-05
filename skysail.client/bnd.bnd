@@ -38,5 +38,6 @@ Include-Resource: resources, conf=conf
 Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
 	de.twenty11.skysail.client.cli.testsupport,\
 	de.twenty11.skysail.client.cli.controllers,\
-	de.twenty11.skysail.client.cli.launcher
+	de.twenty11.skysail.client.cli.launcher,\
+	de.twenty11.skysail.client.cli.utils
 Export-Package: de.twenty11.skysail.client.cli.commands

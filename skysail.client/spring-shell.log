@@ -45,3 +45,267 @@ exit
 help
 pwd
 get
+login --u username --p password
+// null 1.1.0.RELEASE log opened at 2014-09-05 14:44:13
+date
+login --u admin --p skysail
+// null 1.1.0.RELEASE log opened at 2014-09-05 14:49:01
+login --u admin --p skysail
+pwd
+setHost lo
+pwd
+setHost localhost
+pwd
+get
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 14:58:44
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:30:48
+cd
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:31:56
+cd
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:33:48
+cd
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:34:25
+cd
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:38:11
+cd
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:40:22
+cd
+cd test
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:40:31
+cd
+cd test
+cd test
+cd
+cd
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:41:19
+cd
+cd test
+cd test
+cd
+cd
+cd
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:41:40
+cd
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:42:05
+cd
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:42:32
+cd
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:43:07
+cd
+cd test
+cd
+cd
+cd
+cd
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:58:37
+cd
+cd test
+cd
+cd
+cd
+cd
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 15:59:01
+cd
+cd test
+cd
+cd
+cd
+cd
+cd test
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:00:00
+cd
+cd test
+cd
+cd
+cd
+cd
+cd test
+cd
+cd /path
+cd /path/
+cd /path/sub
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:00:03
+cd
+cd test
+cd
+cd
+cd
+cd
+cd test
+cd
+cd /path
+cd /path/
+cd /path/sub
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:00:57
+cd
+cd test
+cd
+cd
+cd path
+// [failed] cd ..
+cd
+cd
+cd
+cd test
+cd
+cd /path
+cd /path/
+cd /path/sub
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:01:23
+cd
+cd path
+// [failed] cd ..
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:02:33
+cd
+cd path
+// [failed] cd ..
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:02:41
+cd
+cd path
+// [failed] cd ..
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:26:10
+cd
+cd path
+// [failed] cd ..
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:31:06
+cd
+cd path
+cd ..
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:31:23
+cd
+cd path
+cd ..
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 16:33:04
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 16:34:39
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 16:35:15
+help
+pwd
+cd 
+pwd
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 16:36:28
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 16:36:32
+help
+get
+pwd
+get
+get
+cd plugins
+pwd
+get
+// null 1.1.0.RELEASE log opened at 2014-09-05 16:39:42
+cd
+cd test
+cd
+cd
+cd path
+cd ..
+cd
+cd
+cd
+cd test
+cd
+cd /path
+cd /path/
+cd /path/sub
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 16:40:41
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 16:41:14
+pwd
+get
+cd plugins
+get
+cd ..
+pwd
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 16:43:22
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 16:54:25
+pwd
+help login
+login --u admin --p skysail
+login --u admin --p skysail --path  /_login
+get
+cd plugins
+pwd
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:02:08
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 17:02:18
+help
+links
+get
+login --u admin --p skysail
+pwd
+get
+links
+cd plugins
+get
+links
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:06:34
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 17:06:39
+login --u admin --p skysail
+pwd
+cd plugins
+get
+links
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:19:17
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 17:19:21
+pwd
+login --u admin --p skysail
+get
+get
+cd plugins
+pwd
+get
+login --u admin --p skysail
+get
+pwd
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:21:42
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 17:21:47
+get
+login --u admin --p skysail
+get
+cd plugins
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:23:52
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 17:23:54
+pwd
+login --u admin --p skysail
+get
+cd plugins
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:25:25
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 17:25:28
+help
+pwd
+login --u admin --p skysail
+cd plugins
+get
+get
+links
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:26:50
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 17:26:59
+pwd
+login --u admin --p skysail
+cd plugins
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:27:31
