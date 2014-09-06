@@ -5,9 +5,7 @@ import org.clamshellcli.api.Context;
 
 public abstract class AbstractCommand implements Command {
 
-	protected Descriptor commandDescriptor = new HttpCommandDescriptor(
-			"unkown", "unknown", "command descriptor missing! "
-					+ getClass().getName());
+	protected Descriptor commandDescriptor = null;
 
 	public abstract Object doExecute(Context arg0);
 

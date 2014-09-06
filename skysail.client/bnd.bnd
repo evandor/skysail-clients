@@ -8,7 +8,8 @@ Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.ja
     lib/spring-aop-4.0.5.RELEASE.jar,\
     lib/spring-expression-4.0.5.RELEASE.jar
 Include-Resource: resources, conf=conf
--buildpath: lib/clamshell-api-0.5.2.jar;version=file,\
+-buildpath:  \
+	lib/clamshell-api-0.5.2.jar;version=file,\
 	lib/clamshell-impl-core-0.5.2.jar;version=file,\
 	lib/htmlunit-2.11.jar;version=file,\
 	lib/spring-shell-1.1.0.RELEASE.jar;version=file,\
@@ -33,11 +34,14 @@ Include-Resource: resources, conf=conf
 	com.google.gson;version=1.7,\
 	jackson-mapper-asl;version=1.9,\
 	jackson-core-asl;version=1.9,\
-	jline;version=2.11,\
-	org.apache.commons.io;version=2.4
-Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
+	org.apache.commons.io;version=2.4,\
+	jline;version=2.11
+Private-Package:  \
+	de.twenty11.skysail.client.cli.commands.utils,\
+	de.twenty11.skysail.client.cli.domain,\
 	de.twenty11.skysail.client.cli.testsupport,\
 	de.twenty11.skysail.client.cli.controllers,\
 	de.twenty11.skysail.client.cli.launcher,\
-	de.twenty11.skysail.client.cli.utils
+	de.twenty11.skysail.client.cli.utils,\
+	de.twenty11.skysail.client.cli.converter
 Export-Package: de.twenty11.skysail.client.cli.commands

@@ -1,6 +1,11 @@
 package de.twenty11.skysail.client.cli.commands;
 
+import java.io.IOException;
+import java.util.Collections;
+
 import org.apache.http.HttpResponse;
+import org.apache.http.ParseException;
+import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.shell.core.CommandMarker;
@@ -32,9 +37,19 @@ public class AuthenticationCommands implements CommandMarker {
 		
 		HttpResponse response = HttpUtils.post(context.getCurrentUrl(), username, password);
 		
+        context.setRequestHeaders(Collections.emptyList());
+        context.setResponseHeaders(response.getAllHeaders());
+        try {
+            context.setBody(EntityUtils.toString(response.getEntity()));
+        } catch (ParseException | IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        context.setStatus(response.getStatusLine());
+
 		StringBuilder sb = new StringBuilder();
-		sb.append(OutputUtils.printResponseHeader(response));
-		sb.append(OutputUtils.printBody(response));
+		sb.append(OutputUtils.printResponseHeader(context));
+		sb.append(OutputUtils.printBody(context));
 
 		context.setPath(originalPath);
 		return sb.toString();

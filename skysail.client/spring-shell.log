@@ -309,3 +309,386 @@ cd plugins
 get
 exit
 // Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 17:27:31
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 19:03:49
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 19:04:16
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 19:04:18
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-05 19:04:40
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-05 19:04:42
+help
+pwd
+get
+links
+help
+login --u admin --p skysail
+get
+cd dbclient
+get
+cd /usermanagement/currentUser
+pwd
+get
+login --u admin --p skysail
+login --u admin --p skysail
+cls
+login --u admin --p skysail
+login --u admin --p skysail
+login --u admin --p skysail
+login --u admin --p skysail
+// [failed] login --u admin --p skysail
+login --u admin --p skysail
+login --u admin --p skysail
+cls
+login --u admin --p skysail
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 06:35:12
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 06:35:25
+help
+pwd
+get
+cd dbclient
+get
+pwd
+get
+login --u admin --p skysail
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 06:48:20
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 06:48:31
+get
+pwd
+login --u admin --p skysail
+help
+get
+cd dbclient
+pwd
+get
+links
+get --title list
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 06:55:02
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 06:55:04
+login --u admin --p skysail
+get
+links
+get --title item
+pwd
+pwd
+links
+get --title col
+cd ..
+pwd
+cd ..
+pwd
+pwd
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 07:20:24
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 07:20:29
+login --u admin --p skysail
+// [failed] get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 07:21:25
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 07:21:27
+login --u admin --p skysail
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 07:24:45
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 07:24:47
+login --u admin --p skysail
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 07:27:32
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 07:27:34
+login --u admin --p skysail
+get
+links
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 07:37:31
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 07:37:34
+login --u admin --p skysail
+get
+get --uri dbclient
+get --title item
+cd ..
+pwd
+get
+get --uri notes
+get
+get --title item
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 07:42:17
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 07:42:19
+login --u admin --p skysail
+get
+help
+pwd
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 07:46:23
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 07:46:25
+login --u admin --p skysail
+get
+get --uri dbc
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 07:50:02
+// null 1.1.0.RELEASE log opened at 2014-09-06 07:52:18
+cd
+cd test
+cd
+cd
+cd path
+cd ..
+cd
+cd
+cd
+cd test
+cd
+cd /path
+cd /path/
+cd /path/sub
+// null 1.1.0.RELEASE log opened at 2014-09-06 07:53:11
+get
+// null 1.1.0.RELEASE log opened at 2014-09-06 07:56:48
+get
+get --uri dbc
+// null 1.1.0.RELEASE log opened at 2014-09-06 07:57:19
+get
+get --uri dbc
+// null 1.1.0.RELEASE log opened at 2014-09-06 07:58:17
+get
+get --uri dbc
+// null 1.1.0.RELEASE log opened at 2014-09-06 07:58:55
+get
+get --uri dbc
+// null 1.1.0.RELEASE log opened at 2014-09-06 07:59:27
+get
+get --uri dbc
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:05:20
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 08:06:31
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:06:32
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 08:07:00
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:07:02
+help
+// [failed] script test.run
+login --u admin --p skysail
+get
+login --u admin --p skysail
+get
+// script test.run
+// [failed] get --uri user
+login --u admin --p skysail
+// [failed] get
+// [failed] script test.run
+login --u admin --p skysail
+// [failed] get
+// [failed] script test.run
+login --u admin --p skysail
+get
+// [failed] get --uri user
+// [failed] script test.run
+cd
+login --u admin --p skysail
+get
+get --uri user
+// script test.run
+links
+// [failed] get --uri current
+pwd
+// [failed] get
+// [failed] get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 08:19:39
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:22:01
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+// [failed] get --uri currentuser
+// [failed] script test.run
+links
+// [failed] get --uri current
+// [failed] get --uri current
+// [failed] get --uri current
+// [failed] get --uri current
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:28:18
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 08:29:19
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:29:22
+get --uri currentuser
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+get
+get
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 08:30:16
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:30:19
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+cd ..
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 08:33:16
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:33:20
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 08:34:12
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 08:34:14
+help
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 09:00:04
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 09:00:07
+help
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+// [failed] assert --body username=admin
+// [failed] assert --body username=admin
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 09:07:46
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 09:07:49
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+assert --body username=admin
+assert --body username=admin1
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 09:15:21
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 09:15:24
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+assert --body username=admin
+// [failed] assert --body username=admin1
+assert --body username=admin
+get
+cd ..
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 09:21:37
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 09:21:39
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// script test.run
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+// script test.run
+pwd
+cd ..
+pwd
+get
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+// script test.run
+get
+cd ..
+get
+get --rel create
+links
+get --rel create
+get
+pwd
+get
+get
+get
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 09:56:59
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 09:57:02
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+// script test.run
+cd ..
+get
+get --uri regis
+get
+get
+cd ..
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 10:34:05
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 10:34:07
+// [failed] get
+// [failed] get
+// [failed] get
+// [failed] get
+get
+setHeader 
+help setHeader
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 10:40:08
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 10:40:11
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 10:42:02
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 10:42:05
+get
+setHeader X=Y
+get
+get
+setHeader X=Z
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:02:19
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 11:03:50
+help
+showHeader
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:08:11

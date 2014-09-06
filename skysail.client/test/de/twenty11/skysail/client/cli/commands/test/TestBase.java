@@ -1,7 +1,6 @@
 package de.twenty11.skysail.client.cli.commands.test;
 
 import java.util.Arrays;
-import java.util.Optional;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

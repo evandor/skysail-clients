@@ -1,29 +1,23 @@
 package de.twenty11.skysail.client.cli.commands.utils;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 
 public class HttpUtils {
 
 	public static HttpResponse get(String url, List<Header> requestHeaders) {
 		
 		try {
-			CloseableHttpClient httpclient = HttpClients.createDefault();
-			HttpGet httpGet = new HttpGet(url);
-			CloseableHttpResponse response = httpclient.execute(httpGet);
-			requestHeaders = Arrays.asList(httpGet.getAllHeaders());
-			return response;
-			//return Request.Get(url).execute().returnResponse();
+			Request get = Request.Get(url);
+			for (Header header : requestHeaders) {
+			    get.addHeader(header.getName(), header.getValue());    
+            }
+			return get.execute().returnResponse();
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}

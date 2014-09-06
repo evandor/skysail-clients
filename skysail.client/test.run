@@ -1,2 +1,7 @@
-setServer http://localhost:2016
-login admin skysail
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+
+assert --body username=admin

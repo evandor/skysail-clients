@@ -6,5 +6,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<context:component-scan base-package="de.twenty11.skysail.client.cli.commands" />
+	<context:component-scan base-package="de.twenty11.skysail.client.cli.converter" />
 	
 </beans>
