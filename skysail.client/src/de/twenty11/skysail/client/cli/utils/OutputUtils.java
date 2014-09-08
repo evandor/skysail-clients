@@ -16,91 +16,104 @@ import de.twenty11.skysail.client.cli.commands.Context;
 
 public class OutputUtils {
 
-	public static String printRequestHeader(Context context) {
-		StringBuilder sb = new StringBuilder();
-		
-		String msg =context.getRequestHeaders().stream()
-				.map(h -> getSingleHeaderRepresentation(">", h))
-				.filter(line -> (line != null))
-				.collect(Collectors.joining("\n"));
-		sb.append(msg + "\n\n");
-		return sb.toString();
-	}
+    public static String printRequestHeader(Context context) {
+        if (!context.isShowRequestHeaders()) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+
+        String msg = context.getRequestHeaders().stream().map(h -> getSingleHeaderRepresentation(">", h))
+                .filter(line -> (line != null)).collect(Collectors.joining("\n"));
+        sb.append(msg + "\n\n");
+        return sb.toString();
+    }
 
     public static Object printStatus(Context context) {
         StringBuilder sb = new StringBuilder();
         StatusLine statusLine = context.getStatus();
-        sb.append(statusLine.getStatusCode() + ": " + statusLine.getReasonPhrase() + "\n");     
+        sb.append(statusLine.getStatusCode() + ": " + statusLine.getReasonPhrase() + "\n");
         return sb.toString();
     }
 
-	public static String printResponseHeader(Context context) {
-		StringBuilder sb = new StringBuilder();
-		
-		String msg = Arrays.stream(context.getResponseHeaders())
-				.map(h -> getSingleHeaderRepresentation("<", h))
-				.filter(line -> (line != null))
-				.collect(Collectors.joining("\n"));
-		sb.append(msg + "\n\n");
-		return sb.toString();
-	}
+    public static String printResponseHeader(Context context) {
+        if (!context.isShowResponseHeaders()) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
 
-	public static String printBody(Context context) {
-//        HttpEntity entity = context.getBody();
-		StringBuilder sb = new StringBuilder();
-		try {
-	        String responseString = context.getBody();
-	        if (responseString.trim().length() == 0) {
-	            return "";
-	        }
+        String msg = Arrays.stream(context.getResponseHeaders()).map(h -> getSingleHeaderRepresentation("<", h))
+                .filter(line -> (line != null)).collect(Collectors.joining("\n"));
+        sb.append(msg + "\n\n");
+        return sb.toString();
+    }
+
+    public static String printBody(Context context) {
+
+        if (!context.isShowBody()) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+        try {
+            String responseString = context.getBody();
+            if (responseString.trim().length() == 0) {
+                return "";
+            }
             sb.append(format(responseString));
-		} catch (ParseException e) {
-			sb.append(e.getMessage());
-			e.printStackTrace();
-		}
-		return sb.toString();
-	}
+        } catch (ParseException e) {
+            sb.append(e.getMessage());
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
 
-	private static String getSingleHeaderRepresentation(String prompt, Header h) {
-		if (h.getName().equals("Link")) {
-			return formatLinks(h);
-		}
-		return prompt + "   " + h.getName() + ": " + h.getValue();
-	}
+    private static String getSingleHeaderRepresentation(String prompt, Header h) {
+        if (h.getName().equals("Link")) {
+            return formatLinks(h);
+        }
+        return prompt + "   " + h.getName() + ": " + h.getValue();
+    }
 
     private static String formatLinks(Header h) {
         StringBuilder sb = new StringBuilder("<   " + h.getName() + ": ");
         if (h.getValue().trim().equals("")) {
             return null;
         }
-        
+
         int maxUriLength = getLinkheaderStream(h).map(lh -> lh.getUri().length()).mapToInt(i -> i).max().orElse(0);
-        int maxRelationLength = getLinkheaderStream(h).map(lh -> lh.getRel().toString().length()).mapToInt(i -> i).max().orElse(0);
+        int maxRelationLength = getLinkheaderStream(h).map(lh -> lh.getRel().toString().length()).mapToInt(i -> i)
+                .max().orElse(0);
         int maxTitleLength = getLinkheaderStream(h).map(lh -> lh.getTitle().length()).mapToInt(i -> i).max().orElse(0);
-        getLinkheaderStream(h).forEach(lh -> {
-            sb.append("\n          <").append(lh.getUri()).append(">;").append(StringUtils.repeat(" ", 1 + maxUriLength - lh.getUri().length()));
-            sb.append("rel=\"").append(lh.getRel()).append("\";").append(StringUtils.repeat(" ", 1 + maxRelationLength - lh.getRel().toString().length()));
-            sb.append("title=\"").append(lh.getTitle()).append("\";").append(StringUtils.repeat(" ", 1 + maxTitleLength - lh.getTitle().length()));
-            sb.append("verbs=\"").append(lh.getVerbs()).append("\"");
-        });
+        getLinkheaderStream(h).forEach(
+                lh -> {
+                    sb.append("\n          <").append(lh.getUri()).append(">;")
+                            .append(StringUtils.repeat(" ", 1 + maxUriLength - lh.getUri().length()));
+                    sb.append("rel=\"").append(lh.getRel()).append("\";")
+                            .append(StringUtils.repeat(" ", 1 + maxRelationLength - lh.getRel().toString().length()));
+                    sb.append("title=\"").append(lh.getTitle()).append("\";")
+                            .append(StringUtils.repeat(" ", 1 + maxTitleLength - lh.getTitle().length()));
+                    sb.append("verbs=\"").append(lh.getVerbs()).append("\"");
+                });
         return sb.toString();
     }
-
 
     private static Stream<Linkheader> getLinkheaderStream(Header h) {
         return Arrays.stream(h.getValue().split(",")).map(link -> Linkheader.valueOf(link));
     }
-	
-	private static String format(String msg) {
-		ObjectMapper mapper = new ObjectMapper();
-		Object json;
-		try {
-			json = mapper.readValue(msg, Object.class);
-			return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
-		} catch (IOException e) {
-			e.printStackTrace();
-			return "Original Message:\n" + msg;
-		}	
-	}
+
+    private static String format(String msg) {
+        ObjectMapper mapper = new ObjectMapper();
+        Object json;
+        try {
+            json = mapper.readValue(msg, Object.class);
+            return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+            if (msg.length() < 500) {
+                return "Original Message:\n" + msg;
+            } else {
+                return msg.substring(0, 200) + "... \n\n    (...) \n\n    ..." + msg.substring(msg.length()-250,msg.length());
+            }
+        }
+    }
 
 }

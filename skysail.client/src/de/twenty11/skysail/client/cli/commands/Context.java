@@ -5,13 +5,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.ParseException;
 import org.apache.http.StatusLine;
 import org.springframework.stereotype.Component;
 
 import de.twenty11.skysail.api.responses.Linkheader;
-import de.twenty11.skysail.client.cli.domain.HeaderDefinition;
 
 @Component
 public class Context {
@@ -25,6 +22,9 @@ public class Context {
     private String body;
     private Header[] responseHeaders;
     private StatusLine status;
+    private boolean showRequestHeaders = true;
+    private boolean showResponseHeaders = true;
+    private Boolean showBody;
 
 	public void setPort(int port) {
 		this.port = port;
@@ -116,4 +116,29 @@ public class Context {
         Optional<Header> existingHeader = getRequestHeaders().stream().filter(h -> header.equals(h.getName())).findFirst();
         existingHeader.ifPresent(h -> getRequestHeaders().remove(h));
     }
+
+    public void showRequestHeaders(boolean showRequestHeaders) {
+        this.showRequestHeaders = showRequestHeaders;
+    }
+
+    public boolean isShowRequestHeaders() {
+        return this.showRequestHeaders;
+    }
+
+    public void showResponseHeaders(Boolean showResponseHeaders) {
+        this.showResponseHeaders  = showResponseHeaders;
+    }
+
+    public boolean isShowResponseHeaders() {
+        return this.showResponseHeaders;
+    }
+
+    public void showBody(Boolean showBody) {
+        this.showBody = showBody;
+
+    }
+    public boolean isShowBody() {
+        return this.showBody;
+    }
+
 }

@@ -38,7 +38,7 @@ public class RestCommands implements CommandMarker {
         matchGet(title, sb, l -> containsIgnoreCase(l.getTitle(),title));
         matchGet(rel, sb, l -> containsIgnoreCase(l.getRel().toString(),rel.toString()));
 
-        String url = context.getCurrentUrl() + "?media=json";
+        String url = context.getCurrentUrl();// + "?media=json";
         String headline = "\n> GET '" + url + "'\n";
         sb.append(StringUtils.repeat("=", headline.length()));
         sb.append(headline);

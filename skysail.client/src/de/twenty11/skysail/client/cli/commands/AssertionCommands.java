@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 
 import com.jayway.jsonpath.JsonPath;
 
+import de.twenty11.skysail.client.cli.domain.JsonAssertion;
+
 @Component
 public class AssertionCommands implements CommandMarker {
 
@@ -18,23 +20,21 @@ public class AssertionCommands implements CommandMarker {
 
     @CliCommand(value = "assert", help = "assert conditions on the current headers or body: assert --body <assertion>")
     public String get(
-            @CliOption(key = { "body" }, mandatory = true, help = "assert condition on the current body: --body username=admin") final String body) {
+            @CliOption(key = { "body" }, mandatory = true, help = "assert condition on the current body: --body username=admin") final JsonAssertion assertion) {
 
-        String[] split = body.split("=");
-        if (split.length != 2) {
-            return "wrong invocation of assert!";
-        }
         StringBuilder sb = new StringBuilder();
-        Object match = JsonPath.read(context.getBody(), split[0]);
+        Object match = JsonPath.read(context.getBody(), assertion.getJsonPath());
         if (match == null) {
             throw new IllegalStateException("assertion didn't find any match");
         }
         if (match instanceof List) {
             throw new IllegalStateException("assertion found a list; try to match only one item");
         }
-        if (!match.toString().equals(split[1])) {
-            throw new IllegalStateException("expected match '" + split[1] + "', but '" + split[0] + "' was '"
-                    + match.toString() + "'");
+        if (!match.toString().equals(assertion.getExpectedValue())) {
+            throw new IllegalStateException("expected match '" + assertion.getExpectedValue() + "', but '"
+                    + assertion.getJsonPath() + "' was '" + match.toString() + "'");
+        } else {
+            sb.append("matched " + assertion);
         }
         return sb.toString();
     }

@@ -9,9 +9,6 @@ Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.ja
     lib/spring-expression-4.0.5.RELEASE.jar
 Include-Resource: resources, conf=conf
 -buildpath:  \
-	lib/clamshell-api-0.5.2.jar;version=file,\
-	lib/clamshell-impl-core-0.5.2.jar;version=file,\
-	lib/htmlunit-2.11.jar;version=file,\
 	lib/spring-shell-1.1.0.RELEASE.jar;version=file,\
 	lib/spring-core-4.0.5.RELEASE.jar;version=file,\
 	lib/spring-context-4.0.5.RELEASE.jar;version=file,\

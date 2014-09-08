@@ -20,8 +20,8 @@ public class HeaderConverter implements Converter<Header> {
 
     @Override
     public Header convertFromText(String value, Class<?> targetType, String optionContext) {
-        String[] split = value.split("=");
-        if (split.length != 2) {
+        String[] split = value.split("=",2);
+        if (split.length < 2) {
             throw new IllegalStateException("could not convert '" + value + "' to HeaderDefinition");
         }
         return new Header() {
@@ -41,6 +41,10 @@ public class HeaderConverter implements Converter<Header> {
                 return split[1];
             }
             
+            @Override
+            public String toString() {
+                return getName() + ": " + getValue();
+            }
         };
     }
 
@@ -49,7 +53,4 @@ public class HeaderConverter implements Converter<Header> {
             String optionContext, MethodTarget target) {
         return false;
     }
-
-   
-
 }

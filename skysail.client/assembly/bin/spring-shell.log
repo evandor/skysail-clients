@@ -1,0 +1,396 @@
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 13:59:28
+help
+get
+setHost www.google.de
+pwd
+setPort 80
+pwd
+get
+setHost jira.twentyeleven.de
+get
+get
+cls
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:05:15
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:05:18
+pwd
+get
+get --uri user
+login --u admin --p skysail
+get
+get --uri user
+pwd
+cd ..
+pwd
+links
+get
+links
+get --rel create
+cls
+get --rel create
+cls
+get
+get
+get
+// [failed] setHeader Accept=application/json
+// [failed] setHeader Accept=application/json
+showHeader
+showHeader
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:14:53
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:18:09
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:18:11
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:18:22
+pwd
+get
+cd
+setHeader Accept=application/json
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+// script test.run
+showHeader
+// [failed] setHeader Accept=application
+help
+showHeader
+// [failed] setHeader Accept=application
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:20:57
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:20:59
+showHeader
+setHeader x=y
+get
+removeHeader x
+get
+setHeader Accept=application
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:23:33
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:23:35
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:25:15
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:25:18
+get
+setHeader Accept=text/html
+get
+showHeader
+removeHeader Accept
+setHeader Accept=application/json
+get
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:35:57
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:36:05
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:36:45
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:36:54
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:37:25
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:37:28
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:37:31
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:37:37
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:37:39
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:37:45
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:37:56
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:37:59
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:38:01
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:38:14
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:38:26
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:38:30
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:38:43
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:38:48
+help
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:46:31
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:46:34
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:51:34
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:51:37
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:52:08
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:52:10
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:52:56
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:52:58
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:53:47
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:53:50
+get
+cd
+setHeader Accept=application/json
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+// script test.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 14:59:38
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 14:59:40
+cd
+setHeader Accept=application/json
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+// script test.run
+showHeader
+pwd
+cd ..
+cd /usermanagement
+cd
+cd
+// [failed] setHeader Accept=application/json
+// [failed] script test.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:01:18
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:01:20
+cd
+setHeader Accept=application/json
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+get --uri usermanagement
+get --uri registration
+// script test.run
+cd
+// [failed] setHeader Accept=application/json
+// [failed] script test.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:02:23
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:02:26
+cd
+setHeader Accept=application/json
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+help
+get
+pwd
+cd
+// [failed] setHeader Accept=application/json
+// [failed] setHeader Accept=application/json
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:18:29
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:18:32
+cd
+setHeader Accept=application/json
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+showHeader
+get
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:28:13
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:28:16
+get
+setHeader x=y
+get
+set
+set
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:30:04
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:30:06
+help
+env
+env --showRequestHeaders false
+get
+env --showResponseHeaders false
+get
+env --showRequestHeaders true
+get
+showHeader
+env --showRequestHeaders true
+env --showRequestHeaders true
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:32:10
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:32:34
+// [failed] env --showRequestHeaders false
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:37:13
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:37:15
+setHeader Accept=application/json
+help
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+get
+links
+get --uri user
+login --u admin --p skysail
+get
+links
+get --uri regis
+pwd
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:40:04
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:40:08
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+cls
+pwd
+get
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 15:43:29
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 15:43:31
+pwd
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+get
+get
+// [failed] get
+// [failed] get
+// [failed] get
+pwd
+pwd
+// [failed] get
+get
+get
+// [failed] get
+// [failed] get
+get
+get
+// [failed] get
+get
+removeHeader Accept
+get
+setHeader Accept=text/html
+setHeader Accept=text/html,application/xhtml+xml,application/xml
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-07 14:34:22
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-07 14:34:26
+setHeader Accept=text/html,application/xhtml+xml,application/xml;q=0.9,**;q=0.8
+showHeader
+setHeader Accetpt=text/html,application/xhtml+xml,application/xml;q=0.9,**;q=0.8
+removeHeader Accetpt
+removeHeader Accept
+setHeader Accept=text/html,application/xhtml+xml,application/xml;q=0.9,**;q=0.8
+// [failed] get
+pwd
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+get
+setHeader Accept=text/html,application/xhtml+xml,application/xml;q=0.9,**;q=0.8
+get
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-07 14:52:05
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-07 14:52:07
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+get
+get
+get
+get
+get
+// [failed] get
+// [failed] get
+// [failed] get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 07:15:28

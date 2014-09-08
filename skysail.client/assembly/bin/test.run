@@ -1,0 +1,21 @@
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+
+cd
+
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+
+get
+get --uri usermanagement
+get --uri registration

@@ -692,3 +692,56 @@ help
 showHeader
 exit
 // Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:08:11
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 11:20:21
+help
+showHeader
+setHeader 
+// [failed] setHeader Accept=test/html
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:22:02
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 11:22:04
+setHeader Accept=text/html
+setHeader Accept=text/html
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:25:03
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 11:25:05
+setHeader Accept=text/html
+showHeader
+showHeader
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:26:08
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 11:26:10
+showHeader
+setHeader Accept=text/html
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:30:50
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 11:30:52
+setHeader Accept=text/html
+showHeader
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:32:34
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-06 11:32:37
+showHeader
+setHeader Accept=text/html
+setHeader Accept2=text/html
+removeHeader Accept2
+removeHeader Accept2
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-06 11:44:31
+// null 1.1.0.RELEASE log opened at 2014-09-06 11:53:47
+login --u admin --p skysail
+// null 1.1.0.RELEASE log opened at 2014-09-06 11:53:47
+cd
+cd test
+cd
+cd
+cd path
+cd ..
+cd
+cd
+cd
+cd test
+cd
+cd /path
+cd /path/
+cd /path/sub

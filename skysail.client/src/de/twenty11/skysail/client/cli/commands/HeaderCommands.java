@@ -1,5 +1,7 @@
 package de.twenty11.skysail.client.cli.commands;
 
+import java.util.stream.Collectors;
+
 import org.apache.http.Header;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.core.CommandMarker;
@@ -17,19 +19,20 @@ public class HeaderCommands implements CommandMarker {
     public String get(
             @CliOption(key = { "", "header" }, mandatory = false, help = "e.g. setHeader Accept=text/html") final Header header) {
         context.addOrSetHeader(header);
-        return "Request headers set to: " + context.getRequestHeaders().toString();
+        return "Request headers set to: " + context.getRequestHeaders();
     }
 
     @CliCommand(value = "removeHeader", help = "removes header from subsequent requests")
     public String remove(
             @CliOption(key = { "", "header" }, mandatory = false, help = "e.g. removeHeader Accept") final String header) {
         context.removeHeader(header);
-        return "Request headers set to: " + context.getRequestHeaders().toString();
+        return "Request headers set to: " + context.getRequestHeaders();
     }
 
     @CliCommand(value = "showHeader", help = "shows request headers for subsequent requests")
     public String show() {
-        return "Request headers set to: " + context.getRequestHeaders().toString();
+        return "Current Request headers: " + context.getRequestHeaders();
     }
+
 
 }

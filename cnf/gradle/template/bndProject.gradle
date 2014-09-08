@@ -282,6 +282,19 @@ task bundle {
       }
       bnd_project.build()
       printBndProjectWarningsAndErrors()
+      
+      File genDir = file('assembly/lib')
+      logger.info  "Copying jars from: " + targetDir + " to " + genDir
+      if ((!genDir.exists() && !genDir.mkdirs()) || !genDir.isDirectory()) {
+        throw new GradleException("Could not create directory $targetDir")
+      }
+      
+      copy {
+      	from targetDir
+      	into genDir
+      	include '**/*.jar'
+      }
+      
     } catch (Exception e) {
       throw new GradleException("Building OSGi bundle(s) of project $project.name failed", e)
     }
