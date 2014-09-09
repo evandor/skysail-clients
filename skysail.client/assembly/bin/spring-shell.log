@@ -394,3 +394,99 @@ get
 // [failed] get
 exit
 // Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 07:15:28
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 07:18:12
+pwd
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+// [failed] login --u admin --p skysail
+// [failed] script test.run
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 07:19:12
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 16:41:49
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+pwd
+// [failed] head
+cd 
+get
+// [failed] head
+// [failed] head
+// [failed] head
+// [failed] head
+// [failed] head
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 16:54:57
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 16:54:59
+// [failed] get
+head
+pwd
+// [failed] login --u admin --p skysail
+// [failed] login --u admin --p skysail
+// [failed] login --u admin --p skysail
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 16:56:19
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 16:56:21
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+cd
+get
+head
+get --uri dbc
+get --rel coll
+pwd
+head
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-09 06:09:58
