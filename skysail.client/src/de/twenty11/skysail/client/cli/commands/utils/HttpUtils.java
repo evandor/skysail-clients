@@ -7,6 +7,7 @@ import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
+import org.apache.http.entity.ContentType;
 
 public class HttpUtils {
 
@@ -23,8 +24,23 @@ public class HttpUtils {
 		}
 		return null;
 	}
+	
+	public static HttpResponse post(String url, String data, List<Header> requestHeaders) {
+		
+		try {
+			Request post = Request.Post(url);
+			for (Header header : requestHeaders) {
+				post.addHeader(header.getName(), header.getValue());    
+            }
+			post.bodyString(data, ContentType.APPLICATION_JSON);
+			return post.execute().returnResponse();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		return null;
+	}
 
-	public static HttpResponse post(String url, String username, String password) {
+	public static HttpResponse postForLogin(String url, String username, String password) {
 		try {
 			return Request.Post(url)
 					.bodyForm(Form.form().add("username",  username).add("password",  password).build())

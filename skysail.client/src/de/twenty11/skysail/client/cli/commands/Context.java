@@ -24,7 +24,7 @@ public class Context {
     private StatusLine status;
     private boolean showRequestHeaders = true;
     private boolean showResponseHeaders = true;
-    private Boolean showBody;
+    private Boolean showBody = true;
 
 	public void setPort(int port) {
 		this.port = port;

@@ -394,3 +394,477 @@ get
 // [failed] get
 exit
 // Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 07:15:28
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 10:23:11
+help
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 11:02:08
+setHost jira.twentyeleven.de
+pwd
+setPort 80
+pwd
+// [failed] get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 11:04:25
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 11:14:51
+pwd
+// [failed] get
+// [failed] login --u admin --p skysail
+help
+pwd
+cd ..
+// [failed] get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 11:16:33
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 11:16:35
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 11:17:12
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 11:17:13
+// [failed] get
+// [failed] get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 11:19:45
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 11:19:47
+get
+setHost ciargus
+setPort 80
+setPort 8080
+get
+cd /jenkins/job/argus.1.RELEASE/747/api/json?pretty=true
+pwd
+get
+cd localhost
+cd 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// [failed] assert --body username=admin
+// [failed] script test.run
+// [failed] assert --body username=admin
+// [failed] assert --body username=admin
+pwd
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 11:26:36
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 11:26:38
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+pwd
+pwd
+get
+// [failed] get
+// [failed] get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 12:56:54
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 12:56:56
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+// [failed] get --uri registration
+// [failed] script test.run
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+// [failed] get --uri registration
+// [failed] script test.run
+pwd
+// [failed] get
+// [failed] get
+// [failed] get
+get
+get
+get
+// [failed] get
+get
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 13:08:06
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 13:08:08
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+get
+get
+get
+get
+get
+get
+get
+get
+get
+get
+get
+get
+get
+get
+// [failed] get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 15:22:37
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 15:22:39
+help
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 15:25:05
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+// [failed] assert --body username=admin
+// [failed] script test.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 15:25:28
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 15:26:47
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+links
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 15:35:04
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 15:35:08
+help
+pwd
+cd test
+pwd
+get
+cd ..
+pwd
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+links
+pwd
+// [failed] post --data {
+cls
+// [failed] post --data null
+// [failed] post --data null
+// [failed] post --data null
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-08 15:38:51
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-08 15:38:55
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+post --data null
+post --data {}
+post --data '{"username" : "test",  "password" : "test"}'
+// [failed] post --data '{"username" : "test",  "password" : "test"}'
+setHost ciargus
+setPort 8080
+pwd
+cd
+pwd
+get
+cd jenkins/job/argus.1.RELEASE/747/api/json?pretty=true
+get
+cls
+setHost ciargus
+setPort 8080
+cd jenkins/job/argus.1.RELEASE/747/api/json?pretty=true
+get
+cd http://ciargus:8080/jenkins/job/argus.1.RELEASE/747/
+get
+cls
+help
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+// [failed] login --u admin --p skysail
+// [failed] script test.run
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders false
+env --showResponseHeaders false
+env --showBody false
+cd
+login --u admin --p skysail
+get
+get --uri usermanagement
+get --uri currentuser
+assert --body username=admin
+cd
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+get
+get --uri usermanagement
+get --uri registration
+// script test.run
+pwd
+pwd
+pwd
+links
+get
+links
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+cd
+login --u admin --p skysail
+// script ccd.run
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+pwd
+login --u admin --p skysail
+pwd
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-09 10:11:51
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-09 10:11:54
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+cd
+login --u admin --p skysail
+// script ccd.run
+pwd
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-09 10:12:38
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-09 10:12:40
+pwd
+logout
+get
+login --u admin --p skysail
+get
+pwd
+get
+get
+logout
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-09 15:46:46
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-09 15:46:48
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+cd
+login --u admin --p skysail
+// script ccd.run
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-09 15:48:15
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-09 15:48:17
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+cd
+// script ccd.run
+pwd
+get
+login --u admin --p skysail
+get
+logout
+get
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-09 15:50:47
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-09 15:50:52
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+cd
+scrip ccd.run
+get
+login --u admin --p skysail
+get
+logout
+logout
+pwd
+cd /_logout
+pwd
+get
+get
+pwd
+cd ..
+get
+pwd
+get
+logout
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-09 15:57:23
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-09 15:57:25
+setHost localhost
+setPort 2016
+setHeader Accept=application/json
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+cd
+// script ccd.run
+pwd
+cd /hallo
+pwd
+get
+cd ..
+pwd
+get
+login --u admin --p skysail
+pwd
+get
+cd /plugins
+pwd
+// [failed] get
+cd ../usermanagement
+pwd
+get
+get --uri user
+pwd
+get --rel create
+post --data '{  "id" : null, "username" : "test",  "password" : "test",  "pwdRepeated" : "test",  "registrationDate" : null,  "confirmationDate" : null,  "confirmationUrl" : null,  "status" : null}'
+post --data '{  "id" : null, "username" : "test",  "password" : "test",  "pwdRepeated" : "test",  "registrationDate" : null,  "confirmationDate" : null,  "confirmationUrl" : null,  "status" : null}'
+post --data '{  "id" : null, "username" : "test",  "password" : "test",  "pwdRepeated" : "test",  "registrationDate" : null,  "confirmationDate" : null,  "confirmationUrl" : null,  "status" : null}'
+post --data '{  "id" : null, "username" : "test",  "password" : "test",  "pwdRepeated" : "test",  "registrationDate" : null,  "confirmationDate" : null,  "confirmationUrl" : null,  "status" : null}'
+// [failed] post --data '{  "id" : null, "username" : "test",  "password" : "test",  "pwdRepeated" : "test",  "registrationDate" : null,  "confirmationDate" : null,  "confirmationUrl" : null,  "status" : null}'

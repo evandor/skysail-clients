@@ -1,7 +1,6 @@
 package de.twenty11.skysail.client.cli.commands;
 
 import java.io.IOException;
-import java.util.Collections;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
@@ -19,30 +18,57 @@ import de.twenty11.skysail.client.cli.utils.OutputUtils;
 public class AuthenticationCommands implements CommandMarker {
 
 	@Autowired
-    private Context context;
-	
+	private Context context;
+
 	@CliCommand(value = "login", help = "login -u username -p password")
 	public String login(
 			@CliOption(key = { "u" }, mandatory = true, help = "username") final String username,
 			@CliOption(key = { "p" }, mandatory = true, help = "password") final String password,
-			@CliOption(key = { "path" }, mandatory = false, help = "path where to login", unspecifiedDefaultValue= "/_login", specifiedDefaultValue="/_login") final String loginPath
-			) {
+			@CliOption(key = { "path" }, mandatory = false, help = "path where to login", unspecifiedDefaultValue = "/_login", specifiedDefaultValue = "/_login") final String loginPath) {
 
 		String originalPath = context.getPath();
 
 		context.setPath(loginPath);
+
+		HttpResponse response = HttpUtils.postForLogin(context.getCurrentUrl(),
+				username, password);
+
+		// context.setRequestHeaders(Collections.emptyList());
+		context.setResponseHeaders(response.getAllHeaders());
+		try {
+			context.setBody(EntityUtils.toString(response.getEntity()));
+		} catch (ParseException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		context.setStatus(response.getStatusLine());
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(OutputUtils.printResponseHeader(context));
+		sb.append(OutputUtils.printBody(context));
+
+		context.setPath(originalPath);
+		return sb.toString();
+	}
+
+	@CliCommand(value = "logout", help = "logout current user")
+	public String logout() {
+
+		String originalPath = context.getPath();
+
+		context.setPath("/_logout");
+
+		HttpResponse response = HttpUtils.get(context.getCurrentUrl(), context.getRequestHeaders());
 		
-		HttpResponse response = HttpUtils.post(context.getCurrentUrl(), username, password);
-		
-        //context.setRequestHeaders(Collections.emptyList());
-        context.setResponseHeaders(response.getAllHeaders());
-        try {
-            context.setBody(EntityUtils.toString(response.getEntity()));
-        } catch (ParseException | IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        context.setStatus(response.getStatusLine());
+		// context.setRequestHeaders(Collections.emptyList());
+		context.setResponseHeaders(response.getAllHeaders());
+		try {
+			context.setBody(EntityUtils.toString(response.getEntity()));
+		} catch (ParseException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		context.setStatus(response.getStatusLine());
 
 		StringBuilder sb = new StringBuilder();
 		sb.append(OutputUtils.printResponseHeader(context));
