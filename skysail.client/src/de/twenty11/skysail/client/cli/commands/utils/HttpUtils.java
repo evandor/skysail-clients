@@ -62,5 +62,18 @@ public class HttpUtils {
 		return null;
 	}
 
+    public static HttpResponse head(String url, List<Header> requestHeaders) {
+        try {
+            Request get = Request.Head(url);
+            for (Header header : requestHeaders) {
+                get.addHeader(header.getName(), header.getValue());    
+            }
+            return get.execute().returnResponse();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        return null;
+    }
+
 
 }
