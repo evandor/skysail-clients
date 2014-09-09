@@ -1,0 +1,11 @@
+setHost localhost
+setPort 2016
+
+setHeader Accept=application/json
+
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+
+cd
+//login --u admin --p skysail

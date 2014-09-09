@@ -9,7 +9,7 @@
 if "%OS%"=="Windows_NT" setlocal
 
 @rem Add default JVM options here. You can also use JAVA_OPTS and SKYSAIL_CLIENT_OPTS to pass JVM options to this script.
-set DEFAULT_JVM_OPTS=
+set DEFAULT_JVM_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n
 
 set DIRNAME=%~dp0
 if "%DIRNAME%" == "" set DIRNAME=.
@@ -69,7 +69,7 @@ set CMD_LINE_ARGS=%$
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\skysail.client-1.0.0.RELEASE.jar;%APP_HOME%\lib\bin;%APP_HOME%\lib\clamshell-api-0.5.2.jar;%APP_HOME%\lib\clamshell-impl-core-0.5.2.jar;%APP_HOME%\lib\htmlunit-2.11.jar;%APP_HOME%\lib\spring-shell-1.1.0.RELEASE.jar;%APP_HOME%\lib\spring-core-4.0.5.RELEASE.jar;%APP_HOME%\lib\spring-context-4.0.5.RELEASE.jar;%APP_HOME%\lib\spring-beans-4.0.5.RELEASE.jar;%APP_HOME%\lib\spring-aop-4.0.5.RELEASE.jar;%APP_HOME%\lib\spring-expression-4.0.5.RELEASE.jar;%APP_HOME%\lib\com.springsource.org.junit-4.11.0.jar;%APP_HOME%\lib\biz.aQute.launcher-1.2.1.jar;%APP_HOME%\lib\osgi.core-5.0.0.jar;%APP_HOME%\lib\org.apache.felix.framework-4.4.0.jar;%APP_HOME%\lib\org.mockito.mockito-all-1.9.0.jar;%APP_HOME%\lib\org.apache.httpcomponents.httpclient-4.3.1.jar;%APP_HOME%\lib\org.apache.commons.lang-2.6.0.jar;%APP_HOME%\lib\de.twentyeleven.skysail.org.hamcrest.hamcrest-all-osgi-1.3.0.jar;%APP_HOME%\lib\skysail.api-9.1.0.jar;%APP_HOME%\lib\org.apache.commons.logging-1.1.3.jar;%APP_HOME%\lib\com.jayway.jsonpath.json-path-0.9.1.jar;%APP_HOME%\lib\slf4j.api-1.7.5.jar;%APP_HOME%\lib\net.minidev.json-smart-1.2.0.jar;%APP_HOME%\lib\com.google.gson-1.7.0.jar;%APP_HOME%\lib\jackson-mapper-asl-1.9.8.jar;%APP_HOME%\lib\jackson-core-asl-1.9.8.jar;%APP_HOME%\lib\org.apache.commons.io-2.4.0.jar;%APP_HOME%\lib\jline-2.11.0.jar;%APP_HOME%\lib\spring-shell-1.1.0.RELEASE.jar;%APP_HOME%\lib\log4j-1.2.17.jar;%APP_HOME%\lib\apache-log4j-extras-1.1.jar;%APP_HOME%\lib\slf4j-log4j12-1.7.5.jar;%APP_HOME%\lib\slf4j-api-1.7.5.jar;%APP_HOME%\lib\jcl-over-slf4j-1.7.5.jar;%APP_HOME%\lib\lombok-1.12.2.jar;%APP_HOME%\lib\commons-lang3-3.1.jar;%APP_HOME%\lib\commons-io-2.3.jar;%APP_HOME%\lib\jline-2.11.jar;%APP_HOME%\lib\guava-15.0.jar;%APP_HOME%\lib\cglib-2.2.2.jar;%APP_HOME%\lib\spring-context-support-4.0.3.RELEASE.jar;%APP_HOME%\lib\spring-core-4.0.3.RELEASE.jar;%APP_HOME%\lib\asm-3.3.1.jar;%APP_HOME%\lib\spring-beans-4.0.3.RELEASE.jar;%APP_HOME%\lib\spring-context-4.0.3.RELEASE.jar;%APP_HOME%\lib\commons-logging-1.1.3.jar;%APP_HOME%\lib\spring-aop-4.0.3.RELEASE.jar;%APP_HOME%\lib\spring-expression-4.0.3.RELEASE.jar;%APP_HOME%\lib\aopalliance-1.0.jar
+set CLASSPATH=../../generated/skysail.client.jar;$APP_HOME/lib/bin;../../generated/install/skysail.client/lib/*
 
 @rem Execute skysail.client
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %SKYSAIL_CLIENT_OPTS%  -classpath "%CLASSPATH%" org.springframework.shell.Bootstrap %CMD_LINE_ARGS%

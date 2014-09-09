@@ -27,16 +27,6 @@ import org.junit.BeforeClass;
 import com.jayway.jsonpath.JsonPath;
 
 import de.twenty11.skysail.api.responses.Linkheader;
-import de.twenty11.skysail.client.cli.commands.ChangePathCommand;
-import de.twenty11.skysail.client.cli.commands.ConnectCommand;
-import de.twenty11.skysail.client.cli.commands.GetCommand;
-import de.twenty11.skysail.client.cli.commands.LoginCommand;
-import de.twenty11.skysail.client.cli.commands.LogoutCommand;
-import de.twenty11.skysail.client.cli.commands.PostCommand;
-import de.twenty11.skysail.client.cli.commands.PwdCommand;
-import de.twenty11.skysail.client.cli.commands.ScriptCommand;
-import de.twenty11.skysail.client.cli.commands.SetCommand;
-import de.twenty11.skysail.client.cli.commands.SetServerCommand;
 
 public class LargeTestsBase {
 
@@ -57,89 +47,6 @@ public class LargeTestsBase {
 	}
 
 	private Context ctx = MockContext.createInstance();
-
-	protected Command setServerCommand = new SetServerCommand();
-	protected Command getCommand = new GetCommand();
-	protected Command pwdCommand = new PwdCommand();
-	protected Command cdCommand = new ChangePathCommand();
-	protected Command connectCommand = new ConnectCommand();
-	protected Command loginCommand = new LoginCommand();
-	protected Command logoutCommand = new LogoutCommand();
-	protected Command postCommand = new PostCommand();
-	protected Command setCommand = new SetCommand();
-	protected Command scriptCommand = new ScriptCommand();
-
-	protected LargeTestsBase get() {
-		echoCommand("get");
-		response = (HttpResponse) getCommand.execute(ctx);
-		return this;
-	}
-
-	protected HttpResponse post(Form form) {
-		echoCommand("post", "form to be done");
-		Map<String, Object> arguments = new HashMap<>();
-		List<NameValuePair> pairs = form.build();
-		pairs.stream().forEach(nvp -> {
-			arguments.put(nvp.getName(), nvp.getValue());
-		});
-		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, arguments);
-		response = (HttpResponse) postCommand.execute(ctx);
-		return response;
-	}
-
-	protected String pwd() {
-		echoCommand("pwd");
-		return (String) pwdCommand.execute(ctx);
-	}
-
-	protected void cd(String path) {
-		echoCommand("cd", path);
-		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, path);
-		cdCommand.execute(ctx);
-	}
-
-	private void connect() {
-		echoCommand("connect");
-		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, null);
-		connectCommand.execute(ctx);
-	}
-
-	protected void setServer(String path) {
-		echoCommand("setServer", path);
-		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, path);
-		setServerCommand.execute(ctx);
-	}
-
-	protected void login(String user, String pass) {
-		echoCommand("login", user, "****");
-		Map<String, Object> arguments = new HashMap<>();
-		arguments.put("username", user);
-		arguments.put("password", pass);
-		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, arguments);
-		loginCommand.execute(ctx);
-	}
-
-	protected void logout() {
-		echoCommand("logout");
-		logoutCommand.execute(ctx);
-	}
-
-	protected void set() {
-		set("", "");
-	}
-
-	protected void set(String param, String value) {
-		echoCommand("set", param, value);
-		ctx.putValue(Context.KEY_COMMAND_LINE_ARGS, param + " " + value);
-		setCommand.execute(ctx);
-
-	}
-	
-	protected void script(String filename) {
-		echoCommand("script", filename);
-		ctx.putValue(Context.KEY_COMMAND_LINE_INPUT, filename);
-		scriptCommand.execute(ctx);
-	}
 
 	private void writeSeparator(IOConsole console, String string, int length) {
 		StringBuilder sb = new StringBuilder();
@@ -181,29 +88,26 @@ public class LargeTestsBase {
 		writeSeparator(console, "-", 6 + command.length());
 	}
 
-    public String extractFromBody(HttpResponse response, String jsonPath) {
-        try {
-            String json = EntityUtils.toString(response.getEntity());
-            return JsonPath.read(json, jsonPath);
-        } catch (ParseException | IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
+	public String extractFromBody(HttpResponse response, String jsonPath) {
+		try {
+			String json = EntityUtils.toString(response.getEntity());
+			return JsonPath.read(json, jsonPath);
+		} catch (ParseException | IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 	protected int getStatusCode(HttpResponse response) {
-        return response.getStatusLine().getStatusCode();
-    }
+		return response.getStatusLine().getStatusCode();
+	}
 
-    private static boolean runLauncher() {
+	private static boolean runLauncher() {
 		String runLauncher = System.getProperty("runLauncher");
 		if (runLauncher == null || runLauncher.trim().length() == 0) {
 			return false;
 		}
 		return Boolean.valueOf(runLauncher);
 	}
-
 
 }

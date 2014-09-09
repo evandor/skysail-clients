@@ -1,3 +1,6 @@
+setHost localhost
+setPort 2016
+
 setHeader Accept=application/json
 env --showRequestHeaders false
 env --showResponseHeaders false
