@@ -9,6 +9,7 @@ import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.util.EntityUtils;
+import org.restlet.data.Method;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.core.CommandMarker;
 import org.springframework.shell.core.annotation.CliCommand;
@@ -63,7 +64,7 @@ public class Rest2Commands implements CommandMarker {
 
     private void matchGet(final String title, StringBuilder sb, Predicate<? super Linkheader> matcher) {
         if (title != null && title.trim().length() > 0) {
-            context.getLinks().stream().filter(lh -> lh.getVerbs().contains(Linkheader.Verb.GET)).filter(matcher).findFirst().ifPresent(l -> {
+            context.getLinks().stream().filter(lh -> lh.getVerbs().contains(Method.GET)).filter(matcher).findFirst().ifPresent(l -> {
                 context.setPath(l.getUri());
                 //sb.append("found link and changed path to '").append(l.getUri()).append("'.\n");
             });
