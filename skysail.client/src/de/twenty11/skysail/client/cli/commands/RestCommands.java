@@ -115,7 +115,7 @@ public class RestCommands implements CommandMarker {
 			Predicate<? super Linkheader> matcher) {
 		if (title != null && title.trim().length() > 0) {
 			context.getLinks().stream()
-					.filter(lh -> lh.getVerbs().contains(Method.GET))
+					.filter(lh -> lh.getVerbs().contains(org.restlet.data.Method.GET))
 					.filter(matcher).findFirst().ifPresent(l -> {
 						context.setPath(l.getUri());
 						// sb.append("found link and changed path to '").append(l.getUri()).append("'.\n");
