@@ -1,8 +1,15 @@
-Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.jar,lib/clamshell-test-0.5.2.jar,lib/htmlunit-2.11.jar
--buildpath: lib/clamshell-api-0.5.2.jar;version=file,\
-	lib/clamshell-impl-core-0.5.2.jar;version=file,\
-	lib/clamshell-test-0.5.2.jar;version=file,\
-	lib/htmlunit-2.11.jar;version=file,\
+Bundle-ClassPath: .,lib/spring-shell-1.1.0.RELEASE.jar,\
+    lib/spring-core-4.0.5.RELEASE.jar,\
+    lib/spring-context-4.0.5.RELEASE.jar,\
+    lib/spring-beans-4.0.5.RELEASE.jar,\
+    lib/spring-aop-4.0.5.RELEASE.jar,\
+    lib/spring-expression-4.0.5.RELEASE.jar
+-buildpath: lib/spring-shell-1.1.0.RELEASE.jar;version=file,\
+	lib/spring-core-4.0.5.RELEASE.jar;version=file,\
+	lib/spring-context-4.0.5.RELEASE.jar;version=file,\
+	lib/spring-beans-4.0.5.RELEASE.jar;version=file,\
+	lib/spring-aop-4.0.5.RELEASE.jar;version=file,\
+	lib/spring-expression-4.0.5.RELEASE.jar;version=file,\
 	com.springsource.org.junit;version=4.11,\
 	biz.aQute.launcher,\
 	osgi.core;version=5.0,\
@@ -18,11 +25,61 @@ Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.ja
 	net.minidev.json-smart;version=1.2,\
 	com.google.gson;version=1.7,\
 	skysail.client;version=latest
-Test-Cases: ${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
+Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 -runvm: -ea
--runbundles: org.mockito.mockito-all
--runfw: org.apache.felix.framework
--runee: JavaSE-1.6
+-runbundles: com.jayway.jsonpath.json-path;version=0.9,\
+	net.minidev.json-smart;version=1.2,\
+	classmate;version='[1.0.0,1.0.1)',\
+	slf4j.api;version=1.7.5,\
+	ch.qos.logback.core;version=1.0.0,\
+	ch.qos.logback.classic;version=1.0.0,\
+	com.fasterxml.jackson.core.jackson-annotations;version='[2.2.0,2.3)',\
+	com.google.guava;version='[15.0.0,15.0.1)',\
+	jackson-core-asl;version='[1.9.8,1.9.9)',\
+	jackson-mapper-asl;version='[1.9.8,1.9.9)',\
+	javax.validation.api;version='[1.1.0,1.1.1)',\
+	javax.el;version=2.2.0,\
+	javax.servlet;version='[2.5.0,2.5.1)',\
+	org.apache.commons.lang;version='[2.6.0,2.6.1)',\
+	org.apache.commons.logging;version=1.1.3,\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.httpcomponents.httpclient;version='[4.3.1,4.3.2)',\
+	org.apache.httpcomponents.httpcore;version='[4.3.0,4.3.1)',\
+	skysail.api;version=11.0.0,\
+	org.restlet;version=2.1.6,\
+	osgi.cmpn;version=5.0.0,\
+	jline;version=2.11.0,\
+	org.apache.commons.io;version=2.4.0,\
+	org.apache.commons.pool;version=1.6.0,\
+	org.hibernate.validator;version=5.0.1,\
+	org.jboss.logging.jboss-logging;version=3.1.2
+-runfw: org.apache.felix.framework;version='[4.4.0,4.4.0]'
+-runee: JavaSE-1.8
 Private-Package: de.twenty11.skysail.client.cli.testsupport,\
 	de.twenty11.skysail.client.cli.test
 -runsystempackages: sun.reflect
+Import-Package: !aQute.launcher.*,\
+    !bsh,\
+    !com.jamonapi.*,\
+    !com.sun.net.httpserver.*,\
+    !groovy.*,\
+    !javax.ejb.*,\
+    !javax.enterprise.*,\
+    !javax.inject.*,\
+    !javax.interceptor.*,\
+    !joptsimple.*,\
+    !org.aopalliance.*,\
+    !org.apache.log4j.*,\
+    !org.apache.tools.*,\
+    !org.aspectj.*,\
+    !org.codehaus.groovy.*,\
+    !org.hibernate.validator.method.*,\
+    !org.joda.*,\
+    !org.jruby.*,\
+    !org.springframework.asm.*,\
+    !org.springframework.instrument.*,\
+    !sun.misc.*,\
+	*
+Export-Package: org.springframework.*

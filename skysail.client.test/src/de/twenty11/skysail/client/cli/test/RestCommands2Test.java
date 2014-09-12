@@ -1,14 +1,14 @@
-package de.twenty11.skysail.client.cli.commands.test;
+package de.twenty11.skysail.client.cli.test;
 
 import org.junit.Test;
 import org.springframework.shell.core.CommandResult;
 
 
-public class RestCommandsTest extends TestBase {
+public class RestCommands2Test extends TestBase {
 
     @Test
    // @Ignore // LargeTest
-    public void testName() throws Exception {
+    public void testName2() throws Exception {
         CommandResult exec = exec("get", "get --uri dbc");
     }
 }

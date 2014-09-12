@@ -1,1 +1,79 @@
-INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.felix.scr [35], Origin: org.apache.felix.scr [35], Bundle #35
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.felix.scr [33], Origin: org.apache.felix.scr [33], Bundle #33
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.httpcomponents.httpclient [34], Origin: org.apache.httpcomponents.httpclient [34], Bundle #34
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.httpcomponents.httpcore [35], Origin: org.apache.httpcomponents.httpcore [35], Bundle #35
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.servicemix.bundles.cglib [36], Origin: org.apache.servicemix.bundles.cglib [36], Bundle #36
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.shiro.core [37], Origin: org.apache.shiro.core [37], Bundle #37
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.shiro.web [38], Origin: org.apache.shiro.web [38], Bundle #38
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.h2 [39], Origin: org.h2 [39], Bundle #39
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: de.twentyeleven.skysail.ojdbc-osgi [40], Origin: de.twentyeleven.skysail.ojdbc-osgi [40], Bundle #40
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.eclipse.gemini.jpa [43], Origin: org.eclipse.gemini.jpa [43], Bundle #43
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.eclipse.persistence.antlr [45], Origin: org.eclipse.persistence.antlr [45], Bundle #45
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.eclipse.persistence.asm [46], Origin: org.eclipse.persistence.asm [46], Bundle #46
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.eclipse.persistence.core [47], Origin: org.eclipse.persistence.core [47], Bundle #47
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.eclipse.persistence.jpa [48], Origin: org.eclipse.persistence.jpa [48], Bundle #48
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.eclipse.persistence.jpa.jpql [49], Origin: org.eclipse.persistence.jpa.jpql [49], Bundle #49
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.hibernate.validator [50], Origin: org.hibernate.validator [50], Bundle #50
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.jboss.logging.jboss-logging [51], Origin: org.jboss.logging.jboss-logging [51], Bundle #51
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.restlet [52], Origin: org.restlet [52], Bundle #52
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.restlet.ext.crypto [53], Origin: org.restlet.ext.crypto [53], Bundle #53
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.restlet.ext.jackson [54], Origin: org.restlet.ext.jackson [54], Bundle #54
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: osgi.cmpn [55], Origin: osgi.cmpn [55], Bundle #55
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: osgi.enterprise [56], Origin: osgi.enterprise [56], Bundle #56
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: osgi.residential [57], Origin: osgi.residential [57], Bundle #57
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: biz.aQute.bnd.annotation [58], Origin: biz.aQute.bnd.annotation [58], Bundle #58
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.api [59], Origin: skysail.api [59], Bundle #59
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.config.configadmin [60], Origin: skysail.config.configadmin [60], Bundle #60
+INFO  d.t.s.c.configadmin.ConfigAdminConfigurationProvider - Creating new ConfigProvider: ConfigAdminConfigurationProvider [1885509442] with 0 entries
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.eclipse.gemini.dbaccess.util [42], Origin: org.eclipse.gemini.dbaccess.util [42], Bundle #42
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.eclipse.gemini.dbaccess.derby [41], Origin: org.eclipse.gemini.dbaccess.derby [41], Bundle #41
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server [61], Origin: skysail.server [61], Bundle #61
+INFO  d.t.skysail.server.config.ServerConfigurationImpl - adding configuration provider ConfigAdminConfigurationProvider [1885509442] with 0 entries
+INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'TreeFormConverter' with typesMatch '{treeform/*=1.0}'
+INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'SHtmlConverter' with typesMatch '{shtml/*=1.0}'
+INFO  de.twenty11.skysail.server.app.SkysailRootApplication - Instanciating new Skysail Application 'SkysailRootApplication'
+INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'root' registered <<<
+INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'BootstrapHtmlConverter' with typesMatch '{htmlform/*=0.9, text/html=0.9}'
+INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'ServerSentEventsConverter' with typesMatch '{text/event-stream=1.0}'
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.ext.i18n [62], Origin: skysail.server.ext.i18n [62], Bundle #62
+INFO  d.t.skysail.server.osgi.OsgiMonitorViewerApplication - Instanciating new Skysail Application 'OsgiMonitorViewerApplication'
+INFO  d.t.skysail.server.osgi.OsgiMonitorViewerApplication - Activating Application de.twenty11.skysail.server.osgi.OsgiMonitorViewerApplication
+INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'osgimonitor' registered <<<
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.osgi [63], Origin: skysail.server.osgi [63], Bundle #63
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.http [64], Origin: skysail.server.http [64], Bundle #64
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.features [65], Origin: skysail.server.features [65], Bundle #65
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.crypto [66], Origin: skysail.server.crypto [66], Bundle #66
+INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - initializing ShiroServices
+INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - Creating new SkysailWebSecurityManager...
+INFO  d.t.s.s.s.shiro.session.mgt.SkysailWebSessionManager - creating new SkysailWebSessionManager
+INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - Setting new SkysailWebSecurityManager as Shiros SecurityManager
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.security.shiro [70], Origin: skysail.server.security.shiro [70], Bundle #70
+INFO  d.t.skysail.server.webapp.internal.WebappApplication - Instanciating new Skysail Application 'WebappApplication'
+INFO  d.t.skysail.server.webapp.internal.WebappApplication - Activating Application de.twenty11.skysail.server.webapp.internal.WebappApplication
+INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'static' registered <<<
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.static [71], Origin: skysail.server.static [71], Bundle #71
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.app.lookup [76], Origin: skysail.server.app.lookup [76], Bundle #76
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.ext.notes.core [78], Origin: skysail.server.ext.notes.core [78], Bundle #78
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'stopped': Source: skysail.server.app.lookup [76], Origin: skysail.server.app.lookup [76], Bundle #76
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'unresolved': Source: skysail.server.app.lookup [76], Origin: skysail.server.app.lookup [76], Bundle #76
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'resolved': Source: skysail.server.app.lookup [76], Origin: skysail.server.app.lookup [76], Bundle #76
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.app.lookup [76], Origin: skysail.server.app.lookup [76], Bundle #76
+INFO  d.t.s.s.e.osgi.listener.SkysailServerFrameworkListener - FrameworkEvent 'PACKAGES_REFRESHED': Source: org.apache.felix.framework [0], Bundle #0
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'stopped': Source: skysail.server.ext.notes.core [78], Origin: skysail.server.ext.notes.core [78], Bundle #78
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'unresolved': Source: skysail.server.ext.notes.core [78], Origin: skysail.server.ext.notes.core [78], Bundle #78
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'resolved': Source: skysail.server.ext.notes.core [78], Origin: skysail.server.ext.notes.core [78], Bundle #78
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.ext.notes.core [78], Origin: skysail.server.ext.notes.core [78], Bundle #78
+INFO  d.t.s.s.e.osgi.listener.SkysailServerFrameworkListener - FrameworkEvent 'PACKAGES_REFRESHED': Source: org.apache.felix.framework [0], Bundle #0
+INFO  de.twenty11.skysail.products.notes.Activator - Starting skysail.products.notes in version 0.5.8.201409120901
+INFO  de.twenty11.skysail.products.notes.NotesProduct - Instanciating new Skysail Application 'NotesProduct'
+INFO  de.twenty11.skysail.products.notes.NotesProduct - Activating Application de.twenty11.skysail.products.notes.NotesProduct
+INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'Frontend' registered <<<
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.products.notes [81], Origin: skysail.products.notes [81], Bundle #81
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: skysail.server.persistence.keyvalue.core [82], Origin: skysail.server.persistence.keyvalue.core [82], Bundle #82
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: com.googlecode.flyway.core [83], Origin: com.googlecode.flyway.core [83], Bundle #83
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: slf4j.api [84], Origin: slf4j.api [84], Bundle #84
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: com.sun.mail.javax.mail [85], Origin: com.sun.mail.javax.mail [85], Bundle #85
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.commons.lang3 [86], Origin: org.apache.commons.lang3 [86], Bundle #86
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.mapdb.mapdb [87], Origin: org.mapdb.mapdb [87], Bundle #87
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: com.sun.el [88], Origin: com.sun.el [88], Bundle #88
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: javax.el [89], Origin: javax.el [89], Bundle #89
+INFO  d.t.skysail.api.services.logentry.BundleEventLogEntry - BundleEvent 'started': Source: org.apache.felix.bundlerepository [90], Origin: org.apache.felix.bundlerepository [90], Bundle #90

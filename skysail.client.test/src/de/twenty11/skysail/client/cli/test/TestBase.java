@@ -1,4 +1,4 @@
-package de.twenty11.skysail.client.cli.commands.test;
+package de.twenty11.skysail.client.cli.test;
 
 import java.util.Arrays;
 
