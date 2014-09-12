@@ -25,6 +25,26 @@ public class RestCommands implements CommandMarker {
 	@Autowired
 	private Context context;
 
+	@CliCommand(value = "options", help = "executes a OPTIONS request on the current path")
+	public String options() {
+
+		StringBuilder sb = new StringBuilder();
+
+		String url = context.getCurrentUrl();
+
+		printHeadline("OPTIONS", sb, url);
+
+		HttpResponse response = HttpUtils.options(url, context.getRequestHeaders());
+
+		updateContext(response);
+
+
+		sb.append(OutputUtils.printResponseHeader(context));
+		sb.append(OutputUtils.printBody(context));
+
+		return sb.toString();
+	}
+	
 	@CliCommand(value = "get", help = "executes a GET request on the current path")
 	public String get(
 			@CliOption(key = { "uri" }, mandatory = false, help = "select a link by matching the uri") final String uri,

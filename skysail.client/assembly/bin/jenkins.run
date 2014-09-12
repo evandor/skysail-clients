@@ -1,0 +1,10 @@
+setHost ciargus
+setPort 8080
+
+setHeader Accept=application/json
+
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+
+cd /jenkins/job/argus.1.RELEASE/767/api/json?pretty=true

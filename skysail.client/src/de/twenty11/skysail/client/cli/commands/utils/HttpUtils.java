@@ -13,11 +13,26 @@ import de.twenty11.skysail.client.cli.commands.Context;
 
 public class HttpUtils {
 
+
 	public static HttpResponse get(Context context) {
 		
 		try {
 			Request get = Request.Get(context.getCurrentUrl());
 			addRequestHeaders(context, get);
+			return get.execute().returnResponse();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		return null;
+	}
+
+	public static HttpResponse options(String url, List<Header> requestHeaders) {
+
+		try {
+			Request get = Request.Options(url);
+			for (Header header : requestHeaders) {
+				get.addHeader(header.getName(), header.getValue());
+			}
 			return get.execute().returnResponse();
 		} catch (IOException e1) {
 			e1.printStackTrace();
@@ -38,10 +53,14 @@ public class HttpUtils {
 		return null;
 	}
 
-	public static HttpResponse postForLogin(String url, String username, String password) {
+	public static HttpResponse postForLogin(String url, String username,
+			String password) {
 		try {
-			return Request.Post(url)
-					.bodyForm(Form.form().add("username",  username).add("password",  password).build())
+			return Request
+					.Post(url)
+					.bodyForm(
+							Form.form().add("username", username)
+									.add("password", password).build())
 					.execute().returnResponse();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -51,9 +70,8 @@ public class HttpUtils {
 
 	public static HttpResponse post(String url, Form form) {
 		try {
-			return Request.Post(url)
-					.bodyForm(form.build())
-					.execute().returnResponse();
+			return Request.Post(url).bodyForm(form.build()).execute()
+					.returnResponse();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -2,8 +2,6 @@ package de.twenty11.skysail.client.cli.testsupport;
 
 import java.io.File;
 
-import aQute.launcher.Launcher;
-
 public class SkysailServerLauncher {
 
 	private static Thread serverThread;
@@ -29,7 +27,7 @@ public class SkysailServerLauncher {
 		@Override
 		public void run() {
 			while (running) {
-				Launcher.main(args);
+				//Launcher.main(args);
 			}
 		}
 	}
