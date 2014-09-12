@@ -50,21 +50,29 @@ public class NavigationCommands implements CommandMarker {
 		} else if (dir.startsWith("/")) {
 			context.setPath(dir);
 		} else if (dir.startsWith("..")) {
-			String[] segments = currentPath.split("/");
-			if (segments.length == 0) {
-				context.setPath("");
-			} else if (segments.length == 1) {
-				context.setPath("");
-			} else {
-				context.setPath(Arrays.asList(segments)
-						.subList(0, segments.length - 1).stream()
-						.collect(Collectors.joining("/")));
-			}
+			oneDirectoryUp(currentPath);
 		} else {
-			context.setPath(currentPath.endsWith("/") ? currentPath + dir
-					: currentPath + "/" + dir);
+			appendDir(dir, currentPath);
 		}
 		return "path was set to '" + context.getPath() + "'";
 	}
+
+    private void appendDir(final String dir, String currentPath) {
+        context.setPath(currentPath.endsWith("/") ? currentPath + dir
+        		: currentPath + "/" + dir);
+    }
+
+    private void oneDirectoryUp(String currentPath) {
+        String[] segments = currentPath.split("/");
+        if (segments.length == 0) {
+        	context.setPath("");
+        } else if (segments.length == 1) {
+        	context.setPath("");
+        } else {
+        	context.setPath(Arrays.asList(segments)
+        			.subList(0, segments.length - 1).stream()
+        			.collect(Collectors.joining("/")));
+        }
+    }
 
 }

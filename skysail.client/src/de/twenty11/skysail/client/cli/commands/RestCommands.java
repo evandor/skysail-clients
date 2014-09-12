@@ -1,7 +1,6 @@
 package de.twenty11.skysail.client.cli.commands;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
@@ -36,11 +35,9 @@ public class RestCommands implements CommandMarker {
 
 		handleOptions(uri, title, rel, sb);
 
-		String url = context.getCurrentUrl();
+		printHeadline("GET", sb);
 
-		printHeadline("GET", sb, url);
-
-		HttpResponse response = HttpUtils.get(url, context.getRequestHeaders());
+		HttpResponse response = HttpUtils.get(context);
 
 		updateContext(response);
 
@@ -66,11 +63,9 @@ public class RestCommands implements CommandMarker {
 
 		handleOptions(uri, title, rel, sb);
 
-		String url = context.getCurrentUrl();
+		printHeadline("POST", sb);
 
-		printHeadline("POST", sb, url);
-
-		HttpResponse response = HttpUtils.post(url, data, context.getRequestHeaders());
+		HttpResponse response = HttpUtils.post(context, data);
 
 		updateContext(response);
 
@@ -96,8 +91,8 @@ public class RestCommands implements CommandMarker {
 		context.setStatus(response.getStatusLine());
 	}
 
-	private void printHeadline(String method, StringBuilder sb, String url) {
-		String headline = "\n> "+method+" '" + url + "'\n";
+	private void printHeadline(String method, StringBuilder sb) {
+		String headline = "\n> "+method+" '" + context.getCurrentUrl() + "'\n";
 		sb.append(StringUtils.repeat("=", headline.length()));
 		sb.append(headline);
 		sb.append(StringUtils.repeat("=", headline.length())).append("\n\n");

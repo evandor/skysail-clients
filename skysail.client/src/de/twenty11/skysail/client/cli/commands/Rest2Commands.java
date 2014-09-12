@@ -42,7 +42,7 @@ public class Rest2Commands implements CommandMarker {
         sb.append(headline);
         sb.append(StringUtils.repeat("=", headline.length())).append("\n\n");
 
-        HttpResponse response = HttpUtils.head(url, context.getRequestHeaders());
+        HttpResponse response = HttpUtils.head(context);
 
         context.setResponseHeaders(response.getAllHeaders());
         context.setBody("");
@@ -52,7 +52,6 @@ public class Rest2Commands implements CommandMarker {
         sb.append(StringUtils.repeat("-", 30)).append("\n");
         sb.append(OutputUtils.printStatus(context));
         sb.append(OutputUtils.printResponseHeader(context));
-        //sb.append(OutputUtils.printBody(context));
 
         setLinks(response);
 

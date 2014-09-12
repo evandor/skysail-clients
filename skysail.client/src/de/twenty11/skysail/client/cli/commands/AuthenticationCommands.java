@@ -58,7 +58,7 @@ public class AuthenticationCommands implements CommandMarker {
 
 		context.setPath("/_logout");
 
-		HttpResponse response = HttpUtils.get(context.getCurrentUrl(), context.getRequestHeaders());
+		HttpResponse response = HttpUtils.get(context);
 		
 		// context.setRequestHeaders(Collections.emptyList());
 		context.setResponseHeaders(response.getAllHeaders());
