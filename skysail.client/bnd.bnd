@@ -1,19 +1,8 @@
 Bundle-Version: 0.1.0.${tstamp}
 Bundle-Name: SKYSAIL :: client
 Include-Resource: lib=lib,resources
-Bundle-ClassPath: .,lib/clamshell-api-0.5.2.jar,lib/clamshell-impl-core-0.5.2.jar,lib/htmlunit-2.11.jar,lib/spring-shell-1.1.0.RELEASE.jar,\
-    lib/spring-core-4.0.5.RELEASE.jar,\
-    lib/spring-context-4.0.5.RELEASE.jar,\
-    lib/spring-beans-4.0.5.RELEASE.jar,\
-    lib/spring-aop-4.0.5.RELEASE.jar,\
-    lib/spring-expression-4.0.5.RELEASE.jar
 Include-Resource: resources, conf=conf
--buildpath: lib/spring-shell-1.1.0.RELEASE.jar;version=file,\
-	lib/spring-core-4.0.5.RELEASE.jar;version=file,\
-	lib/spring-context-4.0.5.RELEASE.jar;version=file,\
-	lib/spring-beans-4.0.5.RELEASE.jar;version=file,\
-	lib/spring-aop-4.0.5.RELEASE.jar;version=file,\
-	lib/spring-expression-4.0.5.RELEASE.jar;version=file,\
+-buildpath:  \
 	com.springsource.org.junit;version=4.11,\
 	biz.aQute.launcher,\
 	osgi.core;version=5.0,\
@@ -32,7 +21,12 @@ Include-Resource: resources, conf=conf
 	jackson-core-asl;version=1.9,\
 	org.apache.commons.io;version=2.4,\
 	jline;version=2.11,\
-	org.restlet;version=2.1
+	org.restlet;version=2.1,\
+	skysail.wrapped.bundles.spring.shell;version=1.1,\
+	org.springframework.aop;version=3.1.4,\
+	org.springframework.beans;version=3.1.4,\
+	org.springframework.context;version=3.1.4,\
+	org.springframework.core;version=3.1.4
 Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
 	de.twenty11.skysail.client.cli.domain,\
 	de.twenty11.skysail.client.cli.testsupport,\
@@ -41,7 +35,9 @@ Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
 	de.twenty11.skysail.client.cli.utils,\
 	de.twenty11.skysail.client.cli.converter,\
 	de.twenty11.skysail.client.cli.commands.test
-Export-Package: de.twenty11.skysail.client.cli.commands
+Export-Package:  \
+	de.twenty11.skysail.client.cli.commands,\
+	de.twenty11.skysail.client
 Test-Cases: de.twenty11.skysail.client.cli.commands.test.RestCommandsTest
 -runvm: -ea
 -runbundles: com.jayway.jsonpath.json-path;version=0.9,\
@@ -63,5 +59,4 @@ Test-Cases: de.twenty11.skysail.client.cli.commands.test.RestCommandsTest
 	osgi.cmpn;version=5.0.0
 -runfw: org.apache.felix.framework;version='[4.4.0,4.4.0]'
 -runee: JavaSE-1.8
-Import-Package: !org.springframework.*,\
-	*
+Import-Package: *

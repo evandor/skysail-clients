@@ -9,7 +9,6 @@ import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.util.EntityUtils;
-import org.restlet.data.Method;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.core.CommandMarker;
 import org.springframework.shell.core.annotation.CliCommand;
@@ -69,7 +68,7 @@ public class RestCommands implements CommandMarker {
 
 		String url = context.getCurrentUrl();
 
-		printHeadline("OPTIONS", sb, url);
+		printHeadline("OPTIONS", sb);
 
 		HttpResponse response = HttpUtils.options(url, context.getRequestHeaders());
 
@@ -92,11 +91,9 @@ public class RestCommands implements CommandMarker {
 
 		handleOptions(uri, title, rel, sb);
 
-		String url = context.getCurrentUrl();
+		printHeadline("GET", sb);
 
-		printHeadline("GET", sb, url);
-
-		HttpResponse response = HttpUtils.get(url, context.getRequestHeaders());
+		HttpResponse response = HttpUtils.get(context);
 
 		updateContext(response);
 
@@ -122,11 +119,9 @@ public class RestCommands implements CommandMarker {
 
 		handleOptions(uri, title, rel, sb);
 
-		String url = context.getCurrentUrl();
+		printHeadline("POST", sb);
 
-		printHeadline("POST", sb, url);
-
-		HttpResponse response = HttpUtils.post(url, data, context.getRequestHeaders());
+		HttpResponse response = HttpUtils.post(context, data);
 
 		updateContext(response);
 
@@ -152,8 +147,8 @@ public class RestCommands implements CommandMarker {
 		context.setStatus(response.getStatusLine());
 	}
 
-	private void printHeadline(String method, StringBuilder sb, String url) {
-		String headline = "\n> "+method+" '" + url + "'\n";
+	private void printHeadline(String method, StringBuilder sb) {
+		String headline = "\n> "+method+" '" + context.getCurrentUrl() + "'\n";
 		sb.append(StringUtils.repeat("=", headline.length()));
 		sb.append(headline);
 		sb.append(StringUtils.repeat("=", headline.length())).append("\n\n");
@@ -171,7 +166,7 @@ public class RestCommands implements CommandMarker {
 			Predicate<? super Linkheader> matcher) {
 		if (title != null && title.trim().length() > 0) {
 			context.getLinks().stream()
-					.filter(lh -> lh.getVerbs().contains(Method.GET))
+					.filter(lh -> lh.getVerbs().contains(org.restlet.data.Method.GET))
 					.filter(matcher).findFirst().ifPresent(l -> {
 						context.setPath(l.getUri());
 						// sb.append("found link and changed path to '").append(l.getUri()).append("'.\n");

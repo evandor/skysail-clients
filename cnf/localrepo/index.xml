@@ -1,5 +1,227 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1410182220530' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1410600801839' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='c862156e8c7bd54819c60e1717ded3ebb010347ed58419d75982644b188c16a8'/>
+      <attribute name='url' value='skysail.wrapped.bundles.spring.shell/skysail.wrapped.bundles.spring.shell-1.1.0.jar'/>
+      <attribute name='size' type='Long' value='149993'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+      <directive name='uses' value='org.springframework.context,org.springframework.context.support,org.springframework.shell.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.commands'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans,org.springframework.context,org.springframework.shell.core,org.springframework.shell.core.annotation,org.springframework.stereotype'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.converters'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+      <directive name='uses' value='org.springframework.shell.core,org.springframework.stereotype'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.core'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+      <directive name='uses' value='jline,jline.console,jline.console.completer,org.springframework.beans,org.springframework.beans.factory,org.springframework.context,org.springframework.shell.core.annotation,org.springframework.shell.event'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.core.annotation'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.event'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.plugin'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+      <directive name='uses' value='org.springframework.context'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.plugin.support'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.annotation,org.springframework.shell.plugin,org.springframework.stereotype'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.support.logging'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.support.table'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.shell.support.util'/>
+      <attribute name='version' type='Version' value='1.1.0.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.shell'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.RELEASE'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=com.google.common.base)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=jline)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=jline.console)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=jline.console.completer)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=jline.console.history)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.apache.commons.io)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.apache.commons.io.input)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.fusesource.jansi)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.config)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.xml)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.context)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.context.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.context.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.io)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.style)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.stereotype)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util)'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='com.jayway.jsonpath.json-path'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='0.9.1'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='5a3f7746983bc88e8b04c30bd1e934aa9ef197c9f64d2ae7e05cfb108184c5f3'/>
+      <attribute name='url' value='com.jayway.jsonpath.json-path/com.jayway.jsonpath.json-path-0.9.1.jar'/>
+      <attribute name='size' type='Long' value='94243'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='com.jayway.jsonpath.json-path'/>
+      <attribute name='bundle-version' type='Version' value='0.9.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='com.jayway.jsonpath.json-path'/>
+      <attribute name='bundle-version' type='Version' value='0.9.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='com.jayway.jsonpath'/>
+      <attribute name='version' type='Version' value='0.9.1'/>
+      <attribute name='bundle-symbolic-name' value='com.jayway.jsonpath.json-path'/>
+      <attribute name='bundle-version' type='Version' value='0.9.1'/>
+      <directive name='uses' value='com.jayway.jsonpath.spi,org.slf4j'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='com.jayway.jsonpath.spi'/>
+      <attribute name='version' type='Version' value='0.9.1'/>
+      <attribute name='bundle-symbolic-name' value='com.jayway.jsonpath.json-path'/>
+      <attribute name='bundle-version' type='Version' value='0.9.1'/>
+      <directive name='uses' value='com.jayway.jsonpath'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=net.minidev.json)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=net.minidev.json.parser)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson.map)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson.map.type)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson.type)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.slf4j)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+  </resource>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.restlet'/>
@@ -204,6 +426,1309 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='85bc43b1f5a9a9bcfb0072faa37db952c1d44e362769bc7b9098197be23db735'/>
+      <attribute name='url' value='skysail.wrapped.bundles.spring.context/skysail.wrapped.bundles.spring.context-4.0.5.jar'/>
+      <attribute name='size' type='Long' value='992565'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cache'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cache.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.annotation,org.springframework.cache,org.springframework.cache.interceptor,org.springframework.context.annotation,org.springframework.core.annotation,org.springframework.core.type'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cache.concurrent'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.cache'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cache.config'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory.xml'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cache.interceptor'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.aop,org.springframework.aop.framework,org.springframework.aop.support,org.springframework.beans.factory,org.springframework.cache'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cache.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.cache'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.core.env,org.springframework.core.io,org.springframework.core.io.support,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context.access'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.access,org.springframework.context,org.springframework.jndi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.annotation,org.springframework.beans.factory.config,org.springframework.beans.factory.parsing,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.context,org.springframework.context.support,org.springframework.core,org.springframework.core.env,org.springframework.core.io,org.springframework.core.type,org.springframework.core.type.classreading,org.springframework.core.type.filter,org.springframework.instrument.classloading,org.springframework.jmx.export.annotation,org.springframework.jmx.support,org.springframework.stereotype,org.w3c.dom'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context.config'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory.xml'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context.event'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.context,org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context.expression'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.expression,org.springframework.expression.spel.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context.i18n'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.beans.factory.groovy,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.context,org.springframework.core.convert,org.springframework.core.convert.support,org.springframework.core.env,org.springframework.core.io,org.springframework.core.io.support,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.context.weaving'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.core,org.springframework.instrument.classloading'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.ejb.access'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.naming,org.springframework.beans.factory,org.springframework.core,org.springframework.jndi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.ejb.config'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory.xml'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.ejb.interceptor'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.annotation,org.springframework.beans.factory,org.springframework.beans.factory.access,org.springframework.beans.factory.annotation'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.format'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert.converter'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.format.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.format.datetime'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.context,org.springframework.core.convert.converter,org.springframework.format,org.springframework.format.annotation,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.format.datetime.joda'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.context,org.springframework.format,org.springframework.format.annotation,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.format.datetime.standard'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.context,org.springframework.format,org.springframework.format.annotation,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.format.number'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.context,org.springframework.format,org.springframework.format.annotation,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.format.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.context,org.springframework.core.convert.support,org.springframework.format,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.instrument.classloading'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.instrument.classloading.glassfish'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.instrument.classloading'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.instrument.classloading.jboss'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.instrument.classloading'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.instrument.classloading.tomcat'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.instrument.classloading'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.instrument.classloading.weblogic'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.instrument.classloading'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.instrument.classloading.websphere'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.instrument.classloading'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx.access'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.management,org.apache.commons.logging,org.springframework.beans.factory,org.springframework.core,org.springframework.jmx,org.springframework.jmx.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx.export'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.management,javax.management.modelmbean,org.springframework.beans.factory,org.springframework.jmx,org.springframework.jmx.export.assembler,org.springframework.jmx.export.naming,org.springframework.jmx.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx.export.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.jmx.export,org.springframework.jmx.export.metadata,org.springframework.jmx.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx.export.assembler'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.management,javax.management.modelmbean,org.springframework.beans.factory,org.springframework.core,org.springframework.jmx.export.metadata'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx.export.metadata'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.management.modelmbean,org.springframework.jmx,org.springframework.jmx.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx.export.naming'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.management,org.apache.commons.logging,org.springframework.beans.factory,org.springframework.core.io,org.springframework.jmx.export.metadata'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx.export.notification'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.management,javax.management.modelmbean,org.springframework.beans.factory,org.springframework.jmx'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jmx.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.management,javax.management.remote,org.apache.commons.logging,org.springframework.beans.factory,org.springframework.jmx'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jndi'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.naming,org.apache.commons.logging,org.springframework.aop,org.springframework.beans.factory,org.springframework.core,org.springframework.core.env'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.jndi.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans,org.springframework.beans.factory,org.springframework.jndi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.remoting'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.remoting.rmi'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.naming,org.apache.commons.logging,org.omg.CORBA,org.springframework.beans.factory,org.springframework.core,org.springframework.jndi,org.springframework.remoting,org.springframework.remoting.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.remoting.soap'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.xml.namespace,org.springframework.remoting'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.remoting.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans.factory'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scheduling'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core,org.springframework.core.task'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scheduling.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.aop,org.springframework.aop.framework,org.springframework.aop.interceptor,org.springframework.aop.support,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.context,org.springframework.context.annotation,org.springframework.context.event,org.springframework.core,org.springframework.core.annotation,org.springframework.core.type,org.springframework.scheduling.config,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scheduling.concurrent'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.naming,org.apache.commons.logging,org.springframework.beans.factory,org.springframework.core.task,org.springframework.jndi,org.springframework.scheduling,org.springframework.util,org.springframework.util.concurrent'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scheduling.config'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.context,org.springframework.context.event,org.springframework.core.task,org.springframework.scheduling,org.springframework.scheduling.support,org.w3c.dom'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scheduling.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans.factory,org.springframework.beans.support,org.springframework.scheduling,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scripting'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scripting.bsh'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.core,org.springframework.scripting'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scripting.config'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory.config,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.w3c.dom'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scripting.groovy'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans,org.springframework.beans.factory,org.springframework.scripting'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scripting.jruby'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.core,org.springframework.scripting'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.scripting.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.script,org.apache.commons.logging,org.springframework.aop,org.springframework.aop.target.dynamic,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.context,org.springframework.core,org.springframework.core.io,org.springframework.core.io.support,org.springframework.scripting'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.stereotype'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.ui'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.ui.context'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.context'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.ui.context.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.context,org.springframework.ui.context'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.validation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.context.support,org.springframework.core,org.springframework.core.convert'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.validation.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.validation.beanvalidation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.validation,javax.validation.metadata,org.hibernate.validator.spi.resourceloading,org.springframework.aop.framework,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.context,org.springframework.core,org.springframework.core.io,org.springframework.validation'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.validation.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.context'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.ui'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.management)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.management.modelmbean)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.management.openmbean)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.management.remote)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.naming)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.rmi)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.script)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.validation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.validation.bootstrap)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.validation.metadata)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.namespace)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.ws)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.apache.commons.logging)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hibernate.validator)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hibernate.validator.messageinterpolation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hibernate.validator.spi.resourceloading)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.omg.CORBA)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.config)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.framework)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.framework.adapter)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.framework.autoproxy)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.interceptor)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.scope)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.support.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.target)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.aop.target.dynamic)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.access)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.config)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.groovy)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.parsing)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.xml)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.propertyeditors)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.cglib.core)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.cglib.proxy)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.cglib.transform)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.convert)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.convert.converter)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.convert.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.env)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.io)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.io.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.task)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.task.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.type)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.type.classreading)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.type.filter)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.expression)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.expression.spel.standard)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.expression.spel.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util.concurrent)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util.xml)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.w3c.dom)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.xml.sax)'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='jline'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='2.11.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='d5f85abd580007d7d28474c891d8afe5f4309173e69a2d01148a0c9ff1578ac4'/>
+      <attribute name='url' value='jline/jline-2.11.0.jar'/>
+      <attribute name='size' type='Long' value='208781'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.11.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.11.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='jline'/>
+      <attribute name='version' type='Version' value='2.11.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.11.0'/>
+      <directive name='uses' value='org.fusesource.jansi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='jline.console'/>
+      <attribute name='version' type='Version' value='2.11.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.11.0'/>
+      <directive name='uses' value='org.fusesource.jansi,jline.console.history,jline,jline.console.completer'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='jline.console.completer'/>
+      <attribute name='version' type='Version' value='2.11.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.11.0'/>
+      <directive name='uses' value='jline.console'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='jline.console.history'/>
+      <attribute name='version' type='Version' value='2.11.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.11.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.fusesource.jansi'/>
+      <attribute name='version' type='Version' value='1.11.0'/>
+      <attribute name='bundle-symbolic-name' value='jline'/>
+      <attribute name='bundle-version' type='Version' value='2.11.0'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.swing)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='6d368c92b6f8f9ba29d644b5990622238d75bfa177d97fbcd798249b4ecff70a'/>
+      <attribute name='url' value='skysail.wrapped.bundles.spring.beans/skysail.wrapped.bundles.spring.beans-4.0.5.jar'/>
+      <attribute name='size' type='Long' value='677536'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core,org.springframework.core.convert'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.access'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.access.el'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.el,org.apache.commons.logging,org.springframework.beans.factory'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.beans.factory.support,org.springframework.beans.factory.wiring,org.springframework.core,org.springframework.core.annotation,org.springframework.core.type'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.config'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.support,org.springframework.core,org.springframework.core.convert,org.springframework.core.io.support,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.groovy'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.core.io,org.springframework.core.io.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.parsing'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.core.io'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.serviceloader'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.beans.factory,org.springframework.beans.factory.config'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.core,org.springframework.core.convert,org.springframework.core.env,org.springframework.core.io,org.springframework.core.io.support,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.wiring'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans.factory'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.factory.xml'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.xml.parsers,org.apache.commons.logging,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.beans.factory.parsing,org.springframework.beans.factory.support,org.springframework.core.env,org.springframework.core.io,org.springframework.core.io.support,org.w3c.dom,org.xml.sax'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.propertyeditors'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.io'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.beans.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.beans'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.beans,org.springframework.core.env,org.springframework.core.io,org.springframework.util'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.el)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.parsers)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.apache.commons.logging)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.cglib.core)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.cglib.proxy)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.convert)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.env)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.io)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.io.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.type)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util.xml)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.w3c.dom)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.xml.sax)'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='9f1e5af98651f641ec2fcf0259b219b77ed6bdfeb1cc61a602a0fea7a960f616'/>
+      <attribute name='url' value='skysail.wrapped.bundles.spring.core/skysail.wrapped.bundles.spring.core-4.0.5.jar'/>
+      <attribute name='size' type='Long' value='989180'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.asm'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cglib'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cglib.beans'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.asm,org.springframework.cglib.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cglib.core'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.asm,org.springframework.cglib.transform'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cglib.proxy'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.asm,org.springframework.cglib.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cglib.reflect'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.asm,org.springframework.cglib.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cglib.transform'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.asm,org.springframework.cglib.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cglib.transform.impl'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.asm,org.springframework.cglib.core,org.springframework.cglib.transform'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.cglib.util'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.asm,org.springframework.cglib.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.convert'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.convert.converter'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.convert.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert,org.springframework.core.convert.converter'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.env'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.core.convert.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.io'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.env'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.io.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.core.env,org.springframework.core.io,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.serializer'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.serializer.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core,org.springframework.core.convert.converter,org.springframework.core.serializer'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.style'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.task'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.util,org.springframework.util.concurrent'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.task.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.task,org.springframework.util.concurrent'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.type'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.type.classreading'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.asm,org.springframework.core.annotation,org.springframework.core.io,org.springframework.core.type,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.core.type.filter'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.type,org.springframework.core.type.classreading'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.objenesis.instantiator,org.springframework.objenesis.strategy'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis.instantiator'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis.instantiator.android'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.objenesis.instantiator'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis.instantiator.basic'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.objenesis.instantiator'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis.instantiator.gcj'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.objenesis.instantiator'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis.instantiator.jrockit'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.objenesis.instantiator'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis.instantiator.perc'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.objenesis.instantiator'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis.instantiator.sun'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.objenesis.instantiator'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.objenesis.strategy'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.objenesis.instantiator'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.util'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.util.comparator'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.util.concurrent'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.util.xml'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='javax.xml.namespace,javax.xml.stream,javax.xml.transform,org.apache.commons.logging,org.w3c.dom,org.xml.sax'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.net)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.namespace)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.stream)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.stream.events)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform.sax)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform.stax)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.apache.commons.logging)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.w3c.dom)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.xml.sax)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.xml.sax.ext)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.xml.sax.helpers)'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='f1a3d99c1ce1420e2806a69d55e5242ccc0af11fa80cfd5e0fd946abae86094e'/>
+      <attribute name='url' value='skysail.wrapped.bundles.spring.expression/skysail.wrapped.bundles.spring.expression-4.0.5.jar'/>
+      <attribute name='size' type='Long' value='207883'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.expression'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.expression.common'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert,org.springframework.expression'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.expression.spel'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert,org.springframework.expression'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.expression.spel.ast'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert,org.springframework.expression,org.springframework.expression.spel,org.springframework.expression.spel.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.expression.spel.standard'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert,org.springframework.expression,org.springframework.expression.common,org.springframework.expression.spel,org.springframework.expression.spel.ast'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.expression.spel.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.expression'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core.convert,org.springframework.expression,org.springframework.expression.spel'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.convert)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.convert.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.style)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util)'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='de.twentyeleven.skysail.org.hamcrest.hamcrest-all-osgi'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='1.3.0.1'/>
@@ -394,32 +1919,200 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='org.apache.commons.cli'/>
+      <attribute name='osgi.identity' value='skysail.wrapped.bundles.spring.aop'/>
       <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='1.2.0'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='e7cd8951956d349b568b7ccfd4f5b2529a8c113e67c32b028f52ffda371259d9'/>
-      <attribute name='url' value='org.apache.commons.cli/org.apache.commons.cli-1.2.0.jar'/>
-      <attribute name='size' type='Long' value='41123'/>
+      <attribute name='osgi.content' value='e25c0d3d660d97a2347a8c352af3c6dab0573c01c83036f9d0d810566ee5cd03'/>
+      <attribute name='url' value='skysail.wrapped.bundles.spring.aop/skysail.wrapped.bundles.spring.aop-4.0.5.jar'/>
+      <attribute name='size' type='Long' value='358213'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='org.apache.commons.cli'/>
-      <attribute name='bundle-version' type='Version' value='1.2.0'/>
+      <attribute name='osgi.wiring.bundle' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='org.apache.commons.cli'/>
-      <attribute name='bundle-version' type='Version' value='1.2.0'/>
+      <attribute name='osgi.wiring.host' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.apache.commons.cli'/>
-      <attribute name='version' type='Version' value='1.2.0'/>
-      <attribute name='bundle-symbolic-name' value='org.apache.commons.cli'/>
-      <attribute name='bundle-version' type='Version' value='1.2.0'/>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.aspectj'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.aop,org.springframework.aop.support,org.springframework.beans.factory,org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.aspectj.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.aop,org.springframework.aop.aspectj,org.springframework.aop.aspectj.autoproxy,org.springframework.aop.framework,org.springframework.aop.support,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.aspectj.autoproxy'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.aop,org.springframework.aop.framework.autoproxy'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.config'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.aop.aspectj,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.beans.factory.parsing,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.w3c.dom'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.framework'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.aop,org.springframework.aop.framework.adapter,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.cglib.proxy,org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.framework.adapter'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.aop,org.springframework.beans,org.springframework.beans.factory.config'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.framework.autoproxy'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.aop,org.springframework.aop.framework,org.springframework.aop.framework.adapter,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.framework.autoproxy.target'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.aop,org.springframework.aop.framework.autoproxy,org.springframework.aop.target,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.beans.factory.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.interceptor'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.aop,org.springframework.beans.factory,org.springframework.core,org.springframework.core.task,org.springframework.util'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.scope'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.aop,org.springframework.aop.framework,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.beans.factory.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.support'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.aop,org.springframework.beans.factory,org.springframework.core'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.support.annotation'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.springframework.aop,org.springframework.aop.support'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.target'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.apache.commons.pool,org.springframework.aop,org.springframework.aop.support,org.springframework.beans,org.springframework.beans.factory'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.aop.target.dynamic'/>
+      <attribute name='version' type='Version' value='4.0.5.RELEASE'/>
+      <attribute name='bundle-symbolic-name' value='skysail.wrapped.bundles.spring.aop'/>
+      <attribute name='bundle-version' type='Version' value='4.0.5.RELEASE'/>
+      <directive name='uses' value='org.apache.commons.logging,org.springframework.aop,org.springframework.beans.factory'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.commons.cli)(version&gt;=1.2.0))'/>
+      <directive name='filter' value='(osgi.wiring.package=org.apache.commons.logging)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.apache.commons.pool)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.apache.commons.pool.impl)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.config)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.parsing)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.beans.factory.xml)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.cglib.core)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.cglib.proxy)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.cglib.transform.impl)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.annotation)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.convert.converter)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.task)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.core.task.support)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.objenesis)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util.comparator)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.springframework.util.xml)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.w3c.dom)'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
     </requirement>
   </resource>
   <resource>
@@ -558,120 +2251,32 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.jayway.jsonpath.json-path'/>
+      <attribute name='osgi.identity' value='org.apache.commons.cli'/>
       <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.9.1'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='5a3f7746983bc88e8b04c30bd1e934aa9ef197c9f64d2ae7e05cfb108184c5f3'/>
-      <attribute name='url' value='com.jayway.jsonpath.json-path/com.jayway.jsonpath.json-path-0.9.1.jar'/>
-      <attribute name='size' type='Long' value='94243'/>
+      <attribute name='osgi.content' value='e7cd8951956d349b568b7ccfd4f5b2529a8c113e67c32b028f52ffda371259d9'/>
+      <attribute name='url' value='org.apache.commons.cli/org.apache.commons.cli-1.2.0.jar'/>
+      <attribute name='size' type='Long' value='41123'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.jayway.jsonpath.json-path'/>
-      <attribute name='bundle-version' type='Version' value='0.9.1'/>
+      <attribute name='osgi.wiring.bundle' value='org.apache.commons.cli'/>
+      <attribute name='bundle-version' type='Version' value='1.2.0'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.jayway.jsonpath.json-path'/>
-      <attribute name='bundle-version' type='Version' value='0.9.1'/>
+      <attribute name='osgi.wiring.host' value='org.apache.commons.cli'/>
+      <attribute name='bundle-version' type='Version' value='1.2.0'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.jayway.jsonpath'/>
-      <attribute name='version' type='Version' value='0.9.1'/>
-      <attribute name='bundle-symbolic-name' value='com.jayway.jsonpath.json-path'/>
-      <attribute name='bundle-version' type='Version' value='0.9.1'/>
-      <directive name='uses' value='com.jayway.jsonpath.spi,org.slf4j'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.jayway.jsonpath.spi'/>
-      <attribute name='version' type='Version' value='0.9.1'/>
-      <attribute name='bundle-symbolic-name' value='com.jayway.jsonpath.json-path'/>
-      <attribute name='bundle-version' type='Version' value='0.9.1'/>
-      <directive name='uses' value='com.jayway.jsonpath'/>
+      <attribute name='osgi.wiring.package' value='org.apache.commons.cli'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.commons.cli'/>
+      <attribute name='bundle-version' type='Version' value='1.2.0'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=net.minidev.json)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=net.minidev.json.parser)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))'/>
-      <directive name='resolution' value='optional'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson.map)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))'/>
-      <directive name='resolution' value='optional'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson.map.type)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))'/>
-      <directive name='resolution' value='optional'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson.type)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))'/>
-      <directive name='resolution' value='optional'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.slf4j)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='jline'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='2.11.0'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='d5f85abd580007d7d28474c891d8afe5f4309173e69a2d01148a0c9ff1578ac4'/>
-      <attribute name='url' value='jline/jline-2.11.0.jar'/>
-      <attribute name='size' type='Long' value='208781'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='jline'/>
-      <attribute name='bundle-version' type='Version' value='2.11.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='jline'/>
-      <attribute name='bundle-version' type='Version' value='2.11.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='jline'/>
-      <attribute name='version' type='Version' value='2.11.0'/>
-      <attribute name='bundle-symbolic-name' value='jline'/>
-      <attribute name='bundle-version' type='Version' value='2.11.0'/>
-      <directive name='uses' value='org.fusesource.jansi'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='jline.console'/>
-      <attribute name='version' type='Version' value='2.11.0'/>
-      <attribute name='bundle-symbolic-name' value='jline'/>
-      <attribute name='bundle-version' type='Version' value='2.11.0'/>
-      <directive name='uses' value='org.fusesource.jansi,jline.console.history,jline,jline.console.completer'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='jline.console.completer'/>
-      <attribute name='version' type='Version' value='2.11.0'/>
-      <attribute name='bundle-symbolic-name' value='jline'/>
-      <attribute name='bundle-version' type='Version' value='2.11.0'/>
-      <directive name='uses' value='jline.console'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='jline.console.history'/>
-      <attribute name='version' type='Version' value='2.11.0'/>
-      <attribute name='bundle-symbolic-name' value='jline'/>
-      <attribute name='bundle-version' type='Version' value='2.11.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.fusesource.jansi'/>
-      <attribute name='version' type='Version' value='1.11.0'/>
-      <attribute name='bundle-symbolic-name' value='jline'/>
-      <attribute name='bundle-version' type='Version' value='2.11.0'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(osgi.wiring.package=javax.swing)'/>
-      <directive name='resolution' value='optional'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.commons.cli)(version&gt;=1.2.0))'/>
     </requirement>
   </resource>
   <resource>
