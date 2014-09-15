@@ -32,7 +32,7 @@ public class RestCommands implements CommandMarker {
 
 		String url = context.getCurrentUrl();
 
-		printHeadline("OPTIONS", sb, url);
+		printHeadline("OPTIONS", sb);
 
 		HttpResponse response = HttpUtils.options(url, context.getRequestHeaders());
 

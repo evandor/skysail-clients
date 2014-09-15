@@ -1,2 +1,298 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1342528672992' name='Release' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'/>
+<repository increment='1410759513120' name='Release' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.springframework.osgi.core'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='edb83c342c00b4f38475cf9ac41649852c9b13df1985d33156a21de757e8a949'/>
+      <attribute name='url' value='org.springframework.osgi.core/org.springframework.osgi.core-1.2.1.jar'/>
+      <attribute name='size' type='Long' value='362889'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.osgi.framework,org.springframework.beans.factory,org.springframework.context,org.springframework.core.enums,org.springframework.core.io,org.springframework.osgi.context'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.compendium.cm'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.osgi.framework,org.springframework.beans.factory,org.springframework.osgi.context'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.compendium.config'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.springframework.beans.factory.config,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.osgi.config.internal.util,org.w3c.dom'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.config'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.osgi.config.internal.util,org.springframework.osgi.service.importer.support,org.w3c.dom'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.context'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.osgi.framework,org.springframework.beans,org.springframework.beans.factory.config,org.springframework.context,org.springframework.osgi.context.event'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.context.event'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.osgi.framework,org.springframework.context,org.springframework.context.event'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.context.support'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.apache.commons.logging,org.osgi.framework,org.springframework.beans,org.springframework.beans.factory,org.springframework.beans.factory.config,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.context,org.springframework.context.event,org.springframework.context.support,org.springframework.core.io,org.springframework.core.io.support,org.springframework.osgi.context,org.springframework.osgi.context.event,org.springframework.osgi.util.internal,org.xml.sax'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.service'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.osgi.framework,org.springframework.osgi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.service.exporter'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.service.exporter.support'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.osgi.framework,org.springframework.beans,org.springframework.beans.factory,org.springframework.core,org.springframework.core.enums,org.springframework.osgi.context,org.springframework.osgi.service.exporter,org.springframework.osgi.service.exporter.support.internal.controller'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.service.importer'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.osgi.framework,org.springframework.osgi.service'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.service.importer.event'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.springframework.context,org.springframework.osgi.service.importer'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.service.importer.support'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.aopalliance.aop,org.aopalliance.intercept,org.osgi.framework,org.springframework.beans.factory,org.springframework.context,org.springframework.core.enums,org.springframework.osgi.context,org.springframework.osgi.context.internal.classloader,org.springframework.osgi.service.importer,org.springframework.osgi.service.importer.support.internal.aop,org.springframework.osgi.service.importer.support.internal.collection,org.springframework.osgi.service.importer.support.internal.controller,org.springframework.osgi.service.importer.support.internal.dependency'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.springframework.osgi.util'/>
+      <attribute name='version' type='Version' value='1.2.1'/>
+      <attribute name='bundle-symbolic-name' value='org.springframework.osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1'/>
+      <directive name='uses' value='org.apache.commons.logging,org.osgi.framework,org.springframework.util'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.aopalliance.aop)(version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.aopalliance.intercept)(version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.commons.logging)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.3.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.cm)(version&gt;=1.2.0))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.packageadmin)(version&gt;=1.2.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.startlevel)(version&gt;=1.0.0))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.aop)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.aop.framework)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.aop.support)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.beans)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.beans.factory)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.beans.factory.config)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.beans.factory.support)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.beans.factory.xml)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.beans.propertyeditors)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.context)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.context.event)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.context.support)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.core)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.core.enums)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.core.io)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.core.io.support)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.osgi.io)(version&gt;=1.2.1)(version&lt;=1.2.1))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.util)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.springframework.util.xml)(version&gt;=2.5.6)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.w3c.dom)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.xml.sax)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='com.springsource.org.aopalliance'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='4419f05e3da1b5c8d063fe0b23aeadff16e6d3c0f0d2e77a02a5e5d08d90176c'/>
+      <attribute name='url' value='com.springsource.org.aopalliance/com.springsource.org.aopalliance-1.0.0.jar'/>
+      <attribute name='size' type='Long' value='4615'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='com.springsource.org.aopalliance'/>
+      <attribute name='bundle-version' type='Version' value='1.0.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='com.springsource.org.aopalliance'/>
+      <attribute name='bundle-version' type='Version' value='1.0.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.aopalliance.aop'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='com.springsource.org.aopalliance'/>
+      <attribute name='bundle-version' type='Version' value='1.0.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.aopalliance.intercept'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='com.springsource.org.aopalliance'/>
+      <attribute name='bundle-version' type='Version' value='1.0.0'/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='skysail.product.notes.client.spa'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='0.5.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='2f07e0133ab9b4ffb406d10026d4438df00ea0c253b16cb6b3a90e1f90f3db3e'/>
+      <attribute name='url' value='skysail.product.notes.client.spa/skysail.product.notes.client.spa-0.5.0.jar'/>
+      <attribute name='size' type='Long' value='5548'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='skysail.product.notes.client.spa'/>
+      <attribute name='bundle-version' type='Version' value='0.5.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='skysail.product.notes.client.spa'/>
+      <attribute name='bundle-version' type='Version' value='0.5.0'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=de.twenty11.skysail.server.directory)(version&gt;=0.5.0)(!(version&gt;=1.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=de.twenty11.skysail.server.restlet)(version&gt;=0.5.0)(!(version&gt;=1.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=de.twenty11.skysail.server.services)(version&gt;=0.5.0)(!(version&gt;=1.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.restlet)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.restlet.data)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.restlet.routing)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=de.twenty11.skysail.server.utils)(version&gt;=0.5.0)(!(version&gt;=1.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.extender'>
+      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
+    </requirement>
+    <requirement namespace='osgi.extender'>
+      <directive name='filter' value='(&amp;(osgi.extender=osgi.blueprint)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
+    </requirement>
+  </resource>
+</repository>

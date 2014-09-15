@@ -1,0 +1,8 @@
+version: 4.0.5.RELEASE
+name: expression
+Bundle-Version: ${version}
+Bundle-SymbolicName: skysail.wrapped.bundles.spring.${name}
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.html
+Include-Resource: @lib/spring-${name}-${version}.jar
+Bundle-ClassPath: .,lib/spring-${name}-${version}.jar
+Export-Package: org.springframework.expression.*;version=${version}
