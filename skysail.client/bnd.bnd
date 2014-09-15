@@ -23,11 +23,10 @@ Include-Resource: resources, conf=conf
 	jline;version=2.11,\
 	org.restlet;version=2.1,\
 	skysail.wrapped.bundles.spring.shell;version=1.1,\
-	skysail.wrapped.bundles.spring.core;version=4.0,\
-	skysail.wrapped.bundles.spring.expression;version=4.0,\
-	skysail.wrapped.bundles.spring.aop;version=4.0,\
-	skysail.wrapped.bundles.spring.beans;version=4.0,\
-	skysail.wrapped.bundles.spring.context;version=4.0
+	org.springframework.aop;version=3.1.4,\
+	org.springframework.beans;version=3.1.4,\
+	org.springframework.context;version=3.1.4,\
+	org.springframework.core;version=3.1.4
 Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
 	de.twenty11.skysail.client.cli.domain,\
 	de.twenty11.skysail.client.cli.testsupport,\
