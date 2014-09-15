@@ -1,0 +1,18 @@
+
+setHeader --Accept application/json
+env --showRequestHeaders true
+env --showResponseHeaders true
+env --showBody true
+
+cd
+login --u admin --p skysail
+get
+assert --link "title Notes exists"
+
+get --title Notes
+
+get --title notes
+
+get --rel create_form
+
+post --rel next --data '{"content" : "test"}'

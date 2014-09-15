@@ -226,3 +226,122 @@ get
 // [failed] get
 exit
 // Spring Shell 1.1.0.RELEASE log closed at 2014-09-12 17:24:15
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-15 10:38:56
+help
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-15 10:39:50
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-15 10:57:14
+help
+get
+login --u admin --p skysail
+login --u admin --p skysail
+// script notestest.run
+login --u admin --p skysail
+get
+// script notestest.run
+login --u admin --p skysail
+get
+// [failed] assert --body username=admin
+// [failed] script notestest.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-15 11:18:25
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-15 11:18:27
+login --u admin --p skysail
+get
+// [failed] assert --body username=admin
+// [failed] script notestest.run
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-15 12:37:51
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-15 12:37:54
+login --u admin --p skysail
+login --u admin --p skysail
+get
+// [failed] script notestest.run
+login --u admin --p skysail
+get
+// [failed] script notestest.run
+login --u admin --p skysail
+get
+// [failed] script notestest.run
+// [failed] assert --link "uri uri uri"
+// [failed] assert --link "uri uri exists"
+// [failed] assert --link "uri notes exists"
+links
+assert --link "uri /notes exists"
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-15 13:08:33
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-15 13:08:34
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-15 13:09:50
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-15 13:09:53
+// [failed] assert --link "uri /notes exists"
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-15 13:13:39
+// Spring Shell 1.1.0.RELEASE log opened at 2014-09-15 13:13:41
+cd
+login --u admin --p skysail
+get
+assert --link "uri /notes exists"
+// script notestest.run
+cd
+login --u admin --p skysail
+get
+assert --link "title Notes exists"
+// script notestest.run
+get --title  Notes
+get
+cd
+login --u admin --p skysail
+get
+assert --link "title Notes exists"
+get --title Notes
+// script notestest.run
+cd
+login --u admin --p skysail
+get
+assert --link "title Notes exists"
+get --title Notes
+// script notestest.run
+get
+get
+get
+get
+get --title list
+cd
+login --u admin --p skysail
+get
+assert --link "title Notes exists"
+get --title Notes
+get --title list
+get
+get --title notes
+get --rel create_form
+cd
+login --u admin --p skysail
+get
+assert --link "title Notes exists"
+get --title Notes
+get --title notes
+get --rel create_form
+// script notestest.run
+links
+post --rel next --data '{"content": "test"}'
+setHeader --Accept application/json
+post --data '{"content": "test"}'
+pwd
+cd ..
+pwd
+get
+links
+cd notes
+get
+head
+get --rel cre
+post --data '{"content": "test"}'
+post --data '{"content": "test"}'
+post --data '{"content": "test"}'
+post --data '{"content": "test"}'
+post --data '{"content": "test"}'
+post --data '{"content": "test"}'
+exit
+// Spring Shell 1.1.0.RELEASE log closed at 2014-09-15 17:10:45
