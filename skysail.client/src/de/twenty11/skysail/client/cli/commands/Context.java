@@ -107,14 +107,14 @@ public class Context {
     }
 
     public void addOrSetHeader(Header header) {
-        Optional<Header> existingHeader = getRequestHeaders().stream().filter(h -> header.getName().equals(h.getName())).findFirst();
-        existingHeader.ifPresent(h -> getRequestHeaders().remove(h));
-        getRequestHeaders().add(header);
+//        Optional<Header> existingHeader = getRequestHeaders().stream().filter(h -> header.getName().equals(h.getName())).findFirst();
+//        existingHeader.ifPresent(h -> getRequestHeaders().remove(h));
+//        getRequestHeaders().add(header);
     }
 
     public void removeHeader(String header) {
-        Optional<Header> existingHeader = getRequestHeaders().stream().filter(h -> header.equals(h.getName())).findFirst();
-        existingHeader.ifPresent(h -> getRequestHeaders().remove(h));
+//        Optional<Header> existingHeader = getRequestHeaders().stream().filter(h -> header.equals(h.getName())).findFirst();
+//        existingHeader.ifPresent(h -> getRequestHeaders().remove(h));
     }
 
     public void showRequestHeaders(boolean showRequestHeaders) {
@@ -140,5 +140,4 @@ public class Context {
     public boolean isShowBody() {
         return this.showBody;
     }
-
 }

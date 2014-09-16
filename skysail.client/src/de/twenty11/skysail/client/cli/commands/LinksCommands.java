@@ -7,7 +7,7 @@ import org.springframework.shell.core.CommandMarker;
 import org.springframework.shell.core.annotation.CliCommand;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class LinksCommands implements CommandMarker {
 
 	@Autowired
@@ -15,7 +15,7 @@ public class LinksCommands implements CommandMarker {
 	
 	@CliCommand(value = "links", help = "shows the available links to navigate to")
 	public String links() {
-		return context.getLinks().stream().map(link -> link.toString()).collect(Collectors.joining("\n"));
+		return "";//context.getLinks().stream().map(link -> link.toString()).collect(Collectors.joining("\n"));
 	}
 
 }

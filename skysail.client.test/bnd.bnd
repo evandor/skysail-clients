@@ -15,11 +15,11 @@
 	com.google.gson;version=1.7,\
 	skysail.client;version=latest,\
 	skysail.wrapped.bundles.spring.shell;version=1.1,\
-	skysail.wrapped.bundles.spring.aop,\
-	skysail.wrapped.bundles.spring.beans,\
-	skysail.wrapped.bundles.spring.context,\
-	skysail.wrapped.bundles.spring.core,\
-	skysail.wrapped.bundles.spring.expression
+	org.springframework.context;version=3.1,\
+	org.springframework.expression;version=3.1,\
+	org.springframework.context.support;version=3.1,\
+	org.springframework.beans;version=3.1,\
+	org.springframework.core;version=3.1
 Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 -runvm: -ea
 -runbundles:  \
@@ -43,11 +43,6 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
 	org.apache.httpcomponents.httpclient;version='[4.3.1,4.3.2)',\
 	org.apache.httpcomponents.httpcore;version='[4.3.0,4.3.1)',\
-	skysail.wrapped.bundles.spring.aop,\
-	skysail.wrapped.bundles.spring.beans,\
-	skysail.wrapped.bundles.spring.context,\
-	skysail.wrapped.bundles.spring.core,\
-	skysail.wrapped.bundles.spring.expression,\
 	skysail.wrapped.bundles.spring.shell,\
 	skysail.api;version=11.0.0,\
 	skysail.client;version=latest,\
@@ -61,9 +56,11 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 	org.springframework.osgi.core;version=1.2.1,\
 	com.springsource.org.aopalliance;version=1.0.0,\
 	org.springframework.aop;version=3.1.4,\
+	org.springframework.asm;version=3.1.4,\
 	org.springframework.beans;version=3.1.4,\
 	org.springframework.context;version=3.1.4,\
 	org.springframework.core;version=3.1.4,\
+	org.springframework.expression;version=3.1.4,\
 	org.springframework.osgi.io;version=1.2.1,\
 	org.springframework.osgi.extender;version=1.2.1
 -runfw: org.apache.felix.framework;version='[4.4.0,4.4.0]'
@@ -81,7 +78,6 @@ Import-Package: !aQute.launcher.*,\
     !javax.inject.*,\
     !javax.interceptor.*,\
     !joptsimple.*,\
-    !org.aopalliance.*,\
     !org.apache.log4j.*,\
     !org.apache.tools.*,\
     !org.aspectj.*,\
@@ -89,7 +85,6 @@ Import-Package: !aQute.launcher.*,\
     !org.hibernate.validator.method.*,\
     !org.joda.*,\
     !org.jruby.*,\
-    !org.springframework.asm.*,\
     !org.springframework.instrument.*,\
     !sun.misc.*,\
 	*
