@@ -1,11 +1,8 @@
 package de.twenty11.skysail.client.cli.commands;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.function.Predicate;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.util.EntityUtils;
@@ -15,9 +12,9 @@ import org.springframework.shell.core.annotation.CliCommand;
 import org.springframework.shell.core.annotation.CliOption;
 import org.springframework.stereotype.Component;
 
-import de.twenty11.skysail.api.responses.Linkheader;
 import de.twenty11.skysail.client.cli.commands.utils.HttpUtils;
 import de.twenty11.skysail.client.cli.utils.OutputUtils;
+import de.twenty11.skysail.client.cli.utils.RestUtils;
 
 @Component
 public class RestCommands implements CommandMarker {
@@ -34,9 +31,7 @@ public class RestCommands implements CommandMarker {
 
         StringBuilder sb = new StringBuilder();
 
-        matchGet(uri, sb, l -> containsIgnoreCase(l.getUri(),uri));
-        matchGet(title, sb, l -> containsIgnoreCase(l.getTitle(),title));
-        matchGet(rel, sb, l -> containsIgnoreCase(l.getRel().toString(),rel.toString()));
+        RestUtils.matchParams(context, uri, title, rel, sb);
 
         String url = context.getCurrentUrl();// + "?media=json";
         String headline = "\n> GET '" + url + "'\n";
@@ -44,7 +39,7 @@ public class RestCommands implements CommandMarker {
         sb.append(headline);
         sb.append(StringUtils.repeat("=", headline.length())).append("\n\n");
 
-        HttpResponse response = HttpUtils.head(url, context.getRequestHeaders());
+        HttpResponse response = HttpUtils.head(context);
 
         context.setResponseHeaders(response.getAllHeaders());
         context.setBody("");
@@ -56,7 +51,7 @@ public class RestCommands implements CommandMarker {
         sb.append(OutputUtils.printResponseHeader(context));
         //sb.append(OutputUtils.printBody(context));
 
-        setLinks(response);
+        RestUtils.setLinks(context, response);
 
         return sb.toString();
     }
@@ -103,7 +98,7 @@ public class RestCommands implements CommandMarker {
 		sb.append(OutputUtils.printResponseHeader(context));
 		sb.append(OutputUtils.printBody(context));
 
-		setLinks(response);
+        RestUtils.setLinks(context, response);
 
 		return sb.toString();
 	}
@@ -131,7 +126,7 @@ public class RestCommands implements CommandMarker {
 		sb.append(OutputUtils.printResponseHeader(context));
 		sb.append(OutputUtils.printBody(context));
 
-		setLinks(response);
+        RestUtils.setLinks(context, response);
 
 		return sb.toString();
 	}
@@ -156,38 +151,8 @@ public class RestCommands implements CommandMarker {
 
 	private void handleOptions(final String uri, final String title,
 			final String rel, StringBuilder sb) {
-		matchGet(uri, sb, l -> containsIgnoreCase(l.getUri(), uri));
-		matchGet(title, sb, l -> containsIgnoreCase(l.getTitle(), title));
-		matchGet(rel, sb,
-				l -> containsIgnoreCase(l.getRel().toString(), rel.toString()));
+		RestUtils.matchParams(context, uri, title, rel, sb);
 	}
-
-	private void matchGet(final String title, StringBuilder sb,
-			Predicate<? super Linkheader> matcher) {
-		if (title != null && title.trim().length() > 0) {
-			context.getLinks().stream()
-					.filter(lh -> lh.getVerbs().contains(org.restlet.data.Method.GET))
-					.filter(matcher).findFirst().ifPresent(l -> {
-						context.setPath(l.getUri());
-						// sb.append("found link and changed path to '").append(l.getUri()).append("'.\n");
-						});
-		}
-	}
-
-	private void setLinks(HttpResponse response) {
-		context.getLinks().clear();
-		Header[] linkHeaders = response.getHeaders("Link");
-		for (Header linkheader : linkHeaders) {
-			if (linkheader.getValue().trim().length() == 0) {
-				continue;
-			}
-			Arrays.stream(linkheader.getValue().split(",")).forEach(
-					l -> context.getLinks().add(Linkheader.valueOf(l)));
-		}
-	}
-
-	private boolean containsIgnoreCase(String string, String sub) {
-		return string.toLowerCase().contains(sub.toLowerCase());
-	}
+	
 
 }

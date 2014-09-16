@@ -27,11 +27,10 @@ Include-Resource: resources, conf=conf
 	org.springframework.beans;version=3.1.4,\
 	org.springframework.context;version=3.1.4,\
 	org.springframework.core;version=3.1.4
-Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
+Private-Package:  \
+	de.twenty11.skysail.client.cli.commands.utils,\
 	de.twenty11.skysail.client.cli.domain,\
 	de.twenty11.skysail.client.cli.testsupport,\
-	de.twenty11.skysail.client.cli.controllers,\
-	de.twenty11.skysail.client.cli.launcher,\
 	de.twenty11.skysail.client.cli.utils,\
 	de.twenty11.skysail.client.cli.converter,\
 	de.twenty11.skysail.client.cli.commands.test
@@ -39,3 +38,4 @@ Export-Package:  \
 	de.twenty11.skysail.client.cli.commands,\
 	de.twenty11.skysail.client
 Import-Package: *
+DynamicImport-Package: org.springframework.context.config

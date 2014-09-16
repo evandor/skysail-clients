@@ -22,6 +22,10 @@ public class RestCommands2Test extends TestBase {
     public void testName2() throws Exception {
         Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
         URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
+        
+      Bundle springContextBundle = FrameworkUtil.getBundle(org.springframework.context.ApplicationContext.class);
+    URL shemasUrl = springContextBundle.getEntry("META-INF/spring.schemas");
+
        
         Bootstrap bootstrap = new Bootstrap(new String[0], new String[] {shellPluginUrl.toExternalForm()}); 
 //      ApplicationContext applicationContext = bootstrap.getApplicationContext();
