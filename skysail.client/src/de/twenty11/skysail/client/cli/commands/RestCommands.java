@@ -25,6 +25,42 @@ public class RestCommands implements CommandMarker {
 	@Autowired
 	private Context context;
 
+	@CliCommand(value = "head", help = "executes a HEAD request on the current path")
+    public String head(
+            @CliOption(key = { "uri" }, mandatory = false, help = "select a link by matching the uri") final String uri,
+            @CliOption(key = { "title" }, mandatory = false, help = "select a link by matching the title") final String title,
+            @CliOption(key = { "rel" }, mandatory = false, help = "select a link by matching the relation attribute") final String rel
+            ) {
+
+        StringBuilder sb = new StringBuilder();
+
+        matchGet(uri, sb, l -> containsIgnoreCase(l.getUri(),uri));
+        matchGet(title, sb, l -> containsIgnoreCase(l.getTitle(),title));
+        matchGet(rel, sb, l -> containsIgnoreCase(l.getRel().toString(),rel.toString()));
+
+        String url = context.getCurrentUrl();// + "?media=json";
+        String headline = "\n> GET '" + url + "'\n";
+        sb.append(StringUtils.repeat("=", headline.length()));
+        sb.append(headline);
+        sb.append(StringUtils.repeat("=", headline.length())).append("\n\n");
+
+        HttpResponse response = HttpUtils.head(url, context.getRequestHeaders());
+
+        context.setResponseHeaders(response.getAllHeaders());
+        context.setBody("");
+        context.setStatus(response.getStatusLine());
+
+        sb.append(OutputUtils.printRequestHeader(context));
+        sb.append(StringUtils.repeat("-", 30)).append("\n");
+        sb.append(OutputUtils.printStatus(context));
+        sb.append(OutputUtils.printResponseHeader(context));
+        //sb.append(OutputUtils.printBody(context));
+
+        setLinks(response);
+
+        return sb.toString();
+    }
+
 	@CliCommand(value = "options", help = "executes a OPTIONS request on the current path")
 	public String options() {
 
