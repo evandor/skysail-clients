@@ -1,4 +1,5 @@
--buildpath: com.springsource.org.junit;version=4.11,\
+-buildpath:  \
+	com.springsource.org.junit;version=4.11,\
 	biz.aQute.launcher,\
 	osgi.core;version=5.0,\
 	org.apache.felix.framework;version=4.4,\
@@ -19,34 +20,12 @@
 	org.springframework.context.support;version=3.1,\
 	org.springframework.beans;version=3.1,\
 	org.springframework.core;version=3.1,\
-	org.springframework.osgi.core;version=1.2
+	org.springframework.osgi.core;version=1.2,\
+	skysail.config.systemproperties;version=0.1,\
+	skysail.server;version=11.0
 Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
--runvm: -ea,-Xmx128m,\
-    -Dport=2016,\
-    -Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,\
-    -Dskysail.db.url=jdbc:derby:etc/skysailDerbyLargeTestDb,\
-    -Dskysail.db.Username=skysailtest,\
-    -Dskysail.db.Password=skysail,\
-    -Dhttp.proxyHost=192.168.11.140,\
-    -Dhttp.proxyPort=8080,\
-    -Dhttps.proxyHost=192.168.11.140,\
-    -Dhttps.proxyPort=8080   
--runbundles: com.jayway.jsonpath.json-path;version=0.9,\
-	net.minidev.json-smart;version=1.2,\
-	skysail.wrapped.bundles.spring.shell,\
-	skysail.client;version=latest,\
-	jline;version=2.11.0,\
-	org.springframework.osgi.core;version=1.2.1,\
-	com.springsource.org.aopalliance;version=1.0.0,\
-	org.springframework.aop;version=3.1.4,\
-	org.springframework.asm;version=3.1.4,\
-	org.springframework.beans;version=3.1.4,\
-	org.springframework.context;version=3.1.4,\
-	org.springframework.core;version=3.1.4,\
-	org.springframework.expression;version=3.1.4,\
-	org.springframework.osgi.io;version=1.2.1,\
-	org.springframework.osgi.extender;version=1.2.1,\
-	org.apache.commons.pool;version=1.6.0,\
+-runvm: -Xmx128m,-Dport=2016,-Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,-Dskysail.db.url="jdbc:derby:skysailDerbyLargeTestDb;create=true",-Dskysail.db.Username=SA,-Dskysail.db.Password=,-Dhttp.proxyHost=192.168.11.140,-Dhttp.proxyPort=8080,-Dhttps.proxyHost=192.168.11.140,-Dhttps.proxyPort=8080   
+-runbundles: \
 	ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
 	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
 	classmate;version='[1.0.0,1.0.1)',\
@@ -104,22 +83,9 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 	skysail.server.http;version=1.0,\
 	skysail.server.um;version=3.1,\
 	skysail.server.um.db;version=0.5,\
-	skysail.config.systemproperties;version=latest,\
-	skysail.server.app.plugins;version=latest,\
-	skysail.server.ext.i18n;version=latest,\
-	skysail.server.ext.mailer;version=latest,\
-	skysail.server.um;version=latest,\
-	skysail.server.um.db;version=latest,\
-	skysail.server.security.shiro;version=latest,\
+	skysail.config.systemproperties;version=0.1,\
+	skysail.server.security.shiro;version=4.0,\
 	skysail.server.static;version=0.5,\
-	skysail.server.ext.i18n;version=latest,\
-	skysail.server.ext.mailer;version=latest,\
-	skysail.server.ext.notes.core;version=latest,\
-	skysail.server.ext.notes.db;version=latest,\
-	skysail.server.ext.favorites.preferences;version=latest,\
-	skysail.server.ext.metrics;version=latest,\
-	skysail.server.osgi;version=latest,\
-	skysail.products.notes;version=latest,\
 	com.googlecode.flyway.core;version=2.2.1,\
 	slf4j.api;version=1.7,\
 	com.sun.mail.javax.mail;version=1.5.1,\
@@ -129,7 +95,23 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 	org.apache.felix.bundlerepository;version=2.0.2,\
 	uk.com.robust-it.cloning;version=1.8.5,\
 	org.objenesis;version=1.4.0,\
-	com.codahale.metrics.core;version=3.0.2
+	com.codahale.metrics.core;version=3.0.2,\
+    com.jayway.jsonpath.json-path;version=0.9,\
+	net.minidev.json-smart;version=1.2,\
+	skysail.wrapped.bundles.spring.shell,\
+	skysail.client;version=latest,\
+	jline;version=2.11.0,\
+	org.springframework.osgi.core;version=1.2.1,\
+	com.springsource.org.aopalliance;version=1.0.0,\
+	org.springframework.aop;version=3.1.4,\
+	org.springframework.asm;version=3.1.4,\
+	org.springframework.beans;version=3.1.4,\
+	org.springframework.context;version=3.1.4,\
+	org.springframework.core;version=3.1.4,\
+	org.springframework.expression;version=3.1.4,\
+	org.springframework.osgi.io;version=1.2.1,\
+	org.springframework.osgi.extender;version=1.2.1,\
+	org.apache.commons.pool;version=1.6.0
 -runfw: org.apache.felix.framework;version='[4.4.0,4.4.0]'
 -runee: JavaSE-1.8
 Private-Package: de.twenty11.skysail.client.cli.testsupport,\

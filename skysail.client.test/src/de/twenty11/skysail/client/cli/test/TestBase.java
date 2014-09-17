@@ -8,6 +8,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.osgi.framework.Bundle;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.BundleException;
 import org.osgi.framework.FrameworkUtil;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -22,6 +24,19 @@ import de.twenty11.skysail.client.cli.commands.RestCommands;
 public class TestBase {
 
     protected static JLineShellComponent shell;
+    private static BundleContext bundleContext;
+    
+//    @BeforeClass
+//    public static void init() {
+//        bundleContext = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class).getBundleContext();
+//        
+//        //deleteTestDatabase();
+//
+//        startBundle("org.eclipse.gemini.dbaccess.derby");
+//        //setupUserManagementDb();
+//        //setupIncubatorDb();
+//    }
+
     
     @Before
 	public void startUp() throws Exception {
@@ -50,6 +65,21 @@ public class TestBase {
 
     protected CommandResult exec(String... command) {
         return Arrays.stream(command).map(cmd -> getShell().executeCommand(cmd)).reduce((cr1, cr2) -> cr2).get();
+    }
+    
+    private static void startBundle(String string) {
+        Bundle[] bundles = bundleContext.getBundles();
+        for (Bundle bundle : bundles) {
+            if (bundle.getSymbolicName().equals(string)) {
+                try {
+                    bundle.start();
+                } catch (BundleException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+                return;
+            }
+        }
     }
 
 }
