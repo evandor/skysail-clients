@@ -36,6 +36,19 @@ public class AssertionUtils {
         }
     }
 
+    public static void handleStatus(Context context, Integer expectedStatusCode, StringBuilder sb) {
+        if (context.getStatus() == null) {
+            System.out.println("context status code was null!");
+            System.exit(-1);
+        }
+        int currentStatusCode = context.getStatus().getStatusCode();
+        if (!expectedStatusCode.equals(currentStatusCode)) {
+            System.out.println("expected code " + expectedStatusCode + ", but was " + currentStatusCode);
+            System.exit(currentStatusCode);
+        }
+        sb.append("matched status code " + expectedStatusCode);
+    }
+    
     public static void handleLinks(Context context, LinkAssertion linkAssertion, StringBuilder sb) {
         if (linkAssertion == null) {
             return;
@@ -90,4 +103,5 @@ public class AssertionUtils {
                 .filter(uri -> uri.equals(linkAssertion.getExpectedValue()))
                 .findFirst().isPresent();
     }
+   
 }

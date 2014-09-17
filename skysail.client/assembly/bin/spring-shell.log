@@ -345,3 +345,41 @@ post --data '{"content": "test"}'
 post --data '{"content": "test"}'
 exit
 // Spring Shell 1.1.0.RELEASE log closed at 2014-09-15 17:10:45
+// Spring Shell Unknown Version log opened at 2014-09-17 11:23:42
+help
+// [failed] get
+get
+assert 
+exit
+// Spring Shell Unknown Version log closed at 2014-09-17 11:27:42
+// Spring Shell Unknown Version log opened at 2014-09-17 11:27:51
+get
+assert --status 200
+exit
+// Spring Shell Unknown Version log closed at 2014-09-17 11:28:23
+// Spring Shell Unknown Version log opened at 2014-09-17 11:28:25
+// [failed] get
+exit
+// Spring Shell Unknown Version log closed at 2014-09-17 11:29:15
+// Spring Shell Unknown Version log opened at 2014-09-17 11:29:17
+get
+assert --status 200
+// Spring Shell Unknown Version log opened at 2014-09-17 11:48:27
+exit
+// Spring Shell Unknown Version log closed at 2014-09-17 11:48:32
+// Spring Shell Unknown Version log opened at 2014-09-17 12:36:00
+// [failed] assert --status 200
+// [failed] assert --status 200
+// [failed] assert --status 200
+// [failed] assert --status 200
+// [failed] assert --status 200
+exit
+// Spring Shell Unknown Version log closed at 2014-09-17 12:44:53
+// Spring Shell Unknown Version log opened at 2014-09-17 12:44:54
+// Spring Shell Unknown Version log opened at 2014-09-17 12:45:24
+// [failed] get
+get
+get
+assert --status 200
+// Spring Shell Unknown Version log opened at 2014-09-17 13:38:14
+get

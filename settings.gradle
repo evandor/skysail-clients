@@ -21,3 +21,4 @@
 }*/
 
 include "skysail.client"
+include "skysail.client.test"
