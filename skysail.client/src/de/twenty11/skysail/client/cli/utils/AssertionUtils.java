@@ -38,13 +38,11 @@ public class AssertionUtils {
 
     public static void handleStatus(Context context, Integer expectedStatusCode, StringBuilder sb) {
         if (context.getStatus() == null) {
-            System.out.println("context status code was null!");
-            System.exit(-1);
+            throw new AssertionError("context status code was null!");
         }
         int currentStatusCode = context.getStatus().getStatusCode();
         if (!expectedStatusCode.equals(currentStatusCode)) {
-            System.out.println("expected code " + expectedStatusCode + ", but was " + currentStatusCode);
-            System.exit(currentStatusCode);
+           throw new AssertionError("expected code " + expectedStatusCode + ", but was " + currentStatusCode);
         }
         sb.append("matched status code " + expectedStatusCode);
     }

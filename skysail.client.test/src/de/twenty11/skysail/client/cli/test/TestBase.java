@@ -4,24 +4,21 @@ import java.net.URL;
 import java.util.Arrays;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.BundleException;
 import org.osgi.framework.FrameworkUtil;
-import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.osgi.framework.ServiceReference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericApplicationContext;
-import org.springframework.shell.Bootstrap;
+import org.springframework.osgi.context.support.OsgiBundleXmlApplicationContext;
 import org.springframework.shell.core.CommandResult;
 import org.springframework.shell.core.JLineShellComponent;
 
-import de.twenty11.skysail.client.cli.commands.Context;
-import de.twenty11.skysail.client.cli.commands.RestCommands;
-
 public class TestBase {
+    
+    private static final Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     protected static JLineShellComponent shell;
     private static BundleContext bundleContext;
@@ -40,28 +37,25 @@ public class TestBase {
 
     @Before
     public void startUp() throws Exception {
-        // Bundle skysailClientBundle =
-        // FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
-        // URL shellPluginUrl =
-        // skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
+        Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
+        URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
         //
         // Bundle springContextBundle =
         // FrameworkUtil.getBundle(org.springframework.context.ApplicationContext.class);
         // URL shemasUrl =
         // springContextBundle.getEntry("META-INF/spring.schemas");
 
-        // Bootstrap bootstrap = new Bootstrap(new String[0], new String[]
-        // {shellPluginUrl.toExternalForm(), shemasUrl.toExternalForm()});
-        // // ApplicationContext applicationContext =
-        // bootstrap.getApplicationContext();
-        // //
-        // ((GenericApplicationContext)applicationContext).getAutowireCapableBeanFactory().createBean(Context.class,
-        // AutowireCapableBeanFactory.AUTOWIRE_AUTODETECT, false);
-        // //
-        // ((GenericApplicationContext)applicationContext).getAutowireCapableBeanFactory().createBean(RestCommands.class,
-        // AutowireCapableBeanFactory.AUTOWIRE_AUTODETECT, true);
-        // //System.out.println(applicationContext.getClass().getName());
-        // shell = bootstrap.getJLineShellComponent();
+        OsgiBundleXmlApplicationContext appConfig = getAppContextOnceAvailable(skysailClientBundle, 500, 5);
+        MyBootstrap bootstrap = new MyBootstrap(appConfig, new String[0],
+                new String[] { shellPluginUrl.toExternalForm() });
+        
+        Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
+        for (Bundle bundle : bundles) {
+            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': " + bundle.getState());
+        }
+        
+        
+        shell = bootstrap.getJLineShellComponent();
     }
 
     @After
@@ -81,19 +75,48 @@ public class TestBase {
         return getShell().executeCommand(cmd);
     }
 
-    private static void startBundle(String string) {
-        Bundle[] bundles = bundleContext.getBundles();
-        for (Bundle bundle : bundles) {
-            if (bundle.getSymbolicName().equals(string)) {
-                try {
-                    bundle.start();
-                } catch (BundleException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-                return;
+//    private static void startBundle(String string) {
+//        Bundle[] bundles = bundleContext.getBundles();
+//        for (Bundle bundle : bundles) {
+//            if (bundle.getSymbolicName().equals(string)) {
+//                try {
+//                    bundle.start();
+//                } catch (BundleException e) {
+//                    // TODO Auto-generated catch block
+//                    e.printStackTrace();
+//                }
+//                return;
+//            }
+//        }
+//    }
+    
+    private OsgiBundleXmlApplicationContext getAppContextOnceAvailable(Bundle skysailClientBundle,
+            int waitingMilliSecons, int retries) {
+        for (int i = 0; i < retries; i++) {
+            logger.info("waiting for appContext to become available #" + i);
+            OsgiBundleXmlApplicationContext appConfig = getAppConfig(skysailClientBundle);
+            if (appConfig != null) {
+                return appConfig;
+            }
+            try {
+                //Thread.currentThread();
+                Thread.sleep(waitingMilliSecons);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
+        return null;
+    }
+
+    private OsgiBundleXmlApplicationContext getAppConfig(Bundle skysailClientBundle) {
+        ServiceReference<ApplicationContext> appConfigServiceRef = skysailClientBundle.getBundleContext()
+                .getServiceReference(org.springframework.context.ApplicationContext.class);
+        if (appConfigServiceRef == null) {
+            return null;
+        }
+        OsgiBundleXmlApplicationContext appConfig = (OsgiBundleXmlApplicationContext) skysailClientBundle
+                .getBundleContext().getService(appConfigServiceRef);
+        return appConfig;
     }
 
 }

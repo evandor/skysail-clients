@@ -4,10 +4,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;
@@ -18,7 +14,6 @@ import org.springframework.shell.Bootstrap;
 import org.springframework.shell.CommandLine;
 import org.springframework.shell.ShellException;
 import org.springframework.shell.SimpleShellCommandLineOptions;
-import org.springframework.shell.converters.IntegerConverter;
 import org.springframework.shell.core.ExitShellRequest;
 import org.springframework.shell.core.JLineShellComponent;
 import org.springframework.shell.support.logging.HandlerUtils;
@@ -73,10 +68,10 @@ public class MyBootstrap extends Bootstrap {
             scanner.scan("org.springframework.shell.commands", "org.springframework.shell.converters",
                     "org.springframework.shell.plugin.support");
         }
-        ctx.getAutowireCapableBeanFactory().initializeBean(new IntegerConverter(), IntegerConverter.class.getSimpleName());
+       // ctx.getAutowireCapableBeanFactory().initializeBean(new IntegerConverter(), IntegerConverter.class.getSimpleName());
         
         // user contributed commands
-        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(ctx);
+       XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(ctx);
        // reader.loadBeanDefinitions(contextPath);
         
         ctx.refresh();

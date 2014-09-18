@@ -24,7 +24,31 @@
 	skysail.config.systemproperties;version=0.1,\
 	skysail.server;version=11.0
 Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
--runvm: -Xmx128m,-Dport=2016,-Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,-Dskysail.db.url="jdbc:derby:skysailDerbyLargeTestDb;create=true",-Dskysail.db.Username=SA,-Dskysail.db.Password=,-Dhttp.proxyHost=192.168.11.140,-Dhttp.proxyPort=8080,-Dhttps.proxyHost=192.168.11.140,-Dhttps.proxyPort=8080   
+
+-runvm: \
+	-Xmx128m,\
+    -Dport=2016,\
+    -Xdebug,\
+    -Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,\
+    -Dskysail.db.url="jdbc:derby:skysailDerbyLargeTestDb;create=true",\
+    -Dskysail.db.Username=SA,\
+    -Dskysail.db.Password=,\
+    -Dhttp.proxyHost=192.168.11.140,\
+    -Dhttp.proxyPort=8080,\
+    -Dhttps.proxyHost=192.168.11.140,\
+    -Dhttps.proxyPort=8080,\
+	-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
+-runtrace: true
+
+-runproperties: felix.fileinstall.dir=config,\
+    felix.fileinstall.filter=.*\\.jar|.*\\.cfg,\
+    felix.fileinstall.noInitialDelay=true,\
+    felix.fileinstall.poll=1000,\
+    org.apache.felix.log.storeDebug=true,\
+    felix.fileinstall.log.level=4,\
+    org.apache.felix.log.storeDebug=true,\
+    logback.configurationFile=config/logback.xml
+
 -runbundles: \
 	ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
 	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
@@ -51,6 +75,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 	org.apache.felix.configadmin;version='[1.8.0,1.8.1)',\
 	org.apache.felix.eventadmin;version='[1.3.2,1.3.3)',\
 	org.apache.felix.fileinstall;version='[3.4,3.5)',\
+	org.apache.felix.shell.remote;version=1.1,\
 	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
 	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
 	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
