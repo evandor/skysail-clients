@@ -49,7 +49,7 @@ ext.gradleBuild_compileFork                    = true
 ext.gradleBuild_compileVerbose                 = false
 
 /* Java test settings */
-ext.gradleBuild_testEnableAssertions           = true
+ext.gradleBuild_testEnableAssertions           = false
 ext.gradleBuild_testIgnoreFailures             = false
 ext.gradleBuild_testMaxParallelForks           = 1
 

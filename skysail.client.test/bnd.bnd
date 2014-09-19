@@ -25,10 +25,9 @@
 	skysail.server;version=11.0
 Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 
--runvm: \
+-runvm: -disableassertions,\
 	-Xmx128m,\
     -Dport=2016,\
-    -Xdebug,\
     -Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,\
     -Dskysail.db.url="jdbc:derby:skysailDerbyLargeTestDb;create=true",\
     -Dskysail.db.Username=SA,\
@@ -37,7 +36,9 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
     -Dhttp.proxyPort=8080,\
     -Dhttps.proxyHost=192.168.11.140,\
     -Dhttps.proxyPort=8080,\
+    -Xdebug,\
 	-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
+	
 -runtrace: true
 
 -runproperties: felix.fileinstall.dir=config,\
