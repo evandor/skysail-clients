@@ -4,7 +4,7 @@ INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new 
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'SHtmlConverter' with typesMatch '{shtml/*=1.0}'
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'TreeFormConverter' with typesMatch '{treeform/*=1.0}'
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'BootstrapHtmlConverter' with typesMatch '{htmlform/*=0.9, text/html=0.9}'
-INFO  d.t.skysail.server.config.ServerConfigurationImpl - adding configuration provider de.twenty11.skysail.config.systemproperties.TestsetupConfigurationProvider@87abc48
+INFO  d.t.skysail.server.config.ServerConfigurationImpl - adding configuration provider de.twenty11.skysail.config.systemproperties.TestsetupConfigurationProvider@2f7a7219
 INFO  de.twenty11.skysail.server.http.HttpServer - setting configadmin in Skysail Configuration
 INFO  de.twenty11.skysail.server.http.HttpServer - setting ServerConfiguration in Skysail Configuration
 INFO  de.twenty11.skysail.server.http.HttpServer - Activating de.twenty11.skysail.server.http.HttpServer
@@ -28,4 +28,3 @@ INFO  d.t.skysail.server.webapp.internal.WebappApplication - Instanciating new S
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Activating Application de.twenty11.skysail.server.webapp.internal.WebappApplication
 INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'static' registered <<<
 INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #0
-INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #1
