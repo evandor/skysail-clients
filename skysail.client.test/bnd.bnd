@@ -39,7 +39,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
     #-Xdebug,\
 	#-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
 	
--runtrace: true
+-runtrace: false
 
 -runproperties: felix.fileinstall.dir=config,\
     felix.fileinstall.filter=.*\\.jar|.*\\.cfg,\
