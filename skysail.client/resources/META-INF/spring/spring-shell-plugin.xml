@@ -7,7 +7,6 @@
 	<context:component-scan base-package="de.twenty11.skysail.client.cli.commands" />
 	<context:component-scan base-package="de.twenty11.skysail.client.cli.converter" />
 	<context:component-scan base-package="org.springframework.shell.commands" />
-	<context:component-scan base-package="org.springframework.shell.converters" />
 	<context:component-scan base-package="org.springframework.shell.plugin.support" />
 
 </beans>

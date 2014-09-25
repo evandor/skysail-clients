@@ -39,11 +39,6 @@ public class TestBase {
     public void startUp() throws Exception {
         Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
         URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
-        //
-        // Bundle springContextBundle =
-        // FrameworkUtil.getBundle(org.springframework.context.ApplicationContext.class);
-        // URL shemasUrl =
-        // springContextBundle.getEntry("META-INF/spring.schemas");
 
         OsgiBundleXmlApplicationContext appConfig = getAppContextOnceAvailable(skysailClientBundle, 500, 5);
         MyBootstrap bootstrap = new MyBootstrap(appConfig, new String[0],
@@ -51,7 +46,7 @@ public class TestBase {
         
         Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
         for (Bundle bundle : bundles) {
-            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': " + bundle.getState());
+            //System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': " + bundle.getState());
         }
         
         
@@ -75,21 +70,7 @@ public class TestBase {
         return getShell().executeCommand(cmd);
     }
 
-//    private static void startBundle(String string) {
-//        Bundle[] bundles = bundleContext.getBundles();
-//        for (Bundle bundle : bundles) {
-//            if (bundle.getSymbolicName().equals(string)) {
-//                try {
-//                    bundle.start();
-//                } catch (BundleException e) {
-//                    // TODO Auto-generated catch block
-//                    e.printStackTrace();
-//                }
-//                return;
-//            }
-//        }
-//    }
-    
+
     private OsgiBundleXmlApplicationContext getAppContextOnceAvailable(Bundle skysailClientBundle,
             int waitingMilliSecons, int retries) {
         for (int i = 0; i < retries; i++) {

@@ -1,7 +1,7 @@
 Bundle-Version: 0.1.0.${tstamp}
 Bundle-Name: SKYSAIL :: client
 Include-Resource: lib=lib,resources
-Include-Resource: resources, conf=conf
+Include-Resource: resources
 -buildpath:  \
 	com.springsource.org.junit;version=4.11,\
 	biz.aQute.launcher,\
