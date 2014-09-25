@@ -383,3 +383,10 @@ get
 assert --status 200
 // Spring Shell Unknown Version log opened at 2014-09-17 13:38:14
 get
+// Spring Shell Unknown Version log opened at 2014-09-25 16:34:46
+exit
+// Spring Shell Unknown Version log closed at 2014-09-25 16:39:01
+// Spring Shell Unknown Version log opened at 2014-09-25 16:51:04
+help
+// [failed] get
+setPort 2016

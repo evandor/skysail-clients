@@ -62,13 +62,13 @@ public class MyBootstrap extends Bootstrap {
        
         // built-in commands and converters
         ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner(ctx);
-        if (commandLine.getDisableInternalCommands()) {
-            scanner.scan("org.springframework.shell.converters", "org.springframework.shell.plugin.support");
-        } else {
-            scanner.scan("org.springframework.shell.commands", "org.springframework.shell.converters",
-                    "org.springframework.shell.plugin.support");
-        }
-       // ctx.getAutowireCapableBeanFactory().initializeBean(new IntegerConverter(), IntegerConverter.class.getSimpleName());
+//        if (commandLine.getDisableInternalCommands()) {
+//            scanner.scan("org.springframework.shell.converters", "org.springframework.shell.plugin.support");
+//        } else {
+//            scanner.scan("org.springframework.shell.commands", "org.springframework.shell.converters",
+//                    "org.springframework.shell.plugin.support");
+//        }
+       // ctx.getAutowireCapableBeanFactory().initializeBean(new MyIntegerConverter(), MyIntegerConverter.class.getSimpleName());
         
         // user contributed commands
        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(ctx);

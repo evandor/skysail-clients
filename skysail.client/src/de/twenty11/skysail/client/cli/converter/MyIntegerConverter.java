@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  */
 @Component
-public class IntegerConverter implements Converter<Integer> {
+public class MyIntegerConverter implements Converter<Integer> {
 
     @Override
     public Integer convertFromText(final String value, final Class<?> requiredType, final String optionContext) {

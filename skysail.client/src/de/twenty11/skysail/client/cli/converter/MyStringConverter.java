@@ -29,7 +29,7 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  */
 @Component
-public class StringConverter implements Converter<String> {
+public class MyStringConverter implements Converter<String> {
 
     @Override
     public String convertFromText(final String value, final Class<?> requiredType, final String optionContext) {
