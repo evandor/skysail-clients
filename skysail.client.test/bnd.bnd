@@ -25,8 +25,7 @@
 	skysail.server;version=11.0
 Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 
--runvm: -ea,\
-	-Xmx128m,\
+-runvm: -Xmx128m,\
     -Dport=2016,\
     -Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,\
     -Dskysail.db.url="jdbc:derby:skysailDerbyLargeTestDb;create=true",\
@@ -40,7 +39,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
     #-Xdebug,\
 	#-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
 	
--runtrace: true
+-runtrace: false
 
 -runproperties: felix.fileinstall.dir=config,\
     felix.fileinstall.filter=.*\\.jar|.*\\.cfg,\
