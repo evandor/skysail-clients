@@ -4,7 +4,7 @@ INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new 
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'SHtmlConverter' with typesMatch '{shtml/*=1.0}'
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'TreeFormConverter' with typesMatch '{treeform/*=1.0}'
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'BootstrapHtmlConverter' with typesMatch '{htmlform/*=0.9, text/html=0.9}'
-INFO  d.t.skysail.server.config.ServerConfigurationImpl - adding configuration provider de.twenty11.skysail.config.systemproperties.TestsetupConfigurationProvider@611f8234
+INFO  d.t.skysail.server.config.ServerConfigurationImpl - adding configuration provider de.twenty11.skysail.config.systemproperties.TestsetupConfigurationProvider@361c294e
 INFO  de.twenty11.skysail.server.http.HttpServer - setting configadmin in Skysail Configuration
 INFO  de.twenty11.skysail.server.http.HttpServer - setting ServerConfiguration in Skysail Configuration
 INFO  de.twenty11.skysail.server.http.HttpServer - Activating de.twenty11.skysail.server.http.HttpServer
@@ -16,6 +16,73 @@ INFO  de.twenty11.skysail.server.http.HttpServer - Starting skysail server on po
 INFO  de.twenty11.skysail.server.http.HttpServer - ====================================
 INFO  de.twenty11.skysail.server.http.HttpServer - 
 INFO  de.twenty11.skysail.server.SkysailComponent - Creating Restlet Component: de.twenty11.skysail.server.SkysailComponent
+ERROR de.twenty11.skysail.server.http.HttpServer - Exception when starting standalone server trying to parse provided port (2016)
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0]
+	at sun.nio.ch.Net.bind(Net.java:414) ~[na:1.8.0]
+	at sun.nio.ch.Net.bind(Net.java:406) ~[na:1.8.0]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) ~[na:1.8.0]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) ~[na:1.8.0]
+	at org.restlet.engine.connector.ServerConnectionHelper.createServerSocketChannel(ServerConnectionHelper.java:158) ~[na:na]
+	at org.restlet.engine.connector.ServerConnectionHelper.start(ServerConnectionHelper.java:320) ~[na:na]
+	at org.restlet.Server.start(Server.java:590) ~[na:na]
+	at de.twenty11.skysail.server.http.HttpServer.activate(HttpServer.java:104) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0]
+	at org.apache.felix.scr.impl.helper.BaseMethod.invokeMethod(BaseMethod.java:236) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.helper.BaseMethod.access$500(BaseMethod.java:37) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.helper.BaseMethod$Resolved.invoke(BaseMethod.java:613) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.helper.BaseMethod.invoke(BaseMethod.java:496) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.helper.ActivateMethod.invoke(ActivateMethod.java:149) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.ImmediateComponentManager.createImplementationObject(ImmediateComponentManager.java:239) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.ImmediateComponentManager.createComponent(ImmediateComponentManager.java:119) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$Unsatisfied.activate(AbstractComponentManager.java:1518) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:550) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.DependencyManager.serviceAdded(DependencyManager.java:333) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.DependencyManager.serviceChanged(DependencyManager.java:159) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.invokeServiceListenerCallback(EventDispatcher.java:943) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireEventImmediately(EventDispatcher.java:794) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireServiceEvent(EventDispatcher.java:544) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.fireServiceEvent(Felix.java:4425) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.registerService(Felix.java:3429) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:346) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:660) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:644) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerComponentService(AbstractComponentManager.java:688) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$Unsatisfied.activate(AbstractComponentManager.java:1481) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:550) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.DependencyManager.serviceAdded(DependencyManager.java:333) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.DependencyManager.serviceChanged(DependencyManager.java:159) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.invokeServiceListenerCallback(EventDispatcher.java:943) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireEventImmediately(EventDispatcher.java:794) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireServiceEvent(EventDispatcher.java:544) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.fireServiceEvent(Felix.java:4425) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.registerService(Felix.java:3429) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:346) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:660) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:644) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerComponentService(AbstractComponentManager.java:688) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$Unsatisfied.activate(AbstractComponentManager.java:1481) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:550) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:261) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.config.ImmediateComponentHolder.enableComponents(ImmediateComponentHolder.java:328) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialize(BundleComponentActivator.java:158) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.BundleComponentActivator.<init>(BundleComponentActivator.java:113) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:261) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.scr.impl.Activator.bundleChanged(Activator.java:179) [org.apache.felix.scr-1.6.2.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.invokeBundleListenerCallback(EventDispatcher.java:869) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireEventImmediately(EventDispatcher.java:790) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.util.EventDispatcher.fireBundleEvent(EventDispatcher.java:515) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.fireBundleEvent(Felix.java:4409) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2098) [org.apache.felix.framework-4.4.0.jar:na]
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:976) [org.apache.felix.framework-4.4.0.jar:na]
+	at aQute.launcher.Launcher.update(Launcher.java:386) [biz.aQute.launcher-latest.jar:na]
+	at aQute.launcher.Launcher.activate(Launcher.java:310) [biz.aQute.launcher-latest.jar:na]
+	at aQute.launcher.Launcher.run(Launcher.java:199) [biz.aQute.launcher-latest.jar:na]
+	at aQute.launcher.Launcher.main(Launcher.java:90) [biz.aQute.launcher-latest.jar:na]
 INFO  de.twenty11.skysail.server.http.SwarmClient - checking 'peers' configuration to connect to swarm servers...
 INFO  de.twenty11.skysail.server.http.SwarmClient - no peers found, not connecting to any swarm server.
 INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - initializing ShiroServices
@@ -24,14 +91,14 @@ INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - setting datasour
 INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - Creating new SkysailWebSecurityManager...
 INFO  d.t.s.s.s.shiro.session.mgt.SkysailWebSessionManager - creating new SkysailWebSessionManager
 INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - Setting new SkysailWebSecurityManager as Shiros SecurityManager
-INFO  de.twenty11.skysail.server.config.DbSetup - adding dbSetup for PU 'UserManagementPU'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Instanciating new Skysail Application 'WebappApplication'
+INFO  de.twenty11.skysail.server.config.DbSetup - adding dbSetup for PU 'UserManagementPU'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Activating Application de.twenty11.skysail.server.webapp.internal.WebappApplication
 INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'static' registered <<<
 INFO  de.twenty11.skysail.server.config.DbSetup - migrating PU UserManagementPU as it has no dependencies
 INFO  de.twenty11.skysail.server.config.DbSetup - running migration of PU 'UserManagementPU'
 INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #0
-INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #1
+INFO  de.twenty11.skysail.server.config.DbSetup - processed Persistence Units now are: '[UserManagementPU]'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Instanciating new Skysail Application 'UserManagementApplication'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Activating Application de.twenty11.skysail.server.um.UserManagementApplication
 INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'usermanagement' registered <<<
@@ -71,55 +138,4 @@ INFO  de.twenty11.skysail.server.um.UserManagementApplication - Metrics service 
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - setting hookfilters to application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - setting hookfilters to application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - setting hookfilters to application 'usermanagement'
-INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #2
-INFO  de.twenty11.skysail.server.app.SkysailRootApplication - creating new Router in de.twenty11.skysail.server.app.SkysailRootApplication
-INFO  de.twenty11.skysail.server.app.SkysailRootApplication - adding extensions to metadata service
-INFO  de.twenty11.skysail.server.app.SkysailRootApplication - adding protocols
-DEBUG de.twenty11.skysail.server.app.SkysailRootApplication - attaching application-specific routes
-DEBUG de.twenty11.skysail.server.app.SkysailRootApplication - creating blocker...
-DEBUG de.twenty11.skysail.server.app.SkysailRootApplication - creating tracer...
-DEBUG de.twenty11.skysail.server.app.SkysailRootApplication - creating original request filter...
-DEBUG de.twenty11.skysail.server.app.SkysailRootApplication - determining authentication service...
-DEBUG de.twenty11.skysail.server.app.SkysailRootApplication - setting authenticationGuard from authentication service
-INFO  de.twenty11.skysail.server.um.UserManagementApplication - creating new Router in de.twenty11.skysail.server.um.UserManagementApplication
-INFO  de.twenty11.skysail.server.um.UserManagementApplication - adding extensions to metadata service
-INFO  de.twenty11.skysail.server.um.UserManagementApplication - adding protocols
-DEBUG de.twenty11.skysail.server.um.UserManagementApplication - attaching application-specific routes
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@2e08129a'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7a405a8'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/api' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@47fb5d9a'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@3c2e54dc'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities/{name}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@4fc1a1e2'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/roles' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@4b97269b'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/currentUser' -> Restlet 'Class'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@173d026e'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@257f9c6e'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7e87744'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1b6760d7'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/password/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@23205de'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1e37478c'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@3f998f33'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/{group}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@be722bc'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/' -> Restlet 'Class'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/{registrationId}' -> Restlet 'ConfirmationRedirector'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/{registrationId}/confirmation/' -> Restlet 'Class'
-DEBUG de.twenty11.skysail.server.um.UserManagementApplication - creating blocker...
-DEBUG de.twenty11.skysail.server.um.UserManagementApplication - creating tracer...
-DEBUG de.twenty11.skysail.server.um.UserManagementApplication - creating original request filter...
-DEBUG de.twenty11.skysail.server.um.UserManagementApplication - determining authentication service...
-DEBUG de.twenty11.skysail.server.um.UserManagementApplication - setting authenticationGuard from authentication service
-DEBUG de.twenty11.skysail.server.resources.DefaultResource - instanciation of DefaultResource
-INFO  de.twenty11.skysail.server.resources.DefaultResource - calling getEntities, media types '[*/*:1.0]'
-DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering ExceptionCatchingFilter#doHandle
-DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering DataExtractingFilter#doHandle
-DEBUG org.apache.shiro.web.mgt.CookieRememberMeManager - SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
-DEBUG de.twenty11.skysail.server.resources.DefaultResource - instanciation of DefaultResource
-INFO  de.twenty11.skysail.server.resources.DefaultResource - calling getEntities, media types '[*/*:1.0]'
-DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering ExceptionCatchingFilter#doHandle
-DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering DataExtractingFilter#doHandle
-DEBUG org.apache.shiro.web.mgt.CookieRememberMeManager - SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
-DEBUG de.twenty11.skysail.server.resources.DefaultResource - instanciation of DefaultResource
-INFO  de.twenty11.skysail.server.resources.DefaultResource - calling getEntities, media types '[*/*:1.0]'
-DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering ExceptionCatchingFilter#doHandle
-DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering DataExtractingFilter#doHandle
-DEBUG org.apache.shiro.web.mgt.CookieRememberMeManager - SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
+INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #1

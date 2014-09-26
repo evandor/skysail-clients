@@ -400,3 +400,18 @@ exit
 get
 cd
 get
+// Spring Shell Unknown Version log opened at 2014-09-26 14:32:11
+help
+get
+setHeader Accept=text/html
+setHeader Accept=application/json
+get
+setHeader  --Accept text/html
+exit
+// Spring Shell Unknown Version log closed at 2014-09-26 14:48:58
+// Spring Shell Unknown Version log opened at 2014-09-26 14:48:59
+get
+setHeader --Accept text/html
+get
+exit
+// Spring Shell Unknown Version log closed at 2014-09-26 14:49:31

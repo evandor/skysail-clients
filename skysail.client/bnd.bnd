@@ -2,8 +2,7 @@ Bundle-Version: 0.1.0.${tstamp}
 Bundle-Name: SKYSAIL :: client
 Include-Resource: lib=lib,resources
 Include-Resource: resources
--buildpath:  \
-	com.springsource.org.junit;version=4.11,\
+-buildpath: com.springsource.org.junit;version=4.11,\
 	biz.aQute.launcher,\
 	osgi.core;version=5.0,\
 	org.apache.felix.framework;version=4.4,\
@@ -27,7 +26,8 @@ Include-Resource: resources
 	org.springframework.asm;version=3.1.4,\
 	org.springframework.beans;version=3.1.4,\
 	org.springframework.context;version=3.1.4,\
-	org.springframework.core;version=3.1.4
+	org.springframework.core;version=3.1.4,\
+	org.springframework.expression;version=3.1
 Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
 	de.twenty11.skysail.client.cli.domain,\
 	de.twenty11.skysail.client.cli.testsupport,\

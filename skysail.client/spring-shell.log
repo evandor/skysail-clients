@@ -787,3 +787,7 @@ get --uri dbc
 // null 1.1.0.RELEASE log opened at 2014-09-12 16:49:24
 // [failed] get
 // [failed] get --uri dbc
+// null Unknown Version log opened at 2014-09-26 14:47:55
+setHeader --Accept text/html
+// null Unknown Version log opened at 2014-09-26 14:48:42
+setHeader --Accept text/html

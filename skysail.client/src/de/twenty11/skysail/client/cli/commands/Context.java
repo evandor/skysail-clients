@@ -2,12 +2,14 @@ package de.twenty11.skysail.client.cli.commands;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.http.Header;
 import org.apache.http.StatusLine;
 import org.springframework.stereotype.Component;
 
 import de.twenty11.skysail.api.responses.Linkheader;
+import de.twenty11.skysail.client.cli.utils.ContextUtils;
 
 @Component
 public class Context {
@@ -106,14 +108,11 @@ public class Context {
     }
 
     public void addOrSetHeader(Header header) {
-//        Optional<Header> existingHeader = getRequestHeaders().stream().filter(h -> header.getName().equals(h.getName())).findFirst();
-//        existingHeader.ifPresent(h -> getRequestHeaders().remove(h));
-//        getRequestHeaders().add(header);
+        ContextUtils.addOrSetHeader(getRequestHeaders(), header);
     }
 
     public void removeHeader(String header) {
-//        Optional<Header> existingHeader = getRequestHeaders().stream().filter(h -> header.equals(h.getName())).findFirst();
-//        existingHeader.ifPresent(h -> getRequestHeaders().remove(h));
+        ContextUtils.removeHeader(getRequestHeaders(),header);
     }
 
     public void showRequestHeaders(boolean showRequestHeaders) {
