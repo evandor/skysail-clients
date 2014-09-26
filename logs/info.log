@@ -4,7 +4,7 @@ INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new 
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'SHtmlConverter' with typesMatch '{shtml/*=1.0}'
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'TreeFormConverter' with typesMatch '{treeform/*=1.0}'
 INFO  d.t.skysail.server.core.restlet.SkysailConverterHelper - initializing new converter 'BootstrapHtmlConverter' with typesMatch '{htmlform/*=0.9, text/html=0.9}'
-INFO  d.t.skysail.server.config.ServerConfigurationImpl - adding configuration provider de.twenty11.skysail.config.systemproperties.TestsetupConfigurationProvider@361c294e
+INFO  d.t.skysail.server.config.ServerConfigurationImpl - adding configuration provider de.twenty11.skysail.config.systemproperties.TestsetupConfigurationProvider@611f8234
 INFO  de.twenty11.skysail.server.http.HttpServer - setting configadmin in Skysail Configuration
 INFO  de.twenty11.skysail.server.http.HttpServer - setting ServerConfiguration in Skysail Configuration
 INFO  de.twenty11.skysail.server.http.HttpServer - Activating de.twenty11.skysail.server.http.HttpServer
@@ -31,7 +31,9 @@ INFO  de.twenty11.skysail.server.config.DbSetup - adding dbSetup for PU 'UserMan
 INFO  de.twenty11.skysail.server.config.DbSetup - migrating PU UserManagementPU as it has no dependencies
 INFO  de.twenty11.skysail.server.config.DbSetup - running migration of PU 'UserManagementPU'
 INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #0
-INFO  de.twenty11.skysail.server.config.DbSetup - processed Persistence Units now are: '[UserManagementPU]'
+INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #1
+INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #2
+INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #3
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Instanciating new Skysail Application 'UserManagementApplication'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Activating Application de.twenty11.skysail.server.um.UserManagementApplication
 INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'usermanagement' registered <<<
@@ -62,6 +64,7 @@ INFO  de.twenty11.skysail.server.um.UserManagementApplication - Authorization se
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - Favorites service was set to null for application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Favorites service was set to null for application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Favorites service was set to null for application 'usermanagement'
+INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #4
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - Translation service was set to null for application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Translation service was set to null for application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Translation service was set to null for application 'usermanagement'
@@ -71,4 +74,28 @@ INFO  de.twenty11.skysail.server.um.UserManagementApplication - Metrics service 
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - setting hookfilters to application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - setting hookfilters to application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - setting hookfilters to application 'usermanagement'
-INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #1
+INFO  de.twenty11.skysail.server.app.SkysailRootApplication - creating new Router in de.twenty11.skysail.server.app.SkysailRootApplication
+INFO  de.twenty11.skysail.server.app.SkysailRootApplication - adding extensions to metadata service
+INFO  de.twenty11.skysail.server.app.SkysailRootApplication - adding protocols
+INFO  de.twenty11.skysail.server.um.UserManagementApplication - creating new Router in de.twenty11.skysail.server.um.UserManagementApplication
+INFO  de.twenty11.skysail.server.um.UserManagementApplication - adding extensions to metadata service
+INFO  de.twenty11.skysail.server.um.UserManagementApplication - adding protocols
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@34e32218'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@6481b024'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/api' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@20552c9b'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1d60250a'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities/{name}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@4f959585'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/roles' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@104d608a'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/currentUser' -> Restlet 'Class'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@a83cb00'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7d1813b4'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@282e4b87'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7a898f26'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/password/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1aaa991f'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@20553abf'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1016b42f'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/{group}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@40a7c354'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/' -> Restlet 'Class'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/{registrationId}' -> Restlet 'ConfirmationRedirector'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/{registrationId}/confirmation/' -> Restlet 'Class'
+INFO  de.twenty11.skysail.server.resources.DefaultResource - calling getEntities, media types '[*/*:1.0]'

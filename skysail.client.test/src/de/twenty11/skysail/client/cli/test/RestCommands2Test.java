@@ -26,7 +26,7 @@ public class RestCommands2Test extends TestBase {
         return Arrays.asList(new String[][] { { "skysail.client.test/resources/some.test" } });
     }
 
-   // @Test
+//    @Test
     public void testName2() throws Exception {
         exec("get", "assert --status 200");
     }
@@ -34,11 +34,18 @@ public class RestCommands2Test extends TestBase {
     @Test
     public void testName3() throws Exception {
         File file = new File(filename);
-        System.out.println(file.getAbsolutePath());
+        System.out.println("");
+        System.out.println("***** " + file.getAbsolutePath());
+        System.out.println("");
         if (file.exists() && !file.isDirectory()) {
             Stream<String> lines = Files.lines(Paths.get(filename));
-            lines.forEach(line -> exec(line));
+            lines.forEach(line -> runTestLine(line));
         }
+    }
+
+    private void runTestLine(String line) {
+        System.out.println("***** executing: " + line);
+        exec(line);
     }
 
 }
