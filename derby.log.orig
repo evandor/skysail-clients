@@ -1,0 +1,17 @@
+----------------------------------------------------------------
+<<<<<<< Updated upstream
+Fri Sep 26 07:11:24 CEST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0148-b05e-ecab-0000022246c8 
+on database directory /Users/carsten/git/skysail-clients/skysailDerbyLargeTestDb  with class loader org.apache.derby [22] 
+Loaded from file:/Users/carsten/git/skysail-repository/release/org.apache.derby/org.apache.derby-10.8.2.jar
+=======
+Fri Sep 26 09:09:11 CEST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0148-b0ca-c31a-0000007daf58 
+on database directory C:\git\skysail-clients\skysailDerbyLargeTestDb  with class loader org.apache.derby [22] 
+Loaded from file:/C:/git/skysail-repository/release/org.apache.derby/org.apache.derby-10.8.2.jar
+>>>>>>> Stashed changes
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0-b132
+user.dir=/Users/carsten/git/skysail-clients
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

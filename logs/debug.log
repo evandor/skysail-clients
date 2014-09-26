@@ -24,10 +24,10 @@ INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - setting datasour
 INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - Creating new SkysailWebSecurityManager...
 INFO  d.t.s.s.s.shiro.session.mgt.SkysailWebSessionManager - creating new SkysailWebSessionManager
 INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - Setting new SkysailWebSecurityManager as Shiros SecurityManager
+INFO  de.twenty11.skysail.server.config.DbSetup - adding dbSetup for PU 'UserManagementPU'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Instanciating new Skysail Application 'WebappApplication'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Activating Application de.twenty11.skysail.server.webapp.internal.WebappApplication
 INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'static' registered <<<
-INFO  de.twenty11.skysail.server.config.DbSetup - adding dbSetup for PU 'UserManagementPU'
 INFO  de.twenty11.skysail.server.config.DbSetup - migrating PU UserManagementPU as it has no dependencies
 INFO  de.twenty11.skysail.server.config.DbSetup - running migration of PU 'UserManagementPU'
 INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #0
