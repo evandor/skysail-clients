@@ -3,6 +3,8 @@ package de.twenty11.skysail.client.cli.utils;
 import java.util.List;
 import java.util.function.Function;
 
+import org.apache.http.Header;
+
 import com.jayway.jsonpath.JsonPath;
 
 import de.twenty11.skysail.api.responses.Linkheader;
@@ -13,6 +15,37 @@ import de.twenty11.skysail.client.cli.domain.LinkAssertion;
 
 public class AssertionUtils {
 
+    public static void handleHeader(Context context, JsonAssertion headerAssertion, StringBuilder sb) {
+        if (headerAssertion == null) {
+            return;
+        }
+        Header[] responseHeaders = context.getResponseHeaders();
+        for (Header header : responseHeaders) {
+            if (header.getName().equals(headerAssertion.getJsonPath())) {
+                
+            }
+        }
+        
+//        
+//        Object match = JsonPath.read(context.getBody(),
+//                headerAssertion.getJsonPath());
+//        if (match == null) {
+//            throw new IllegalStateException("assertion didn't find any match");
+//        }
+//        if (match instanceof List) {
+//            throw new IllegalStateException(
+//                    "assertion found a list; try to match only one item");
+//        }
+//        if (!match.toString().equals(headerAssertion.getExpectedValue())) {
+//            throw new IllegalStateException("expected match '"
+//                    + headerAssertion.getExpectedValue() + "', but '"
+//                    + headerAssertion.getJsonPath() + "' was '"
+//                    + match.toString() + "'");
+//        } else {
+//            sb.append("matched " + headerAssertion);
+//        }
+    }
+    
     public static void handleBody(Context context, JsonAssertion bodyAssertion, StringBuilder sb) {
         if (bodyAssertion == null) {
             return;
