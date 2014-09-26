@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
@@ -23,34 +24,32 @@ public class TestBase {
     protected static JLineShellComponent shell;
     private static BundleContext bundleContext;
 
-    // @BeforeClass
-    // public static void init() {
-    // bundleContext =
-    // FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class).getBundleContext();
-    //
-    // //deleteTestDatabase();
-    //
-    // startBundle("org.eclipse.gemini.dbaccess.derby");
-    // //setupUserManagementDb();
-    // //setupIncubatorDb();
-    // }
+     @BeforeClass
+     public static void init() {
+         Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
+         URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
+
+         OsgiBundleXmlApplicationContext appConfig = getAppContextOnceAvailable(skysailClientBundle, 500, 5);
+         MyBootstrap bootstrap = new MyBootstrap(appConfig, new String[0],
+                 new String[] { shellPluginUrl.toExternalForm() });
+         
+         Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
+         for (Bundle bundle : bundles) {
+             //System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': " + bundle.getState());
+         }
+         
+         
+         shell = bootstrap.getJLineShellComponent();
+    
+     //deleteTestDatabase();
+    
+     //startBundle("org.eclipse.gemini.dbaccess.derby");
+     //setupUserManagementDb();
+     //setupIncubatorDb();
+     }
 
     @Before
     public void startUp() throws Exception {
-        Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
-        URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
-
-        OsgiBundleXmlApplicationContext appConfig = getAppContextOnceAvailable(skysailClientBundle, 500, 5);
-        MyBootstrap bootstrap = new MyBootstrap(appConfig, new String[0],
-                new String[] { shellPluginUrl.toExternalForm() });
-        
-        Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
-        for (Bundle bundle : bundles) {
-            //System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': " + bundle.getState());
-        }
-        
-        
-        shell = bootstrap.getJLineShellComponent();
     }
 
     @After
@@ -71,7 +70,7 @@ public class TestBase {
     }
 
 
-    private OsgiBundleXmlApplicationContext getAppContextOnceAvailable(Bundle skysailClientBundle,
+    private static OsgiBundleXmlApplicationContext getAppContextOnceAvailable(Bundle skysailClientBundle,
             int waitingMilliSecons, int retries) {
         for (int i = 0; i < retries; i++) {
             logger.info("waiting for appContext to become available #" + i);
@@ -89,7 +88,7 @@ public class TestBase {
         return null;
     }
 
-    private OsgiBundleXmlApplicationContext getAppConfig(Bundle skysailClientBundle) {
+    private static OsgiBundleXmlApplicationContext getAppConfig(Bundle skysailClientBundle) {
         ServiceReference<ApplicationContext> appConfigServiceRef = skysailClientBundle.getBundleContext()
                 .getServiceReference(org.springframework.context.ApplicationContext.class);
         if (appConfigServiceRef == null) {

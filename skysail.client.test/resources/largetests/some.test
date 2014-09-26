@@ -1,0 +1,3 @@
+setHeader Accept=application/json
+get
+assert --status 200

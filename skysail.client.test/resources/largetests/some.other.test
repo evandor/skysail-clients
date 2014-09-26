@@ -1,0 +1,2 @@
+get
+assert --status 200

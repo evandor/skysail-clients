@@ -32,8 +32,6 @@ INFO  de.twenty11.skysail.server.config.DbSetup - migrating PU UserManagementPU 
 INFO  de.twenty11.skysail.server.config.DbSetup - running migration of PU 'UserManagementPU'
 INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #0
 INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #1
-INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #2
-INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #3
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Instanciating new Skysail Application 'UserManagementApplication'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Activating Application de.twenty11.skysail.server.um.UserManagementApplication
 INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'usermanagement' registered <<<
@@ -64,7 +62,6 @@ INFO  de.twenty11.skysail.server.um.UserManagementApplication - Authorization se
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - Favorites service was set to null for application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Favorites service was set to null for application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Favorites service was set to null for application 'usermanagement'
-INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #4
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - Translation service was set to null for application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Translation service was set to null for application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Translation service was set to null for application 'usermanagement'
@@ -74,6 +71,7 @@ INFO  de.twenty11.skysail.server.um.UserManagementApplication - Metrics service 
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - setting hookfilters to application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - setting hookfilters to application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - setting hookfilters to application 'usermanagement'
+INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #2
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - creating new Router in de.twenty11.skysail.server.app.SkysailRootApplication
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - adding extensions to metadata service
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - adding protocols
@@ -87,21 +85,21 @@ INFO  de.twenty11.skysail.server.um.UserManagementApplication - creating new Rou
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - adding extensions to metadata service
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - adding protocols
 DEBUG de.twenty11.skysail.server.um.UserManagementApplication - attaching application-specific routes
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@34e32218'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@6481b024'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/api' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@20552c9b'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1d60250a'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities/{name}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@4f959585'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/roles' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@104d608a'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@2e08129a'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7a405a8'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/api' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@47fb5d9a'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@3c2e54dc'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities/{name}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@4fc1a1e2'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/roles' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@4b97269b'
 INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/currentUser' -> Restlet 'Class'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@a83cb00'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7d1813b4'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@282e4b87'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7a898f26'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/password/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1aaa991f'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@20553abf'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1016b42f'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/{group}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@40a7c354'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@173d026e'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@257f9c6e'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7e87744'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1b6760d7'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/password/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@23205de'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1e37478c'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@3f998f33'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/{group}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@be722bc'
 INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/' -> Restlet 'Class'
 INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/{registrationId}' -> Restlet 'ConfirmationRedirector'
 INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/{registrationId}/confirmation/' -> Restlet 'Class'
@@ -110,6 +108,16 @@ DEBUG de.twenty11.skysail.server.um.UserManagementApplication - creating tracer.
 DEBUG de.twenty11.skysail.server.um.UserManagementApplication - creating original request filter...
 DEBUG de.twenty11.skysail.server.um.UserManagementApplication - determining authentication service...
 DEBUG de.twenty11.skysail.server.um.UserManagementApplication - setting authenticationGuard from authentication service
+DEBUG de.twenty11.skysail.server.resources.DefaultResource - instanciation of DefaultResource
+INFO  de.twenty11.skysail.server.resources.DefaultResource - calling getEntities, media types '[*/*:1.0]'
+DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering ExceptionCatchingFilter#doHandle
+DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering DataExtractingFilter#doHandle
+DEBUG org.apache.shiro.web.mgt.CookieRememberMeManager - SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
+DEBUG de.twenty11.skysail.server.resources.DefaultResource - instanciation of DefaultResource
+INFO  de.twenty11.skysail.server.resources.DefaultResource - calling getEntities, media types '[*/*:1.0]'
+DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering ExceptionCatchingFilter#doHandle
+DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering DataExtractingFilter#doHandle
+DEBUG org.apache.shiro.web.mgt.CookieRememberMeManager - SubjectContext argument is not an HTTP-aware instance.  This is required to obtain a servlet request and response in order to retrieve the rememberMe cookie. Returning immediately and ignoring rememberMe operation.
 DEBUG de.twenty11.skysail.server.resources.DefaultResource - instanciation of DefaultResource
 INFO  de.twenty11.skysail.server.resources.DefaultResource - calling getEntities, media types '[*/*:1.0]'
 DEBUG d.t.s.s.core.restlet.filter.ExceptionCatchingFilter - entering ExceptionCatchingFilter#doHandle
