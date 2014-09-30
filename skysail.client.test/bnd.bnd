@@ -113,7 +113,6 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 	skysail.config.systemproperties;version=0.1,\
 	skysail.server.security.shiro;version=4.0,\
 	skysail.server.static;version=0.5,\
-	com.googlecode.flyway.core;version=2.2.1,\
 	slf4j.api;version=1.7,\
 	com.sun.mail.javax.mail;version=1.5.1,\
 	com.sun.el;version=2.2.0,\
@@ -139,6 +138,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 	org.springframework.osgi.io;version=1.2.1,\
 	org.springframework.osgi.extender;version=1.2.1,\
 	org.apache.commons.pool;version=1.6.0,\
+	com.googlecode.flyway.core;version=2.2.1,\
 	jul.to.slf4j;version=1.7.5
 -runfw: org.apache.felix.framework;version='[4.4.0,4.4.0]'
 -runee: JavaSE-1.8
