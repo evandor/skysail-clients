@@ -7,25 +7,29 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Stream;
 
+import org.apache.commons.lang.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RunWith(Parameterized.class)
-public class RestCommands2Test extends TestBase {
+public class ScriptTests extends TestBase {
+    
+    private static final Logger logger = LoggerFactory.getLogger(ScriptTests.class);
 
     private static final String TEST_FILES_DIR = "skysail.client.test/resources/largetests";
     private static final String TEST_FILE_SUFFIX = ".test";
 
     private String filename;
 
-    public RestCommands2Test(final String filenname) {
+    public ScriptTests(final String filenname) {
         this.filename = filenname;
     }
 
@@ -68,16 +72,20 @@ public class RestCommands2Test extends TestBase {
     @Test
     public void testName3() throws Exception {
         File file = new File(filename);
-        System.out.println("");
-        System.out.println("***** " + file.getAbsolutePath());
-        System.out.println("");
+        
+        logger.info("");
+        logger.info(StringUtils.repeat("-", file.getAbsolutePath().length() + 25));
+        logger.info("--- executing test '" + file.getAbsolutePath() + "' ---");
+        logger.info(StringUtils.repeat("-", file.getAbsolutePath().length() + 25));
+        logger.info("");
+
         Stream<String> lines = Files.lines(Paths.get(filename));
         lines.forEach(line -> runTestLine(line));
         lines.close();
     }
 
     private void runTestLine(String line) {
-        System.out.println("***** executing: " + line);
+        logger.info("***** executing: " + line);
         exec(line);
     }
 

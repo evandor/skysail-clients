@@ -1,7 +1,0 @@
-cd
-login --u admin --p skysail
-get
-get --uri usermanagement
-get --uri currentuser
-
-assert --body username=admin

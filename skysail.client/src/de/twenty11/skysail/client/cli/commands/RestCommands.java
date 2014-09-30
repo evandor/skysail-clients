@@ -49,7 +49,6 @@ public class RestCommands implements CommandMarker {
         sb.append(StringUtils.repeat("-", 30)).append("\n");
         sb.append(OutputUtils.printStatus(context));
         sb.append(OutputUtils.printResponseHeader(context));
-        //sb.append(OutputUtils.printBody(context));
 
         RestUtils.setLinks(context, response);
 

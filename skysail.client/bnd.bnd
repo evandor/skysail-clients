@@ -28,9 +28,9 @@ Include-Resource: resources
 	org.springframework.context;version=3.1.4,\
 	org.springframework.core;version=3.1.4,\
 	org.springframework.expression;version=3.1
-Private-Package: de.twenty11.skysail.client.cli.commands.utils,\
+Private-Package:  \
+	de.twenty11.skysail.client.cli.commands.utils,\
 	de.twenty11.skysail.client.cli.domain,\
-	de.twenty11.skysail.client.cli.testsupport,\
 	de.twenty11.skysail.client.cli.utils,\
 	de.twenty11.skysail.client.cli.converter,\
 	de.twenty11.skysail.client.cli.commands.test

@@ -7,23 +7,23 @@ import org.springframework.shell.core.Converter;
 import org.springframework.shell.core.MethodTarget;
 import org.springframework.stereotype.Component;
 
-import de.twenty11.skysail.client.cli.domain.JsonAssertion;
+import de.twenty11.skysail.client.cli.domain.KeyValueAssertion;
 
 @Component
-public class JsonAssertionConverter implements Converter<JsonAssertion> {
+public class JsonAssertionConverter implements Converter<KeyValueAssertion> {
 
     @Override
     public boolean supports(Class<?> type, String optionContext) {
-        return type.isAssignableFrom(JsonAssertion.class);
+        return type.isAssignableFrom(KeyValueAssertion.class);
     }
 
     @Override
-    public JsonAssertion convertFromText(String value, Class<?> targetType, String optionContext) {
-        String[] split = value.split("=");
+    public KeyValueAssertion convertFromText(String value, Class<?> targetType, String optionContext) {
+        String[] split = value.split("=",2);
         if (split.length != 2) {
             throw new IllegalStateException("could not convert '" + value + "' to JsonAssertion");
         }
-        return new JsonAssertion(split[0],split[1]);
+        return new KeyValueAssertion(split[0],split[1]);
     }
 
     @Override

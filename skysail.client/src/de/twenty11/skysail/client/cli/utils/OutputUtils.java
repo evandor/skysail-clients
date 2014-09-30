@@ -2,6 +2,7 @@ package de.twenty11.skysail.client.cli.utils;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -58,7 +59,13 @@ public class OutputUtils {
             if (responseString.trim().length() == 0) {
                 return "";
             }
-            sb.append(format(responseString));
+            Optional<Header> contentType = Arrays.stream(context.getResponseHeaders())
+                    .filter(header -> header.getName().equals("Content-Type")).findFirst();
+            if (contentType.isPresent() && contentType.get().getValue().toLowerCase().contains("json")) {
+                sb.append(formatJson(responseString));
+            } else {
+                sb.append(responseString);
+            }
         } catch (ParseException e) {
             sb.append(e.getMessage());
             e.printStackTrace();
@@ -100,7 +107,7 @@ public class OutputUtils {
         return Arrays.stream(h.getValue().split(",")).map(link -> Linkheader.valueOf(link));
     }
 
-    private static String format(String msg) {
+    private static String formatJson(String msg) {
         ObjectMapper mapper = new ObjectMapper();
         Object json;
         try {
@@ -111,7 +118,8 @@ public class OutputUtils {
             if (msg.length() < 500) {
                 return "Original Message:\n" + msg;
             } else {
-                return msg.substring(0, 200) + "... \n\n    (...) \n\n    ..." + msg.substring(msg.length()-250,msg.length());
+                return msg.substring(0, 200) + "... \n\n    (...) \n\n    ..."
+                        + msg.substring(msg.length() - 250, msg.length());
             }
         }
     }

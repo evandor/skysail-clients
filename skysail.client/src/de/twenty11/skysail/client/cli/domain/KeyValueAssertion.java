@@ -1,11 +1,11 @@
 package de.twenty11.skysail.client.cli.domain;
 
-public class JsonAssertion {
+public class KeyValueAssertion {
 
     private String expectedValue;
     private String jsonPath;
 
-    public JsonAssertion(String jsonPath, String expectedValue) {
+    public KeyValueAssertion(String jsonPath, String expectedValue) {
         this.jsonPath = jsonPath;
         this.expectedValue = expectedValue;
     }
@@ -14,7 +14,7 @@ public class JsonAssertion {
         return expectedValue;
     }
     
-    public String getJsonPath() {
+    public String getKey() {
         return jsonPath;
     }
     

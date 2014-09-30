@@ -22,8 +22,8 @@ public class AuthenticationCommands implements CommandMarker {
 
 	@CliCommand(value = "login", help = "login -u username -p password")
 	public String login(
-			@CliOption(key = { "u" }, mandatory = true, help = "username") final String username,
-			@CliOption(key = { "p" }, mandatory = true, help = "password") final String password,
+			@CliOption(key = { "u", "username" }, mandatory = true, help = "username") final String username,
+			@CliOption(key = { "p", "password" }, mandatory = true, help = "password") final String password,
 			@CliOption(key = { "path" }, mandatory = false, help = "path where to login", unspecifiedDefaultValue = "/_login", specifiedDefaultValue = "/_login") final String loginPath) {
 
 		String originalPath = context.getPath();
@@ -33,12 +33,10 @@ public class AuthenticationCommands implements CommandMarker {
 		HttpResponse response = HttpUtils.postForLogin(context.getCurrentUrl(),
 				username, password);
 
-		// context.setRequestHeaders(Collections.emptyList());
 		context.setResponseHeaders(response.getAllHeaders());
 		try {
 			context.setBody(EntityUtils.toString(response.getEntity()));
 		} catch (ParseException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		context.setStatus(response.getStatusLine());

@@ -1,0 +1,22 @@
+env --showBody true
+
+get 
+
+assertTrue --link "title Usermanagement missing"
+
+
+# get --rel create_form
+# assert 
+# TODO post --data username=admin&password=skysail
+
+# instead for now:
+login --u admin --p skysail
+
+get
+
+assertNotEmpty --header Set-Cookie
+assertNotEmpty --header X-Api-Version
+
+assertTrue --link "title Usermanagement exists"
+
+

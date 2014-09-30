@@ -1,3 +1,0 @@
-setHeader Accept=text/html
-get
-assert --status 200

@@ -7,7 +7,7 @@
 ##############################################################################
 
 # Add default JVM options here. You can also use JAVA_OPTS and SKYSAIL_CLIENT_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS="-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n -Djava.util.logging.config.file=logging.properties"
+DEFAULT_JVM_OPTS="-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n -DdisableAssertions -Djava.util.logging.config.file=logging.properties"
 
 APP_NAME="skysail.client"
 APP_BASE_NAME=`basename "$0"`

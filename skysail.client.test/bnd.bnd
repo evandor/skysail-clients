@@ -23,7 +23,7 @@
 	org.springframework.osgi.core;version=1.2,\
 	skysail.config.systemproperties;version=0.1,\
 	skysail.server;version=11.0
-Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
+Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 
 -runvm: -Xmx128m,\
     -Dport=2016,\
@@ -35,9 +35,8 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
     -Dhttp.proxyPort=8080,\
     -Dhttps.proxyHost=192.168.11.140,\
     -Dhttps.proxyPort=8080
-    #,\
-    #-Xdebug,\
-	#-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
+#    -Xdebug,\
+#	-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
 	
 -runtrace: false
 
@@ -50,7 +49,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
     org.apache.felix.log.storeDebug=true,\
     logback.configurationFile=config/logback.xml
 
--runbundles: \
+-runbundles:  \
 	ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
 	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
 	classmate;version='[1.0.0,1.0.1)',\
@@ -122,7 +121,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 	uk.com.robust-it.cloning;version=1.8.5,\
 	org.objenesis;version=1.4.0,\
 	com.codahale.metrics.core;version=3.0.2,\
-    com.jayway.jsonpath.json-path;version=0.9,\
+	com.jayway.jsonpath.json-path;version=0.9,\
 	net.minidev.json-smart;version=1.2,\
 	skysail.wrapped.bundles.spring.shell,\
 	skysail.client;version=latest,\
@@ -137,7 +136,8 @@ Test-Cases: de.twenty11.skysail.client.cli.test.RestCommands2Test
 	org.springframework.expression;version=3.1.4,\
 	org.springframework.osgi.io;version=1.2.1,\
 	org.springframework.osgi.extender;version=1.2.1,\
-	org.apache.commons.pool;version=1.6.0
+	org.apache.commons.pool;version=1.6.0,\
+	jul.to.slf4j;version=1.7.5
 -runfw: org.apache.felix.framework;version='[4.4.0,4.4.0]'
 -runee: JavaSE-1.8
 Private-Package: de.twenty11.skysail.client.cli.testsupport,\
