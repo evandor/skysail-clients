@@ -25,12 +25,15 @@ INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - Creating new Sky
 INFO  d.t.s.s.s.shiro.session.mgt.SkysailWebSessionManager - creating new SkysailWebSessionManager
 INFO  de.twenty11.skysail.server.security.shiro.ShiroServices - Setting new SkysailWebSecurityManager as Shiros SecurityManager
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Instanciating new Skysail Application 'WebappApplication'
-INFO  de.twenty11.skysail.server.config.DbSetup - adding dbSetup for PU 'UserManagementPU'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Activating Application de.twenty11.skysail.server.webapp.internal.WebappApplication
 INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'static' registered <<<
+INFO  de.twenty11.skysail.server.config.DbSetup - adding dbSetup for PU 'UserManagementPU'
 INFO  de.twenty11.skysail.server.config.DbSetup - migrating PU UserManagementPU as it has no dependencies
 INFO  de.twenty11.skysail.server.config.DbSetup - running migration of PU 'UserManagementPU'
 INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #0
+INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #1
+INFO  de.twenty11.skysail.client.cli.test.TestBase - found appContext...
+INFO  de.twenty11.skysail.server.config.DbSetup - processed Persistence Units now are: '[UserManagementPU]'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Instanciating new Skysail Application 'UserManagementApplication'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Activating Application de.twenty11.skysail.server.um.UserManagementApplication
 INFO  de.twenty11.skysail.server.app.ApplicationList -  >>> new application 'usermanagement' registered <<<
@@ -58,7 +61,6 @@ INFO  de.twenty11.skysail.server.app.ApplicationList - =========================
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - Authorization service was set to 'UserManagementApplication' for application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Authorization service was set to 'UserManagementApplication' for application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Authorization service was set to 'UserManagementApplication' for application 'usermanagement'
-INFO  de.twenty11.skysail.client.cli.test.TestBase - waiting for appContext to become available #1
 INFO  de.twenty11.skysail.server.app.SkysailRootApplication - Favorites service was set to null for application 'root'
 INFO  d.t.skysail.server.webapp.internal.WebappApplication - Favorites service was set to null for application 'static'
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - Favorites service was set to null for application 'usermanagement'
@@ -83,21 +85,21 @@ INFO  de.twenty11.skysail.server.app.SkysailRootApplication - adding protocols
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - creating new Router in de.twenty11.skysail.server.um.UserManagementApplication
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - adding extensions to metadata service
 INFO  de.twenty11.skysail.server.um.UserManagementApplication - adding protocols
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@11ddb959'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@25a6215a'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/api' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@42177b66'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@607322f4'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities/{name}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@35051cbe'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/roles' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@444c9af1'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@5c4952de'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@48cac149'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/api' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@21328589'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@1c4ae5d4'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/entities/{name}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@148c2101'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/roles' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@62453dc'
 INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/currentUser' -> Restlet 'Class'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@2d3e7430'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@57d5f080'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@33848da4'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@214e2c96'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/password/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@4ea95f70'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@651d5909'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@7660d2f'
-INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/{group}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@68bb0bad'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@846f04f'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@4e405483'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@36431e6'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@326db1d7'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/users/{username}/password/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@2f44501b'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@74f576d6'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@fd19e17'
+INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/groups/{group}' -> 'de.twenty11.skysail.server.security.AuthenticatedAuthorizer@5ea3146c'
 INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/' -> Restlet 'Class'
 INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/{registrationId}' -> Restlet 'ConfirmationRedirector'
 INFO  de.twenty11.skysail.server.core.restlet.SkysailRouter - routing path '/registrations/{registrationId}/confirmation/' -> Restlet 'Class'

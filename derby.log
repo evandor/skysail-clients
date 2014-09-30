@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Tue Sep 30 12:14:54 CEST 2014:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0148-c60e-3a93-00000232e340 
+Tue Sep 30 13:12:54 CEST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0148-c643-5173-0000024c6ad8 
 on database directory /Users/carsten/git/skysail-clients/skysailDerbyLargeTestDb  with class loader org.apache.derby [22] 
 Loaded from file:/Users/carsten/git/skysail-repository/release/org.apache.derby/org.apache.derby-10.8.2.jar
 java.vendor=Oracle Corporation

@@ -76,6 +76,13 @@ public class TestBase {
             logger.info("waiting for appContext to become available #" + i);
             OsgiBundleXmlApplicationContext appConfig = getAppConfig(skysailClientBundle);
             if (appConfig != null) {
+                logger.info("found appContext...");
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
                 return appConfig;
             }
             try {

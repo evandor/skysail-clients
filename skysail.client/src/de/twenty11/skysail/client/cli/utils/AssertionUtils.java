@@ -38,7 +38,7 @@ public class AssertionUtils {
                 + headerAssertion.getKey()
                 + "', but headers were set to "
                 + Arrays.stream(context.getResponseHeaders()).map(h -> h.getName() + ": " + h.getValue())
-                        .collect(Collectors.joining(",\n"));
+                        .collect(Collectors.joining(",\\n"));
         if (System.getProperty("disableAssertions") != null) {
             sb.append(msg);
             return;

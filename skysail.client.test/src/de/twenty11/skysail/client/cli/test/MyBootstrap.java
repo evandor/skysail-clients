@@ -77,35 +77,6 @@ public class MyBootstrap extends Bootstrap {
         ctx.refresh();
     }
 
-    // public MyBootstrap(String[] args, String[] contextPath) {
-    // try {
-    // commandLine = SimpleShellCommandLineOptions.parseCommandLine(args);
-    // }
-    // catch (IOException e) {
-    // throw new ShellException(e.getMessage(), e);
-    // }
-    //
-    // ctx = new GenericApplicationContext();
-    // ctx.registerShutdownHook();
-    // configureApplicationContext(ctx);
-    // // built-in commands and converters
-    // ClassPathBeanDefinitionScanner scanner = new
-    // ClassPathBeanDefinitionScanner(ctx);
-    // if (commandLine.getDisableInternalCommands()) {
-    // scanner.scan("org.springframework.shell.converters",
-    // "org.springframework.shell.plugin.support");
-    // }
-    // else {
-    // scanner.scan("org.springframework.shell.commands",
-    // "org.springframework.shell.converters",
-    // "org.springframework.shell.plugin.support");
-    // }
-    // // user contributed commands
-    // XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(ctx);
-    // reader.loadBeanDefinitions(contextPath);
-    // ctx.refresh();
-    // }
-
     public ApplicationContext getApplicationContext() {
         return ctx;
     }
@@ -122,14 +93,6 @@ public class MyBootstrap extends Bootstrap {
     protected void createAndRegisterBeanDefinition(ApplicationContext annctx, Class<?> clazz, String name) {
         RootBeanDefinition rbd = new RootBeanDefinition();
         rbd.setBeanClass(clazz);
-        // DefaultListableBeanFactory bf = (DefaultListableBeanFactory)
-        // annctx.getBeanFactory();
-        // if (name != null) {
-        // bf.registerBeanDefinition(name, rbd);
-        // }
-        // else {
-        // bf.registerBeanDefinition(clazz.getSimpleName(), rbd);
-        // }
     }
 
     // seems on JDK 1.6.0_18 or higher causes the output to disappear
