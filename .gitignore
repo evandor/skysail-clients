@@ -3,10 +3,11 @@ etc
 /skysail.model.applications.emf.editor
 /skysail.model.applications.emf.tests
 /.gradle
-/derby.log/org.clamshell.clamshell-impl-core.osgi/
+/derby.log
 /org.clamshellcli.clamshell-api.osgi/
 /org.clamshell.clamshell-impl-core.osgi/
 /org.clamshellcli.clamshell-test.osgi/
 /net.minidev.json-smart.osgi/
 /net.minidev.json-smart-mini.osgi/
 /skysailDerbyLargeTestDb
+/logs
