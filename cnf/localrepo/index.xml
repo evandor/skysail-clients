@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1411976926241' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1412091672097' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.apache.felix.shell.remote'/>
@@ -1514,48 +1514,48 @@
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='skysail.server.um'/>
       <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='3.1.0.201409150857'/>
+      <attribute name='version' type='Version' value='3.1.0.201409301504'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='6ea85ae2392e9a34496454f5a071482053c65af350251c4c72a7b2676ac0c739'/>
+      <attribute name='osgi.content' value='69c7204aa14f76f466a07c733c9c23ac3c24bea2e897c609f01304f6c98ff290'/>
       <attribute name='url' value='skysail.server.um/skysail.server.um-3.1.0.jar'/>
-      <attribute name='size' type='Long' value='106403'/>
+      <attribute name='size' type='Long' value='106649'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
       <attribute name='osgi.wiring.bundle' value='skysail.server.um'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0.201409150857'/>
+      <attribute name='bundle-version' type='Version' value='3.1.0.201409301504'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
       <attribute name='osgi.wiring.host' value='skysail.server.um'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0.201409150857'/>
+      <attribute name='bundle-version' type='Version' value='3.1.0.201409301504'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='de.twenty11.skysail.server.um.repos'/>
       <attribute name='version' type='Version' value='3.0.0'/>
       <attribute name='bundle-symbolic-name' value='skysail.server.um'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0.201409150857'/>
+      <attribute name='bundle-version' type='Version' value='3.1.0.201409301504'/>
       <directive name='uses' value='de.twenty11.skysail.server.um.domain,javax.persistence,org.restlet.security'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='de.twenty11.skysail.server.um.selectionprovider'/>
       <attribute name='version' type='Version' value='1.0.0'/>
       <attribute name='bundle-symbolic-name' value='skysail.server.um'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0.201409150857'/>
+      <attribute name='bundle-version' type='Version' value='3.1.0.201409301504'/>
       <directive name='uses' value='de.twenty11.skysail.api.forms,org.restlet.resource'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='de.twenty11.skysail.server.um'/>
       <attribute name='version' type='Version' value='4.1.0'/>
       <attribute name='bundle-symbolic-name' value='skysail.server.um'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0.201409150857'/>
+      <attribute name='bundle-version' type='Version' value='3.1.0.201409301504'/>
       <directive name='uses' value='de.twenty11.skysail.api.responses,de.twenty11.skysail.api.security,de.twenty11.skysail.server.app,de.twenty11.skysail.server.config,de.twenty11.skysail.server.core.restlet,de.twenty11.skysail.server.services,de.twenty11.skysail.server.um.domain,de.twenty11.skysail.server.um.repos,javax.persistence,org.apache.shiro.authc,org.osgi.service.component,org.restlet.security'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='de.twenty11.skysail.server.um.domain'/>
       <attribute name='version' type='Version' value='4.2.0'/>
       <attribute name='bundle-symbolic-name' value='skysail.server.um'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0.201409150857'/>
+      <attribute name='bundle-version' type='Version' value='3.1.0.201409301504'/>
       <directive name='uses' value='de.twenty11.skysail.api.responses,javax.persistence,javax.validation,org.eclipse.persistence.annotations'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
@@ -1662,6 +1662,9 @@
     </requirement>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
     </requirement>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
@@ -3454,12 +3457,12 @@
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='skysail.server.um.db'/>
       <attribute name='type' value='osgi.fragment'/>
-      <attribute name='version' type='Version' value='0.5.8.201409150857'/>
+      <attribute name='version' type='Version' value='0.5.8.201409301504'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='bdf48b97a206ea09859084a504119a5cdafe6fdf17e09b6122f9d4f39efc3c4b'/>
+      <attribute name='osgi.content' value='a94f8103807be6c0ad476a2dc5a877235f1680284ca1975527786dafa52c6692'/>
       <attribute name='url' value='skysail.server.um.db/skysail.server.um.db-0.5.8.jar'/>
-      <attribute name='size' type='Long' value='12225'/>
+      <attribute name='size' type='Long' value='12224'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
