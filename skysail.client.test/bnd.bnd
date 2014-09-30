@@ -25,6 +25,8 @@
 	skysail.server;version=11.0
 Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 
+-systemproperties: jsse.enableSNIExtension=false
+
 -runvm: -Xmx128m,\
     -Dport=2016,\
     -Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,\
