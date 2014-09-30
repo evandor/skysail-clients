@@ -138,7 +138,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 	org.springframework.osgi.io;version=1.2.1,\
 	org.springframework.osgi.extender;version=1.2.1,\
 	org.apache.commons.pool;version=1.6.0,\
-	com.googlecode.flyway.core;version=2.2.1,\
+	com.googlecode.flyway.core;version=${flyway.version},\
 	jul.to.slf4j;version=1.7.5
 -runfw: org.apache.felix.framework;version='[4.4.0,4.4.0]'
 -runee: JavaSE-1.8
