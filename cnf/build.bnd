@@ -67,7 +67,7 @@ skysail.api.version     latest
 skysail.server.version  latest
 
 # problems with 1.8.2
-org.apache.felix.scr.version '[1.6.2, 1.7)'
+org.apache.felix.scr.version 1.8.2
 
 Bundle-Vendor:          graefundpartner http://www.graefundpartner.de
 Bundle-Copyright:       ${copyright}
