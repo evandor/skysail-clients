@@ -36,9 +36,9 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
     -Dhttp.proxyHost=192.168.11.140,\
     -Dhttp.proxyPort=8080,\
     -Dhttps.proxyHost=192.168.11.140,\
-    -Dhttps.proxyPort=8080,\
-    -Xdebug,\
-	-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
+    -Dhttps.proxyPort=8080
+#    -Xdebug,\
+#	-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
 	
 -runtrace: false
 
