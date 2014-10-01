@@ -30,6 +30,15 @@ public class TestBase {
 
     @Before
     public void startUp() throws Exception {
+        
+        
+        try {
+            Thread.sleep(50000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
         Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
         URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
 
