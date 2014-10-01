@@ -109,7 +109,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 	skysail.api;version=11.0.0,\
 	skysail.server;version=11.0,\
 	skysail.server.http;version=1.0,\
-	skysail.server.um;version=3.1,\
+	skysail.server.um;version=4.0,\
 	skysail.server.um.db;version=0.5,\
 	skysail.config.systemproperties;version=0.1,\
 	skysail.server.security.shiro;version=4.0,\
