@@ -26,30 +26,30 @@ public class TestBase {
 
      @BeforeClass
      public static void init() {
-         Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
-         URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
-
-         OsgiBundleXmlApplicationContext appConfig = getAppContextOnceAvailable(skysailClientBundle, 500, 5);
-         MyBootstrap bootstrap = new MyBootstrap(appConfig, new String[0],
-                 new String[] { shellPluginUrl.toExternalForm() });
-         
-         Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
-         for (Bundle bundle : bundles) {
-             System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': " + bundle.getState());
-         }
-         
-         
-         shell = bootstrap.getJLineShellComponent();
-    
-     //deleteTestDatabase();
-    
-     //startBundle("org.eclipse.gemini.dbaccess.derby");
-     //setupUserManagementDb();
-     //setupIncubatorDb();
      }
 
     @Before
     public void startUp() throws Exception {
+        Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
+        URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
+
+        OsgiBundleXmlApplicationContext appConfig = getAppContextOnceAvailable(skysailClientBundle, 500, 5);
+        MyBootstrap bootstrap = new MyBootstrap(appConfig, new String[0],
+                new String[] { shellPluginUrl.toExternalForm() });
+        
+        Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
+        for (Bundle bundle : bundles) {
+            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': " + bundle.getState());
+        }
+        
+        
+        shell = bootstrap.getJLineShellComponent();
+   
+        //deleteTestDatabase();
+       
+        //startBundle("org.eclipse.gemini.dbaccess.derby");
+        //setupUserManagementDb();
+        //setupIncubatorDb();
     }
 
     @After

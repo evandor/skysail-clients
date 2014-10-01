@@ -22,7 +22,8 @@
 	org.springframework.core;version=3.1,\
 	org.springframework.osgi.core;version=1.2,\
 	skysail.config.systemproperties;version=0.1,\
-	skysail.server;version=11.0
+	skysail.server;version=11.0,\
+	com.googlecode.flyway.core;version=2.2
 Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 
 -systemproperties: jsse.enableSNIExtension=false
