@@ -33,7 +33,7 @@ public class TestBase {
             // Not sure which event I should wait for here, but need to wait
             // nevertheless or the test will fail
             // as the database is not created in time...
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

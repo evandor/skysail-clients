@@ -31,7 +31,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 -runvm: -Xmx128m,\
     -Dport=2016,\
     -Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,\
-    -Dskysail.db.url="jdbc:derby:skysailDerbyLargeTestDb;create=true",\
+    -Dskysail.db.url="jdbc:derby:skysail.client.test/generated/skysailDerbyLargeTestDb;create=true",\
     -Dskysail.db.Username=SA,\
     -Dskysail.db.Password=
 #    ,\
@@ -50,7 +50,6 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
     logback.configurationFile=config/logback.xml
 
 -runbundles:  \
-	skysail.test.logreader;version=0.0,\
 	ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
 	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
 	classmate;version='[1.0.0,1.0.1)',\
