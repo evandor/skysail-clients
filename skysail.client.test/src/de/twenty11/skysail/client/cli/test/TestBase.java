@@ -4,10 +4,8 @@ import java.net.URL;
 import java.util.Arrays;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.osgi.framework.Bundle;
-import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.slf4j.Logger;
@@ -22,7 +20,6 @@ public class TestBase {
     private static final Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     protected static JLineShellComponent shell;
-    private static BundleContext bundleContext;
 
     @BeforeClass
     public static void init() {
@@ -54,11 +51,6 @@ public class TestBase {
         shell = bootstrap.getJLineShellComponent();
     }
 
-    @Before
-    public void startUp() throws Exception {
-
-    }
-
     @After
     public void shutdown() throws Exception {
         shell.stop();
@@ -80,7 +72,7 @@ public class TestBase {
             int waitingMilliSecons, int retries) {
         for (int i = 0; i < retries; i++) {
             logger.info("waiting for appContext to become available #" + i);
-            OsgiBundleXmlApplicationContext appConfig = getAppConfig(skysailClientBundle);
+            OsgiBundleXmlApplicationContext appConfig = TestHelper.getAppConfig(skysailClientBundle);
             if (appConfig != null) {
                 logger.info("found appContext...");
                 try {
@@ -99,15 +91,5 @@ public class TestBase {
         return null;
     }
 
-    private static OsgiBundleXmlApplicationContext getAppConfig(Bundle skysailClientBundle) {
-        ServiceReference<ApplicationContext> appConfigServiceRef = skysailClientBundle.getBundleContext()
-                .getServiceReference(org.springframework.context.ApplicationContext.class);
-        if (appConfigServiceRef == null) {
-            return null;
-        }
-        OsgiBundleXmlApplicationContext appConfig = (OsgiBundleXmlApplicationContext) skysailClientBundle
-                .getBundleContext().getService(appConfigServiceRef);
-        return appConfig;
-    }
-
+   
 }

@@ -6,15 +6,20 @@ import java.util.List;
 import com.tngtech.jgiven.Stage;
 
 public class GivenSomeStage<SELF extends GivenSomeStage<?>> extends Stage<SELF> {
-    
+
     List<String> ingredients = new ArrayList<String>();
-    
+
     public SELF some_state() {
         return self();
     }
-    
+
     public SELF an_egg() {
         ingredients.add("Egg");
         return self();
-     }
+    }
+    
+    public SELF izzy_is_logged_in() {
+        
+        return self();
+    }
 }

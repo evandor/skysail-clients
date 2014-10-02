@@ -1,4 +1,4 @@
-package de.twenty11.skysail.client.cli.test;
+    package de.twenty11.skysail.client.cli.test;
 
 import java.io.File;
 import java.io.IOException;
