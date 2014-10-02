@@ -20,34 +20,36 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RunWith(Parameterized.class)
-public class ScriptTests extends TestBase {
+public class ScriptLargeTests extends TestBase {
     
-    private static final Logger logger = LoggerFactory.getLogger(ScriptTests.class);
+    private static final Logger logger = LoggerFactory.getLogger(ScriptLargeTests.class);
 
     private static final String TEST_FILES_DIR = "skysail.client.test/resources/largetests";
     private static final String TEST_FILE_SUFFIX = ".test";
 
     private String filename;
 
-    public ScriptTests(final String filenname) {
+    public ScriptLargeTests(final String filenname) {
         this.filename = filenname;
     }
 
     @Before
     public void setUp() {
         exec("setHost localhost");
-        exec("setPort 2016");
+        exec("setPort 2099");
 
-        exec("env --showRequestHeaders false");
-        exec("env --showResponseHeaders false");
+        exec("env --showRequestHeaders true");
+        exec("env --showResponseHeaders true");
         exec("env --showBody false");
 
         exec("cd");
+        exec("logout");
     }
 
     @Parameters(name = "{index}: {0}")
     public static Collection<String[]> files() {
         ArrayList<String[]> result = new ArrayList<>();
+        logger.info("--- determining test files ---");
         getTestFiles(Paths.get(TEST_FILES_DIR), result);
         return result;
     }
@@ -61,6 +63,7 @@ public class ScriptTests extends TestBase {
                     getTestFiles(entry, result);
                 }
                 if (entry.toString().endsWith(TEST_FILE_SUFFIX)) {
+                    logger.info("--- added test file '" + entry.toString() + "' ---");
                     result.add(new String[] { entry.toString() });
                 }
             }

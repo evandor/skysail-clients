@@ -22,21 +22,19 @@
 	org.springframework.core;version=3.1,\
 	org.springframework.osgi.core;version=1.2,\
 	skysail.config.systemproperties;version=0.1,\
-	skysail.server;version=11.0
+	skysail.server;version=11.0,\
+	com.googlecode.flyway.core;version=2.2
 Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 
 -systemproperties: jsse.enableSNIExtension=false
 
 -runvm: -Xmx128m,\
-    -Dport=2016,\
+    -Dport=2099,\
     -Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,\
     -Dskysail.db.url="jdbc:derby:skysailDerbyLargeTestDb;create=true",\
     -Dskysail.db.Username=SA,\
-    -Dskysail.db.Password=,\
-    -Dhttp.proxyHost=192.168.11.140,\
-    -Dhttp.proxyPort=8080,\
-    -Dhttps.proxyHost=192.168.11.140,\
-    -Dhttps.proxyPort=8080
+    -Dskysail.db.Password=
+#    ,\
 #    -Xdebug,\
 #	-Xrunjdwp:transport="dt_socket,address=9999,server=y,suspend=y"
 	
@@ -52,7 +50,6 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
     logback.configurationFile=config/logback.xml
 
 -runbundles:  \
-	skysail.test.logreader;version=0.0,\
 	ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
 	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
 	classmate;version='[1.0.0,1.0.1)',\

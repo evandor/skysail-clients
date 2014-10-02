@@ -1,0 +1,4 @@
+setHeader Accept=text/html
+get
+assertTrue --status 200
+assertTrue --header Content-Type=text/html;\ charset=UTF-8

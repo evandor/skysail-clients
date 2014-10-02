@@ -1,0 +1,4 @@
+setHeader Accept=application/json
+get
+assertTrue --status 200
+assertTrue --header Content-Type=application/json;\ charset=UTF-8

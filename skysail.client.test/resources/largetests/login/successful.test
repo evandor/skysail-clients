@@ -15,7 +15,7 @@ login --u admin --p skysail
 get
 
 assertNotEmpty --header Set-Cookie
-assertNotEmpty --header X-Api-Version
+# with newer skysail.server > 11.0.0: assertNotEmpty --header X-Api-Version
 
 assertTrue --link "title Usermanagement exists"
 
