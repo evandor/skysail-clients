@@ -31,7 +31,7 @@ Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
 -runvm: -Xmx128m,\
     -Dport=2016,\
     -Dskysail.db.driverClassName=org.apache.derby.jdbc.EmbeddedDriver,\
-    -Dskysail.db.url="jdbc:derby:skysail.client.test/generated/skysailDerbyLargeTestDb;create=true",\
+    -Dskysail.db.url="jdbc:derby:skysailDerbyLargeTestDb;create=true",\
     -Dskysail.db.Username=SA,\
     -Dskysail.db.Password=
 #    ,\
