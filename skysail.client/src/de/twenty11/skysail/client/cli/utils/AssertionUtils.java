@@ -46,25 +46,50 @@ public class AssertionUtils {
         throw new AssertionError(msg);
     }
 
-    private static boolean matchHeader(Context context, String key,
-            Predicate<? super Header> matchDefinition, StringBuilder sb) {
+    private static boolean matchHeader(Context context, String key, Predicate<? super Header> matchDefinition,
+            StringBuilder sb) {
         Header[] responseHeaders = context.getResponseHeaders();
-        return Arrays.stream(responseHeaders).filter(h -> h.getName().equals(key))
-                .filter(matchDefinition).findFirst().isPresent();
+        return Arrays.stream(responseHeaders).filter(h -> h.getName().equals(key)).filter(matchDefinition).findFirst()
+                .isPresent();
     }
 
-    public static void handleHeader(Context context, String headerKey, StringBuilder sb) {
+    public static void handleHeaderNotEmpty(Context context, String headerKey, StringBuilder sb) {
         if (headerKey == null) {
             return;
         }
         if (matchHeader(context, headerKey, header -> {
-                sb.append("matched key '" + headerKey + "'");
-                return true;
+            sb.append("matched key '" + headerKey + "'");
+            return true;
         }, sb)) {
             return;
         }
 
         String msg = "expected match '"
+                + headerKey
+                + "', but headers were set to "
+                + Arrays.stream(context.getResponseHeaders()).map(h -> h.getName() + ": " + h.getValue())
+                        .collect(Collectors.joining(","));
+        if (System.getProperty("disableAssertions") != null) {
+            sb.append(msg);
+            return;
+        }
+        throw new AssertionError(msg);
+    }
+
+    public static void handleHeaderEmpty(Context context, String headerKey, StringBuilder sb) {
+        if (headerKey == null) {
+            return;
+        }
+
+        Header[] responseHeaders = context.getResponseHeaders();
+        boolean isPresent = Arrays.stream(responseHeaders).filter(h -> h.getName().equals(headerKey)).findFirst()
+                .isPresent();
+        if (!isPresent) {
+            sb.append("OK: did not match key '" + headerKey + "'");
+            return;
+        }
+
+        String msg = "did not expect match '"
                 + headerKey
                 + "', but headers were set to "
                 + Arrays.stream(context.getResponseHeaders()).map(h -> h.getName() + ": " + h.getValue())

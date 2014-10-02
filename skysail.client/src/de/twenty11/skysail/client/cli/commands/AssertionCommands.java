@@ -39,7 +39,7 @@ public class AssertionCommands implements CommandMarker {
 		return sb.toString();
 	}
 	
-	@CliCommand(value = "assertNotEmpty", help = "assert that certain element exists in headers (todo:, body or links) and is not empty: assert --header Set-Cookie")
+	@CliCommand(value = "assertNotEmpty", help = "assert that certain element exists in headers (todo:, body or links) and is not empty: assertNotEmpty --header Set-Cookie")
     public String assertNotEmpty(
             @CliOption(key = { "body" }, mandatory = false, help = "assert condition on the current body: --body username=admin") final String bodyKey,
             @CliOption(key = { "header" }, mandatory = false, help = "assert condition on the current header: --header Content-Type=appliation/json") final String headerKey,
@@ -47,10 +47,22 @@ public class AssertionCommands implements CommandMarker {
 
         StringBuilder sb = new StringBuilder();
         //AssertionUtils.handleBody(context, bodyAssertion, sb);
-        AssertionUtils.handleHeader(context, headerKey, sb);
+        AssertionUtils.handleHeaderNotEmpty(context, headerKey, sb);
         //AssertionUtils.handleLinks(context, linkAssertion, sb);
         return sb.toString();
     }
 
+    @CliCommand(value = "assertEmpty", help = "assert that certain element do not exist in headers (todo:, body or links) and is not empty: assertEmpty --header Set-Cookie")
+    public String assertEmpty(
+            @CliOption(key = { "body" }, mandatory = false, help = "assert condition on the current body: --body username=admin") final String bodyKey,
+            @CliOption(key = { "header" }, mandatory = false, help = "assert condition on the current header: --header Content-Type=appliation/json") final String headerKey,
+            @CliOption(key = { "link" }, mandatory = false, optionContext = "foo,bar", help = "assert condition on the current links: --link uri|rel|title <uri>|<rel>|<title> exists|missing") final String linkKey) {
+
+        StringBuilder sb = new StringBuilder();
+        //AssertionUtils.handleBody(context, bodyAssertion, sb);
+        AssertionUtils.handleHeaderEmpty(context, headerKey, sb);
+        //AssertionUtils.handleLinks(context, linkAssertion, sb);
+        return sb.toString();
+    }
 
 }

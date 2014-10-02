@@ -20,16 +20,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RunWith(Parameterized.class)
-public class ScriptTests extends TestBase {
+public class ScriptLargeTests extends TestBase {
     
-    private static final Logger logger = LoggerFactory.getLogger(ScriptTests.class);
+    private static final Logger logger = LoggerFactory.getLogger(ScriptLargeTests.class);
 
     private static final String TEST_FILES_DIR = "skysail.client.test/resources/largetests";
     private static final String TEST_FILE_SUFFIX = ".test";
 
     private String filename;
 
-    public ScriptTests(final String filenname) {
+    public ScriptLargeTests(final String filenname) {
         this.filename = filenname;
     }
 
@@ -43,6 +43,7 @@ public class ScriptTests extends TestBase {
         exec("env --showBody false");
 
         exec("cd");
+        exec("logout");
     }
 
     @Parameters(name = "{index}: {0}")

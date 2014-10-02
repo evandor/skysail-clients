@@ -50,7 +50,7 @@ public class AssertionUtilsTest {
     
     @Test
     public void matches_existing_key_in_header() {
-        AssertionUtils.handleHeader(context, "a", sb);
+        AssertionUtils.handleHeaderNotEmpty(context, "a", sb);
         assertThat(sb.toString(), is(equalTo("matched key 'a'")));
     }
     
