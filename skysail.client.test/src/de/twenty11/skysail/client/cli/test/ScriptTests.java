@@ -36,10 +36,10 @@ public class ScriptTests extends TestBase {
     @Before
     public void setUp() {
         exec("setHost localhost");
-        exec("setPort 2016");
+        exec("setPort 2099");
 
-        exec("env --showRequestHeaders false");
-        exec("env --showResponseHeaders false");
+        exec("env --showRequestHeaders true");
+        exec("env --showResponseHeaders true");
         exec("env --showBody false");
 
         exec("cd");
@@ -48,6 +48,7 @@ public class ScriptTests extends TestBase {
     @Parameters(name = "{index}: {0}")
     public static Collection<String[]> files() {
         ArrayList<String[]> result = new ArrayList<>();
+        logger.info("--- determining test files ---");
         getTestFiles(Paths.get(TEST_FILES_DIR), result);
         return result;
     }
@@ -61,6 +62,7 @@ public class ScriptTests extends TestBase {
                     getTestFiles(entry, result);
                 }
                 if (entry.toString().endsWith(TEST_FILE_SUFFIX)) {
+                    logger.info("--- added test file '" + entry.toString() + "' ---");
                     result.add(new String[] { entry.toString() });
                 }
             }

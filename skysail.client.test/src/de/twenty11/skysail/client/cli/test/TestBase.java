@@ -47,8 +47,8 @@ public class TestBase {
 
         Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
         for (Bundle bundle : bundles) {
-//            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': "
-//                    + bundle.getState());
+            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': "
+                    + bundle.getState());
         }
 
         shell = bootstrap.getJLineShellComponent();
