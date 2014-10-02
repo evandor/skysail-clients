@@ -47,8 +47,8 @@ public class TestBase {
 
         Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
         for (Bundle bundle : bundles) {
-            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': "
-                    + bundle.getState());
+//            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': "
+//                    + bundle.getState());
         }
 
         shell = bootstrap.getJLineShellComponent();
@@ -86,13 +86,11 @@ public class TestBase {
                 try {
                     Thread.sleep(5000);
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
                 return appConfig;
             }
             try {
-                // Thread.currentThread();
                 Thread.sleep(waitingMilliSecons);
             } catch (InterruptedException e) {
                 e.printStackTrace();
