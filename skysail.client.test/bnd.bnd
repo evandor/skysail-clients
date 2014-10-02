@@ -1,4 +1,8 @@
--buildpath:  \
+Bundle-ClassPath: .,lib/jgiven-junit-0.5.2.jar,lib/jgiven-core-0.5.2.jar,lib/paranamer-2.5.8.jar
+Include-Resource: lib=lib
+-buildpath: lib/jgiven-junit-0.5.2.jar;version=file,\
+	lib/jgiven-core-0.5.2.jar;version=file,\
+	lib/paranamer-2.5.8.jar;version=file,\
 	com.springsource.org.junit;version=4.11,\
 	biz.aQute.launcher,\
 	osgi.core;version=5.0,\
@@ -23,8 +27,11 @@
 	org.springframework.osgi.core;version=1.2,\
 	skysail.config.systemproperties;version=0.1,\
 	skysail.server;version=11.0,\
-	com.googlecode.flyway.core;version=2.2
-Test-Cases: de.twenty11.skysail.client.cli.test.ScriptTests
+	com.googlecode.flyway.core;version=2.2,\
+	com.google.guava;version=15.0,\
+	org.apache.servicemix.bundles.cglib;version=3.1,\
+	log4j;version=1.2
+Test-Cases: de.twenty11.skysail.client.cli.test.ScriptLargeTests
 
 -systemproperties: jsse.enableSNIExtension=false
 
