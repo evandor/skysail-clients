@@ -18,46 +18,45 @@ import org.springframework.shell.core.CommandResult;
 import org.springframework.shell.core.JLineShellComponent;
 
 public class TestBase {
-    
+
     private static final Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     protected static JLineShellComponent shell;
     private static BundleContext bundleContext;
 
-     @BeforeClass
-     public static void init() {
-     }
+    @BeforeClass
+    public static void init() {
+        
+        // the derby database gets deleted with gradle clean
 
-    @Before
-    public void startUp() throws Exception {
-        
-        
         try {
+            // Not sure which event I should wait for here, but need to wait
+            // nevertheless or the test will fail
+            // as the database is not created in time...
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        
+
         Bundle skysailClientBundle = FrameworkUtil.getBundle(de.twenty11.skysail.client.SkysailClient.class);
         URL shellPluginUrl = skysailClientBundle.getEntry("META-INF/spring/spring-shell-plugin.xml");
 
         OsgiBundleXmlApplicationContext appConfig = getAppContextOnceAvailable(skysailClientBundle, 500, 5);
         MyBootstrap bootstrap = new MyBootstrap(appConfig, new String[0],
                 new String[] { shellPluginUrl.toExternalForm() });
-        
+
         Bundle[] bundles = skysailClientBundle.getBundleContext().getBundles();
         for (Bundle bundle : bundles) {
-            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': " + bundle.getState());
+            System.out.println("running: " + bundle.getSymbolicName() + " '" + bundle.getVersion() + "': "
+                    + bundle.getState());
         }
-        
-        
+
         shell = bootstrap.getJLineShellComponent();
-   
-        //deleteTestDatabase();
-       
-        //startBundle("org.eclipse.gemini.dbaccess.derby");
-        //setupUserManagementDb();
-        //setupIncubatorDb();
+    }
+
+    @Before
+    public void startUp() throws Exception {
+
     }
 
     @After
@@ -77,7 +76,6 @@ public class TestBase {
         return getShell().executeCommand(cmd);
     }
 
-
     private static OsgiBundleXmlApplicationContext getAppContextOnceAvailable(Bundle skysailClientBundle,
             int waitingMilliSecons, int retries) {
         for (int i = 0; i < retries; i++) {
@@ -94,7 +92,7 @@ public class TestBase {
                 return appConfig;
             }
             try {
-                //Thread.currentThread();
+                // Thread.currentThread();
                 Thread.sleep(waitingMilliSecons);
             } catch (InterruptedException e) {
                 e.printStackTrace();
