@@ -8,7 +8,7 @@ public class MyShinyJGivenTest extends ScenarioTest<GivenSomeStage<?>, WhenSomeA
 
     @Test
     public void something_should_happen() {
-        given().some_state();
+        given().some_state().and().an_egg();
         when().some_action();
         then().some_outcome();
     }
