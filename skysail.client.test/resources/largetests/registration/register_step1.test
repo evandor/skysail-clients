@@ -1,0 +1,19 @@
+get --title Usermanagement
+
+assertTrue --link "rel CREATE_FORM exists"
+
+get --rel CREATE_FORM
+
+post --data '{"username": "admin", "password": "", "pwdRepeated":""}'
+assertTrue --status 400
+
+post --data '{"username": "admin", "password": "abcabc", "pwdRepeated":""}'
+assertTrue --status 400
+
+post --data '{"username": "admin", "password": "abcabc", "pwdRepeated":"abcabc"}'
+assertTrue --status 400
+
+post --data '{"username": "evandor@gmail.com", "password": "abcabc", "pwdRepeated":"abcabc"}'
+#assertTrue --status 409
+
+
