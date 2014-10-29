@@ -1,254 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1407514894862' name='Build' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='org.osgi.ee.foundation'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='1.0.1'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='3a7f276886eae1bf947810c141a2caf1598c8a441ef88bf112a18542e4ca2482'/>
-      <attribute name='url' value='org.osgi.ee.foundation/org.osgi.ee.foundation-1.0.1.jar'/>
-      <attribute name='size' type='Long' value='690182'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='org.osgi.ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.0.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='org.osgi.ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.0.1'/>
-    </capability>
-    <requirement namespace='osgi.ee'>
-      <directive name='filter' value='(&amp;(osgi.ee=CDC/Foundation)(version=1.0))'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='org.osgi.ee.minimum'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='1.1.1'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='82b649db7b06f0f0cc0751b3eeb21bff2f7b2afc02d0a7682141fe48340e3567'/>
-      <attribute name='url' value='org.osgi.ee.minimum/org.osgi.ee.minimum-1.1.1.jar'/>
-      <attribute name='size' type='Long' value='440314'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='org.osgi.ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.1.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='org.osgi.ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.1.1'/>
-    </capability>
-    <requirement namespace='osgi.ee'>
-      <directive name='filter' value='(&amp;(osgi.ee=OSGi/Minimum)(version=1.1))'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='osgi.core'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='4.0.1'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='7e5b62d7fa88a33a0b4be5d11dc8759d67c6d1569ea082ec84e13092c0952a58'/>
-      <attribute name='url' value='osgi.core/osgi.core-4.0.1.jar'/>
-      <attribute name='size' type='Long' value='169444'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.0.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.0.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.0.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.condpermadmin'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.0.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.packageadmin'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.0.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.permissionadmin'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.0.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.startlevel'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.0.1'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.url'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.0.1'/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='org.osgi.ee.minimum'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='1.1.3.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='1cbf3b9029a05d34c0a4a0008f65e923c57c9c15356ef5e3514a4eb3d0a9dcb5'/>
-      <attribute name='url' value='org.osgi.ee.minimum/org.osgi.ee.minimum-1.1.3.jar'/>
-      <attribute name='size' type='Long' value='391107'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='org.osgi.ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.1.3.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='org.osgi.ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.1.3.build-200702212030'/>
-    </capability>
-    <requirement namespace='osgi.ee'>
-      <directive name='filter' value='(&amp;(osgi.ee=OSGi/Minimum)(version=1.1))'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='ee.minimum'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='8c84e29a6d23353ac916b5695fa0c54485c405c50ffd8c78440a6f74eab09bec'/>
-      <attribute name='url' value='ee.minimum/ee.minimum-1.2.1.jar'/>
-      <attribute name='size' type='Long' value='616353'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.io'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.lang'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.lang.ref'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.lang.reflect'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.math'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.net'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security.acl'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security.cert'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security.interfaces'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security.spec'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.text'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.util'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.util.jar'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.util.zip'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='javax.security.auth.x500'/>
-      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
-      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
-    </capability>
-    <requirement namespace='osgi.ee'>
-      <directive name='filter' value='(&amp;(osgi.ee=OSGi/Minimum)(version=1.2))'/>
-    </requirement>
-  </resource>
+<repository increment='1414408391876' name='Build' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='osgi.core'/>
@@ -365,63 +116,6 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='osgi.core'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='4742a2935b0eb81036b598f085cfda09ce932d71b29311bd2775e5a73f7710b3'/>
-      <attribute name='url' value='osgi.core/osgi.core-4.1.0.jar'/>
-      <attribute name='size' type='Long' value='163464'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.condpermadmin'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.packageadmin'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.permissionadmin'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.startlevel'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.url'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='junit.osgi'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='3.8.2'/>
@@ -519,6 +213,230 @@
     </requirement>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=junit.textui)(version&gt;=3.8.0)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='osgi.core'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='4742a2935b0eb81036b598f085cfda09ce932d71b29311bd2775e5a73f7710b3'/>
+      <attribute name='url' value='osgi.core/osgi.core-4.1.0.jar'/>
+      <attribute name='size' type='Long' value='163464'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.condpermadmin'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.packageadmin'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.permissionadmin'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.startlevel'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.url'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.1.0.build-200702212030'/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='ee.foundation'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='3368b334902dceeb184482c94246cdf65c795dc6999a89500c61581908ccbc0a'/>
+      <attribute name='url' value='ee.foundation/ee.foundation-1.1.0.jar'/>
+      <attribute name='size' type='Long' value='641461'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security.interfaces'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.lang'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.net'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.text'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security.spec'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security.acl'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.lang.reflect'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.util'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.lang.ref'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security.cert'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+      <directive name='uses' value='javax.security.auth.x500'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.io'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.util.zip'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.math'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.util.jar'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='javax.microedition.io'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+      <directive name='uses' value='javax.microedition.pki'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='javax.security.auth.x500'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='javax.microedition.pki'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.microedition.io)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.microedition.pki)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.security.auth.x500)'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=CDC/Foundation)(version=1.1))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.osgi.ee.minimum'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.1.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='a7f50d914ffc67c6788da7c42dd803c4a0e8bbbc217ef5806d0fbd1201f0e325'/>
+      <attribute name='url' value='org.osgi.ee.minimum/org.osgi.ee.minimum-1.1.0.jar'/>
+      <attribute name='size' type='Long' value='394198'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.osgi.ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.osgi.ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0'/>
+    </capability>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=OSGi/Minimum)(version=1.1))'/>
     </requirement>
   </resource>
   <resource>
@@ -681,6 +599,183 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='ee.minimum'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='8c84e29a6d23353ac916b5695fa0c54485c405c50ffd8c78440a6f74eab09bec'/>
+      <attribute name='url' value='ee.minimum/ee.minimum-1.2.1.jar'/>
+      <attribute name='size' type='Long' value='616353'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.io'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.lang'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.lang.ref'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.lang.reflect'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.math'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.net'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security.acl'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security.cert'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security.interfaces'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.security.spec'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.text'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.util'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.util.jar'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='java.util.zip'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='javax.security.auth.x500'/>
+      <attribute name='version' type='Version' value='1.2.1.201305092016'/>
+      <attribute name='bundle-symbolic-name' value='ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.2.1.201305092016'/>
+    </capability>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=OSGi/Minimum)(version=1.2))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='osgi.core'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='4.0.1'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='7e5b62d7fa88a33a0b4be5d11dc8759d67c6d1569ea082ec84e13092c0952a58'/>
+      <attribute name='url' value='osgi.core/osgi.core-4.0.1.jar'/>
+      <attribute name='size' type='Long' value='169444'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.condpermadmin'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.packageadmin'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.permissionadmin'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.startlevel'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.url'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.0.1'/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='osgi.core'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='4.2.0.200908310645'/>
@@ -794,21 +889,159 @@
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.osgi.ee.minimum'/>
       <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='1.1.0'/>
+      <attribute name='version' type='Version' value='1.1.1'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='a7f50d914ffc67c6788da7c42dd803c4a0e8bbbc217ef5806d0fbd1201f0e325'/>
-      <attribute name='url' value='org.osgi.ee.minimum/org.osgi.ee.minimum-1.1.0.jar'/>
-      <attribute name='size' type='Long' value='394198'/>
+      <attribute name='osgi.content' value='82b649db7b06f0f0cc0751b3eeb21bff2f7b2afc02d0a7682141fe48340e3567'/>
+      <attribute name='url' value='org.osgi.ee.minimum/org.osgi.ee.minimum-1.1.1.jar'/>
+      <attribute name='size' type='Long' value='440314'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
       <attribute name='osgi.wiring.bundle' value='org.osgi.ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0'/>
+      <attribute name='bundle-version' type='Version' value='1.1.1'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
       <attribute name='osgi.wiring.host' value='org.osgi.ee.minimum'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0'/>
+      <attribute name='bundle-version' type='Version' value='1.1.1'/>
+    </capability>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=OSGi/Minimum)(version=1.1))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='osgi.core'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='4.3.0.201102171602'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='a6237c3c8cb23c9aed933e5ab5024c90bb1f93fd9ecd45b7d9e7e561b65f72b6'/>
+      <attribute name='url' value='osgi.core/osgi.core-4.3.0.jar'/>
+      <attribute name='size' type='Long' value='337575'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework.startlevel'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework.wiring'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework.hooks.bundle'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework.hooks.service'/>
+      <attribute name='version' type='Version' value='1.1.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework.hooks.resolver'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework.wiring'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework.launch'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework'/>
+      <attribute name='version' type='Version' value='1.6.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='javax.security.auth.x500'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.framework.hooks.weaving'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework.wiring'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.condpermadmin'/>
+      <attribute name='version' type='Version' value='1.1.1'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework,org.osgi.service.permissionadmin'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.packageadmin'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.permissionadmin'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.startlevel'/>
+      <attribute name='version' type='Version' value='1.1.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+      <directive name='uses' value='org.osgi.framework'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.url'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='osgi.core'/>
+      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.security.auth.x500)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.osgi.ee.minimum'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.1.3.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='1cbf3b9029a05d34c0a4a0008f65e923c57c9c15356ef5e3514a4eb3d0a9dcb5'/>
+      <attribute name='url' value='org.osgi.ee.minimum/org.osgi.ee.minimum-1.1.3.jar'/>
+      <attribute name='size' type='Long' value='391107'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.osgi.ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.1.3.build-200702212030'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.osgi.ee.minimum'/>
+      <attribute name='bundle-version' type='Version' value='1.1.3.build-200702212030'/>
     </capability>
     <requirement namespace='osgi.ee'>
       <directive name='filter' value='(&amp;(osgi.ee=OSGi/Minimum)(version=1.1))'/>
@@ -940,259 +1173,26 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='ee.foundation'/>
+      <attribute name='osgi.identity' value='org.osgi.ee.foundation'/>
       <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='1.1.0.200908310645'/>
+      <attribute name='version' type='Version' value='1.0.1'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='3368b334902dceeb184482c94246cdf65c795dc6999a89500c61581908ccbc0a'/>
-      <attribute name='url' value='ee.foundation/ee.foundation-1.1.0.jar'/>
-      <attribute name='size' type='Long' value='641461'/>
+      <attribute name='osgi.content' value='3a7f276886eae1bf947810c141a2caf1598c8a441ef88bf112a18542e4ca2482'/>
+      <attribute name='url' value='org.osgi.ee.foundation/org.osgi.ee.foundation-1.0.1.jar'/>
+      <attribute name='size' type='Long' value='690182'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+      <attribute name='osgi.wiring.bundle' value='org.osgi.ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.0.1'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
+      <attribute name='osgi.wiring.host' value='org.osgi.ee.foundation'/>
+      <attribute name='bundle-version' type='Version' value='1.0.1'/>
     </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security.interfaces'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.lang'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.net'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.text'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security.spec'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security.acl'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.lang.reflect'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.util'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.lang.ref'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.security.cert'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-      <directive name='uses' value='javax.security.auth.x500'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.io'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.util.zip'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.math'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='java.util.jar'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='javax.microedition.io'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-      <directive name='uses' value='javax.microedition.pki'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='javax.security.auth.x500'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='javax.microedition.pki'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-      <attribute name='bundle-symbolic-name' value='ee.foundation'/>
-      <attribute name='bundle-version' type='Version' value='1.1.0.200908310645'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(osgi.wiring.package=javax.microedition.io)'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(osgi.wiring.package=javax.microedition.pki)'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(osgi.wiring.package=javax.security.auth.x500)'/>
-    </requirement>
     <requirement namespace='osgi.ee'>
-      <directive name='filter' value='(&amp;(osgi.ee=CDC/Foundation)(version=1.1))'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='osgi.core'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='4.3.0.201102171602'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='a6237c3c8cb23c9aed933e5ab5024c90bb1f93fd9ecd45b7d9e7e561b65f72b6'/>
-      <attribute name='url' value='osgi.core/osgi.core-4.3.0.jar'/>
-      <attribute name='size' type='Long' value='337575'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework.startlevel'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework.wiring'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework.hooks.bundle'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework.hooks.service'/>
-      <attribute name='version' type='Version' value='1.1.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework.hooks.resolver'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework.wiring'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework.launch'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework'/>
-      <attribute name='version' type='Version' value='1.6.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='javax.security.auth.x500'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.framework.hooks.weaving'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework.wiring'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.condpermadmin'/>
-      <attribute name='version' type='Version' value='1.1.1'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework,org.osgi.service.permissionadmin'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.packageadmin'/>
-      <attribute name='version' type='Version' value='1.2.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.permissionadmin'/>
-      <attribute name='version' type='Version' value='1.2.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.startlevel'/>
-      <attribute name='version' type='Version' value='1.1.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-      <directive name='uses' value='org.osgi.framework'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.service.url'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='osgi.core'/>
-      <attribute name='bundle-version' type='Version' value='4.3.0.201102171602'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(osgi.wiring.package=javax.security.auth.x500)'/>
-      <directive name='resolution' value='optional'/>
+      <directive name='filter' value='(&amp;(osgi.ee=CDC/Foundation)(version=1.0))'/>
     </requirement>
   </resource>
 </repository>

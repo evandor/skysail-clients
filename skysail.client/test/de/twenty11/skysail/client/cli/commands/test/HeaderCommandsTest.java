@@ -3,11 +3,6 @@ package de.twenty11.skysail.client.cli.commands.test;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertThat;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.hamcrest.MatcherAssert;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

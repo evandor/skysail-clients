@@ -11,6 +11,9 @@
 #        index=${workspace}/cnf/jpm-index.json;\
 #        location=${user.home}/.bnd/cache
 
+# commented out until new bundles (non skysail) will be added again
+#    aQute.bnd.deployer.repository.LocalIndexedRepo; name='skysail releases (local)';local=${workspace}/../skysail-repository/release,\
+
 -baseline: *
 -baselinerepository: skysail snapshots (local)
 -releaserepo: skysail snapshots (local)

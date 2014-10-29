@@ -24,7 +24,7 @@ public class ScriptLargeTests extends TestBase {
     
     private static final Logger logger = LoggerFactory.getLogger(ScriptLargeTests.class);
 
-    private static final String TEST_FILES_DIR = "skysail.client.test/resources/largetests";
+    private static final String TEST_FILES_DIR = "resources/largetests";
     private static final String TEST_FILE_SUFFIX = ".test";
 
     private String filename;
@@ -68,7 +68,8 @@ public class ScriptLargeTests extends TestBase {
                 }
             }
         } catch (IOException e) {
-            throw new IllegalArgumentException(e);
+            String currentPath = new File(".").getAbsolutePath();
+            throw new IllegalArgumentException("Problem, current working dir: " +currentPath ,e);
         }
     }
 
