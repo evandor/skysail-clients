@@ -25,6 +25,8 @@ public class Context {
     private boolean showRequestHeaders = true;
     private boolean showResponseHeaders = true;
     private Boolean showBody = true;
+    
+//    private WebClient webClient = new WebClient();
 
 	public void setPort(int port) {
 		this.port = port;
@@ -137,4 +139,8 @@ public class Context {
     public boolean isShowBody() {
         return this.showBody;
     }
+
+//    public WebClient getWebClient() {
+//        return webClient;
+//    }
 }

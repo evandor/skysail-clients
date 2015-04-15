@@ -1,0 +1,10 @@
+{
+  "name": "skysail.client.todos.ionic",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/contacts",
+      "proxyUrl": "http://localhost:2015/ContactsGen"
+    }
+  ]
+}

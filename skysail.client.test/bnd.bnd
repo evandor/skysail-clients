@@ -31,6 +31,7 @@ Include-Resource: lib=lib
 	com.google.guava;version=15.0,\
 	org.apache.servicemix.bundles.cglib;version=3.1,\
 	log4j;version=1.2
+	
 Test-Cases: de.twenty11.skysail.client.cli.test.ScriptLargeTests
 
 -systemproperties: jsse.enableSNIExtension=false
