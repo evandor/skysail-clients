@@ -19,6 +19,25 @@ angular.module('starter')
     useCredentials(token);
   }
 
+  function remoteLogin(username, password) {
+	  //var data = '{"username": "'+username+'", "password": "'+password+'"}';
+	  var data = "username="+username+"&password="+password;
+	  var link = '/server/_login';
+	  console.log(username + ": logging in to " + link + " with " + data);
+	  
+      var config = {
+       	headers: {'Content-Type': 'application/x-www-form-urlencoded'} 
+      }
+	  
+	  $http.post(link, data, config)
+		  .success(function(data,status,headers,config) {
+			console.log(username + ": success --- " + status);
+	 	  }).
+	 	  error(function(data, status, headers, config){
+	 		 console.log(username + ": failure --- " + data);
+	 	  });
+  }
+  
   function useCredentials(token) {
     username = token.split('.')[0];
     isAuthenticated = true;
@@ -45,7 +64,8 @@ angular.module('starter')
 
   var login = function(name, pw) {
     return $q(function(resolve, reject) {
-      if ((name == 'admin' && pw == '1') || (name == 'user' && pw == '1')) {
+    	remoteLogin(name, pw)
+      if ((name == 'admin' ) || (name == 'user' )) {
         // Make a request and receive your auth token from your server
         storeUserCredentials(name + '.yourServerToken');
         resolve('Login success.');

@@ -3,8 +3,8 @@
   "app_id": "",
   "proxies": [
     {
-      "path": "/contacts",
-      "proxyUrl": "http://localhost:2015/ContactsGen"
+      "path": "/server",
+      "proxyUrl": "http://localhost:2015/"
     }
   ]
 }

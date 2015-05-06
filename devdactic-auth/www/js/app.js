@@ -60,7 +60,8 @@ angular.module('starter', ['ionic', 'ngMockE2E'])
       authorizedRoles: [USER_ROLES.admin]
     }
   });
-  $urlRouterProvider.otherwise('/main/dash');
+  $urlRouterProvider.otherwise('/login');
+  //$urlRouterProvider.otherwise('/main/dash');
 })
 
 .run(function($httpBackend){
@@ -72,6 +73,8 @@ angular.module('starter', ['ionic', 'ngMockE2E'])
         .respond(403, {message: "Not Authorized"});
 
   $httpBackend.whenGET(/templates\/\w+.*/).passThrough();
+  $httpBackend.whenGET("/server/.*").passThrough();
+  $httpBackend.whenPOST("/server/_login").passThrough();
  })
 
 .run(function ($rootScope, $state, AuthService, AUTH_EVENTS) {
