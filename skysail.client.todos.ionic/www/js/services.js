@@ -1,9 +1,7 @@
 angular.module('starter.services', [])
 
 .factory('Chats', function() {
-  // Might use a resource here that returns a JSON array
 
-  // Some fake testing data
   var chats = [{
     id: 0,
     name: 'Ben Sparrow',
@@ -14,21 +12,6 @@ angular.module('starter.services', [])
     name: 'Max Lynx',
     lastText: 'Hey, it\'s me',
     face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
-  }, {
-    id: 2,
-    name: 'Andrew Jostlin',
-    lastText: 'Did you get the ice cream?',
-    face: 'https://pbs.twimg.com/profile_images/491274378181488640/Tti0fFVJ.jpeg'
-  }, {
-    id: 3,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
-  }, {
-    id: 4,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
   }];
 
   return {
@@ -49,90 +32,39 @@ angular.module('starter.services', [])
   }
 })
 
-/**
- * A simple example service that returns some data.
- */
 .factory('Friends', function($http) {
 	
-      var result = {};
-	  //result["key1"] = "value1";
-
+    var result = {};
 	
-	  var lists = [{
-	    id: 0,
-	    name: 'Ben Sparrow!',
-	    notes: 'Enjoys drawing things',
-	    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
-	  }, {
-	    id: 1,
-	    name: 'Max Lynx',
-	    notes: 'Odd obsession with everything',
-	    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
-	  }, {
-	    id: 4,
-	    name: 'Perry Governor',
-	    notes: 'Just the nicest guy',
-	    face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
-	  }];
-
-  $http.get('/server/Todos?media=json').
-    success(function(data, status, headers, config) {
+    $http.get('/server/Todos?media=json').
+      success(function(data, status, headers, config) {
     	for (date of data) {
-    		/*lists.push({
-			    id: date.id.replace("#",""),
-			    name: date.name,
-			    notes: 'Just the nicest guy',
-			    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'   					
-    		});*/
+    		console.log(date);
     		var key = date.id.replace("#","");
     		result[key] = {
     			id: key,
-				name: date.name,
-			    notes: 'Just the nicest guy',
+				name: date.name + " (" + date.todosCount + ")",
+				header : date.name,
+			    notes: 'Just the nicest guy!',
 			    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
     		};
-    		
     	}
-    }).
-    error(function(data, status, headers, config) {
-      console.log(data);
-    });
-	
-
-
-
-  return {
-    all: function() {
-      return result;
-    },
-    get: function(friendId) {
-      return result[friendId];
-    }
-  }
-})
-
-.service('LoginService', function($q) {
+      }).
+      error(function(data, status, headers, config) {
+        console.log(data);
+      }
+    );
+  
     return {
-        loginUser: function(name, pw) {
-            var deferred = $q.defer();
-            var promise = deferred.promise;
- 
-            if (name == 'user' && pw == 'secret') {
-                deferred.resolve('Welcome ' + name + '!');
-            } else {
-                deferred.reject('Wrong credentials.');
-            }
-            promise.success = function(fn) {
-                promise.then(fn);
-                return promise;
-            }
-            promise.error = function(fn) {
-                promise.then(null, fn);
-                return promise;
-            }
-            return promise;
-        }
+      all: function() {
+        return result;
+      },
+      get: function(listId) {
+        return result[listId];
+      }
     }
-})
+  })
+
+
 
 ;
