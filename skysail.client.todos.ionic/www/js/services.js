@@ -64,7 +64,24 @@ angular.module('starter.services', [])
       }
     }
   })
-
-
+  
+.service('Todos2', function($http) {
+	var service = this;
+	service.get = function($scope, listId) {
+		var link = '/server/Todos/Lists/'+listId +'/Todos?media=json';
+		$http.get(link).
+		    success(function(data, status, headers, config) {
+		    	$scope.todos = data;
+			  	for (date of data) {
+			  		console.log(date);
+			  		var key = date.id.replace("#","");
+			  	}
+		    }).
+		    error(function(data, status, headers, config) {
+		      console.log(data);
+		    }
+	    );
+	}
+})  
 
 ;

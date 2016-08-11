@@ -17,8 +17,9 @@ angular.module('starter.controllers', [])
   $scope.friends = Friends.all();
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.listId);
+.controller('FriendDetailCtrl', function($scope, $stateParams, Todos2) {
+	$scope.listId = $stateParams.listId;
+    $scope.todos = Todos2.get($scope, $stateParams.listId);
 })
 
 .controller('AccountCtrl', function($scope) {
@@ -33,7 +34,7 @@ angular.module('starter.controllers', [])
     $scope.login = function(data) {
     	AuthService.login(data.username, data.password).then(function(authenticated) {
           $state.go('tab.lists', {}, {reload: true});
-          $scope.setCurrentUsername(data.username);
+         // $scope.setCurrentUsername(data.username);
         }, function(err) {
           var alertPopup = $ionicPopup.alert({
             title: 'Login failed!',
